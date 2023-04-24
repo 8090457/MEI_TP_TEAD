@@ -1,0 +1,115 @@
+{
+ "paragraphs": [
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "inlay": {},
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "Hotel ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Facility ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Nome",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "import org.apache.spark.sql.functions._\n//Leitura de dados Facilities\nval csvFacilities = \"/data/tp/Facilities.csv\"\n\nval df = spark.read.format(\"csv\")\n  .option(\"header\", \"true\") // set this to true if your CSV file has header\n  .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n  .option(\"delimiter\", \";\") // ; is the separator\n  .load(csvFacilities)\n\ndf.show()",
+   "id": "",
+   "dateCreated": "2023-04-23 23:44:45.859",
+   "config": {
+    "tableHide": false
+   },
+   "dateStarted": "2023-04-24 20:21:43.829",
+   "dateUpdated": "2023-04-24 20:21:44.185",
+   "dateFinished": "2023-04-24 20:21:44.184",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "+--------+-----------+--------------------+\n|Hotel ID|Facility ID|                Nome|\n+--------+-----------+--------------------+\n|      16|        230|         Mom Kitchen|\n|      16|        231|        Diet Deserts|\n|      60|        232|Entry into the fi...|\n|      60|        233|              Hiking|\n|      60|        234|            Hammocks|\n|      60|        235|       Double shower|\n|      60|        236|Green area to pra...|\n|      60|        237|Live music on Sat...|\n|      60|        238|Bonfire with live...|\n|      86|        239|Newspapers in com...|\n|      86|        240| Baggage consignment|\n|      86|        241|    Covered car park|\n|      63|        242|             Heating|\n|      24|        243|     Parque Infantil|\n|      47|        265|          Playground|\n|      47|        266|           Mini Golf|\n|      68|        267|King size spring ...|\n|      68|        268|Queen size spring...|\n|      68|        269|Basket off season...|\n|      68|        270|Extra pillows and...|\n+--------+-----------+--------------------+\nonly showing top 20 rows\n\nimport org.apache.spark.sql.functions._\n\u001b[1m\u001b[34mcsvFacilities\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Facilities.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Hotel ID: int, Facility ID: int ... 1 more field]\n"
+     }
+    ]
+   }
+  },
+  {
+   "user": "anonymous",
+   "config": {
+    "colWidth": 12,
+    "fontSize": 9,
+    "enabled": true,
+    "results": {},
+    "editorSetting": {
+     "language": "scala",
+     "editOnDblClick": false,
+     "completionKey": "TAB",
+     "completionSupport": true
+    },
+    "editorMode": "ace/mode/scala"
+   },
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "jobName": "paragraph_1563110258183_1613653816",
+   "id": "20190714-161738_1950435706",
+   "dateCreated": "2019-07-14T16:17:38+0300",
+   "status": "FINISHED",
+   "progressUpdateIntervalMs": 500,
+   "focus": true,
+   "$$hashKey": "object:394",
+   "text": "\n\n",
+   "dateStarted": "2023-04-24 19:50:16.023",
+   "dateUpdated": "2023-04-24 19:50:17.546",
+   "dateFinished": "2023-04-24 19:50:17.546",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "+---------+------+----------+\n|id_pessoa|  nome| data_nasc|\n+---------+------+----------+\n|        1|  João|1986-08-23|\n|        2| Maria|1982-04-12|\n|        3|Isabel|1989-03-10|\n|        4|Carlos|1900-08-02|\n+---------+------+----------+\n\nimport org.apache.spark.sql.Row\nimport java.sql.Date\nimport org.apache.spark.sql.types.{DateType, IntegerType, StringType, StructField, StructType}\nimport org.apache.spark.sql.functions._\n\u001b[1m\u001b[34mcolunas\u001b[0m: \u001b[1m\u001b[32mList[org.apache.spark.sql.types.StructField]\u001b[0m = List(StructField(id_pessoa,IntegerType,true), StructField(nome,StringType,true), StructField(data_nasc,DateType,true))\n\u001b[1m\u001b[34mlinhas\u001b[0m: \u001b[1m\u001b[32mList[org.apache.spark.sql.Row]\u001b[0m = List([1,João,1986-08-23], [2,Maria,1982-04-12], [3,Isabel,1989-03-10], [4,Carlos,1900-08-02])\n\u001b[1m\u001b[34mpessoas\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [id_pessoa: int, nome: string ... 1 more field]\n"
+     }
+    ]
+   }
+  }
+ ],
+ "name": "Zeppelin Notebook",
+ "id": "",
+ "noteParams": {},
+ "noteForms": {},
+ "angularObjects": {},
+ "config": {
+  "isZeppelinNotebookCronEnable": false,
+  "looknfeel": "default",
+  "personalizedMode": "false"
+ },
+ "info": {}
+}
