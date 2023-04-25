@@ -1,0 +1,219 @@
+{
+ "paragraphs": [
+  {
+   "user": "anonymous",
+   "config": {
+    "colWidth": 12,
+    "fontSize": 9,
+    "enabled": true,
+    "results": {},
+    "editorSetting": {
+     "language": "scala",
+     "editOnDblClick": false,
+     "completionKey": "TAB",
+     "completionSupport": true
+    },
+    "editorMode": "ace/mode/scala"
+   },
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "País",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Estado da reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "RatePlan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Data da reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Data de partida",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Número de noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Ocupação",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Crianças",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Preço (€)",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Data chegada",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Tipo de quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Quantidade",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Capacidade máxima",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Capacidade máxima de adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Capacidade máxima de crianças",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Capacidade máxima de bebés",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Localização",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Estrelas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Idade Máxima de Crianças (Anos)",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Idade Máxima de Bebés (Meses)",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Quantidade de quartos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "jobName": "paragraph_1563110258183_1613653816",
+   "id": "20190714-161738_1950435706",
+   "dateCreated": "2019-07-14T16:17:38+0300",
+   "status": "FINISHED",
+   "progressUpdateIntervalMs": 500,
+   "focus": true,
+   "$$hashKey": "object:394",
+   "text": "\n\nval result = spark.sql(\"SELECT qr.`País`,qr.`Estado da reserva`, qr.`RatePlan`,qr.`Data da reserva`,\" +\n        \"qr.`Data de partida`, qr.`Número de noites`, qr.`Ocupação`,qr.Adultos, \" +\n        \"qr.`Crianças`,qr.`Preço (€)`,qr.`Data chegada`,\" +\n\n        \"t.`Tipo de quarto`, t.`Quantidade`,t.`Capacidade máxima`,t.`Capacidade máxima de adultos`,t.`Capacidade máxima de crianças`,t.`Capacidade máxima de bebés`,\" +\n        \n        \"h.`Localização`,h.Estrelas, h.`Idade Máxima de Crianças (Anos)`, h.`Idade Máxima de Bebés (Meses)`,h.`Quantidade de quartos` \"+\n        \"FROM Quartos_Reservados qr \" +\n        \"inner join Tipologias t on t.`Hotel ID` = qr.`Hotel ID` and t.`Room ID` = qr.`Room ID`\" +\n    \"inner join Hotel h on h.`Hotel ID` = qr.`Hotel ID`\")\n//Hotel h \n// // ,\" +\nresult.limit(1000).show()",
+   "dateStarted": "2023-04-25 22:40:39.224",
+   "dateUpdated": "2023-04-25 22:40:39.588",
+   "dateFinished": "2023-04-25 22:40:39.588",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "+--------------+-----------------+--------------------+--------------------+---------------+----------------+--------+-------+--------+---------+------------+--------------------+----------+-----------------+----------------------------+-----------------------------+--------------------------+--------------------+--------+-------------------------------+-----------------------------+---------------------+\n|          País|Estado da reserva|            RatePlan|     Data da reserva|Data de partida|Número de noites|Ocupação|Adultos|Crianças|Preço (€)|Data chegada|      Tipo de quarto|Quantidade|Capacidade máxima|Capacidade máxima de adultos|Capacidade máxima de crianças|Capacidade máxima de bebés|         Localização|Estrelas|Idade Máxima de Crianças (Anos)|Idade Máxima de Bebés (Meses)|Quantidade de quartos|\n+--------------+-----------------+--------------------+--------------------+---------------+----------------+--------+-------+--------+---------+------------+--------------------+----------+-----------------+----------------------------+-----------------------------+--------------------------+--------------------+--------+-------------------------------+-----------------------------+---------------------+\n|       Espanha|        Registado|    DB Room Only NRF|2022-01-01 10:17:...|     03/01/2022|               1|       2|      2|       0|     63.0|  02/01/2022|DB - Quarto Duplo...|         8|                2|                           2|                            2|                         0|                Maia|       3|                             12|                           36|                   30|\n|      Portugal|       Modificada|           DB RO NRF|2022-01-01 12:19:...|     02/01/2022|               1|       2|      2|       0|     38.7|  01/01/2022|Quarto Duplo Stan...|        10|                2|                           2|                            1|                         0|             Valongo|       3|                             12|                            4|                   41|\n|         Suiça|        Registado|            Standard|2022-01-01 17:34:...|     18/08/2022|               2|       2|      4|       0|    500.0|  16/08/2022|     Estúdio Jardim |         6|                2|                           2|                            0|                         1|               Porto|       0|                              3|                           36|                   16|\n|       Holanda|        Registado|            Standard|2022-01-01 18:30:...|     05/01/2022|               3|       1|      1|       0|    126.0|  02/01/2022|             Estudio|         3|                2|                           2|                            0|                         1|               Porto|       0|                              3|                           36|                    7|\n|Estados Unidos|        Registado|              Normal|2022-01-01 19:00:...|     08/01/2022|               1|       1|      1|       0|     80.0|  07/01/2022|Duplo   Vista Mar...|         5|                2|                           2|                            1|                         1|              Nazaré|       4|                             12|                           24|                   77|\n|      Portugal|        Registado|             WebSite|2022-01-01 19:23:...|     06/01/2022|               2|       2|      2|       0|    135.0|  04/01/2022|            Bungalow|         1|                2|                           2|                            0|                         0| Travanca do Mondego|       4|                             12|                           24|                   11|\n|      Portugal|        Registado|                 Bar|2022-01-01 19:27:...|     03/01/2022|               1|       1|      1|       0|     30.0|  02/01/2022|Quarto Dpl. Standard|         5|                2|                           2|                            0|                         0|              Amares|       0|                              0|                            0|                   58|\n|      Portugal|        Registado|             WebSite|2022-01-01 20:46:...|     04/01/2022|               2|       2|      2|       0|    162.0|  02/01/2022|     Quarto Familiar|         1|                5|                           2|                            2|                         2| Travanca do Mondego|       4|                             12|                           24|                   11|\n|      Portugal|        Registado|        Normal - Bar|2022-01-01 21:06:...|     03/01/2022|               1|       2|      2|       0|    100.0|  02/01/2022|        Suite Junior|         1|                4|                           2|                            1|                         1|São Martinho do P...|       3|                             12|                           36|                   30|\n|      Portugal|        Registado|NRF - Non Refundable|2022-01-01 21:51:...|     08/01/2022|               2|       2|      2|       0|    105.6|  06/01/2022|Double Room Standard|        45|                3|                           2|                            0|                         1|             Covilhã|       3|                             10|                            3|                   84|\n|      Portugal|        Registado|NRF - Non Refundable|2022-01-01 21:51:...|     08/01/2022|               2|       3|      3|       0|    158.4|  06/01/2022|Triple Room Standard|         7|                3|                           3|                            2|                         1|             Covilhã|       3|                             10|                            3|                   84|\n|       Bélgica|        Registado|                  7N|2022-01-02 11:09:...|     21/05/2022|               9|       2|      2|       0|    367.2|  12/05/2022|              STUDIO|         4|                2|                           2|                            0|                         1|               Porto|       1|                              3|                           36|                    8|\n|      Portugal|         Pendente|             WebSite|2022-01-02 14:08:...|     03/01/2022|               1|       2|      2|       0|     58.5|  02/01/2022|        Quarto Duplo|         5|                3|                           2|                            1|                         1| Travanca do Mondego|       4|                             12|                           24|                   11|\n|      Portugal|        Registado|WEB (Best Availab...|2022-01-02 17:55:...|     05/01/2022|               2|       2|      2|       0|    114.0|  03/01/2022|Double Room Standard|        45|                3|                           2|                            0|                         1|             Covilhã|       3|                             10|                            3|                   84|\n|      Portugal|         Pendente|             WebSite|2022-01-02 18:36:...|     06/01/2022|               1|       2|      2|       0|     58.5|  05/01/2022|        Quarto Duplo|         5|                3|                           2|                            1|                         1| Travanca do Mondego|       4|                             12|                           24|                   11|\n|      Portugal|        Registado|              Normal|2022-01-02 18:57:...|     15/01/2022|               2|       2|      2|       0|    160.0|  13/01/2022|Duplo   Vista Mar...|         5|                2|                           2|                            1|                         1|              Nazaré|       4|                             12|                           24|                   77|\n|      Portugal|        Cancelado|WEB (Best Availab...|2022-01-02 19:54:...|     16/01/2022|               1|       2|      2|       0|     76.0|  15/01/2022|Double Room Standard|        45|                3|                           2|                            0|                         1|             Covilhã|       3|                             10|                            3|                   84|\n|      Portugal|         Pendente|             WebSite|2022-01-02 19:58:...|     08/01/2022|               1|       2|      2|       0|     58.5|  07/01/2022|        Quarto Duplo|         5|                3|                           2|                            1|                         1| Travanca do Mondego|       4|                             12|                           24|                   11|\n|      Portugal|        Registado|                 Bar|2022-01-02 20:57:...|     20/02/2022|               2|       1|      1|       0|      0.0|  18/02/2022|Quarto Dpl. Standard|         5|                2|                           2|                            0|                         0|              Amares|       0|                              0|                            0|                   58|\n|      Portugal|         Pendente|WEB (Best Availab...|2022-01-02 22:04:...|     09/01/2022|               1|       2|      6|       0|    228.0|  08/01/2022|Double Room Standard|        45|                3|                           2|                            0|                         1|             Covilhã|       3|                             10|                            3|                   84|\n+--------------+-----------------+--------------------+--------------------+---------------+----------------+--------+-------+--------+---------+------------+--------------------+----------+-----------------+----------------------------+-----------------------------+--------------------------+--------------------+--------+-------------------------------+-----------------------------+---------------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mresult\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [País: string, Estado da reserva: string ... 20 more fields]\n"
+     }
+    ]
+   }
+  }
+ ],
+ "name": "Zeppelin Notebook",
+ "id": "",
+ "noteParams": {},
+ "noteForms": {},
+ "angularObjects": {},
+ "config": {
+  "isZeppelinNotebookCronEnable": false,
+  "looknfeel": "default",
+  "personalizedMode": "false"
+ },
+ "info": {}
+}
