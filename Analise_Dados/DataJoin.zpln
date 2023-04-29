@@ -14,14 +14,12 @@
      "completionSupport": true
     },
     "editorMode": "ace/mode/scala",
-    "tableHide": true
+    "tableHide": false
    },
    "settings": {
     "params": {
      "bdtMeta": {
-      "inlay": {
-       "collapsed": true
-      }
+      "inlay": {}
      }
     },
     "forms": {}
@@ -34,10 +32,10 @@
    "progressUpdateIntervalMs": 500,
    "focus": true,
    "$$hashKey": "object:394",
-   "text": "val result = spark.sql(\n    \"SELECT qr.pais, qr.estado_reserva, qr.rate_plan, qr.data_reserva, qr.data_partida, \" + \n            \"qr.num_noites, qr.ocupacao, qr.adultos, qr.criancas, qr.preco_euros, qr.data_chegada, \" + \n            \"t.tipo_quarto, t.quantidade, t.capacidade_maxima, t.capacidade_max_adultos, \" + \n            \"t.capacidade_max_criancas, t.capacidade_max_bebes, \" + \n            \"h.localizacao, h.estrelas, h.idade_max_criancas, h.idade_max_bebes, h.qtd_quartos \" + \n            \"FROM Quartos_Reservados qr \" + \n            \"INNER JOIN Tipologias t ON t.hotel_ID = qr.hotel_ID AND t.room_ID = qr.room_ID \" + \n            \"INNER JOIN Hotel h ON h.hotel_ID = qr.hotel_ID\")\nresult.coalesce(1).write.format(\"csv\").option(\"header\", \"true\").mode(\"overwrite\").save(\"/data/tp/arquivo\")\n//Hotel h \n// // ,\" +\nresult.limit(1000).show()",
-   "dateStarted": "2023-04-29 11:21:26.129",
-   "dateUpdated": "2023-04-29 11:21:28.925",
-   "dateFinished": "2023-04-29 11:21:28.925"
+   "text": "val sqlQuery =\n    \"\"\"\n      |SELECT qr.pais, qr.estado_reserva, qr.rate_plan, qr.data_reserva, qr.data_partida,\n      |     qr.num_noites, qr.ocupacao, qr.adultos, qr.criancas, qr.preco_euros, qr.data_chegada, \n      |     t.tipo_quarto, t.quantidade, t.capacidade_maxima, t.capacidade_max_adultos, \n      |     t.capacidade_max_criancas, t.capacidade_max_bebes, \n      |     h.localizacao, h.estrelas, h.idade_max_criancas, h.idade_max_bebes, h.qtd_quartos \n      |FROM Quartos_Reservados qr \n      |INNER JOIN Tipologias t \n      |     ON t.hotel_ID = qr.hotel_ID AND t.room_ID = qr.room_ID \n      |INNER JOIN Hotel h \n      |     ON h.hotel_ID = qr.hotel_ID\n      |\"\"\".stripMargin\n\nval result = spark.sql(sqlQuery)\nresult.coalesce(1).write.format(\"csv\").option(\"header\", \"true\").mode(\"overwrite\").save(\"/data/tp/arquivo\")\n//Hotel h \n// // ,\" +\nresult.limit(1000).show()",
+   "dateStarted": "2023-04-29 15:37:53.822",
+   "dateUpdated": "2023-04-29 15:37:55.137",
+   "dateFinished": "2023-04-29 15:37:55.137"
   },
   {
    "settings": {
@@ -48,13 +46,13 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "val result = spark.sql(\n    \"SELECT * FROM Quartos_Reservados qr \" + \n            \"INNER JOIN Tipologias t ON t.hotel_ID = qr.hotel_ID AND t.room_ID = qr.room_ID \" + \n            \"INNER JOIN Hotel h ON h.hotel_ID = qr.hotel_ID\")\nresult.limit(1000).show()\n//result.coalesce(1).write.format(\"csv\").option(\"header\", \"true\").mode(\"overwrite\").save(\"/data/tp/arquivo\")",
+   "text": "var sqlQuery2 =\n    \"\"\"\n      |SELECT * \n      |FROM Quartos_Reservados qr \n      |INNER JOIN Tipologias t \n      |     ON t.hotel_ID = qr.hotel_ID AND t.room_ID = qr.room_ID \n      |INNER JOIN Hotel h \n      |     ON h.hotel_ID = qr.hotel_ID\n      |\"\"\".stripMargin\n\nval result = spark.sql(sqlQuery2)\nresult.limit(1000).show()\n//result.coalesce(1).write.format(\"csv\").option(\"header\", \"true\").mode(\"overwrite\").save(\"/data/tp/arquivo\")",
    "id": "",
    "dateCreated": "2023-04-29 10:57:44.597",
    "config": {},
-   "dateStarted": "2023-04-29 11:20:30.646",
-   "dateUpdated": "2023-04-29 11:20:31.020",
-   "dateFinished": "2023-04-29 11:20:31.020"
+   "dateStarted": "2023-04-29 15:37:55.138",
+   "dateUpdated": "2023-04-29 15:37:55.663",
+   "dateFinished": "2023-04-29 15:37:55.663"
   }
  ],
  "name": "Zeppelin Notebook",
