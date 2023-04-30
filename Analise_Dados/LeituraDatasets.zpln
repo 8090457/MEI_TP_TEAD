@@ -3,6 +3,23 @@
   {
    "settings": {
     "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val FacilitesTable = \"Facilities\"\nval HotelTable = \"Hotel\"\nval TipologiasTable = \"Tipologias\"\nval QuartosReservadosTable = \"QuartosReservados\"\nval FeriadosTable = \"Feriados\"",
+   "id": "",
+   "dateCreated": "2023-04-30 20:03:05.806",
+   "config": {},
+   "dateStarted": "2023-04-30 20:04:41.387",
+   "dateUpdated": "2023-04-30 20:04:41.490",
+   "dateFinished": "2023-04-30 20:04:41.490"
+  },
+  {
+   "settings": {
+    "params": {
      "bdtMeta": {
       "inlay": {
        "collapsed": true
@@ -13,15 +30,15 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "import org.apache.spark.sql.functions._\nval csvFacilities = \"/data/tp/Facilities.csv\" // Facilities file\n\nval df = spark.read.format(\"csv\") // Read CSV\n  .option(\"header\", \"true\") // First line is a header\n  .option(\"inferSchema\", \"true\") // infer the data types \n  .option(\"delimiter\", \";\") // Columns separated by ';'\n  .load(csvFacilities)\n\ndf.printSchema() // Schema of the data frame\ndf.show() // see the data frame data\n// df.cache()",
+   "text": "import org.apache.spark.sql.functions._\nval csvFacilities = \"/data/tp/Facilities.csv\" // Facilities file\n\nval df = spark.read.format(\"csv\") // Read CSV\n  .option(\"header\", \"true\") // First line is a header\n  .option(\"inferSchema\", \"true\") // infer the data types \n  .option(\"delimiter\", \";\") // Columns separated by ';'\n  .load(csvFacilities)\n\ndf.createOrReplaceTempView(FacilitesTable)\ndf.printSchema() // Schema of the data frame\ndf.show() // see the data frame data\n df.cache()",
    "id": "",
    "dateCreated": "2023-04-23 23:44:45.859",
    "config": {
     "tableHide": true
    },
-   "dateStarted": "2023-04-30 19:04:20.301",
-   "dateUpdated": "2023-04-30 19:04:20.668",
-   "dateFinished": "2023-04-30 19:04:20.668"
+   "dateStarted": "2023-04-30 20:04:41.498",
+   "dateUpdated": "2023-04-30 20:04:41.984",
+   "dateFinished": "2023-04-30 20:04:41.984"
   },
   {
    "user": "anonymous",
@@ -55,10 +72,10 @@
    "progressUpdateIntervalMs": 500,
    "focus": true,
    "$$hashKey": "object:394",
-   "text": "val csvHotel = \"/data/tp/Hotel.csv\" // Hotels file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvHotel)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Localização\", \"localizacao\")\n        .withColumnRenamed(\"Estrelas\", \"estrelas\")\n        .withColumnRenamed(\"Idade Máxima de Crianças (Anos)\", \"idade_max_criancas\")\n        .withColumnRenamed(\"Idade Máxima de Bebés (Meses)\", \"idade_max_bebes\")\n        .withColumnRenamed(\"Hora máxima de check-in\", \"hora_max_checkin\")\n        .withColumnRenamed(\"Quantidade de quartos\", \"qtd_quartos\")\n        .withColumn(\"hora_max_checkin\", to_timestamp(col(\"hora_max_checkin\")))\n\ndf.createOrReplaceTempView(\"Hotel\")\ndf.cache()\ndf.printSchema()\ndf.describe().show()\ndf.show()",
-   "dateStarted": "2023-04-30 19:04:20.678",
-   "dateUpdated": "2023-04-30 19:04:21.412",
-   "dateFinished": "2023-04-30 19:04:21.412"
+   "text": "val csvHotel = \"/data/tp/Hotel.csv\" // Hotels file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvHotel)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Localização\", \"localizacao\")\n        .withColumnRenamed(\"Estrelas\", \"estrelas\")\n        .withColumnRenamed(\"Idade Máxima de Crianças (Anos)\", \"idade_max_criancas\")\n        .withColumnRenamed(\"Idade Máxima de Bebés (Meses)\", \"idade_max_bebes\")\n        .withColumnRenamed(\"Hora máxima de check-in\", \"hora_max_checkin\")\n        .withColumnRenamed(\"Quantidade de quartos\", \"qtd_quartos\")\n        .withColumn(\"hora_max_checkin\", to_timestamp(col(\"hora_max_checkin\")))\n\ndf.createOrReplaceTempView(HotelTable)\ndf.cache()\ndf.printSchema()\ndf.describe().show()\ndf.show()",
+   "dateStarted": "2023-04-30 20:04:41.996",
+   "dateUpdated": "2023-04-30 20:04:42.438",
+   "dateFinished": "2023-04-30 20:04:42.438"
   },
   {
    "settings": {
@@ -71,15 +88,15 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "val csvTipologias = \"/data/tp/Tipologias.csv\" // Tipologias file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvTipologias)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Room ID\", \"room_ID\")\n        .withColumnRenamed(\"Tipo de quarto\", \"tipo_quarto\")\n        .withColumnRenamed(\"Quantidade\", \"quantidade\")\n        .withColumnRenamed(\"Capacidade máxima\", \"capacidade_maxima\")\n        .withColumnRenamed(\"Capacidade mínima\", \"capacidade_minima\") // !\n        .withColumnRenamed(\"Capacidade máxima de adultos\", \"capacidade_max_adultos\")\n        .withColumnRenamed(\"Capacidade mínima de adultos\", \"capacidade_min_adultos\") // !\n        .withColumnRenamed(\"Capacidade máxima de crianças\", \"capacidade_max_criancas\")\n        .withColumnRenamed(\"Capacidade mínima de crianças\", \"capacidade_min_criancas\") // !\n        .withColumnRenamed(\"Capacidade máxima de bebés\", \"capacidade_max_bebes\")\n        .withColumnRenamed(\"Capacidade máxima de camas extra\", \"capacidade_max_camas_extra\") // !\n        .withColumnRenamed(\"Capacidade máxima de camas extra (crianças)\", \"capacidade_max_camas_extra_criancas\") // !\n        .withColumnRenamed(\"Capacidade máxima de berços extra\", \"capacidade_max_bercos_extra\") // !\n\ndf.describe().show()\ndf.createOrReplaceTempView(\"Tipologias\")\ndf.cache()\ndf.printSchema()\ndf.show()",
+   "text": "val csvTipologias = \"/data/tp/Tipologias.csv\" // Tipologias file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvTipologias)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Room ID\", \"room_ID\")\n        .withColumnRenamed(\"Tipo de quarto\", \"tipo_quarto\")\n        .withColumnRenamed(\"Quantidade\", \"quantidade\")\n        .withColumnRenamed(\"Capacidade máxima\", \"capacidade_maxima\")\n        .withColumnRenamed(\"Capacidade mínima\", \"capacidade_minima\") // !\n        .withColumnRenamed(\"Capacidade máxima de adultos\", \"capacidade_max_adultos\")\n        .withColumnRenamed(\"Capacidade mínima de adultos\", \"capacidade_min_adultos\") // !\n        .withColumnRenamed(\"Capacidade máxima de crianças\", \"capacidade_max_criancas\")\n        .withColumnRenamed(\"Capacidade mínima de crianças\", \"capacidade_min_criancas\") // !\n        .withColumnRenamed(\"Capacidade máxima de bebés\", \"capacidade_max_bebes\")\n        .withColumnRenamed(\"Capacidade máxima de camas extra\", \"capacidade_max_camas_extra\") // !\n        .withColumnRenamed(\"Capacidade máxima de camas extra (crianças)\", \"capacidade_max_camas_extra_criancas\") // !\n        .withColumnRenamed(\"Capacidade máxima de berços extra\", \"capacidade_max_bercos_extra\") // !\n\n//df.describe().show()\ndf.createOrReplaceTempView(TipologiasTable)\ndf.cache()\ndf.printSchema()\n//df.show()",
    "id": "",
    "dateCreated": "2023-04-24 21:16:30.526",
    "config": {
     "tableHide": false
    },
-   "dateStarted": "2023-04-30 19:04:21.440",
-   "dateUpdated": "2023-04-30 19:04:22.726",
-   "dateFinished": "2023-04-30 19:04:22.726"
+   "dateStarted": "2023-04-30 20:04:42.463",
+   "dateUpdated": "2023-04-30 20:04:42.886",
+   "dateFinished": "2023-04-30 20:04:42.886"
   },
   {
    "settings": {
@@ -90,13 +107,13 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "val csvQuartosReservados= \"/data/tp/Quartos_Reservados.csv\" // Quartos_Reservados File\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvQuartosReservados)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Reserve ID\", \"Reserve_ID\")\n        .withColumnRenamed(\"País\", \"pais\")\n        .withColumnRenamed(\"Estado da reserva\", \"estado_reserva\")\n        .withColumnRenamed(\"Room ID\", \"room_ID\")\n        .withColumnRenamed(\"Tipo de Quarto\", \"tipo_quarto\") // !\n        .withColumnRenamed(\"RatePlan\", \"rate_plan\")\n        .withColumnRenamed(\"Data da reserva\", \"data_reserva\")\n        .withColumn(\"data_chegada\", to_date(col(\"Data chegada\"), \"dd/MM/yyyy\"))\n        .drop(\"Data chegada\")\n        .withColumn(\"data_partida\", to_date(col(\"Data de partida\"), \"dd/MM/yyyy\"))\n        .drop(\"Data de partida\")\n        .withColumnRenamed(\"Número de noites\", \"num_noites\")\n        .withColumnRenamed(\"Ocupação\", \"ocupacao\")\n        .withColumnRenamed(\"Adultos\", \"adultos\")\n        .withColumnRenamed(\"Crianças\", \"criancas\")\n        .withColumnRenamed(\"Bebés\", \"bebes\") // !\n        .withColumnRenamed(\"Preço (€)\", \"preco_euros\")\n\ndf.createOrReplaceTempView(\"Quartos_Reservados\")\ndf.cache()\ndf.printSchema()\n//df.show()\n//df.select(\"pais\", \"estado_reserva\", \"rate_plan\", \"data_reserva\", \"data_chegada\", \"data_partida\", \"num_noites\", \"ocupacao\", \"adultos\", \"criancas\", \"preco_euros\").describe().show()",
+   "text": "val csvQuartosReservados= \"/data/tp/Quartos_Reservados.csv\" // Quartos_Reservados File\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvQuartosReservados)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Reserve ID\", \"Reserve_ID\")\n        .withColumnRenamed(\"País\", \"pais\")\n        .withColumnRenamed(\"Estado da reserva\", \"estado_reserva\")\n        .withColumnRenamed(\"Room ID\", \"room_ID\")\n        .withColumnRenamed(\"Tipo de Quarto\", \"tipo_quarto\") // !\n        .withColumnRenamed(\"RatePlan\", \"rate_plan\")\n        .withColumnRenamed(\"Data da reserva\", \"data_reserva\")\n        .withColumn(\"data_chegada\", to_date(col(\"Data chegada\"), \"dd/MM/yyyy\"))\n        .drop(\"Data chegada\")\n        .withColumn(\"data_partida\", to_date(col(\"Data de partida\"), \"dd/MM/yyyy\"))\n        .drop(\"Data de partida\")\n        .withColumnRenamed(\"Número de noites\", \"num_noites\")\n        .withColumnRenamed(\"Ocupação\", \"ocupacao\")\n        .withColumnRenamed(\"Adultos\", \"adultos\")\n        .withColumnRenamed(\"Crianças\", \"criancas\")\n        .withColumnRenamed(\"Bebés\", \"bebes\") // !\n        .withColumnRenamed(\"Preço (€)\", \"preco_euros\")\n\ndf.createOrReplaceTempView(QuartosReservadosTable)\ndf.cache()\ndf.printSchema()\ndf.show()\n//df.select(\"pais\", \"estado_reserva\", \"rate_plan\", \"data_reserva\", \"data_chegada\", \"data_partida\", \"num_noites\", \"ocupacao\", \"adultos\", \"criancas\", \"preco_euros\").describe().show()",
    "id": "",
    "dateCreated": "2023-04-24 21:18:31.653",
    "config": {},
-   "dateStarted": "2023-04-30 19:04:22.753",
-   "dateUpdated": "2023-04-30 19:04:23.721",
-   "dateFinished": "2023-04-30 19:04:23.721"
+   "dateStarted": "2023-04-30 20:26:49.726",
+   "dateUpdated": "2023-04-30 20:26:50.252",
+   "dateFinished": "2023-04-30 20:26:50.252"
   },
   {
    "settings": {
@@ -107,13 +124,13 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "val csvFeriados= \"/data/tp/Feriados.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n        .load(csvFeriados)\n        .withColumn(\"Date\", to_date(col(\"date\"), \"dd/MM/yyyy\"))\n\ndf.createOrReplaceTempView(\"Feriados\")\ndf.cache()\ndf.printSchema()\ndf.describe().show()\ndf.show()",
+   "text": "val csvFeriados= \"/data/tp/Feriados.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n        .load(csvFeriados)\n        .withColumn(\"date\", to_date(col(\"date\"), \"dd/MM/yyyy\"))\n\ndf.createOrReplaceTempView(FeriadosTable)\ndf.cache()\ndf.printSchema()\ndf.describe().show()\ndf.show()",
    "id": "",
    "dateCreated": "2023-04-24 22:00:30.321",
    "config": {},
-   "dateStarted": "2023-04-30 19:04:23.730",
-   "dateUpdated": "2023-04-30 19:04:24.161",
-   "dateFinished": "2023-04-30 19:04:24.161"
+   "dateStarted": "2023-04-30 20:15:09.550",
+   "dateUpdated": "2023-04-30 20:15:09.950",
+   "dateFinished": "2023-04-30 20:15:09.950"
   }
  ],
  "name": "Zeppelin Notebook",
