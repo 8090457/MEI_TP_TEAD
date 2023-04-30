@@ -1,0 +1,487 @@
+{
+ "paragraphs": [
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "inlay": {
+       "collapsed": true
+      },
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "Date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "day",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "dayOfWeek",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "month",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "trimester",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "year",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "is_holiday",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "portugueseWeekName",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "import org.apache.spark.sql.functions._\nval csvFacilities = \"/data/tp/Facilities.csv\" // Facilities file\n\nval df = spark.read.format(\"csv\") // Read CSV\n  .option(\"header\", \"true\") // First line is a header\n  .option(\"inferSchema\", \"true\") // infer the data types \n  .option(\"delimiter\", \";\") // Columns separated by ';'\n  .load(csvFacilities)\n\ndf.printSchema() // Schema of the data frame\ndf.show() // see the data frame data\n// df.cache()",
+   "id": "",
+   "dateCreated": "2023-04-23 23:44:45.859",
+   "config": {
+    "tableHide": true
+   },
+   "dateStarted": "2023-04-30 19:04:20.301",
+   "dateUpdated": "2023-04-30 19:04:20.668",
+   "dateFinished": "2023-04-30 19:04:20.668",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "root\n |-- Hotel ID: integer (nullable = true)\n |-- Facility ID: integer (nullable = true)\n |-- Nome: string (nullable = true)\n\n+--------+-----------+--------------------+\n|Hotel ID|Facility ID|                Nome|\n+--------+-----------+--------------------+\n|      16|        230|         Mom Kitchen|\n|      16|        231|        Diet Deserts|\n|      60|        232|Entry into the fi...|\n|      60|        233|              Hiking|\n|      60|        234|            Hammocks|\n|      60|        235|       Double shower|\n|      60|        236|Green area to pra...|\n|      60|        237|Live music on Sat...|\n|      60|        238|Bonfire with live...|\n|      86|        239|Newspapers in com...|\n|      86|        240| Baggage consignment|\n|      86|        241|    Covered car park|\n|      63|        242|             Heating|\n|      24|        243|     Parque Infantil|\n|      47|        265|          Playground|\n|      47|        266|           Mini Golf|\n|      68|        267|King size spring ...|\n|      68|        268|Queen size spring...|\n|      68|        269|Basket off season...|\n|      68|        270|Extra pillows and...|\n+--------+-----------+--------------------+\nonly showing top 20 rows\n\nimport org.apache.spark.sql.functions._\n\u001b[1m\u001b[34mcsvFacilities\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Facilities.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Hotel ID: int, Facility ID: int ... 1 more field]\n"
+     }
+    ]
+   }
+  },
+  {
+   "user": "anonymous",
+   "config": {
+    "colWidth": 12,
+    "fontSize": 9,
+    "enabled": true,
+    "results": {},
+    "editorSetting": {
+     "language": "scala",
+     "editOnDblClick": false,
+     "completionKey": "TAB",
+     "completionSupport": true
+    },
+    "editorMode": "ace/mode/scala",
+    "tableHide": false
+   },
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "inlay": {},
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "Date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "day",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "dayOfWeek",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "month",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "trimester",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "year",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "is_holiday",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "portugueseWeekName",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "jobName": "paragraph_1563110258183_1613653816",
+   "id": "20190714-161738_1950435706",
+   "dateCreated": "2019-07-14T16:17:38+0300",
+   "status": "FINISHED",
+   "progressUpdateIntervalMs": 500,
+   "focus": true,
+   "$$hashKey": "object:394",
+   "text": "val csvHotel = \"/data/tp/Hotel.csv\" // Hotels file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvHotel)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Localização\", \"localizacao\")\n        .withColumnRenamed(\"Estrelas\", \"estrelas\")\n        .withColumnRenamed(\"Idade Máxima de Crianças (Anos)\", \"idade_max_criancas\")\n        .withColumnRenamed(\"Idade Máxima de Bebés (Meses)\", \"idade_max_bebes\")\n        .withColumnRenamed(\"Hora máxima de check-in\", \"hora_max_checkin\")\n        .withColumnRenamed(\"Quantidade de quartos\", \"qtd_quartos\")\n        .withColumn(\"hora_max_checkin\", to_timestamp(col(\"hora_max_checkin\")))\n\ndf.createOrReplaceTempView(\"Hotel\")\ndf.cache()\ndf.printSchema()\ndf.describe().show()\ndf.show()",
+   "dateStarted": "2023-04-30 19:04:20.678",
+   "dateUpdated": "2023-04-30 19:04:21.412",
+   "dateFinished": "2023-04-30 19:04:21.412",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "root\n |-- hotel_ID: integer (nullable = true)\n |-- localizacao: string (nullable = true)\n |-- estrelas: integer (nullable = true)\n |-- idade_max_criancas: integer (nullable = true)\n |-- idade_max_bebes: integer (nullable = true)\n |-- hora_max_checkin: timestamp (nullable = true)\n |-- qtd_quartos: integer (nullable = true)\n\n+-------+------------------+-----------+------------------+------------------+------------------+------------------+\n|summary|          hotel_ID|localizacao|          estrelas|idade_max_criancas|   idade_max_bebes|       qtd_quartos|\n+-------+------------------+-----------+------------------+------------------+------------------+------------------+\n|  count|               145|        145|               145|               145|               145|               145|\n|   mean| 395.7586206896552|       null|1.7862068965517242| 7.324137931034483|20.020689655172415|30.020689655172415|\n| stddev|118.24939956754241|       null| 1.780239555105778| 6.145100531024569|20.013699809795995|33.797080118274614|\n|    min|                20|          .|                 0|                 0|                 0|                 1|\n|    max|               561|      teste|                 5|                36|               168|               192|\n+-------+------------------+-----------+------------------+------------------+------------------+------------------+\n\n+--------+-----------------+--------+------------------+---------------+-------------------+-----------+\n|hotel_ID|      localizacao|estrelas|idade_max_criancas|idade_max_bebes|   hora_max_checkin|qtd_quartos|\n+--------+-----------------+--------+------------------+---------------+-------------------+-----------+\n|      20|            Viseu|       3|                10|             24|2023-04-30 23:30:00|         30|\n|      44|   Pinhão - Alijó|       3|                12|             24|2023-04-30 23:00:00|         10|\n|      49|           Lamego|       4|                15|             36|2023-04-30 23:59:00|         51|\n|      54| Póvoa de Lanhoso|       3|                12|             36|2023-04-30 23:59:00|         21|\n|     167|           Lisboa|       4|                12|             36|2023-04-30 23:59:00|         62|\n|     179|            Porto|       4|                12|             24|2023-04-30 23:59:00|        132|\n|     185|Valdigem - Lamego|       4|                12|             36|2023-04-30 23:00:00|         20|\n|     206|            Porto|       3|                 0|              0|2023-04-30 18:00:00|          7|\n|     225|            Porto|       0|                 2|             24|2023-04-30 17:00:00|          5|\n|     226|           Lisboa|       0|                 2|             24|2023-04-30 17:00:00|          2|\n|     237|           Lisboa|       3|                11|             24|2023-04-30 23:59:00|         91|\n|     238|          Funchal|       3|                 8|             23|2023-04-30 23:30:00|         52|\n|     241|           Lisboa|       0|                 5|             24|2023-04-30 20:00:00|         25|\n|     242|           Lisboa|       0|                 5|             24|2023-04-30 20:00:00|          8|\n|     259|        Guimarães|       4|                11|             36|2023-04-30 23:59:00|         22|\n|     269|             Ovar|       4|                12|             24|2023-04-30 23:59:00|         50|\n|     273| Seixas - Caminha|       0|                 0|              0|2023-04-30 12:00:00|         14|\n|     276|            Braga|       4|                12|             24|2023-04-30 23:59:00|         17|\n|     277|            Braga|       3|                 0|              0|2023-04-30 18:00:00|         20|\n|     278|            Braga|       4|                 0|              0|2023-04-30 18:00:00|         29|\n+--------+-----------------+--------+------------------+---------------+-------------------+-----------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mcsvHotel\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Hotel.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, localizacao: string ... 5 more fields]\n"
+     }
+    ]
+   }
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "inlay": {},
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "Date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "day",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "dayOfWeek",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "month",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "trimester",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "year",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "is_holiday",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "portugueseWeekName",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val csvTipologias = \"/data/tp/Tipologias.csv\" // Tipologias file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvTipologias)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Room ID\", \"room_ID\")\n        .withColumnRenamed(\"Tipo de quarto\", \"tipo_quarto\")\n        .withColumnRenamed(\"Quantidade\", \"quantidade\")\n        .withColumnRenamed(\"Capacidade máxima\", \"capacidade_maxima\")\n        .withColumnRenamed(\"Capacidade mínima\", \"capacidade_minima\") // !\n        .withColumnRenamed(\"Capacidade máxima de adultos\", \"capacidade_max_adultos\")\n        .withColumnRenamed(\"Capacidade mínima de adultos\", \"capacidade_min_adultos\") // !\n        .withColumnRenamed(\"Capacidade máxima de crianças\", \"capacidade_max_criancas\")\n        .withColumnRenamed(\"Capacidade mínima de crianças\", \"capacidade_min_criancas\") // !\n        .withColumnRenamed(\"Capacidade máxima de bebés\", \"capacidade_max_bebes\")\n        .withColumnRenamed(\"Capacidade máxima de camas extra\", \"capacidade_max_camas_extra\") // !\n        .withColumnRenamed(\"Capacidade máxima de camas extra (crianças)\", \"capacidade_max_camas_extra_criancas\") // !\n        .withColumnRenamed(\"Capacidade máxima de berços extra\", \"capacidade_max_bercos_extra\") // !\n\ndf.describe().show()\ndf.createOrReplaceTempView(\"Tipologias\")\ndf.cache()\ndf.printSchema()\ndf.show()",
+   "id": "",
+   "dateCreated": "2023-04-24 21:16:30.526",
+   "config": {
+    "tableHide": false
+   },
+   "dateStarted": "2023-04-30 19:04:21.440",
+   "dateUpdated": "2023-04-30 19:04:22.726",
+   "dateFinished": "2023-04-30 19:04:22.726",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "+-------+------------------+------------------+--------------------+-----------------+------------------+------------------+----------------------+----------------------+-----------------------+-----------------------+--------------------+--------------------------+-----------------------------------+---------------------------+\n|summary|          hotel_ID|           room_ID|         tipo_quarto|       quantidade| capacidade_maxima| capacidade_minima|capacidade_max_adultos|capacidade_min_adultos|capacidade_max_criancas|capacidade_min_criancas|capacidade_max_bebes|capacidade_max_camas_extra|capacidade_max_camas_extra_criancas|capacidade_max_bercos_extra|\n+-------+------------------+------------------+--------------------+-----------------+------------------+------------------+----------------------+----------------------+-----------------------+-----------------------+--------------------+--------------------------+-----------------------------------+---------------------------+\n|  count|               741|               741|                 741|              741|               741|               741|                   741|                   741|                    741|                    741|                 741|                       741|                                741|                        741|\n|   mean| 384.0229419703104|2021.7665317139001|                null|5.224021592442645|               3.0|1.0917678812415654|     2.748987854251012|    1.1012145748987854|     1.0769230769230769|   0.020242914979757085|  0.5951417004048583|       0.14709851551956815|                0.15519568151147098|         0.3616734143049933|\n| stddev|116.89714010550753|  630.089084874799|                null|8.710572359607925|1.4275285768900876|0.5809588812676403|    1.3453180779776073|    0.5943528241466249|     1.3767447822404102|     0.1589507669625343|  0.6415168996967767|       0.38019600529692493|                 0.4079488849575179|         0.5539435098604999|\n|    min|                20|                81|   Estúdio com Va...|                0|                 1|                 1|                     1|                     1|                      0|                      0|                   0|                         0|                                  0|                          0|\n|    max|               561|              2905|                Água|               90|                10|                10|                    10|                    10|                      8|                      2|                   3|                         2|                                  2|                          2|\n+-------+------------------+------------------+--------------------+-----------------+------------------+------------------+----------------------+----------------------+-----------------------+-----------------------+--------------------+--------------------------+-----------------------------------+---------------------------+\n\nroot\n |-- hotel_ID: integer (nullable = true)\n |-- room_ID: integer (nullable = true)\n |-- tipo_quarto: string (nullable = true)\n |-- quantidade: integer (nullable = true)\n |-- capacidade_maxima: integer (nullable = true)\n |-- capacidade_minima: integer (nullable = true)\n |-- capacidade_max_adultos: integer (nullable = true)\n |-- capacidade_min_adultos: integer (nullable = true)\n |-- capacidade_max_criancas: integer (nullable = true)\n |-- capacidade_min_criancas: integer (nullable = true)\n |-- capacidade_max_bebes: integer (nullable = true)\n |-- capacidade_max_camas_extra: integer (nullable = true)\n |-- capacidade_max_camas_extra_criancas: integer (nullable = true)\n |-- capacidade_max_bercos_extra: integer (nullable = true)\n\n+--------+-------+--------------------+----------+-----------------+-----------------+----------------------+----------------------+-----------------------+-----------------------+--------------------+--------------------------+-----------------------------------+---------------------------+\n|hotel_ID|room_ID|         tipo_quarto|quantidade|capacidade_maxima|capacidade_minima|capacidade_max_adultos|capacidade_min_adultos|capacidade_max_criancas|capacidade_min_criancas|capacidade_max_bebes|capacidade_max_camas_extra|capacidade_max_camas_extra_criancas|capacidade_max_bercos_extra|\n+--------+-------+--------------------+----------+-----------------+-----------------+----------------------+----------------------+-----------------------+-----------------------+--------------------+--------------------------+-----------------------------------+---------------------------+\n|      20|     81|       STANDART ROOM|        24|                2|                1|                     2|                     1|                      2|                      0|                   1|                         1|                                  0|                          0|\n|      44|     85| Quarto Vista Pinhão|         6|                2|                1|                     2|                     1|                      0|                      0|                   0|                         0|                                  0|                          0|\n|      49|     92|        Quarto Duplo|        10|                4|                1|                     2|                     1|                      1|                      0|                   1|                         0|                                  1|                          1|\n|      49|     93|       Quarto Single|        10|                2|                1|                     1|                     1|                      1|                      0|                   1|                         0|                                  0|                          0|\n|      49|     94|     Suite Executiva|         1|                4|                1|                     2|                     1|                      1|                      0|                   1|                         0|                                  0|                          0|\n|      54|    167|         Quarto Twin|         5|                3|                1|                     2|                     1|                      2|                      0|                   1|                         0|                                  0|                          0|\n|      54|    168|Suite Junior (rom...|         1|                2|                1|                     2|                     1|                      2|                      0|                   2|                         2|                                  2|                          0|\n|      54|    169|Suite Standard (f...|         1|                4|                1|                     2|                     1|                      2|                      0|                   2|                         0|                                  0|                          0|\n|      44|    188|                Twin|         1|                3|                1|                     2|                     1|                      0|                      0|                   1|                         0|                                  1|                          0|\n|      44|    189|  Suite Vista Pinhão|         1|                4|                2|                     4|                     1|                      0|                      0|                   1|                         0|                                  1|                          0|\n|      44|    190|Quarto Vista Tras...|         2|                2|                1|                     2|                     1|                      0|                      0|                   1|                         0|                                  0|                          0|\n|      49|    211|\"Quarto Duplo \"\"T...|         5|                3|                1|                     2|                     1|                      1|                      0|                   1|                         0|                                  0|                          0|\n|      49|    212|\"Suite \"\"DD\"\"ouro...|         1|                4|                1|                     2|                     1|                      1|                      0|                   1|                         0|                                  0|                          0|\n|      20|    372|      EXECUTIVE ROOM|         2|                2|                1|                     2|                     1|                      2|                      0|                   1|                         1|                                  0|                          0|\n|     167|    597|            STANDARD|        10|                3|                1|                     2|                     1|                      0|                      0|                   0|                         0|                                  0|                          0|\n|     167|    598|SUPERIOR DOUBLE /...|        20|                2|                1|                     2|                     1|                      0|                      0|                   0|                         0|                                  0|                          0|\n|     167|    599|DELUXE DOUBLE / TWIN|        10|                2|                1|                     2|                     1|                      0|                      0|                   0|                         0|                                  0|                          0|\n|     167|    618|PREMIUM DOUBLE / ...|        10|                2|                1|                     2|                     1|                      0|                      0|                   0|                         0|                                  0|                          0|\n|     179|    629|      Single Comfort|        10|                1|                1|                     1|                     1|                      0|                      0|                   0|                         0|                                  0|                          0|\n|     179|    630|      Duplo  Comfort|        27|                2|                1|                     2|                     1|                      0|                      0|                   0|                         0|                                  0|                          0|\n+--------+-------+--------------------+----------+-----------------+-----------------+----------------------+----------------------+-----------------------+-----------------------+--------------------+--------------------------+-----------------------------------+---------------------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mcsvTipologias\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Tipologias.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 12 more fields]\n"
+     }
+    ]
+   }
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "Date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "day",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "dayOfWeek",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "month",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "trimester",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "year",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "is_holiday",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "portugueseWeekName",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val csvQuartosReservados= \"/data/tp/Quartos_Reservados.csv\" // Quartos_Reservados File\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvQuartosReservados)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Reserve ID\", \"Reserve_ID\")\n        .withColumnRenamed(\"País\", \"pais\")\n        .withColumnRenamed(\"Estado da reserva\", \"estado_reserva\")\n        .withColumnRenamed(\"Room ID\", \"room_ID\")\n        .withColumnRenamed(\"Tipo de Quarto\", \"tipo_quarto\") // !\n        .withColumnRenamed(\"RatePlan\", \"rate_plan\")\n        .withColumnRenamed(\"Data da reserva\", \"data_reserva\")\n        .withColumn(\"data_chegada\", to_date(col(\"Data chegada\"), \"dd/MM/yyyy\"))\n        .drop(\"Data chegada\")\n        .withColumn(\"data_partida\", to_date(col(\"Data de partida\"), \"dd/MM/yyyy\"))\n        .drop(\"Data de partida\")\n        .withColumnRenamed(\"Número de noites\", \"num_noites\")\n        .withColumnRenamed(\"Ocupação\", \"ocupacao\")\n        .withColumnRenamed(\"Adultos\", \"adultos\")\n        .withColumnRenamed(\"Crianças\", \"criancas\")\n        .withColumnRenamed(\"Bebés\", \"bebes\") // !\n        .withColumnRenamed(\"Preço (€)\", \"preco_euros\")\n\ndf.createOrReplaceTempView(\"Quartos_Reservados\")\ndf.cache()\ndf.printSchema()\n//df.show()\n//df.select(\"pais\", \"estado_reserva\", \"rate_plan\", \"data_reserva\", \"data_chegada\", \"data_partida\", \"num_noites\", \"ocupacao\", \"adultos\", \"criancas\", \"preco_euros\").describe().show()",
+   "id": "",
+   "dateCreated": "2023-04-24 21:18:31.653",
+   "config": {},
+   "dateStarted": "2023-04-30 19:04:22.753",
+   "dateUpdated": "2023-04-30 19:04:23.721",
+   "dateFinished": "2023-04-30 19:04:23.721",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "root\n |-- hotel_ID: integer (nullable = true)\n |-- Reserve_ID: integer (nullable = true)\n |-- pais: string (nullable = true)\n |-- estado_reserva: string (nullable = true)\n |-- room_ID: integer (nullable = true)\n |-- tipo_quarto: string (nullable = true)\n |-- rate_plan: string (nullable = true)\n |-- data_reserva: timestamp (nullable = true)\n |-- num_noites: integer (nullable = true)\n |-- ocupacao: integer (nullable = true)\n |-- adultos: integer (nullable = true)\n |-- criancas: integer (nullable = true)\n |-- bebes: integer (nullable = true)\n |-- preco_euros: double (nullable = true)\n |-- data_chegada: date (nullable = true)\n |-- data_partida: date (nullable = true)\n\n\u001b[1m\u001b[34mcsvQuartosReservados\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Quartos_Reservados.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 14 more fields]\n"
+     }
+    ]
+   }
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "Date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "day",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "dayOfWeek",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "month",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "trimester",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "year",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "is_holiday",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "portugueseWeekName",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val csvFeriados= \"/data/tp/Feriados.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n        .load(csvFeriados)\n        .withColumn(\"Date\", to_date(col(\"date\"), \"dd/MM/yyyy\"))\n\ndf.createOrReplaceTempView(\"Feriados\")\ndf.cache()\ndf.printSchema()\ndf.describe().show()\ndf.show()",
+   "id": "",
+   "dateCreated": "2023-04-24 22:00:30.321",
+   "config": {},
+   "dateStarted": "2023-04-30 19:04:23.730",
+   "dateUpdated": "2023-04-30 19:04:24.161",
+   "dateFinished": "2023-04-30 19:04:24.161",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "root\n |-- Date: date (nullable = true)\n |-- day: integer (nullable = true)\n |-- dayOfWeek: integer (nullable = true)\n |-- month: integer (nullable = true)\n |-- trimester: integer (nullable = true)\n |-- year: integer (nullable = true)\n |-- is_holiday: integer (nullable = true)\n |-- portugueseWeekName: string (nullable = true)\n\n+-------+-----------------+------------------+-----------------+------------------+------------------+--------------------+------------------+\n|summary|              day|         dayOfWeek|            month|         trimester|              year|          is_holiday|portugueseWeekName|\n+-------+-----------------+------------------+-----------------+------------------+------------------+--------------------+------------------+\n|  count|              730|               730|              730|               730|               730|                 730|               730|\n|   mean|15.72054794520548|               4.0|6.526027397260274|2.5095890410958903|            2022.5|0.038356164383561646|              null|\n| stddev|8.802278027009615|2.0047953485517556| 3.45021529306815| 1.117532602466349|0.5003428180045024| 0.19218627865352142|              null|\n|    min|                1|                 1|                1|                 1|              2022|                   0|           Domingo|\n|    max|               31|                 7|               12|                 4|              2023|                   1|       Ter�a-feira|\n+-------+-----------------+------------------+-----------------+------------------+------------------+--------------------+------------------+\n\n+----------+---+---------+-----+---------+----+----------+------------------+\n|      Date|day|dayOfWeek|month|trimester|year|is_holiday|portugueseWeekName|\n+----------+---+---------+-----+---------+----+----------+------------------+\n|2022-01-01|  1|        7|    1|        1|2022|         1|            S�bado|\n|2022-01-02|  2|        1|    1|        1|2022|         0|           Domingo|\n|2022-01-03|  3|        2|    1|        1|2022|         0|     Segunda-feira|\n|2022-01-04|  4|        3|    1|        1|2022|         0|       Ter�a-feira|\n|2022-01-05|  5|        4|    1|        1|2022|         0|      Quarta-feira|\n|2022-01-06|  6|        5|    1|        1|2022|         0|      Quinta-feira|\n|2022-01-07|  7|        6|    1|        1|2022|         0|       Sexta-feira|\n|2022-01-08|  8|        7|    1|        1|2022|         0|            S�bado|\n|2022-01-09|  9|        1|    1|        1|2022|         0|           Domingo|\n|2022-01-10| 10|        2|    1|        1|2022|         0|     Segunda-feira|\n|2022-01-11| 11|        3|    1|        1|2022|         0|       Ter�a-feira|\n|2022-01-12| 12|        4|    1|        1|2022|         0|      Quarta-feira|\n|2022-01-13| 13|        5|    1|        1|2022|         0|      Quinta-feira|\n|2022-01-14| 14|        6|    1|        1|2022|         0|       Sexta-feira|\n|2022-01-15| 15|        7|    1|        1|2022|         0|            S�bado|\n|2022-01-16| 16|        1|    1|        1|2022|         0|           Domingo|\n|2022-01-17| 17|        2|    1|        1|2022|         0|     Segunda-feira|\n|2022-01-18| 18|        3|    1|        1|2022|         0|       Ter�a-feira|\n|2022-01-19| 19|        4|    1|        1|2022|         0|      Quarta-feira|\n|2022-01-20| 20|        5|    1|        1|2022|         0|      Quinta-feira|\n+----------+---+---------+-----+---------+----+----------+------------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mcsvFeriados\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Feriados.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Date: date, day: int ... 6 more fields]\n"
+     }
+    ]
+   }
+  }
+ ],
+ "name": "Zeppelin Notebook",
+ "id": "",
+ "noteParams": {},
+ "noteForms": {},
+ "angularObjects": {},
+ "config": {
+  "isZeppelinNotebookCronEnable": false,
+  "looknfeel": "default",
+  "personalizedMode": "false"
+ },
+ "info": {}
+}
