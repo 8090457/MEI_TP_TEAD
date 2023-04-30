@@ -1,0 +1,114 @@
+{
+ "paragraphs": [
+  {
+   "user": "anonymous",
+   "config": {
+    "colWidth": 12,
+    "fontSize": 9,
+    "enabled": true,
+    "results": {},
+    "editorSetting": {
+     "language": "scala",
+     "editOnDblClick": false,
+     "completionKey": "TAB",
+     "completionSupport": true
+    },
+    "editorMode": "ace/mode/scala"
+   },
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estrelas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hora_max_checkin",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "qtd_quartos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "jobName": "paragraph_1563110258183_1613653816",
+   "id": "20190714-161738_1950435706",
+   "dateCreated": "2019-07-14T16:17:38+0300",
+   "status": "FINISHED",
+   "progressUpdateIntervalMs": 500,
+   "focus": true,
+   "$$hashKey": "object:394",
+   "text": "var result = spark.sql(\n    \"\"\"select * from Hotel\n      \n      \"\"\"\n)\n\nresult.show()",
+   "dateStarted": "2023-04-30 22:31:38.905",
+   "dateUpdated": "2023-04-30 22:31:39.128",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "+--------+-----------------+--------+------------------+---------------+-------------------+-----------+\n|hotel_ID|      localizacao|estrelas|idade_max_criancas|idade_max_bebes|   hora_max_checkin|qtd_quartos|\n+--------+-----------------+--------+------------------+---------------+-------------------+-----------+\n|      20|            Viseu|       3|                10|             24|2023-04-30 23:30:00|         30|\n|      44|   Pinhão - Alijó|       3|                12|             24|2023-04-30 23:00:00|         10|\n|      49|           Lamego|       4|                15|             36|2023-04-30 23:59:00|         51|\n|      54| Póvoa de Lanhoso|       3|                12|             36|2023-04-30 23:59:00|         21|\n|     167|           Lisboa|       4|                12|             36|2023-04-30 23:59:00|         62|\n|     179|            Porto|       4|                12|             24|2023-04-30 23:59:00|        132|\n|     185|Valdigem - Lamego|       4|                12|             36|2023-04-30 23:00:00|         20|\n|     206|            Porto|       3|                 0|              0|2023-04-30 18:00:00|          7|\n|     225|            Porto|       0|                 2|             24|2023-04-30 17:00:00|          5|\n|     226|           Lisboa|       0|                 2|             24|2023-04-30 17:00:00|          2|\n|     237|           Lisboa|       3|                11|             24|2023-04-30 23:59:00|         91|\n|     238|          Funchal|       3|                 8|             23|2023-04-30 23:30:00|         52|\n|     241|           Lisboa|       0|                 5|             24|2023-04-30 20:00:00|         25|\n|     242|           Lisboa|       0|                 5|             24|2023-04-30 20:00:00|          8|\n|     259|        Guimarães|       4|                11|             36|2023-04-30 23:59:00|         22|\n|     269|             Ovar|       4|                12|             24|2023-04-30 23:59:00|         50|\n|     273| Seixas - Caminha|       0|                 0|              0|2023-04-30 12:00:00|         14|\n|     276|            Braga|       4|                12|             24|2023-04-30 23:59:00|         17|\n|     277|            Braga|       3|                 0|              0|2023-04-30 18:00:00|         20|\n|     278|            Braga|       4|                 0|              0|2023-04-30 18:00:00|         29|\n+--------+-----------------+--------+------------------+---------------+-------------------+-----------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mresult\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, localizacao: string ... 5 more fields]\n"
+     }
+    ]
+   },
+   "dateFinished": "2023-04-30 22:31:39.128"
+  }
+ ],
+ "name": "Zeppelin Notebook",
+ "id": "",
+ "noteParams": {},
+ "noteForms": {},
+ "angularObjects": {},
+ "config": {
+  "isZeppelinNotebookCronEnable": false,
+  "looknfeel": "default",
+  "personalizedMode": "false"
+ },
+ "info": {}
+}

@@ -54,7 +54,8 @@
      "completionSupport": true
     },
     "editorMode": "ace/mode/scala",
-    "tableHide": false
+    "tableHide": false,
+    "editorHide": false
    },
    "settings": {
     "params": {
@@ -68,14 +69,23 @@
    "jobName": "paragraph_1563110258183_1613653816",
    "id": "20190714-161738_1950435706",
    "dateCreated": "2019-07-14T16:17:38+0300",
-   "status": "FINISHED",
+   "status": "ERROR",
    "progressUpdateIntervalMs": 500,
    "focus": true,
    "$$hashKey": "object:394",
-   "text": "val csvHotel = \"/data/tp/Hotel.csv\" // Hotels file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvHotel)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Localização\", \"localizacao\")\n        .withColumnRenamed(\"Estrelas\", \"estrelas\")\n        .withColumnRenamed(\"Idade Máxima de Crianças (Anos)\", \"idade_max_criancas\")\n        .withColumnRenamed(\"Idade Máxima de Bebés (Meses)\", \"idade_max_bebes\")\n        .withColumnRenamed(\"Hora máxima de check-in\", \"hora_max_checkin\")\n        .withColumnRenamed(\"Quantidade de quartos\", \"qtd_quartos\")\n        .withColumn(\"hora_max_checkin\", to_timestamp(col(\"hora_max_checkin\")))\n\ndf.createOrReplaceTempView(HotelTable)\ndf.cache()\ndf.printSchema()\ndf.describe().show()\ndf.show()",
-   "dateStarted": "2023-04-30 21:52:01.705",
-   "dateUpdated": "2023-04-30 21:52:02.199",
-   "dateFinished": "2023-04-30 21:52:02.199"
+   "text": "import org.apache.spark.sql.Column\n\nval csvHotel = \"/data/tp/Hotel.csv\" // Hotels file\nval Acores = List (\"Açores\", \"Furnas S. Miguel - Açores\", \"Lagoa, Açores\",\"Ponta Delgada\",\"São Vicente Ferreira, São Miguel - Açores\", \"Velas\")\nval Albufeira = List(\"Albufeira - Algarve\", \"Alte\", \"Benafim\", \"Conceição de Tavira\", \"Fuseta\", \"Olhão\", \"Olhos D'Água\", \"São Brás de Alportel\", \"Silves\", \"Tavira\", \"Vilamoura\")\nval Alcobaca = List(\"Alcanena\", \"Alcobaça\", \"São Martinho do Porto\")\nval Alijo = List(\"Alijó\", \"Pinhão - Alijó\")\nval Amares = List(\"Amares\", \"Braga\", \"Póvoa de Lanhoso\", \"Tomar\", \"Torres Novas\")\nval Aveiro = List(\"Aveiro\")\nval Batalha = List(\"Batalha\", \"Nazaré\")\nval Braganca = List(\"Alto dos Lombos\")\nval Campo_Maior = List(\"Campo Maior\")\nval Carnaxide = List(\"Almada\", \"Carnaxide\", \"Charneca de Caparica\", \"Lisboa\")\nval Carvavelos = List(\"Carcavelos\", \"Cascais\", \"Estoril\")\nval Castelo_Branco = List(\"Castelo Branco\", \"Covilhã\", \"Sabugueiro / Seia\", \"Vale do Peso\")\nval Chaves = List(\"Chaves\", \"Lamego\", \"Mesão Frio\", \"Valdigem - Lamego\")\nval Coimbra = List(\"Coimbra\", \"Travanca do Mondego\")\nval Elvas = List(\"ELVAS\")\nval Espinho = List(\"Espinho\", \"Ovar\", \"Viseu\")\nval Evora = List(\"Evora\")\nval Funchal = List(\"Câmara de Lobos\", \"Funchal\")\nval Guimaraes = List(\"Guimarães\")\nval Lagos = List(\"Lagos\", \"Portimão\", \"Sagres\")\nval Maia = List(\"Maia\")\nval Moncao = List(\"Monção\", \"Valença do Minho\")\nval Obidos = List(\"Obidos\")\nval Porto = List(\"Ermesinde\", \"Gaia\", \"Lousada\", \"Madalena\", \"Porto\", \"União de Freguesias do Centro\", \"Valongo\", \"Valpedre - Penafiel\", \"Vila Meã\", \"Vila Nova de Gaia\")\nval Praia_da_Vitoria = List(\"Praia da Vitória\")\nval Sintra = List(\"Sintra\")\nval Viana_do_Castelo = List(\"Seixas - Caminha\", \"Valença, Viana do Castelo\", \"Viana do Castelo\", \"Vila Praia de Âncora\")\n\n\ndef getArea(col: Column) = {\n    when(col.isin(Acores), \"Açores\")\n        .when(col.isin(Albufeira), \"Albufeira\")\n        .when(col.isin(Alcobaca), \"Alcobaça\")\n        .when(col.isin(Alijo), \"Alijó\")\n        .when(col.isin(Aveiro), \"Aveiro\")\n        .when(col.isin(Batalha), \"Batalha\")\n        .when(col.isin(Braganca), \"Bragança\")\n        .when(col.isin(Campo_Maior), \"Campo Maior\")\n        .when(col.isin(Castelo_Branco), \"Castelo Branco\")\n        .when(col.isin(Chaves), \"Chaves\")\n        .when(col.isin(Coimbra), \"Coimbra\")\n        .when(col.isin(Elvas), \"Elvas\")\n        .when(col.isin(Funchal), \"Funchal\")\n        .when(col.isin(Guimaraes), \"Guimarães\")\n        .when(col.isin(Lagos), \"Lagos\")\n        .when(col.isin(Maia), \"Maia\")\n        .when(col.isin(Moncao), \"Moncao\")\n        .when(col.isin(Obidos), \"Obidos\")\n        .when(col.isin(Porto), \"Porto\")\n        .when(col.isin(Praia_da_Vitoria), \"Praia da Vitória\")\n        .when(col.isin(Sintra), \"Sintra\")\n        .when(col.isin(Viana_do_Castelo), \"Viana_do_Castelo\")\n        .otherwise(col(\"localizacao\"))\n}\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvHotel)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Localização\", \"localizacao\")\n        .withColumnRenamed(\"Estrelas\", \"estrelas\")\n        .withColumnRenamed(\"Idade Máxima de Crianças (Anos)\", \"idade_max_criancas\")\n        .withColumnRenamed(\"Idade Máxima de Bebés (Meses)\", \"idade_max_bebes\")\n        .withColumnRenamed(\"Hora máxima de check-in\", \"hora_max_checkin\")\n        .withColumnRenamed(\"Quantidade de quartos\", \"qtd_quartos\")\n        .withColumn(\"hora_max_checkin\", to_timestamp(col(\"hora_max_checkin\")))\n\nval updatedDF = df\n  .withColumn(\"area_localizacao\", getArea(col(\"localizacao\")))\n\ndf.createOrReplaceTempView(HotelTable)\ndf.cache()\ndf.printSchema()\ndf.describe().show()\ndf.show()",
+   "dateStarted": "2023-04-30 22:28:48.018",
+   "dateUpdated": "2023-04-30 22:28:49.214",
+   "dateFinished": "2023-04-30 22:28:49.213",
+   "results": {
+    "code": "ERROR",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "java.lang.RuntimeException: Unsupported literal type class scala.collection.immutable.$colon$colon List(Açores, Furnas S. Miguel - Açores, Lagoa, Açores, Ponta Delgada, São Vicente Ferreira, São Miguel - Açores, Velas)\n  at org.apache.spark.sql.catalyst.expressions.Literal$.apply(literals.scala:78)\n  at org.apache.spark.sql.catalyst.expressions.Literal$$anonfun$create$2.apply(literals.scala:164)\n  at org.apache.spark.sql.catalyst.expressions.Literal$$anonfun$create$2.apply(literals.scala:164)\n  at scala.util.Try.getOrElse(Try.scala:79)\n  at org.apache.spark.sql.catalyst.expressions.Literal$.create(literals.scala:163)\n  at org.apache.spark.sql.functions$.typedLit(functions.scala:127)\n  at org.apache.spark.sql.functions$.lit(functions.scala:110)\n  at org.apache.spark.sql.Column$$anonfun$isin$1.apply(Column.scala:796)\n  at org.apache.spark.sql.Column$$anonfun$isin$1.apply(Column.scala:796)\n  at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)\n  at scala.collection.TraversableLike$$anonfun$map$1.apply(TraversableLike.scala:234)\n  at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)\n  at scala.collection.mutable.WrappedArray.foreach(WrappedArray.scala:35)\n  at scala.collection.TraversableLike$class.map(TraversableLike.scala:234)\n  at scala.collection.AbstractTraversable.map(Traversable.scala:104)\n  at org.apache.spark.sql.Column.isin(Column.scala:796)\n  at getArea(<console>:80)\n  ... 55 elided\n"
+     }
+    ]
+   }
   },
   {
    "settings": {
