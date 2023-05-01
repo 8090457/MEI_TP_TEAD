@@ -169,7 +169,42 @@
   {
    "settings": {
     "params": {
-     "bdtMeta": {}
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "Location",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Event",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "start_Date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "end_date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
     },
     "forms": {}
    },
@@ -179,9 +214,18 @@
    "id": "",
    "dateCreated": "2023-04-30 22:54:57.286",
    "config": {},
-   "dateStarted": "2023-04-30 23:31:45.978",
-   "dateUpdated": "2023-04-30 23:31:48.222",
-   "dateFinished": "2023-04-30 23:31:48.222"
+   "dateStarted": "2023-05-01 00:03:40.989",
+   "dateUpdated": "2023-05-01 00:03:41.358",
+   "dateFinished": "2023-05-01 00:03:41.358",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "root\n |-- Location: string (nullable = true)\n |-- Event: string (nullable = true)\n |-- start_Date: date (nullable = true)\n |-- end_date: date (nullable = true)\n\n+-------+----------------+--------------------+\n|summary|        Location|               Event|\n+-------+----------------+--------------------+\n|  count|              59|                  59|\n|   mean|            null|                null|\n| stddev|            null|                null|\n|    min|       Albufeira| Albufeira Beach ...|\n|    max|Viana do Castelo| Web Summit - Tec...|\n+-------+----------------+--------------------+\n\n+----------+--------------------+----------+----------+\n|  Location|               Event|start_Date|  end_date|\n+----------+--------------------+----------+----------+\n|    Açores| Azores Fringe Fe...|2022-06-01|2022-06-11|\n|    Açores| Angra Jazz Festival|2022-08-11|2022-09-11|\n|    Açores| Ribeira Grande S...|2023-03-01|2023-03-05|\n| Albufeira| Albufeira Beach ...|2022-06-11|2022-06-27|\n| Albufeira| Albufeira Fisher...|2022-10-08|2022-10-12|\n| Albufeira| Albufeira Bike Fest|2022-09-23|2022-09-25|\n|  Alcobaça| Feira de São Ber...|2022-08-07|2022-08-15|\n|  Alcobaça| Alcobaça Monaste...|2022-07-16|2022-07-17|\n| Carnaxide| O Sol da Caparic...|2022-12-31|2023-01-01|\n|    Aveiro| Festovar - Aveir...|2022-08-04|2022-08-07|\n|     Braga| Braga Romana - R...|2022-07-22|2022-07-24|\n|     Braga| Braga World Cup ...|2022-08-19|2022-08-28|\n|     Braga| Braga Romana - H...|2023-05-19|2023-05-28|\n|Carvavelos| Estoril Open - T...|2023-05-18|2023-05-28|\n|Carvavelos| Cascais Vela - S...|2023-03-17|2023-03-19|\n|Carvavelos| Estoril Open - T...|2023-04-30|2023-05-08|\n|   Coimbra| Queima das Fitas...|2023-04-23|2023-05-01|\n|   Coimbra| Festa das Latas ...|2023-03-04|2023-03-12|\n|   Coimbra| Queima das Fitas...|2023-05-01|2023-05-07|\n|   Funchal| Madeira Wine Fes...|2023-05-01|2023-05-07|\n+----------+--------------------+----------+----------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mcsvEventos\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Eventos.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Location: string, Event: string ... 2 more fields]\n"
+     }
+    ]
+   }
   }
  ],
  "name": "Zeppelin Notebook",
