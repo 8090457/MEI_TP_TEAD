@@ -1,6 +1,30 @@
 {
  "paragraphs": [
   {
+   "settings": {
+    "params": {},
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "import org.apache.spark.sql._\n//import spark.implicits._\n//import org.apache.spark.sql.Encoders\n//import org.apache.spark.sql.types._\nimport org.apache.spark.sql.functions._",
+   "id": "",
+   "dateCreated": "2023-05-02 21:20:55.381",
+   "config": {},
+   "dateStarted": "2023-05-02 21:45:14.911",
+   "dateUpdated": "2023-05-02 21:45:15.155",
+   "dateFinished": "2023-05-02 21:45:15.155",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "import org.apache.spark.sql._\nimport org.apache.spark.sql.functions._\n"
+     }
+    ]
+   }
+  },
+  {
    "user": "anonymous",
    "config": {
     "colWidth": 12,
@@ -17,6 +41,35 @@
    },
    "settings": {
     "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "jobName": "paragraph_1563110258183_1613653816",
+   "id": "20190714-161738_1950435706",
+   "dateCreated": "2019-07-14T16:17:38+0300",
+   "status": "FINISHED",
+   "progressUpdateIntervalMs": 500,
+   "focus": true,
+   "$$hashKey": "object:394",
+   "text": "val FacilitesTable = \"Facilities\"\nval HotelTable = \"Hotel\"\nval TipologiasTable = \"Tipologias\"\nval QuartosReservadosTable = \"QuartosReservados\"\nval FeriadosTable = \"Feriados\"\nval MeteorologiaTable = \"Meteorologia\"\nval EventosTable = \"Eventos\"",
+   "dateStarted": "2023-05-02 21:45:15.155",
+   "dateUpdated": "2023-05-02 21:45:15.565",
+   "dateFinished": "2023-05-02 21:45:15.565",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "\u001b[1m\u001b[34mFacilitesTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Facilities\n\u001b[1m\u001b[34mHotelTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Hotel\n\u001b[1m\u001b[34mTipologiasTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Tipologias\n\u001b[1m\u001b[34mQuartosReservadosTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = QuartosReservados\n\u001b[1m\u001b[34mFeriadosTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Feriados\n\u001b[1m\u001b[34mMeteorologiaTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Meteorologia\n\u001b[1m\u001b[34mEventosTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Eventos\n"
+     }
+    ]
+   }
+  },
+  {
+   "settings": {
+    "params": {
      "bdtMeta": {
       "ZTOOLS_DATA_FRAMES": [
        {
@@ -29,44 +82,107 @@
           "nullable": true
          },
          {
-          "name": "localizacao",
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
           "tpe": {
            "presentableName": "string"
           },
           "nullable": true
          },
          {
-          "name": "estrelas",
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
           "tpe": {
            "presentableName": "integer"
           },
           "nullable": true
          },
          {
-          "name": "idade_max_criancas",
+          "name": "tipo_quarto",
           "tpe": {
-           "presentableName": "integer"
+           "presentableName": "string"
           },
           "nullable": true
          },
          {
-          "name": "idade_max_bebes",
+          "name": "rate_plan",
           "tpe": {
-           "presentableName": "integer"
+           "presentableName": "string"
           },
           "nullable": true
          },
          {
-          "name": "hora_max_checkin",
+          "name": "data_reserva",
           "tpe": {
            "presentableName": "timestamp"
           },
           "nullable": true
          },
          {
-          "name": "qtd_quartos",
+          "name": "num_noites",
           "tpe": {
            "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
           },
           "nullable": true
          }
@@ -78,26 +194,47 @@
     "forms": {}
    },
    "apps": [],
-   "jobName": "paragraph_1563110258183_1613653816",
-   "id": "20190714-161738_1950435706",
-   "dateCreated": "2019-07-14T16:17:38+0300",
    "status": "FINISHED",
-   "progressUpdateIntervalMs": 500,
-   "focus": true,
-   "$$hashKey": "object:394",
-   "text": "var result = spark.sql(\n    \"\"\"select * from Hotel\n      \n      \"\"\"\n)\n\nresult.show()",
-   "dateStarted": "2023-04-30 22:31:38.905",
-   "dateUpdated": "2023-04-30 22:31:39.128",
+   "text": "val reservas = spark.sql(s\"select * from $QuartosReservadosTable\")\n\nval percentiles = reservas.selectExpr( \"min(num_noites)\",\n    \"percentile(num_noites, 0.25)\", \n    \"percentile(num_noites, 0.5)\", \n    \"percentile(num_noites, 0.75)\",\n    \"max(num_noites)\").first()\nval q0 = percentiles.getInt(0).asInstanceOf[Double]\nval q1 = percentiles.get(1).asInstanceOf[Double]\nval q2 = percentiles.get(2).asInstanceOf[Double]\nval q3 = percentiles.get(3).asInstanceOf[Double]\nval max = percentiles.getInt(4).asInstanceOf[Double]\n\n\nval IQR = q3 - q1\nval lb = q1 - 3 * IQR\nval up = q3 + 3 * IQR\n",
+   "id": "",
+   "dateCreated": "2023-05-02 21:13:04.859",
+   "config": {},
+   "dateStarted": "2023-05-02 21:51:39.392",
+   "dateUpdated": "2023-05-02 21:51:39.758",
+   "dateFinished": "2023-05-02 21:51:39.758",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "+--------+-----------------+--------+------------------+---------------+-------------------+-----------+\n|hotel_ID|      localizacao|estrelas|idade_max_criancas|idade_max_bebes|   hora_max_checkin|qtd_quartos|\n+--------+-----------------+--------+------------------+---------------+-------------------+-----------+\n|      20|            Viseu|       3|                10|             24|2023-04-30 23:30:00|         30|\n|      44|   Pinhão - Alijó|       3|                12|             24|2023-04-30 23:00:00|         10|\n|      49|           Lamego|       4|                15|             36|2023-04-30 23:59:00|         51|\n|      54| Póvoa de Lanhoso|       3|                12|             36|2023-04-30 23:59:00|         21|\n|     167|           Lisboa|       4|                12|             36|2023-04-30 23:59:00|         62|\n|     179|            Porto|       4|                12|             24|2023-04-30 23:59:00|        132|\n|     185|Valdigem - Lamego|       4|                12|             36|2023-04-30 23:00:00|         20|\n|     206|            Porto|       3|                 0|              0|2023-04-30 18:00:00|          7|\n|     225|            Porto|       0|                 2|             24|2023-04-30 17:00:00|          5|\n|     226|           Lisboa|       0|                 2|             24|2023-04-30 17:00:00|          2|\n|     237|           Lisboa|       3|                11|             24|2023-04-30 23:59:00|         91|\n|     238|          Funchal|       3|                 8|             23|2023-04-30 23:30:00|         52|\n|     241|           Lisboa|       0|                 5|             24|2023-04-30 20:00:00|         25|\n|     242|           Lisboa|       0|                 5|             24|2023-04-30 20:00:00|          8|\n|     259|        Guimarães|       4|                11|             36|2023-04-30 23:59:00|         22|\n|     269|             Ovar|       4|                12|             24|2023-04-30 23:59:00|         50|\n|     273| Seixas - Caminha|       0|                 0|              0|2023-04-30 12:00:00|         14|\n|     276|            Braga|       4|                12|             24|2023-04-30 23:59:00|         17|\n|     277|            Braga|       3|                 0|              0|2023-04-30 18:00:00|         20|\n|     278|            Braga|       4|                 0|              0|2023-04-30 18:00:00|         29|\n+--------+-----------------+--------+------------------+---------------+-------------------+-----------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mresult\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, localizacao: string ... 5 more fields]\n"
+      "data": "\u001b[1m\u001b[34mreservas\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 14 more fields]\n\u001b[1m\u001b[34mpercentiles\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Row\u001b[0m = [1,1.0,1.0,3.0,481]\n\u001b[1m\u001b[34mq0\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 1.0\n\u001b[1m\u001b[34mq1\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 1.0\n\u001b[1m\u001b[34mq2\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 1.0\n\u001b[1m\u001b[34mq3\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 3.0\n\u001b[1m\u001b[34mmax\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 481.0\n\u001b[1m\u001b[34mIQR\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 2.0\n\u001b[1m\u001b[34mlb\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = -5.0\n\u001b[1m\u001b[34mup\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 9.0\n"
      }
     ]
+   }
+  },
+  {
+   "settings": {
+    "params": {},
+    "forms": {}
    },
-   "dateFinished": "2023-04-30 22:31:39.128"
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val more14Nights = reservas.filter(col(\"num_noites\") > 14)\n\nprint(more14Nights.count())\nmore14Nights.show()",
+   "id": "",
+   "dateCreated": "2023-05-02 21:53:56.700",
+   "config": {},
+   "dateStarted": "2023-05-02 21:54:55.389",
+   "dateUpdated": "2023-05-02 21:54:55.771",
+   "dateFinished": "2023-05-02 21:54:55.771",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "115+--------+----------+-------------+--------------+-------+--------------------+--------------------+--------------------+----------+--------+-------+--------+-----+-----------+------------+------------+\n|hotel_ID|Reserve_ID|         pais|estado_reserva|room_ID|         tipo_quarto|           rate_plan|        data_reserva|num_noites|ocupacao|adultos|criancas|bebes|preco_euros|data_chegada|data_partida|\n+--------+----------+-------------+--------------+-------+--------------------+--------------------+--------------------+----------+--------+-------+--------+-----+-----------+------------+------------+\n|     283|   1418645|     Portugal|     Cancelado|   1242|                  T1|                  7N|2022-01-03 07:05:...|        42|       2|      2|       0|    2|        0.0|  2022-04-19|  2022-05-31|\n|     285|   1423137|      Holanda|     Registado|   1290|ONE-BEDROOM APART...|                  7N|2022-01-16 20:02:...|        17|       5|      5|       0|    5|     1162.8|  2022-07-11|  2022-07-28|\n|     414|   1428830|      Irlanda|     Registado|   2050|Duplo Vista Interior|        Normal - Bar|2022-01-31 12:24:...|        15|       1|      1|       0|    1|     1800.0|  2022-08-13|  2022-08-28|\n|     494|   1429963|     Portugal|     Registado|   2383|Quarto twin Com W...|                 Bar|2022-02-02 17:14:...|        28|       2|      2|       0|    2|     1650.0|  2022-02-07|  2022-03-07|\n|     494|   1429966|     Portugal|     Registado|   2383|Quarto twin Com W...|                 Bar|2022-02-02 17:20:...|        31|       2|      2|       0|    2|     1650.0|  2022-03-07|  2022-04-07|\n|     328|   1433249|África do Sul|     Registado|   1451|4 Bed Mixed Dormi...|             WebSite|2022-02-09 13:05:...|        88|       1|      1|       0|    1|     1977.0|  2022-02-26|  2022-05-25|\n|     444|   1434245|       Suécia|     Registado|   2076|               Suite|              Normal|2022-02-11 12:02:...|        18|       2|      2|       0|    2|     1980.0|  2022-02-27|  2022-03-17|\n|     560|   1435031|     Portugal|     Cancelado|   2868|         Estudio 2+2|                  7N|2022-02-13 08:25:...|        20|       2|      2|       0|    2|        0.0|  2022-03-11|  2022-03-31|\n|     490|   1437984|     Portugal|     Registado|   2798|Apartamento Estúd...| Promoção dia da Mãe|2022-02-17 15:22:...|        61|       1|      1|       0|    1|     2600.0|  2022-02-28|  2022-04-30|\n|     493|   1442004|     Portugal|     Registado|   2324|    Estudio com sala|Não Reembolsável ...| 2022-02-24 15:00:43|        61|       2|      2|       0|    2|     3100.0|  2022-02-28|  2022-04-30|\n|     490|   1442747|        Suiça|     Registado|   2317|      Apartamento T1|Promoção mais 7 n...|2022-02-25 21:07:...|        64|       1|      1|       0|    1|     3360.0|  2022-02-25|  2022-04-30|\n|     490|   1444083|     Portugal|     Registado|   2573|Quarto de casal c...|Promoção mais 7 n...|2022-02-28 17:09:...|        45|       1|      1|       0|    1|     1687.5|  2022-03-11|  2022-04-25|\n|     493|   1445857|     Portugal|     Registado|   2323|  Apartamento T1 R/C|                 Bar|2022-03-03 15:33:...|        30|       1|      1|       0|    1|     1600.0|  2022-04-30|  2022-05-30|\n|     285|   1446027|     Portugal|     Registado|   1290|ONE-BEDROOM APART...|                  7N|2022-03-03 20:04:...|        18|       2|      2|       0|    2|        0.0|  2022-03-14|  2022-04-01|\n|     399|   1448243|      Espanha|     Registado|   1863|1 Bedroom Private...| Best Available Rate|2022-03-08 07:06:...|        17|       3|      3|       0|    3|     2686.0|  2022-08-13|  2022-08-30|\n|     328|   1448760|       Itália|     Registado|   1456|Superior Double Room|             WebSite|2022-03-08 21:57:...|        15|       2|      2|       0|    2|      782.0|  2022-03-20|  2022-04-04|\n|     493|   1450260|     Portugal|     Registado|   2338| Estudio com Terraço|Não Reembolsável ...|2022-03-11 18:35:...|        31|       1|      1|       0|    1|     1300.0|  2022-03-17|  2022-04-17|\n|     403|   1450818|Nova Zelândia|     Registado|   2740|Quarto Superior A...|Tarifa sem pequen...|2022-03-12 23:25:...|        18|       2|      2|       0|    2|      954.0|  2022-03-26|  2022-04-13|\n|     328|   1451872|       Brasil|     Registado|   1456|Superior Double Room|             WebSite|2022-03-14 18:01:...|        27|       1|      1|       0|    1|     1462.0|  2022-04-01|  2022-04-28|\n|     392|   1454271|      Bélgica|     Registado|   2122|APARTAMENTO FAMIL...|Epoca Alta ( Jul,...|2022-03-18 20:15:...|        19|       2|      2|       1|    2|    4082.91|  2022-07-22|  2022-08-10|\n+--------+----------+-------------+--------------+-------+--------------------+--------------------+--------------------+----------+--------+-------+--------+-----+-----------+------------+------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mmore14Nights\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 14 more fields]\n"
+     }
+    ]
+   }
   }
  ],
  "name": "Zeppelin Notebook",
