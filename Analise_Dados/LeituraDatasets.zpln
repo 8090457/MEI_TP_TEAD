@@ -19,16 +19,7 @@
    },
    "dateStarted": "2023-05-01 22:58:28.422",
    "dateUpdated": "2023-05-01 22:58:28.639",
-   "dateFinished": "2023-05-01 22:58:28.639",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "\u001b[1m\u001b[34mFacilitesTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Facilities\n\u001b[1m\u001b[34mHotelTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Hotel\n\u001b[1m\u001b[34mTipologiasTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Tipologias\n\u001b[1m\u001b[34mQuartosReservadosTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = QuartosReservados\n\u001b[1m\u001b[34mFeriadosTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Feriados\n\u001b[1m\u001b[34mMeteorologiaTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Meteorologia\n\u001b[1m\u001b[34mEventosTable\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = Eventos\n"
-     }
-    ]
-   }
+   "dateFinished": "2023-05-01 22:58:28.639"
   },
   {
    "settings": {
@@ -36,41 +27,7 @@
      "bdtMeta": {
       "inlay": {
        "collapsed": true
-      },
-      "ZTOOLS_DATA_FRAMES": [
-       {
-        "columns": [
-         {
-          "name": "Location",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Event",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "start_Date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         },
-         {
-          "name": "end_date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         }
-        ]
-       }
-      ]
+      }
      }
     },
     "forms": {}
@@ -85,16 +42,7 @@
    },
    "dateStarted": "2023-05-01 22:58:28.645",
    "dateUpdated": "2023-05-01 22:58:29.806",
-   "dateFinished": "2023-05-01 22:58:29.806",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "root\n |-- Hotel ID: integer (nullable = true)\n |-- Facility ID: integer (nullable = true)\n |-- Nome: string (nullable = true)\n\n+--------+-----------+--------------------+\n|Hotel ID|Facility ID|                Nome|\n+--------+-----------+--------------------+\n|      16|        230|         Mom Kitchen|\n|      16|        231|        Diet Deserts|\n|      60|        232|Entry into the fi...|\n|      60|        233|              Hiking|\n|      60|        234|            Hammocks|\n|      60|        235|       Double shower|\n|      60|        236|Green area to pra...|\n|      60|        237|Live music on Sat...|\n|      60|        238|Bonfire with live...|\n|      86|        239|Newspapers in com...|\n|      86|        240| Baggage consignment|\n|      86|        241|    Covered car park|\n|      63|        242|             Heating|\n|      24|        243|     Parque Infantil|\n|      47|        265|          Playground|\n|      47|        266|           Mini Golf|\n|      68|        267|King size spring ...|\n|      68|        268|Queen size spring...|\n|      68|        269|Basket off season...|\n|      68|        270|Extra pillows and...|\n+--------+-----------+--------------------+\nonly showing top 20 rows\n\nimport org.apache.spark.sql.functions._\n\u001b[1m\u001b[34mcsvFacilities\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Facilities.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Hotel ID: int, Facility ID: int ... 1 more field]\n\u001b[1m\u001b[34mres34\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [Hotel ID: int, Facility ID: int ... 1 more field]\n"
-     }
-    ]
-   }
+   "dateFinished": "2023-05-01 22:58:29.806"
   },
   {
    "user": "anonymous",
@@ -132,56 +80,13 @@
    "text": "val csvHotel = \"/data/tp/Hotel.csv\" // Hotels file\nval Acores = List(\"Açores\", \"Furnas S. Miguel - Açores\", \"Lagoa, Açores\",\"Ponta Delgada\",\"São Vicente Ferreira, São Miguel - Açores\", \"Velas\")\nval Albufeira = List(\"Albufeira - Algarve\", \"Alte\", \"Benafim\", \"Conceição de Tavira\", \"Fuseta\", \"Olhão\", \"Olhos D'Água\", \"São Brás de Alportel\", \"Silves\", \"Tavira\", \"Vilamoura\")\nval Alcobaca = List(\"Alcanena\", \"Alcobaça\", \"São Martinho do Porto\")\nval Alijo = List(\"Alijó\", \"Pinhão - Alijó\")\nval Amares = List(\"Amares\", \"Braga\", \"Póvoa de Lanhoso\", \"Tomar\", \"Torres Novas\")\nval Aveiro = List(\"Aveiro\")\nval Batalha = List(\"Batalha\", \"Nazaré\")\nval Braganca = List(\"Alto dos Lombos\")\nval Campo_Maior = List(\"Campo Maior\")\nval Carnaxide = List(\"Almada\", \"Carnaxide\", \"Charneca de Caparica\", \"Lisboa\")\nval Carcavelos = List(\"Carcavelos\", \"Cascais\", \"Estoril\")\nval Castelo_Branco = List(\"Castelo Branco\", \"Covilhã\", \"Sabugueiro / Seia\", \"Vale do Peso\")\nval Chaves = List(\"Chaves\", \"Lamego\", \"Mesão Frio\", \"Valdigem - Lamego\")\nval Coimbra = List(\"Coimbra\", \"Travanca do Mondego\")\nval Elvas = List(\"ELVAS\")\nval Espinho = List(\"Espinho\", \"Ovar\", \"Viseu\")\nval Evora = List(\"Evora\")\nval Funchal = List(\"Câmara de Lobos\", \"Funchal\")\nval Guimaraes = List(\"Guimarães\")\nval Lagos = List(\"Lagos\", \"Portimão\", \"Sagres\")\nval Maia = List(\"Maia\")\nval Moncao = List(\"Monção\", \"Valença do Minho\")\nval Obidos = List(\"Obidos\")\nval Porto = List(\"Ermesinde\", \"Gaia\", \"Lousada\", \"Madalena\", \"Porto\", \"União de Freguesias do Centro\", \"Valongo\", \"Valpedre - Penafiel\", \"Vila Meã\", \"Vila Nova de Gaia\")\nval Praia_da_Vitoria = List(\"Praia da Vitória\")\nval Sintra = List(\"Sintra\")\nval Viana_do_Castelo = List(\"Seixas - Caminha\", \"Valença, Viana do Castelo\", \"Viana do Castelo\", \"Vila Praia de Âncora\")\n\ndef getArea(value: String)= value match {\n    case x if Acores.contains(x) => \"Açores\"\n    case x if Albufeira.contains(x) => \"Albufeira\"\n    case x if Alcobaca.contains(x) => \"Alcobaça\"\n    case x if Alijo.contains(x) => \"Alijó\"\n    case x if Amares.contains(x) => \"Amares\"\n    case x if Aveiro.contains(x) => \"Aveiro\"\n    case x if Batalha.contains(x) => \"Batalha\"\n    case x if Braganca.contains(x) => \"Bragança\"\n    case x if Campo_Maior.contains(x) => \"Campo Maior\"\n    case x if Carnaxide.contains(x) => \"Carnaxide\"\n    case x if Carcavelos.contains(x) => \"Carcavelos\"\n    case x if Castelo_Branco.contains(x) => \"Castelo Branco\"\n    case x if Chaves.contains(x) => \"Chaves\"\n    case x if Coimbra.contains(x) => \"Coimbra\"\n    case x if Elvas.contains(x) => \"Elvas\"\n    case x if Espinho.contains(x) => \"Espinho\"\n    case x if Evora.contains(x) => \"Evora\"\n    case x if Funchal.contains(x) => \"Funchal\"\n    case x if Guimaraes.contains(x) => \"Guimarães\"\n    case x if Lagos.contains(x) => \"Lagos\"\n    case x if Maia.contains(x) => \"Maia\"\n    case x if Moncao.contains(x) => \"Monção\"\n    case x if Obidos.contains(x) => \"Obidos\"\n    case x if Porto.contains(x) => \"Porto\"\n    case x if Praia_da_Vitoria.contains(x) => \"Praia da Vitória\"\n    case x if Sintra.contains(x) => \"Sintra\"\n    case x if Viana_do_Castelo.contains(x) => \"Viana do Castelo\"\n    case _ => value\n}\n\nval getAreaUDF = udf((value: String) => getArea(value))\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvHotel)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Localização\", \"localizacao\")\n        .withColumnRenamed(\"Estrelas\", \"estrelas\")\n        .withColumnRenamed(\"Idade Máxima de Crianças (Anos)\", \"idade_max_criancas\")\n        .withColumnRenamed(\"Idade Máxima de Bebés (Meses)\", \"idade_max_bebes\")\n        .withColumnRenamed(\"Hora máxima de check-in\", \"hora_max_checkin\")\n        .withColumnRenamed(\"Quantidade de quartos\", \"qtd_quartos\")\n        .withColumn(\"hora_max_checkin\", to_timestamp(col(\"hora_max_checkin\")))\n\nval dfWithArea = df.withColumn(\"area_localizacao\", getAreaUDF(col(\"localizacao\")))\n\ndfWithArea.createOrReplaceTempView(HotelTable)\ndfWithArea.cache()\ndfWithArea.printSchema()\ndfWithArea.describe().show()\ndfWithArea.show()",
    "dateStarted": "2023-05-01 22:58:29.821",
    "dateUpdated": "2023-05-01 22:58:32.860",
-   "dateFinished": "2023-05-01 22:58:32.860",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "root\n |-- hotel_ID: integer (nullable = true)\n |-- localizacao: string (nullable = true)\n |-- estrelas: integer (nullable = true)\n |-- idade_max_criancas: integer (nullable = true)\n |-- idade_max_bebes: integer (nullable = true)\n |-- hora_max_checkin: timestamp (nullable = true)\n |-- qtd_quartos: integer (nullable = true)\n |-- area_localizacao: string (nullable = true)\n\n+-------+------------------+-----------+------------------+------------------+------------------+------------------+----------------+\n|summary|          hotel_ID|localizacao|          estrelas|idade_max_criancas|   idade_max_bebes|       qtd_quartos|area_localizacao|\n+-------+------------------+-----------+------------------+------------------+------------------+------------------+----------------+\n|  count|               145|        145|               145|               145|               145|               145|             145|\n|   mean| 395.7586206896552|       null|1.7862068965517242| 7.324137931034483|20.020689655172415|30.020689655172415|            null|\n| stddev|118.24939956754241|       null| 1.780239555105778| 6.145100531024569|20.013699809795995|33.797080118274614|            null|\n|    min|                20|          .|                 0|                 0|                 0|                 1|               .|\n|    max|               561|      teste|                 5|                36|               168|               192|           teste|\n+-------+------------------+-----------+------------------+------------------+------------------+------------------+----------------+\n\n+--------+-----------------+--------+------------------+---------------+-------------------+-----------+----------------+\n|hotel_ID|      localizacao|estrelas|idade_max_criancas|idade_max_bebes|   hora_max_checkin|qtd_quartos|area_localizacao|\n+--------+-----------------+--------+------------------+---------------+-------------------+-----------+----------------+\n|      20|            Viseu|       3|                10|             24|2023-05-01 23:30:00|         30|         Espinho|\n|      44|   Pinhão - Alijó|       3|                12|             24|2023-05-01 23:00:00|         10|           Alijó|\n|      49|           Lamego|       4|                15|             36|2023-05-01 23:59:00|         51|          Chaves|\n|      54| Póvoa de Lanhoso|       3|                12|             36|2023-05-01 23:59:00|         21|          Amares|\n|     167|           Lisboa|       4|                12|             36|2023-05-01 23:59:00|         62|       Carnaxide|\n|     179|            Porto|       4|                12|             24|2023-05-01 23:59:00|        132|           Porto|\n|     185|Valdigem - Lamego|       4|                12|             36|2023-05-01 23:00:00|         20|          Chaves|\n|     206|            Porto|       3|                 0|              0|2023-05-01 18:00:00|          7|           Porto|\n|     225|            Porto|       0|                 2|             24|2023-05-01 17:00:00|          5|           Porto|\n|     226|           Lisboa|       0|                 2|             24|2023-05-01 17:00:00|          2|       Carnaxide|\n|     237|           Lisboa|       3|                11|             24|2023-05-01 23:59:00|         91|       Carnaxide|\n|     238|          Funchal|       3|                 8|             23|2023-05-01 23:30:00|         52|         Funchal|\n|     241|           Lisboa|       0|                 5|             24|2023-05-01 20:00:00|         25|       Carnaxide|\n|     242|           Lisboa|       0|                 5|             24|2023-05-01 20:00:00|          8|       Carnaxide|\n|     259|        Guimarães|       4|                11|             36|2023-05-01 23:59:00|         22|       Guimarães|\n|     269|             Ovar|       4|                12|             24|2023-05-01 23:59:00|         50|         Espinho|\n|     273| Seixas - Caminha|       0|                 0|              0|2023-05-01 12:00:00|         14|Viana do Castelo|\n|     276|            Braga|       4|                12|             24|2023-05-01 23:59:00|         17|          Amares|\n|     277|            Braga|       3|                 0|              0|2023-05-01 18:00:00|         20|          Amares|\n|     278|            Braga|       4|                 0|              0|2023-05-01 18:00:00|         29|          Amares|\n+--------+-----------------+--------+------------------+---------------+-------------------+-----------+----------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mcsvHotel\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Hotel.csv\n\u001b[1m\u001b[34mAcores\u001b[0m: \u001b[1m\u001b[32mList[String]\u001b[0m = List(Açores, Furnas S. Miguel - Açores, Lagoa, Açores, Ponta Delgada, São Vicente Ferreira, São Miguel - Açores, Velas)\n\u001b[1m\u001b[34mAlbufeira\u001b[0m: \u001b[1m\u001b[32mList[String]\u001b[0m = List(Albufeira - Algarve, Alte, Benafim, Conceição de Tavira, Fuseta, Olhão, Olhos D'Água, São Brás de Alportel, Silves, Tavira, Vilamoura)\n\u001b[1m\u001b[34mAlcobaca\u001b[0m: \u001b[1m\u001b[32mList[String]\u001b[0m = List(Alcanena, Alcobaça, São Martinho do Porto)\n\u001b[1m\u001b[34mAlijo\u001b[0m: \u001b[1m\u001b[32mList[String]\u001b[0m = List(Alijó, Pinhão - Alijó)\n\u001b[1m\u001b[34mAmares\u001b[0m: \u001b[1m\u001b[32mList[String]\u001b[0m = List(Amares, Braga, Póvoa de Lanhoso, Tomar, Torres Novas)\n\u001b[1m\u001b[34mAveiro\u001b[0m: \u001b[1m\u001b[32mList[String]\u001b[0m = List(Aveiro)\n\u001b[1m\u001b[34mBatalha\u001b[0m: \u001b[1m\u001b..."
-     }
-    ]
-   }
+   "dateFinished": "2023-05-01 22:58:32.860"
   },
   {
    "settings": {
     "params": {
      "bdtMeta": {
-      "inlay": {},
-      "ZTOOLS_DATA_FRAMES": [
-       {
-        "columns": [
-         {
-          "name": "Location",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Event",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "start_Date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         },
-         {
-          "name": "end_date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         }
-        ]
-       }
-      ]
+      "inlay": {}
      }
     },
     "forms": {}
@@ -194,260 +99,75 @@
    "config": {
     "tableHide": false
    },
-   "dateStarted": "2023-05-01 22:58:32.941",
-   "dateUpdated": "2023-05-01 22:58:33.349",
-   "dateFinished": "2023-05-01 22:58:33.349",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "root\n |-- hotel_ID: integer (nullable = true)\n |-- room_ID: integer (nullable = true)\n |-- tipo_quarto: string (nullable = true)\n |-- quantidade: integer (nullable = true)\n |-- capacidade_maxima: integer (nullable = true)\n |-- capacidade_minima: integer (nullable = true)\n |-- capacidade_max_adultos: integer (nullable = true)\n |-- capacidade_min_adultos: integer (nullable = true)\n |-- capacidade_max_criancas: integer (nullable = true)\n |-- capacidade_min_criancas: integer (nullable = true)\n |-- capacidade_max_bebes: integer (nullable = true)\n |-- capacidade_max_camas_extra: integer (nullable = true)\n |-- capacidade_max_camas_extra_criancas: integer (nullable = true)\n |-- capacidade_max_bercos_extra: integer (nullable = true)\n\n\u001b[1m\u001b[34mcsvTipologias\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Tipologias.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 12 more fields]\n"
-     }
-    ]
-   }
+   "dateStarted": "2023-05-03 19:06:30.878",
+   "dateUpdated": "2023-05-03 19:06:31.219",
+   "dateFinished": "2023-05-03 19:06:31.219"
   },
   {
    "settings": {
     "params": {
-     "bdtMeta": {
-      "ZTOOLS_DATA_FRAMES": [
-       {
-        "columns": [
-         {
-          "name": "Location",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Event",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "start_Date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         },
-         {
-          "name": "end_date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         }
-        ]
-       }
-      ]
-     }
+     "bdtMeta": {}
     },
     "forms": {}
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "val csvQuartosReservados= \"/data/tp/Quartos_Reservados.csv\" // Quartos_Reservados File\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n        .load(csvQuartosReservados)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Reserve ID\", \"Reserve_ID\")\n        .withColumnRenamed(\"País\", \"pais\")\n        .withColumnRenamed(\"Estado da reserva\", \"estado_reserva\")\n        .withColumnRenamed(\"Room ID\", \"room_ID\")\n        .withColumnRenamed(\"Tipo de Quarto\", \"tipo_quarto\") // !\n        .withColumnRenamed(\"RatePlan\", \"rate_plan\")\n        .withColumnRenamed(\"Data da reserva\", \"data_reserva\")\n        .withColumn(\"data_chegada\", to_date(col(\"Data chegada\"), \"dd/MM/yyyy\"))\n        .drop(\"Data chegada\")\n        .withColumn(\"data_partida\", to_date(col(\"Data de partida\"), \"dd/MM/yyyy\"))\n        .drop(\"Data de partida\")\n        .withColumnRenamed(\"Número de noites\", \"num_noites\")\n        .withColumnRenamed(\"Ocupação\", \"ocupacao\")\n        .withColumnRenamed(\"Adultos\", \"adultos\")\n        .withColumnRenamed(\"Crianças\", \"criancas\")\n        .withColumnRenamed(\"Bebés\", \"bebes\") // !\n        .withColumnRenamed(\"Preço (€)\", \"preco_euros\")\n\ndf.createOrReplaceTempView(QuartosReservadosTable)\ndf.cache()\ndf.printSchema()\ndf.show()\n//df.select(\"pais\", \"estado_reserva\", \"rate_plan\", \"data_reserva\", \"data_chegada\", \"data_partida\", \"num_noites\", \"ocupacao\", \"adultos\", \"criancas\", \"preco_euros\").describe().show()",
+   "text": "val csvQuartosReservados= \"/data/tp/Quartos_Reservados.csv\" // Quartos_Reservados File\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n        .load(csvQuartosReservados)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Reserve ID\", \"Reserve_ID\")\n        .withColumnRenamed(\"País\", \"pais\")\n        .withColumnRenamed(\"Estado da reserva\", \"estado_reserva\")\n        .withColumnRenamed(\"Room ID\", \"room_ID\")\n        .withColumnRenamed(\"Tipo de Quarto\", \"tipo_quarto\") // !\n        .withColumnRenamed(\"RatePlan\", \"rate_plan\")\n        .withColumnRenamed(\"Data da reserva\", \"data_reserva\")\n        .withColumn(\"data_chegada\", to_date(col(\"Data chegada\"), \"dd/MM/yyyy\"))\n        .drop(\"Data chegada\")\n        .withColumn(\"data_partida\", to_date(col(\"Data de partida\"), \"dd/MM/yyyy\"))\n        .drop(\"Data de partida\")\n        .withColumnRenamed(\"Número de noites\", \"num_noites\")\n        .withColumnRenamed(\"Ocupação\", \"ocupacao\")\n        .withColumnRenamed(\"Adultos\", \"adultos\")\n        .withColumnRenamed(\"Crianças\", \"criancas\")\n        .withColumnRenamed(\"Bebés\", \"bebes\") // !\n        .withColumnRenamed(\"Preço (€)\", \"preco_euros\")\n\nval mindata_reserva = df.select(min(\"data_reserva\")).first()(0)\nval maxdata_reserva = df.select(max(\"data_reserva\")).first()(0)\nprintln(s\"Minimum data_reserva date: $mindata_reserva\")\nprintln(s\"Maximum data_reserva date: $maxdata_reserva\")\n\nval mindata_data_chegada = df.select(min(\"data_chegada\")).first()(0)\nval maxdata_data_chegada= df.select(max(\"data_chegada\")).first()(0)\nprintln(s\"Minimum data_chegada date: $mindata_data_chegada\")\nprintln(s\"Maximum data_chegada date: $maxdata_data_chegada\")\n\nval mindata_data_partida = df.select(min(\"data_partida\")).first()(0)\nval maxdata_data_partida= df.select(max(\"data_partida\")).first()(0)\nprintln(s\"Minimum data_partida date: $mindata_data_partida\")\nprintln(s\"Maximum data_partida date: $maxdata_data_partida\")\n\ndf.createOrReplaceTempView(QuartosReservadosTable)\ndf.cache()\ndf.printSchema()\ndf.show()\n//df.select(\"pais\", \"estado_reserva\", \"rate_plan\", \"data_reserva\", \"data_chegada\", \"data_partida\", \"num_noites\", \"ocupacao\", \"adultos\", \"criancas\", \"preco_euros\").describe().show()",
    "id": "",
    "dateCreated": "2023-04-24 21:18:31.653",
    "config": {},
-   "dateStarted": "2023-05-01 22:58:33.355",
-   "dateUpdated": "2023-05-01 22:58:34.075",
-   "dateFinished": "2023-05-01 22:58:34.075",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "root\n |-- hotel_ID: integer (nullable = true)\n |-- Reserve_ID: integer (nullable = true)\n |-- pais: string (nullable = true)\n |-- estado_reserva: string (nullable = true)\n |-- room_ID: integer (nullable = true)\n |-- tipo_quarto: string (nullable = true)\n |-- rate_plan: string (nullable = true)\n |-- data_reserva: timestamp (nullable = true)\n |-- num_noites: integer (nullable = true)\n |-- ocupacao: integer (nullable = true)\n |-- adultos: integer (nullable = true)\n |-- criancas: integer (nullable = true)\n |-- bebes: integer (nullable = true)\n |-- preco_euros: double (nullable = true)\n |-- data_chegada: date (nullable = true)\n |-- data_partida: date (nullable = true)\n\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+----------+--------+-------+--------+-----+-----------+------------+------------+\n|hotel_ID|Reserve_ID|          pais|estado_reserva|room_ID|         tipo_quarto|           rate_plan|        data_reserva|num_noites|ocupacao|adultos|criancas|bebes|preco_euros|data_chegada|data_partida|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+----------+--------+-------+--------+-----+-----------+------------+------------+\n|     311|   1418210|       Espanha|     Registado|   1407|DB - Quarto Duplo...|    DB Room Only NRF|2022-01-01 10:17:...|         1|       2|      2|       0|    2|       63.0|  2022-01-02|  2022-01-03|\n|     309|   1418228|      Portugal|    Modificada|   1372|Quarto Duplo Stan...|           DB RO NRF|2022-01-01 12:19:...|         1|       2|      2|       0|    2|       38.7|  2022-01-01|  2022-01-02|\n|     395|   1418293|         Suiça|     Registado|   1829|     Estúdio Jardim |            Standard|2022-01-01 17:34:...|         2|       2|      4|       0|    2|      500.0|  2022-08-16|  2022-08-18|\n|     283|   1418305|       Holanda|     Registado|   1241|             Estudio|            Standard|2022-01-01 18:30:...|         3|       1|      1|       0|    1|      126.0|  2022-01-02|  2022-01-05|\n|     444|   1418314|Estados Unidos|     Registado|   2074|Duplo ou Twin  Vi...|              Normal|2022-01-01 19:00:...|         1|       1|      1|       0|    1|       80.0|  2022-01-07|  2022-01-08|\n|     535|   1418316|      Portugal|     Registado|   2783|            Bungalow|             WebSite|2022-01-01 19:23:...|         2|       2|      2|       0|    2|      135.0|  2022-01-04|  2022-01-06|\n|     539|   1418318|      Portugal|     Registado|   2542|Quarto Dpl. Standard|                 Bar|2022-01-01 19:27:...|         1|       1|      1|       0|    1|       30.0|  2022-01-02|  2022-01-03|\n|     535|   1418332|      Portugal|     Registado|   2526|     Quarto Familiar|             WebSite|2022-01-01 20:46:...|         2|       2|      2|       0|    2|      162.0|  2022-01-02|  2022-01-04|\n|     414|   1418334|      Portugal|     Registado|   2049|        Suite Junior|        Normal - Bar|2022-01-01 21:06:...|         1|       2|      2|       0|    2|      100.0|  2022-01-02|  2022-01-03|\n|     556|   1418346|      Portugal|     Registado|   2831|Double Room Standard|NRF - Non Refundable|2022-01-01 21:51:...|         2|       2|      2|       0|    2|      105.6|  2022-01-06|  2022-01-08|\n|     556|   1418346|      Portugal|     Registado|   2833|Triple Room Standard|NRF - Non Refundable|2022-01-01 21:51:...|         2|       3|      3|       0|    3|      158.4|  2022-01-06|  2022-01-08|\n|     285|   1418404|       Bélgica|     Registado|   1288|              STUDIO|                  7N|2022-01-02 11:09:...|         9|       2|      2|       0|    2|      367.2|  2022-05-12|  2022-05-21|\n|     535|   1418455|      Portugal|      Pendente|   2523|        Quarto Duplo|             WebSite|2022-01-02 14:08:...|         1|       2|      2|       0|    2|       58.5|  2022-01-02|  2022-01-03|\n|     556|   1418531|      Portugal|     Registado|   2831|Double Room Standard|WEB (Best Availab...|2022-01-02 17:55:...|         2|       2|      2|       0|    2|      114.0|  2022-01-03|  2022-01-05|\n|     535|   1418540|      Portugal|      Pendente|   2523|        Quarto Duplo|             WebSite|2022-01-02 18:36:...|         1|       2|      2|       0|    2|       58.5|  2022-01-05|  2022-01-06|\n|     444|   1418544|      Portugal|     Registado|   2074|Duplo ou Twin  Vi...|              Normal|2022-01-02 18:57:...|         2|       2|      2|       0|    2|      160.0|  2022-01-13|  2022-01-15|\n|     556|   1418568|      Portugal|     Cancelado|   2831|Double Room Standard|WEB (Best Availab...|2022-01-02 19:54:...|         1|       2|      2|       0|    2|       76.0|  2022-01-15|  2022-01-16|\n|     535|   1418570|      Portugal|      Pendente|   2523|        Quarto Duplo|             WebSite|2022-01-02 19:58:...|         1|       2|      2|       0|    2|       58.5|  2022-01-07|  2022-01-08|\n|     539|   1418582|      Portugal|     Registado|   2542|Quarto Dpl. Standard|                 Bar|2022-01-02 20:57:...|         2|       1|      1|       0|    1|        0.0|  2022-02-18|  2022-02-20|\n|     556|   1418600|      Portugal|      Pendente|   2831|Double Room Standard|WEB (Best Availab...|2022-01-02 22:04:...|         1|       2|      6|       0|    2|      228.0|  2022-01-08|  2022-01-09|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+----------+--------+-------+--------+-----+-----------+------------+------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mcsvQuartosReservados\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Quartos_Reservados.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 14 more fields]\n"
-     }
-    ]
-   }
+   "dateStarted": "2023-05-03 19:06:18.278",
+   "dateUpdated": "2023-05-03 19:06:19.697",
+   "dateFinished": "2023-05-03 19:06:19.696"
   },
   {
    "settings": {
     "params": {
-     "bdtMeta": {
-      "ZTOOLS_DATA_FRAMES": [
-       {
-        "columns": [
-         {
-          "name": "Location",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Event",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "start_Date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         },
-         {
-          "name": "end_date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         }
-        ]
-       }
-      ]
-     }
+     "bdtMeta": {}
     },
     "forms": {}
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "val csvFeriados= \"/data/tp/Feriados.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n        .load(csvFeriados)\n        .withColumn(\"date\", to_date(col(\"date\"), \"dd/MM/yyyy\"))\n\ndf.createOrReplaceTempView(FeriadosTable)\ndf.cache()\ndf.printSchema()\ndf.describe().show()\ndf.show()",
+   "text": "val csvFeriados= \"/data/tp/Feriados.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n        .load(csvFeriados)\n        .withColumn(\"date\", to_date(col(\"date\"), \"dd/MM/yyyy\"))\n\nval minDate = df.select(min(\"date\")).first()(0)\nval maxDate = df.select(max(\"date\")).first()(0)\nprintln(s\"Minimum start date: $minDate\")\nprintln(s\"Maximum start date: $maxDate\")\n\ndf.createOrReplaceTempView(FeriadosTable)\ndf.cache()\ndf.printSchema()\ndf.describe().show()\ndf.show()",
    "id": "",
    "dateCreated": "2023-04-24 22:00:30.321",
    "config": {},
-   "dateStarted": "2023-05-01 22:58:34.091",
-   "dateUpdated": "2023-05-01 22:58:34.627",
-   "dateFinished": "2023-05-01 22:58:34.627",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "root\n |-- date: date (nullable = true)\n |-- day: integer (nullable = true)\n |-- dayOfWeek: integer (nullable = true)\n |-- month: integer (nullable = true)\n |-- trimester: integer (nullable = true)\n |-- year: integer (nullable = true)\n |-- is_holiday: integer (nullable = true)\n |-- portugueseWeekName: string (nullable = true)\n\n+-------+-----------------+------------------+-----------------+------------------+------------------+--------------------+------------------+\n|summary|              day|         dayOfWeek|            month|         trimester|              year|          is_holiday|portugueseWeekName|\n+-------+-----------------+------------------+-----------------+------------------+------------------+--------------------+------------------+\n|  count|              730|               730|              730|               730|               730|                 730|               730|\n|   mean|15.72054794520548|               4.0|6.526027397260274|2.5095890410958903|            2022.5|0.038356164383561646|              null|\n| stddev|8.802278027009615|2.0047953485517556| 3.45021529306815| 1.117532602466349|0.5003428180045024| 0.19218627865352142|              null|\n|    min|                1|                 1|                1|                 1|              2022|                   0|           Domingo|\n|    max|               31|                 7|               12|                 4|              2023|                   1|       Terca-feira|\n+-------+-----------------+------------------+-----------------+------------------+------------------+--------------------+------------------+\n\n+----------+---+---------+-----+---------+----+----------+------------------+\n|      date|day|dayOfWeek|month|trimester|year|is_holiday|portugueseWeekName|\n+----------+---+---------+-----+---------+----+----------+------------------+\n|2022-01-01|  1|        7|    1|        1|2022|         1|            Sabado|\n|2022-01-02|  2|        1|    1|        1|2022|         0|           Domingo|\n|2022-01-03|  3|        2|    1|        1|2022|         0|     Segunda-feira|\n|2022-01-04|  4|        3|    1|        1|2022|         0|       Terca-feira|\n|2022-01-05|  5|        4|    1|        1|2022|         0|      Quarta-feira|\n|2022-01-06|  6|        5|    1|        1|2022|         0|      Quinta-feira|\n|2022-01-07|  7|        6|    1|        1|2022|         0|       Sexta-feira|\n|2022-01-08|  8|        7|    1|        1|2022|         0|            Sabado|\n|2022-01-09|  9|        1|    1|        1|2022|         0|           Domingo|\n|2022-01-10| 10|        2|    1|        1|2022|         0|     Segunda-feira|\n|2022-01-11| 11|        3|    1|        1|2022|         0|       Terca-feira|\n|2022-01-12| 12|        4|    1|        1|2022|         0|      Quarta-feira|\n|2022-01-13| 13|        5|    1|        1|2022|         0|      Quinta-feira|\n|2022-01-14| 14|        6|    1|        1|2022|         0|       Sexta-feira|\n|2022-01-15| 15|        7|    1|        1|2022|         0|            Sabado|\n|2022-01-16| 16|        1|    1|        1|2022|         0|           Domingo|\n|2022-01-17| 17|        2|    1|        1|2022|         0|     Segunda-feira|\n|2022-01-18| 18|        3|    1|        1|2022|         0|       Terca-feira|\n|2022-01-19| 19|        4|    1|        1|2022|         0|      Quarta-feira|\n|2022-01-20| 20|        5|    1|        1|2022|         0|      Quinta-feira|\n+----------+---+---------+-----+---------+----+----------+------------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mcsvFeriados\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Feriados.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, day: int ... 6 more fields]\n"
-     }
-    ]
-   }
+   "dateStarted": "2023-05-03 19:06:04.906",
+   "dateUpdated": "2023-05-03 19:06:06.368",
+   "dateFinished": "2023-05-03 19:06:06.367"
   },
   {
    "settings": {
     "params": {
-     "bdtMeta": {
-      "ZTOOLS_DATA_FRAMES": [
-       {
-        "columns": [
-         {
-          "name": "Location",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Event",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "start_Date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         },
-         {
-          "name": "end_date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         }
-        ]
-       }
-      ]
-     }
+     "bdtMeta": {}
     },
     "forms": {}
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "val csvMeteorologia= \"/data/tp/Meteorologia.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n         .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n        .load(csvMeteorologia)\n        .withColumn(\"date\", to_date(col(\"date\"), \"dd/MM/yyyy\"))\n\ndf.createOrReplaceTempView(MeteorologiaTable)\ndf.cache()\n//df.printSchema()\n//df.describe().show()\ndf.show()",
+   "text": "val csvMeteorologia= \"/data/tp/Meteorologia.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n         .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n        .load(csvMeteorologia)\n        .withColumn(\"date\", to_date(col(\"date\"), \"dd/MM/yyyy\"))\n\nval minDate = df.select(min(\"date\")).first()(0)\nval maxDate = df.select(max(\"date\")).first()(0)\nprintln(s\"Minimum start date: $minDate\")\nprintln(s\"Maximum start date: $maxDate\")\n\ndf.createOrReplaceTempView(MeteorologiaTable)\ndf.cache()\n//df.printSchema()\n//df.describe().show()\ndf.show()",
    "id": "",
    "dateCreated": "2023-04-30 21:07:30.821",
    "config": {},
-   "dateStarted": "2023-05-01 22:58:34.649",
-   "dateUpdated": "2023-05-01 22:58:35.004",
-   "dateFinished": "2023-05-01 22:58:35.003",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "+----------+----+----+----+----+----+----+----+------+------+\n|      date|tavg|tmin|tmax|prcp|wdir|wspd|wpgt|  pres|  city|\n+----------+----+----+----+----+----+----+----+------+------+\n|2022-01-01|16.5|16.0|17.6| 1.7| 247|26.0|null|1016.4|Açores|\n|2022-01-02|17.3|15.5|18.6| 1.0| 192|20.5|null|1019.9|Açores|\n|2022-01-03|14.8|11.2|18.4|14.5|   8|20.9|null|1021.9|Açores|\n|2022-01-04|12.9| 7.9|16.5| 0.8| 244| 8.2|null|1030.4|Açores|\n|2022-01-05|15.4|13.7|16.6| 0.1| 225|12.2|null|1031.2|Açores|\n|2022-01-06|14.9|13.5|16.2| 0.8|  16|20.8|null|1033.8|Açores|\n|2022-01-07|14.8|13.2|16.3| 0.3|  58|11.9|null|1036.8|Açores|\n|2022-01-08|14.7|13.2|16.7| 0.0|  44| 9.3|null|1034.4|Açores|\n|2022-01-09|14.8|13.3|17.0| 0.0| 172|15.6|null|1026.2|Açores|\n|2022-01-10|16.1|14.0|18.0| 1.8| 176|21.5|null|1017.3|Açores|\n|2022-01-11|17.1|14.9|19.5| 0.3| 105|21.4|null|1023.3|Açores|\n|2022-01-12|15.3|13.5|17.4| 3.6|  82|21.1|null|1024.8|Açores|\n|2022-01-13|15.3|13.3|18.6| 3.3|  75|13.8|null|1019.4|Açores|\n|2022-01-14|16.1|14.3|18.6| 0.8|  30|12.8|null|1020.7|Açores|\n|2022-01-15|13.6|10.8|18.4| 3.8|  23|27.9|null|1023.8|Açores|\n|2022-01-16|13.3|10.8|15.4| 0.0|  42|26.1|null|1020.0|Açores|\n|2022-01-17|15.4|12.2|18.8| 1.8|  88|20.2|null|1015.9|Açores|\n|2022-01-18|16.3|13.7|18.8|46.2| 120|30.2|null|1010.3|Açores|\n|2022-01-19|15.9|13.8|17.9|15.2|  80|23.8|null|1011.1|Açores|\n|2022-01-20|17.2|15.3|19.0| 0.8|  98|36.8|null|1018.0|Açores|\n+----------+----+----+----+----+----+----+----+------+------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mcsvMeteorologia\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Meteorologia.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, tavg: double ... 8 more fields]\n"
-     }
-    ]
-   }
+   "dateStarted": "2023-05-03 19:05:57.742",
+   "dateUpdated": "2023-05-03 19:05:58.549",
+   "dateFinished": "2023-05-03 19:05:58.549"
   },
   {
    "settings": {
     "params": {
-     "bdtMeta": {
-      "ZTOOLS_DATA_FRAMES": [
-       {
-        "columns": [
-         {
-          "name": "Location",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Event",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "start_Date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         },
-         {
-          "name": "end_date",
-          "tpe": {
-           "presentableName": "date"
-          },
-          "nullable": true
-         }
-        ]
-       }
-      ]
-     }
+     "bdtMeta": {}
     },
     "forms": {}
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "val csvEventos= \"/data/tp/Eventos.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and values\n        .load(csvEventos)\n        .withColumn(\"end_date\", to_date(trim(col(\"end_date\")), \"dd/MM/yyyy\"))\n        .withColumn(\"start_Date\", to_date(col(\"start_Date\"), \"dd/MM/yyyy\"))\n\n\ndf.createOrReplaceTempView(EventosTable)\ndf.cache()\n//df.printSchema()\ndf.describe().show()\n//df.show()",
+   "text": "val csvEventos= \"/data/tp/Eventos.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and values\n        .load(csvEventos)\n        .withColumn(\"end_date\", to_date(trim(col(\"end_date\")), \"dd/MM/yyyy\"))\n        .withColumn(\"start_Date\", to_date(col(\"start_Date\"), \"dd/MM/yyyy\"))\n\nval minStartDate = df.select(min(\"start_Date\")).first()(0)\nval maxStartDate = df.select(max(\"start_Date\")).first()(0)\nval minEndDate = df.select(min(\"end_date\")).first()(0)\nval maxEndDate = df.select(max(\"end_date\")).first()(0)\n\nprintln(s\"Minimum start date: $minStartDate\")\nprintln(s\"Maximum start date: $maxStartDate\")\nprintln(s\"Minimum end date: $minEndDate\")\nprintln(s\"Maximum end date: $maxEndDate\")\n\ndf.createOrReplaceTempView(EventosTable)\ndf.cache()\n//df.printSchema()\ndf.describe().show()\n//df.show()",
    "config": {},
-   "dateStarted": "2023-05-01 22:58:35.018",
-   "dateUpdated": "2023-05-01 22:58:35.386",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "+-------+----------------+--------------------+\n|summary|        Location|               Event|\n+-------+----------------+--------------------+\n|  count|              59|                  59|\n|   mean|            null|                null|\n| stddev|            null|                null|\n|    min|       Albufeira| Albufeira Beach ...|\n|    max|Viana do Castelo| Web Summit - Tec...|\n+-------+----------------+--------------------+\n\n\u001b[1m\u001b[34mcsvEventos\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Eventos.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Location: string, Event: string ... 2 more fields]\n"
-     }
-    ]
-   },
-   "dateFinished": "2023-05-01 22:58:35.386"
+   "dateStarted": "2023-05-03 19:05:45.877",
+   "dateUpdated": "2023-05-03 19:05:47.317",
+   "dateFinished": "2023-05-03 19:05:47.317"
   }
  ],
  "name": "Zeppelin Notebook",
