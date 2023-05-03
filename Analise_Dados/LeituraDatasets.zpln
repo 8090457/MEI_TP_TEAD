@@ -27,7 +27,34 @@
      "bdtMeta": {
       "inlay": {
        "collapsed": true
-      }
+      },
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "Hotel ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Facility ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Nome",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
      }
     },
     "forms": {}
@@ -40,9 +67,18 @@
    "config": {
     "tableHide": true
    },
-   "dateStarted": "2023-05-03 21:59:47.533",
-   "dateUpdated": "2023-05-03 21:59:48.648",
-   "dateFinished": "2023-05-03 21:59:48.648"
+   "dateStarted": "2023-05-03 22:55:37.665",
+   "dateUpdated": "2023-05-03 22:55:38.050",
+   "dateFinished": "2023-05-03 22:55:38.050",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "root\n |-- Hotel ID: integer (nullable = true)\n |-- Facility ID: integer (nullable = true)\n |-- Nome: string (nullable = true)\n\n+--------+-----------+--------------------+\n|Hotel ID|Facility ID|                Nome|\n+--------+-----------+--------------------+\n|      16|        230|         Mom Kitchen|\n|      16|        231|        Diet Deserts|\n|      60|        232|Entry into the fi...|\n|      60|        233|              Hiking|\n|      60|        234|            Hammocks|\n|      60|        235|       Double shower|\n|      60|        236|Green area to pra...|\n|      60|        237|Live music on Sat...|\n|      60|        238|Bonfire with live...|\n|      86|        239|Newspapers in com...|\n|      86|        240| Baggage consignment|\n|      86|        241|    Covered car park|\n|      63|        242|             Heating|\n|      24|        243|     Parque Infantil|\n|      47|        265|          Playground|\n|      47|        266|           Mini Golf|\n|      68|        267|King size spring ...|\n|      68|        268|Queen size spring...|\n|      68|        269|Basket off season...|\n|      68|        270|Extra pillows and...|\n+--------+-----------+--------------------+\nonly showing top 20 rows\n\nimport org.apache.spark.sql.functions._\n\u001b[1m\u001b[34mcsvFacilities\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Facilities.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Hotel ID: int, Facility ID: int ... 1 more field]\n\u001b[1m\u001b[34mres243\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [Hotel ID: int, Facility ID: int ... 1 more field]\n"
+     }
+    ]
+   }
   },
   {
    "user": "anonymous",
