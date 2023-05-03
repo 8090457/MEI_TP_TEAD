@@ -17,7 +17,362 @@
    },
    "settings": {
     "params": {
-     "bdtMeta": {}
+     "bdtMeta": {
+      "inlay": {},
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "rate_plan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estrelas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hora_max_checkin",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "qtd_quartos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "area_localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         }
+        ]
+       },
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "rate_plan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estrelas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hora_max_checkin",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "qtd_quartos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "area_localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_linhas",
+          "tpe": {
+           "presentableName": "long"
+          },
+          "nullable": false
+         }
+        ]
+       }
+      ]
+     }
     },
     "forms": {}
    },
@@ -29,10 +384,164 @@
    "progressUpdateIntervalMs": 500,
    "focus": true,
    "$$hashKey": "object:394",
-   "text": "import org.apache.spark.sql.functions._\n//depois testar com o iqr 1.5\n\nval result = spark.sql(\n    \"\"\"\n      SELECT qr.*\n      FROM QuartosReservados qr    \n    \"\"\"\n)\n\n// Calcula a média e o desvio padrão do número de noites usando Three Sigma\n//mean: Double = 2.282015534754033\n//stdDev: Double = 4.682108190781085\nval mean = result.agg(avg(\"num_noites\")).head.getDouble(0)\nval stdDev = result.agg(stddev(\"num_noites\")).head.getDouble(0)\n//mean + 3 * stdDev \n//14.32 = 2.28 + 3 * 4.68\nval upperLimit = 14\nval lowerLimit = 0.0 \nval outliers = result.filter($\"num_noites\" > upperLimit || $\"num_noites\" < lowerLimit)\n\n// adiciona uma coluna com o número de linhas\nval resultCount = outliers.withColumn(\"num_linhas\", count(\"*\").over())\n//// exibe o valor da coluna \"num_linhas\"\nresultCount.agg(max(\"num_linhas\")).show()\noutliers.show(115)\n//result.limit(100).show(100)",
-   "dateStarted": "2023-05-03 18:51:19.393",
-   "dateUpdated": "2023-05-03 18:51:21.055",
-   "dateFinished": "2023-05-03 18:51:21.055"
+   "text": "//depois testar com o iqr 1.5\n\nval resultQuartosReservados = spark.sql(\n    \"\"\"\n     SELECT * \n      FROM QuartosReservados qr\n      INNER JOIN Hotel h \n      ON h.hotel_ID = qr.hotel_ID   \n    \"\"\"\n)\n\n// Calcula a média e o desvio padrão do número de noites usando Three Sigma\n//mean: Double = 2.282015534754033\n//stdDev: Double = 4.682108190781085\nval mean = resultQuartosReservados.agg(avg(\"num_noites\")).head.getDouble(0)\nval stdDev = resultQuartosReservados.agg(stddev(\"num_noites\")).head.getDouble(0)\n//mean + 3 * stdDev \n//14.32 = 2.28 + 3 * 4.68\nval upperLimit = 14\nval lowerLimit = 0.0 \nval outliers = resultQuartosReservados.filter($\"num_noites\" > upperLimit || $\"num_noites\" < lowerLimit)\n\n// adiciona uma coluna com o número de linhas\nval resultCount = outliers.withColumn(\"num_linhas\", count(\"*\").over())\n//// exibe o valor da coluna \"num_linhas\"\nresultCount.agg(max(\"num_linhas\")).show()\noutliers.show(115)\n//result.limit(100).show(100)",
+   "dateStarted": "2023-05-03 21:34:00.093",
+   "dateUpdated": "2023-05-03 21:34:01.224",
+   "dateFinished": "2023-05-03 21:34:01.224",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "+---------------+\n|max(num_linhas)|\n+---------------+\n|            115|\n+---------------+\n\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+----------+--------+-------+--------+-----+---------------+------------+------------+--------+--------------------+--------+------------------+---------------+-------------------+-----------+----------------+\n|hotel_ID|Reserve_ID|          pais|estado_reserva|room_ID|         tipo_quarto|           rate_plan|        data_reserva|num_noites|ocupacao|adultos|criancas|bebes|    preco_euros|data_chegada|data_partida|hotel_ID|         localizacao|estrelas|idade_max_criancas|idade_max_bebes|   hora_max_checkin|qtd_quartos|area_localizacao|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+----------+--------+-------+--------+-----+---------------+------------+------------+--------+--------------------+--------+------------------+---------------+-------------------+-----------+----------------+\n|     283|   1418645|      Portugal|     Cancelado|   1242|                  T1|                  7N|2022-01-03 07:05:...|        42|       2|      2|       0|    2|            0.0|  2022-04-19|  2022-05-31|     283|               Porto|       0|                 3|             36|2023-05-01 20:00:00|          7|           Porto|\n|     285|   1423137|       Holanda|     Registado|   1290|ONE-BEDROOM APART...|                  7N|2022-01-16 20:02:...|        17|       5|      5|       0|    5|         1162.8|  2022-07-11|  2022-07-28|     285|               Porto|       1|                 3|             36|2023-05-01 20:00:00|          8|           Porto|\n|     414|   1428830|       Irlanda|     Registado|   2050|Duplo Vista Interior|        Normal - Bar|2022-01-31 12:24:...|        15|       1|      1|       0|    1|         1800.0|  2022-08-13|  2022-08-28|     414|São Martinho do P...|       3|                12|             36|2023-05-01 23:30:00|         30|        Alcobaça|\n|     494|   1429963|      Portugal|     Registado|   2383|Quarto twin Com W...|                 Bar|2022-02-02 17:14:...|        28|       2|      2|       0|    2|         1650.0|  2022-02-07|  2022-03-07|     494|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     494|   1429966|      Portugal|     Registado|   2383|Quarto twin Com W...|                 Bar|2022-02-02 17:20:...|        31|       2|      2|       0|    2|         1650.0|  2022-03-07|  2022-04-07|     494|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     328|   1433249| África do Sul|     Registado|   1451|4 Bed Mixed Dormi...|             WebSite|2022-02-09 13:05:...|        88|       1|      1|       0|    1|         1977.0|  2022-02-26|  2022-05-25|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     444|   1434245|        Suécia|     Registado|   2076|               Suite|              Normal|2022-02-11 12:02:...|        18|       2|      2|       0|    2|         1980.0|  2022-02-27|  2022-03-17|     444|              Nazaré|       4|                12|             24|2023-05-01 23:59:00|         77|         Batalha|\n|     560|   1435031|      Portugal|     Cancelado|   2868|         Estudio 2+2|                  7N|2022-02-13 08:25:...|        20|       2|      2|       0|    2|            0.0|  2022-03-11|  2022-03-31|     560|               Porto|       0|                 3|             36|2023-05-01 20:00:00|          8|           Porto|\n|     490|   1437984|      Portugal|     Registado|   2798|Apartamento Estúd...| Promoção dia da Mãe|2022-02-17 15:22:...|        61|       1|      1|       0|    1|         2600.0|  2022-02-28|  2022-04-30|     490|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     493|   1442004|      Portugal|     Registado|   2324|    Estudio com sala|Não Reembolsável ...| 2022-02-24 15:00:43|        61|       2|      2|       0|    2|         3100.0|  2022-02-28|  2022-04-30|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     490|   1442747|         Suiça|     Registado|   2317|      Apartamento T1|Promoção mais 7 n...|2022-02-25 21:07:...|        64|       1|      1|       0|    1|         3360.0|  2022-02-25|  2022-04-30|     490|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     490|   1444083|      Portugal|     Registado|   2573|Quarto de casal c...|Promoção mais 7 n...|2022-02-28 17:09:...|        45|       1|      1|       0|    1|         1687.5|  2022-03-11|  2022-04-25|     490|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     493|   1445857|      Portugal|     Registado|   2323|  Apartamento T1 R/C|                 Bar|2022-03-03 15:33:...|        30|       1|      1|       0|    1|         1600.0|  2022-04-30|  2022-05-30|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     285|   1446027|      Portugal|     Registado|   1290|ONE-BEDROOM APART...|                  7N|2022-03-03 20:04:...|        18|       2|      2|       0|    2|            0.0|  2022-03-14|  2022-04-01|     285|               Porto|       1|                 3|             36|2023-05-01 20:00:00|          8|           Porto|\n|     399|   1448243|       Espanha|     Registado|   1863|1 Bedroom Private...| Best Available Rate|2022-03-08 07:06:...|        17|       3|      3|       0|    3|         2686.0|  2022-08-13|  2022-08-30|     399|              Tavira|       0|                 3|              0|2023-05-01 16:00:00|          9|       Albufeira|\n|     328|   1448760|        Itália|     Registado|   1456|Superior Double Room|             WebSite|2022-03-08 21:57:...|        15|       2|      2|       0|    2|          782.0|  2022-03-20|  2022-04-04|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     493|   1450260|      Portugal|     Registado|   2338| Estudio com Terraço|Não Reembolsável ...|2022-03-11 18:35:...|        31|       1|      1|       0|    1|         1300.0|  2022-03-17|  2022-04-17|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     403|   1450818| Nova Zelândia|     Registado|   2740|Quarto Superior A...|Tarifa sem pequen...|2022-03-12 23:25:...|        18|       2|      2|       0|    2|          954.0|  2022-03-26|  2022-04-13|     403|           Ermesinde|       4|                 0|              0|2023-05-01 23:59:00|         26|           Porto|\n|     328|   1451872|        Brasil|     Registado|   1456|Superior Double Room|             WebSite|2022-03-14 18:01:...|        27|       1|      1|       0|    1|         1462.0|  2022-04-01|  2022-04-28|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     392|   1454271|       Bélgica|     Registado|   2122|APARTAMENTO FAMIL...|Epoca Alta ( Jul,...|2022-03-18 20:15:...|        19|       2|      2|       1|    2|        4082.91|  2022-07-22|  2022-08-10|     392|               Olhão|       4|                11|             24|2023-05-01 23:30:00|         19|       Albufeira|\n|     399|   1456224|      Alemanha|    Modificada|   1863|1 Bedroom Private...| Best Available Rate|2022-03-21 20:06:...|        16|       2|      2|       0|    2|         1616.0|  2022-09-23|  2022-10-09|     399|              Tavira|       0|                 3|              0|2023-05-01 16:00:00|          9|       Albufeira|\n|     238|   1456796|   Bielorússia|     Registado|    938|Side Superior Bal...|      Estadia Normal|2022-03-22 16:56:...|        41|       1|      1|       0|    1|         4498.5|  2022-04-09|  2022-05-20|     238|             Funchal|       3|                 8|             23|2023-05-01 23:30:00|         52|         Funchal|\n|     493|   1462453|      Portugal|     Registado|   2324|    Estudio com sala|Não Reembolsável ...|2022-03-30 15:11:...|        17|       1|      1|       0|    1|          765.0|  2022-03-31|  2022-04-17|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     285|   1464232|Estados Unidos|     Cancelado|   1289|     SUPERIOR STUDIO|                  7N|2022-04-01 18:23:...|        28|       2|      2|       0|    2|         1317.6|  2022-09-09|  2022-10-07|     285|               Porto|       1|                 3|             36|2023-05-01 20:00:00|          8|           Porto|\n|     285|   1464382|      Portugal|     Registado|   1290|ONE-BEDROOM APART...|                  7N|2022-04-01 21:53:...|        31|       2|      2|       0|    2|            0.0|  2022-10-01|  2022-11-01|     285|               Porto|       1|                 3|             36|2023-05-01 20:00:00|          8|           Porto|\n|     328|   1467919|      Portugal|    Modificada|   1450|6 Bed Mixed Dormi...|    B.A.R. (onlines)|2022-04-06 10:29:...|        15|       1|      1|       0|    1|          400.0|  2022-04-12|  2022-04-27|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     494|   1468891|      Portugal|     Registado|   2331|Quarto twin com W...|    Promoção7 noites|2022-04-07 10:05:...|        15|       1|      1|       0|    1|          892.5|  2022-04-11|  2022-04-26|     494|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     493|   1477047|      Portugal|     Registado|   2324|    Estudio com sala|                 Bar|2022-04-19 11:30:...|        30|       1|      1|       0|    1|         1800.0|  2022-04-24|  2022-05-24|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     327|   1477708|      Alemanha|  NãoRegistado|   1445|                  T1|               P.V.P|2022-04-20 08:36:...|        18|       2|      2|       0|    2|         1710.0|  2022-05-02|  2022-05-20|     327|     Câmara de Lobos|       4|                12|             24|2023-05-01 18:00:00|        123|         Funchal|\n|     327|   1477712|      Alemanha|     Registado|   1445|                  T1|               P.V.P|2022-04-20 08:41:...|        18|       2|      2|       0|    2|         1710.0|  2022-05-02|  2022-05-20|     327|     Câmara de Lobos|       4|                12|             24|2023-05-01 18:00:00|        123|         Funchal|\n|     482|   1489523|        Canadá|     Registado|   2285|      Apartamento T1|(WEB) Non-refunda...|2022-05-06 12:22:...|        16|       1|      4|       0|    1|2996.7199999978|  2022-05-09|  2022-05-25|     482|            Portimão|       4|                 3|             36|2023-05-01 23:59:00|        143|           Lagos|\n|     482|   1489527|        Canadá|     Registado|   2285|      Apartamento T1|(WEB) Non-refunda...|2022-05-06 12:25:...|        15|       1|      1|       0|    1| 703.2399999995|  2022-05-10|  2022-05-25|     482|            Portimão|       4|                 3|             36|2023-05-01 23:59:00|        143|           Lagos|\n|     503|   1491342|Estados Unidos|    Modificada|   2368| Quarto Duplo / Twin|             BAR APA|2022-05-08 22:14:...|        35|       2|      2|       0|    2|         2690.0|  2022-05-24|  2022-06-28|     503|              Aveiro|       3|                10|             36|2023-05-01 23:00:00|        187|          Aveiro|\n|     493|   1495031|      Portugal|     Registado|   2800|Estudio com 2 qua...|Não Reembolsável ...|2022-05-12 21:44:...|        16|       1|      1|       0|    1|          690.0|  2022-05-18|  2022-06-03|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     493|   1495413|      Portugal|     Registado|   2338| Estudio com Terraço|Não Reembolsável ...|2022-05-13 13:59:...|        19|       1|      1|       0|    1|          855.0|  2022-05-15|  2022-06-03|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     493|   1495419|      Portugal|     Registado|   2324|    Estudio com sala|Não Reembolsável ...|2022-05-13 14:03:...|        30|       2|      2|       0|    2|         1700.0|  2022-05-30|  2022-06-29|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     482|   1500861|        Canadá|     Registado|   2285|      Apartamento T1|(WEB) Non-refunda...|2022-05-20 11:53:...|        16|       2|      4|       0|    2| 2623.999999999|  2022-05-30|  2022-06-15|     482|            Portimão|       4|                 3|             36|2023-05-01 23:59:00|        143|           Lagos|\n|     482|   1501349|        Canadá|     Registado|   2285|      Apartamento T1|(WEB) Non-refunda...|2022-05-21 06:55:...|        15|       2|      2|       0|    2|1254.5699999995|  2022-05-31|  2022-06-15|     482|            Portimão|       4|                 3|             36|2023-05-01 23:59:00|        143|           Lagos|\n|     493|   1506335|      Portugal|     Registado|   2323|  Apartamento T1 R/C|                 Bar|2022-05-27 16:00:...|        20|       1|      1|       0|    1|         1060.0|  2022-06-10|  2022-06-30|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     493|   1509739|      Portugal|     Registado|   2338| Estudio com Terraço|Não Reembolsável ...|2022-05-31 17:10:...|        18|       1|      1|       0|    1|          810.0|  2022-06-15|  2022-07-03|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     490|   1515904|      Portugal|     Registado|   2799| Apartamento estúdio| Promoção dia da Mãe|2022-06-08 16:16:...|        27|       1|      1|       0|    1|         2000.0|  2022-09-04|  2022-10-01|     490|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     482|   1518732|       Holanda|     Registado|   2285|      Apartamento T1|(WEB) Non-refunda...|2022-06-12 15:47:...|        17|       2|      2|       0|    2|         1236.9|  2022-09-17|  2022-10-04|     482|            Portimão|       4|                 3|             36|2023-05-01 23:59:00|        143|           Lagos|\n|     310|   1525113|       Bélgica|  NãoRegistado|   1673|Quarto Duplo Supe...|      MR - Main Rate|2022-06-20 17:19:...|        20|       2|      4|       0|    2|         2760.0|  2022-07-24|  2022-08-13|     310|                Gaia|       3|                 0|              0|2023-05-01 23:59:00|        192|           Porto|\n|     514|   1526304|         Suiça|     Registado|   2425|     Eco Garden Room|   Non-Refundable >5|2022-06-22 08:15:...|        15|       1|      1|       0|    1|         1620.0|  2022-09-23|  2022-10-08|     514|Charneca de Caparica|       3|                12|             24|2023-05-01 18:00:00|         13|       Carnaxide|\n|     492|   1551961|      Portugal|     Cancelado|   2333|Quarto de casal c...|           7 noites |2022-07-25 15:14:...|        60|       2|      2|       0|    2|         1500.0|  2022-08-16|  2022-10-15|     492|              Lisboa|       0|                 0|              0|2023-05-01 09:00:00|         13|       Carnaxide|\n|     492|   1551966|      Portugal|     Registado|   2322|Quarto twin com W...|           7 noites |2022-07-25 15:18:...|        31|       1|      1|       0|    1|         1500.0|  2022-08-30|  2022-09-30|     492|              Lisboa|       0|                 0|              0|2023-05-01 09:00:00|         13|       Carnaxide|\n|     493|   1555045|      Portugal|     Registado|   2323|  Apartamento T1 R/C|Não Reembolsável ...|2022-07-27 09:43:...|        31|       1|      1|       0|    1|         1600.0|  2022-08-29|  2022-09-29|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     492|   1557748|      Portugal|     Registado|   2322|Quarto twin com W...|                 Bar|2022-07-30 22:05:...|        90|       1|      1|       0|    1|         2700.0|  2022-09-16|  2022-12-15|     492|              Lisboa|       0|                 0|              0|2023-05-01 09:00:00|         13|       Carnaxide|\n|     494|   1558782|      Portugal|     Registado|   2331|Quarto twin com W...|                 Bar|2022-08-01 10:57:...|        19|       1|      1|       0|    1|         2470.0|  2022-08-01|  2022-08-20|     494|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     494|   1559787|      Portugal|     Registado|   2331|Quarto twin com W...|    Promoção7 noites|2022-08-02 13:29:...|       130|       1|      1|       0|    1|         3600.0|  2022-09-07|  2023-01-15|     494|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     309|   1562182|      Portugal|  NãoRegistado|   1430|Quarto Twin Superior|      MR - Main Rate|2022-08-05 17:07:...|        17|       1|      1|       1|    1|         899.64|  2022-08-27|  2022-09-13|     309|             Valongo|       3|                12|              4|2023-05-01 23:59:00|         41|           Porto|\n|     309|   1562182|      Portugal|  NãoRegistado|   2254|Quarto Duplo Supe...|      MR - Main Rate|2022-08-05 17:07:...|        17|       1|      1|       1|    1|         899.64|  2022-08-27|  2022-09-13|     309|             Valongo|       3|                12|              4|2023-05-01 23:59:00|         41|           Porto|\n|     309|   1562215|      Portugal|  NãoRegistado|   1430|Quarto Twin Superior|      MR - Main Rate|2022-08-05 17:42:...|        17|       1|      1|       1|    1|         899.64|  2022-08-27|  2022-09-13|     309|             Valongo|       3|                12|              4|2023-05-01 23:59:00|         41|           Porto|\n|     309|   1562215|      Portugal|  NãoRegistado|   2254|Quarto Duplo Supe...|      MR - Main Rate|2022-08-05 17:42:...|        17|       1|      1|       1|    1|         899.64|  2022-08-27|  2022-09-13|     309|             Valongo|       3|                12|              4|2023-05-01 23:59:00|         41|           Porto|\n|     309|   1562692|      Portugal|     Registado|   2254|Quarto Duplo Supe...|      MR - Main Rate|2022-08-06 15:06:...|        17|       1|      2|       2|    1|        1799.28|  2022-08-27|  2022-09-13|     309|             Valongo|       3|                12|              4|2023-05-01 23:59:00|         41|           Porto|\n|     493|   1565579|      Portugal|     Registado|   2324|    Estudio com sala|                 Bar|2022-08-10 10:03:...|        60|       2|      2|       0|    2|         3000.0|  2022-08-16|  2022-10-15|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     392|   1566703|      Alemanha|     Registado|   1889|        APARTAMENTO |     Oferta Especial|2022-08-11 19:56:...|        29|       1|      1|       0|    1|        1735.65|  2022-11-04|  2022-12-03|     392|               Olhão|       4|                11|             24|2023-05-01 23:30:00|         19|       Albufeira|\n|     493|   1567160|      Portugal|     Cancelado|   2338| Estudio com Terraço|Não Reembolsável ...|2022-08-12 14:28:...|        91|       2|      2|       0|    2|         4800.0|  2022-08-25|  2022-11-24|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     492|   1567912|      Portugal|     Registado|   2322|Quarto twin com W...|                 Bar|2022-08-13 19:25:...|       147|       1|      1|       0|    1|         4500.0|  2022-09-06|  2023-01-31|     492|              Lisboa|       0|                 0|              0|2023-05-01 09:00:00|         13|       Carnaxide|\n|     492|   1570239|      Portugal|     Registado|   2333|Quarto de casal c...|                 Bar|2022-08-17 11:55:...|        57|       1|      1|       0|    1|         1500.0|  2022-08-19|  2022-10-15|     492|              Lisboa|       0|                 0|              0|2023-05-01 09:00:00|         13|       Carnaxide|\n|     493|   1570488|      Portugal|     Registado|   2800|Estudio com 2 qua...|                 Bar|2022-08-17 17:18:...|        20|       1|      1|       0|    1|         1800.0|  2022-08-21|  2022-09-10|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     482|   1571909|        Itália|     Registado|   2285|      Apartamento T1|(WEB) Best Availa...|2022-08-19 20:56:...|        21|       2|      2|       0|    2|         3125.5|  2022-08-26|  2022-09-16|     482|            Portimão|       4|                 3|             36|2023-05-01 23:59:00|        143|           Lagos|\n|     493|   1574736|      Portugal|     Registado|   2324|    Estudio com sala|Não Reembolsável ...|2022-08-24 11:10:...|        52|       1|      1|       0|    1|         3000.0|  2022-08-24|  2022-10-15|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     493|   1578001|      Portugal|     Registado|   2323|  Apartamento T1 R/C|Não Reembolsável ...|2022-08-29 10:13:...|        31|       1|      1|       0|    1|         1600.0|  2022-10-03|  2022-11-03|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     395|   1583953|        Brasil|     Registado|   1828|             Estúdio|                  7N|2022-09-06 19:58:...|        16|       2|      2|       0|    2|          902.7|  2022-12-20|  2023-01-05|     395|               Porto|       0|                 3|             36|2023-05-01 20:00:00|         16|           Porto|\n|     492|   1585707|      Portugal|     Registado|   2321|      Apartamento T2|                 Bar|2022-09-09 12:44:...|        30|       3|      3|       0|    3|         4000.0|  2022-09-14|  2022-10-14|     492|              Lisboa|       0|                 0|              0|2023-05-01 09:00:00|         13|       Carnaxide|\n|     492|   1586762|      Portugal|     Registado|   2322|Quarto twin com W...|           7 noites |2022-09-11 12:17:...|        31|       2|      2|       0|    2|         1100.0|  2022-09-30|  2022-10-31|     492|              Lisboa|       0|                 0|              0|2023-05-01 09:00:00|         13|       Carnaxide|\n|     328|   1586909|        Angola|     Registado|   1452|         Single Room|             WebSite|2022-09-11 16:23:...|        20|       1|      1|       0|    1|         1261.6|  2022-09-30|  2022-10-20|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     328|   1586909|        Angola|     Registado|   1453|Standard Double Room|             WebSite|2022-09-11 16:23:...|        20|       1|      1|       0|    1|        1594.97|  2022-09-30|  2022-10-20|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     556|   1589602|      Portugal|      Pendente|   2831|Double Room Standard|WEB (Best Availab...|2022-09-15 11:01:...|        31|       1|      1|       0|    1|        1556.75|  2022-10-01|  2022-11-01|     556|             Covilhã|       3|                10|              3|2023-05-01 23:00:00|         84|  Castelo Branco|\n|     482|   1592168|      Portugal|     Registado|   2285|      Apartamento T1|(WEB) Best Availa...|2022-09-19 16:49:...|        15|       2|      2|       0|    2|          988.0|  2022-09-24|  2022-10-09|     482|            Portimão|       4|                 3|             36|2023-05-01 23:59:00|        143|           Lagos|\n|     490|   1594217|      Portugal|     Registado|   2798|Apartamento Estúd...|                 Bar|2022-09-22 17:38:...|        30|       2|      2|       0|    2|         1700.0|  2022-09-26|  2022-10-26|     490|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     493|   1594243|      Portugal|     Registado|   2324|    Estudio com sala|Não Reembolsável ...|2022-09-22 18:03:...|        16|       1|      1|       0|    1|          850.0|  2022-10-15|  2022-10-31|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     490|   1594795|      Portugal|     Registado|   2799| Apartamento estúdio|                 Bar|2022-09-23 15:50:...|        30|       1|      1|       0|    1|         1600.0|  2022-10-01|  2022-10-31|     490|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     492|   1598223|      Portugal|     Registado|   2321|      Apartamento T2|           7 noites |2022-09-28 17:54:...|        18|       1|      1|       0|    1|         1620.0|  2022-10-14|  2022-11-01|     492|              Lisboa|       0|                 0|              0|2023-05-01 09:00:00|         13|       Carnaxide|\n|     444|   1604775|        Quatar|     Registado|   2229|              Triplo|              Normal|2022-10-09 07:04:...|        30|       2|      2|       0|    2|         3320.0|  2022-10-20|  2022-11-19|     444|              Nazaré|       4|                12|             24|2023-05-01 23:59:00|         77|         Batalha|\n|     379|   1604976|   Reino Unido|     Registado|   1739|Suite T1 Vista Ma...|      Non Refundable|2022-10-09 14:07:...|        16|       2|      2|       2|    2|        3177.75|  2023-06-30|  2023-07-16|     379|               Lagos|       4|                10|             36|2023-05-01 18:00:00|         26|           Lagos|\n|     494|   1609729|      Portugal|     Registado|   2383|Quarto twin Com W...|    Promoção7 noites|2022-10-16 18:24:...|        60|       1|      1|       0|    1|         2805.0|  2022-11-01|  2022-12-31|     494|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     482|   1611150|        França|     Registado|   2285|      Apartamento T1|(WEB) Best Availa...|2022-10-18 17:20:...|        15|       2|      2|       0|    2|          621.3|  2022-10-20|  2022-11-04|     482|            Portimão|       4|                 3|             36|2023-05-01 23:59:00|        143|           Lagos|\n|     492|   1612233|      Portugal|     Registado|   2333|Quarto de casal c...|                 Bar|2022-10-20 12:31:...|        85|       1|      1|       0|    1|         3000.0|  2022-11-07|  2023-01-31|     492|              Lisboa|       0|                 0|              0|2023-05-01 09:00:00|         13|       Carnaxide|\n|     494|   1613490|      Portugal|     Registado|   2383|Quarto twin Com W...|    Promoção7 noites|2022-10-22 19:29:...|        41|       1|      1|       0|    1|         1400.0|  2022-11-04|  2022-12-15|     494|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     392|   1613784|      Alemanha|     Registado|   1889|        APARTAMENTO |       Epoca Normal |2022-10-23 14:36:...|        16|       2|      2|       0|    2|        1207.04|  2023-03-13|  2023-03-29|     392|               Olhão|       4|                11|             24|2023-05-01 23:30:00|         19|       Albufeira|\n|     493|   1615124|      Portugal|     Registado|   2323|  Apartamento T1 R/C|Não Reembolsável ...|2022-10-25 18:10:...|        30|       1|      1|       0|    1|         1600.0|  2022-11-03|  2022-12-03|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     493|   1618127|      Portugal|     Registado|   2338| Estudio com Terraço|                 Bar|2022-10-31 16:55:...|        27|       2|      2|       0|    2|         1600.0|  2022-10-31|  2022-11-27|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     503|   1619837|        Brasil|     Cancelado|   2784|Individual Econom...|              BAR RO|2022-11-03 16:22:...|       149|       1|      1|       0|    1|         6505.0|  2023-02-02|  2023-07-01|     503|              Aveiro|       3|                10|             36|2023-05-01 23:00:00|        187|          Aveiro|\n|     490|   1626899|      Portugal|     Registado|   2574|Quarto familiar c...|Promoção mais 7 n...|2022-11-17 09:01:...|       149|       1|      1|       0|    1|         5587.5|  2023-02-01|  2023-06-30|     490|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     493|   1641157|      Portugal|     Registado|   2324|    Estudio com sala|Não Reembolsável ...|2022-12-15 13:21:...|        29|       2|      2|       0|    2|         1305.0|  2022-12-30|  2023-01-28|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     492|   1642762|      Portugal|     Registado|   2801|Apartamento com 3...|                 Bar|2022-12-19 11:12:...|        48|       3|      3|       0|    3|         9158.4|  2022-12-19|  2023-02-05|     492|              Lisboa|       0|                 0|              0|2023-05-01 09:00:00|         13|       Carnaxide|\n|     392|   1649999|         Suiça|     Registado|   1889|        APARTAMENTO |     Oferta Especial|2023-01-04 13:33:...|        21|       2|      2|       0|    2|     2260.09224|  2023-06-01|  2023-06-22|     392|               Olhão|       4|                11|             24|2023-05-01 23:30:00|         19|       Albufeira|\n|     478|   1661543|   Reino Unido|     Registado|   2231|Duplo (Cama de Ca...|    Não Reembolsável|2023-01-22 10:13:...|        32|       2|      2|       0|    2|        2721.75|  2023-06-11|  2023-07-13|     478|             Estoril|       2|                12|             24|2023-05-01 18:00:00|         26|      Carvavelos|\n|     492|   1664223|      Portugal|     Cancelado|   2321|      Apartamento T2|                 Bar|2023-01-25 16:46:...|        21|       2|      2|       0|    2|         2940.0|  2023-02-16|  2023-03-09|     492|              Lisboa|       0|                 0|              0|2023-05-01 09:00:00|         13|       Carnaxide|\n|     490|   1666181|      Portugal|     Registado|   2317|      Apartamento T1|                 Bar|2023-01-27 19:09:...|        21|       2|      2|       0|    2|         2100.0|  2023-02-16|  2023-03-09|     490|              Lisboa|       0|                 0|              0|2023-05-01 12:00:00|          6|       Carnaxide|\n|     493|   1668644|      Portugal|     Cancelado|   2338| Estudio com Terraço|                 Bar|2023-01-31 17:01:...|       481|       1|      1|       0|    1|        20683.0|  2023-02-05|  2024-05-31|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     328|   1674186|    Cabo Verde|     Registado|   1453|Standard Double Room|    B.A.R. (onlines)|2023-02-08 13:23:...|        15|       1|      1|       0|    1|         1090.0|  2023-05-09|  2023-05-24|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     493|   1677401|      Portugal|     Registado|   2800| Estudio com lareira|                 Bar|2023-02-13 13:25:...|        31|       1|      1|       0|    1|         1364.0|  2023-03-17|  2023-04-17|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     309|   1677748|      Portugal|  NãoRegistado|   2254|Quarto Duplo Supe...|                  NR|2023-02-13 20:49:...|        15|       2|      2|       0|    2|          741.0|  2023-02-18|  2023-03-05|     309|             Valongo|       3|                12|              4|2023-05-01 23:59:00|         41|           Porto|\n|     309|   1677758|      Portugal|    Modificada|   2254|Quarto Duplo Supe...|                  NR|2023-02-13 21:08:...|        15|       2|      2|       0|    2|          741.0|  2023-02-18|  2023-03-05|     309|             Valongo|       3|                12|              4|2023-05-01 23:59:00|         41|           Porto|\n|     328|   1685188|    Cabo Verde|     Cancelado|   1452|         Single Room|             WebSite|2023-02-25 12:06:...|        17|       1|      1|       0|    1|         909.17|  2023-04-05|  2023-04-22|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     493|   1689577|      Portugal|     Cancelado|   2800| Estudio com lareira|Não Reembolsável ...|2023-03-03 11:02:...|       168|       1|      1|       0|    1|         6652.8|  2023-03-16|  2023-08-31|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     493|   1689583|      Portugal|     Registado|   2324|    Estudio com sala|                 Bar|2023-03-03 11:09:...|       168|       1|      1|       0|    1|         6600.0|  2023-03-16|  2023-08-31|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     493|   1692422|      Portugal|     Registado|   2338| Estudio com Terraço|                 Bar|2023-03-07 10:55:...|        16|       1|      1|       0|    1|         1120.0|  2023-03-10|  2023-03-26|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     310|   1693446|        Brasil|     Registado|   1673|Quarto Duplo Supe...|      MR - Main Rate|2023-03-08 18:34:...|        18|       2|      2|       0|    2|        912.285|  2023-04-09|  2023-04-27|     310|                Gaia|       3|                 0|              0|2023-05-01 23:59:00|        192|           Porto|\n|     493|   1693880|      Portugal|     Registado|   2338| Estudio com Terraço|                 Bar|2023-03-09 12:46:...|        31|       1|      1|       0|    1|         1457.0|  2023-05-05|  2023-06-05|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     328|   1694270|     Argentina|     Registado|   1453|Standard Double Room|    B.A.R. (onlines)|2023-03-09 22:02:...|        15|       2|      2|       0|    2|         1064.0|  2023-03-14|  2023-03-29|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     399|   1695347|       Espanha|     Registado|   1859|1 Bedroom Garden ...| Best Available Rate|2023-03-11 18:50:...|        17|       3|      3|       0|    3|         2720.0|  2023-08-13|  2023-08-30|     399|              Tavira|       0|                 3|              0|2023-05-01 16:00:00|          9|       Albufeira|\n|     328|   1696421|    Cabo Verde|     Registado|   1450|6 Bed Mixed Dormi...|             WebSite|2023-03-13 10:15:...|        21|       1|      1|       0|    1|         622.63|  2023-03-20|  2023-04-10|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     391|   1700724|         Suiça|     Registado|   1803|            Bordeaux|        BASE.WEBSITE|2023-03-19 11:45:...|        24|       1|      1|       0|    1|         1320.0|  2023-04-11|  2023-05-05|     391|        Torres Novas|       4|                17|              0|2023-05-01 23:59:00|         19|          Amares|\n|     328|   1703765|    Cabo Verde|     Cancelado|   1450|6 Bed Mixed Dormi...|             WebSite|2023-03-23 12:03:...|        28|       1|      1|       0|    1|         819.08|  2023-03-27|  2023-04-24|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     328|   1705910|      Marrocos|     Registado|   1450|6 Bed Mixed Dormi...|             WebSite|2023-03-26 15:22:...|        18|       1|      1|       0|    1|         500.98|  2023-07-09|  2023-07-27|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     482|   1710835|        Itália|     Registado|   2285|      Apartamento T1|(WEB) Best Availa...|2023-04-02 08:01:...|        18|       2|      2|       0|    2|          967.1|  2023-04-12|  2023-04-30|     482|            Portimão|       4|                 3|             36|2023-05-01 23:59:00|        143|           Lagos|\n|     493|   1714167|      Portugal|     Cancelado|   2323|  Apartamento T1 R/C|                 Bar|2023-04-05 21:26:...|        23|       1|      1|       0|    1|         2300.0|  2023-05-31|  2023-06-23|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     444|   1715706|        Quatar|     Registado|   2077|            Familiar|              Normal|2023-04-08 12:08:...|        25|       2|      2|       0|    2|         4020.0|  2023-04-24|  2023-05-19|     444|              Nazaré|       4|                12|             24|2023-05-01 23:59:00|         77|         Batalha|\n|     328|   1717448|       Senegal|     Cancelado|   1456|Superior Double Room|             WebSite|2023-04-10 22:48:...|        15|       1|      1|       0|    1|        1117.39|  2023-05-15|  2023-05-30|     328|              Lisboa|       0|                 0|              0|2023-05-01 22:00:00|         56|       Carnaxide|\n|     493|   1717922|      Portugal|     Registado|   2800| Estudio com lareira|                 Bar|2023-04-11 15:27:...|        31|       1|      1|       0|    1|         1550.0|  2023-05-20|  2023-06-20|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n|     493|   1720111|      Portugal|     Registado|   2323|  Apartamento T1 R/C|Não Reembolsável ...|2023-04-14 09:05:...|        23|       3|      3|       0|    3|         2070.0|  2023-05-31|  2023-06-23|     493|           Carnaxide|       0|                 0|              0|2023-05-01 12:00:00|          5|       Carnaxide|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+----------+--------+-------+--------+-----+---------------+------------+------------+--------+--------------------+--------+------------------+---------------+-------------------+-----------+----------------+\n\n\u001b[1m\u001b[34mresultQuartosReservados\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 22 more fields]\n\u001b[1m\u001b[34mmean\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 2.282015534754033\n\u001b[1m\u001b[34mstdDev\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 4.682108190781085\n\u001b[1m\u001b[34mupperLimit\u001b[0m: \u001b[1m\u001b[32mInt\u001b[0m = 14\n\u001b[1m\u001b[34mlowerLimit\u001b[0m: \u001b[1m\u001b[32mDouble\u001b[0m = 0.0\n\u001b[1m\u001b[34moutliers\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 22 more fields]\n\u001b[1m\u001b[34mresultCount\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 23 more fields]\n"
+     }
+    ]
+   }
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "inlay": {},
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         }
+        ]
+       },
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "count",
+          "tpe": {
+           "presentableName": "long"
+          },
+          "nullable": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "//Agrupamento por rate_plan\nval dfRatePlan = resultQuartosReservados.select(\"rate_plan\")\n\n// Agrupar os dados pelo rateplan e contar o número de ocorrências\nval dfRatePlanCounts = dfRatePlan.groupBy(\"rate_plan\").count()\nval order = dfRatePlanCounts.orderBy($\"count\".desc)\n\n// Mostrar o resultado\norder.show(10000)",
+   "id": "",
+   "dateCreated": "2023-05-03 20:23:20.916",
+   "config": {},
+   "dateStarted": "2023-05-03 21:25:17.960",
+   "dateUpdated": "2023-05-03 21:25:18.601",
+   "dateFinished": "2023-05-03 21:25:18.601",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "+--------------------+-----+\n|           rate_plan|count|\n+--------------------+-----+\n|      MR - Main Rate| 2545|\n|              Normal| 2417|\n|                 BAR| 1827|\n|WEB (Best Availab...| 1707|\n|                 Bar| 1693|\n|             WebSite| 1681|\n|        Main Rate BB| 1057|\n|            Standard|  557|\n|(WEB) Best Availa...|  556|\n|    Não Reembolsável|  501|\n|(WEB) Non-refunda...|  445|\n| No Reembolsable 13%|  401|\n|         Tarifa Site|  380|\n|                 NRF|  334|\n|    DB Room Only NRF|  272|\n|              Promo |  262|\n|         Normal (BB)|  231|\n|         Tarifa Base|  228|\n|       No Refundable|  221|\n|                 NR |  217|\n|         Normal (RO)|  203|\n|      Non Refundable|  201|\n|      Estadia Normal|  201|\n|Tarifa Não Reembo...|  195|\n|                  NR|  175|\n|   Non-Refundable >5|  173|\n|Melhor Preço Gara...|  167|\n|        DB Room Only|  167|\n|                  4N|  165|\n|               NR BB|  148|\n|            Duplo BB|  148|\n|              Bar BB|  146|\n|      Reserva Direta|  140|\n|           Room Only|  136|\n|        Normal - Bar|  134|\n| Early Booking 30 NR|  134|\n|      Bar (2 noites)|  126|\n|       Epoca Normal |  117|\n|Reembolsável Supl...|  116|\n|           DB BB NRF|  108|\n|Não reembolsável ...|  107|\n|WEB NRF - Non Ref...|  106|\n|        MEIA PENSÃO |  105|\n|  Reserva Antecipada|   99|\n|NON REFUNDABLE - ...|   97|\n|CHOCOLATE EXPERIENCE|   93|\n|Standart Rate - Q...|   93|\n|             BAR APA|   90|\n|              NRF BB|   90|\n|           DB RO NRF|   87|\n|        BASE.WEBSITE|   80|\n|Não Reembolsável ...|   77|\n|              Bar RO|   72|\n|               PROMO|   72|\n|                  7N|   72|\n|NRF - Non Refundable|   72|\n|              BAR RO|   69|\n|       B.A.R - C/ PA|   68|\n|     Oferta Especial|   68|\n|Epoca Alta ( Jul,...|   67|\n| Não Reembolsável AP|   67|\n|Clientes Fidelizados|   65|\n|Tarifa Reembolsáv...|   64|\n|Standart Rate - Q...|   63|\n|     SUPERIOR RO NRF|   57|\n|Tarifa sem pequen...|   55|\n|Non Refundable | ...|   54|\n|Bar - Melhor Preç...|   53|\n|    TW Room Only NRF|   52|\n|Não reembolsável ...|   52|\n|     Reembolsável AP|   50|\n|    No refundable BB|   50|\n| Best Available Rate|   49|\n|   Semi Flexivel BB |   49|\n|      B.A.R - S/ PA |   48|\n|               TW BB|   46|\n|BAR NO REFUNDABLE...|   44|\n| Tarifa Normal - BAR|   43|\n|     Bar | ROOM ONLY|   43|\n|        Preço Normal|   42|\n|       Semi Flexivel|   39|\n|BAR-ONLINE | Min....|   39|\n|          DBS RO NRF|   37|\n|        TW Room Only|   37|\n|        Normal - BAR|   34|\n|NRF - Melhor Preç...|   33|\n|               DB RO|   32|\n|Não Reembolsável ...|   32|\n|   PREMIUM Room Only|   32|\n|Non Refundable Bo...|   32|\n|        BAR - Normal|   31|\n|         TWIN RO NRF|   31|\n|CAMPANHA ESPECIAL...|   30|\n|Tarifa com pequen...|   30|\n|Standart Rate - A...|   30|\n|BAR NO REFUNDABLE...|   30|\n|       DBS Room Only|   28|\n|CLG - Flexible si...|   28|\n|       DBT Room Only|   28|\n|Promoção - Baja d...|   27|\n|                  HB|   27|\n|     EP.Alta.WEBSITE|   25|\n|  DBT Room Only  NRF|   25|\n|           TW BB NRF|   25|\n|        Main Rate HB|   24|\n|          Premium BB|   24|\n|         TWIN BB NRF|   24|\n|     SUPERIOR BB NRF|   23|\n|              DBS BB|   23|\n|           Rack Rate|   21|\n|               DB BB|   21|\n|            Avionics|   20|\n|         SUPERIOR BB|   20|\n|          Dia da Mãe|   19|\n|       Venda Direta |   19|\n|    Winter Promotion|   19|\n|               P.V.P|   18|\n|         BearPride23|   17|\n|BP1 - BAR Prepaym...|   16|\n|    B.A.R. (onlines)|   16|\n|             TWIN BB|   15|\n|        Min 3 noites|   15|\n|    PENSÃO COMPLETA |   15|\n|               Junho|   15|\n|Estadia com Janta...|   15|\n|                  OR|   15|\n|     PGT DIR S/ P.A.|   13|\n|         NewYear2023|   13|\n|Early booking 30 ...|   13|\n|CAMPANHA ESPECIAL...|   13|\n|         Oferta Maio|   13|\n|Bar - Pensão Comp...|   13|\n|   Bar - Meia Pensão|   13|\n|           19º IMAGE|   13|\n|Non Refundable S/PA |   12|\n|  Desconto 20% + 10%|   12|\n|  Desconto 20% + 20%|   12|\n|NON-REFUNDABLE HI...|   12|\n|         SUPERIOR RO|   11|\n|             TWIN RO|   11|\n|Early Booking - D...|   10|\n|    Semi Flexivel BB|   10|\n|          BAR-ONLINE|   10|\n|Não Reembolsável ...|   10|\n|Early Booking - D...|   10|\n|          DBS BB NRF|    9|\n|     Lastimute e-GDS|    9|\n| Promoção dia da Mãe|    9|\n| Promoção Dia da Mãe|    9|\n|         WEBSITE 20%|    9|\n|Tarifa  Non Refun...|    9|\n|Pacote Romântico/...|    8|\n| Early Booking 30 SF|    8|\n|     Tarifa Flexível|    8|\n| Standard Rate s/ PA|    8|\n|Standard RO - Non...|    8|\n|Bar | Pequeno alm...|    7|\n|      Premium RO NRF|    7|\n|                  BB|    7|\n|Room Only | Non R...|    7|\n|Não-reembolsável ...|    7|\n|     PGT DIR C/ P.A.|    7|\n|              DBT BB|    7|\n|Smart Deal - Dire...|    7|\n|CLG - Flexible si...|    6|\n|           7 noites |    6|\n|               NR OR|    6|\n|     Venda Direta NR|    6|\n|          Non Refund|    6|\n|Smart Deal -  Dir...|    6|\n|      Premium BB NRF|    6|\n|          DBT BB NRF|    6|\n|Standard RO | 4 N...|    6|\n|Programa de São V...|    5|\n|   NRF - Meia Pensão|    5|\n|              DIRETO|    5|\n|Aldeias Histórica...|    5|\n|Smart Deal - Dire...|    5|\n|      Super Promo T1|    5|\n| Oferta Especial Out|    5|\n|    Promoção7 noites|    5|\n| Standard Rate c/ PA|    5|\n|           -20% Maio|    4|\n|    Autumm Promotion|    4|\n|Não Reembolsável ...|    4|\n|           Promo 10%|    4|\n|   Minimum Stay Rate|    4|\n|Não Reembolsável ...|    4|\n|Promoção mais 7 n...|    4|\n|      Golega.WEBSITE|    3|\n|       Standard Rate|    3|\n|       Early Payment|    3|\n|Não-reembolsável ...|    3|\n|Congresso Portugu...|    3|\n|   Promoção de Verão|    3|\n|  Não Reembolsável 1|    3|\n|        Winter Offer|    3|\n|Alojamento e Pequ...|    3|\n|Early Booking - D...|    3|\n|          ROMÂNTICO |    3|\n|Não Reembolsável ...|    3|\n|            BAR ALTA|    3|\n|Especial Dia dos ...|    2|\n|Só Alojamento NRF...|    2|\n|Early Booking 30 ...|    2|\n|  Desconto 20% + 15%|    2|\n|PÁSCOA EM FAMÍLIA...|    2|\n|   Quinzena Setembro|    2|\n|NON REFUNDABLE - ...|    2|\n|      Reveillon 2023|    2|\n|      BAR FULL BOARD|    2|\n|Páscoa com Descon...|    2|\n|                  FB|    2|\n|Programa de Fim d...|    2|\n|Nao Reembolsavel ...|    2|\n|         Last Minute|    2|\n|        Winter Promo|    2|\n|      BAR HALF BOARD|    1|\n|   Last Minute Offer|    1|\n|          Pre summer|    1|\n|Standard RO - Non...|    1|\n|               ST OR|    1|\n| Promoção Site Hotel|    1|\n| PROGRAMA PÁSCOA ...|    1|\n|Réveillon - 1 noi...|    1|\n|PÁSCOA EM FAMÍLIA...|    1|\n|                 3=2|    1|\n|SUPER REDUC WINTE...|    1|\n|Aldeias Histórico...|    1|\n| WebSite Fidelização|    1|\n|         INGENIARIUS|    1|\n|    Easter Promotion|    1|\n|  Casa Caseiros EGDS|    1|\n|        Main Rate FB|    1|\n+--------------------+-----+\n\n\u001b[1m\u001b[34mdfRatePlan\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [rate_plan: string]\n\u001b[1m\u001b[34mdfRatePlanCounts\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [rate_plan: string, count: bigint]\n\u001b[1m\u001b[34morder\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [rate_plan: string, count: bigint]\n"
+     }
+    ]
+   }
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         }
+        ]
+       },
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "count",
+          "tpe": {
+           "presentableName": "long"
+          },
+          "nullable": false
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "//Agrupamento por Hotel quais os hoteis com mais reservas\nval dfRatePlan = resultQuartosReservados.select(\"qr.hotel_ID\",\"h.localizacao\")\n\n// Agrupar os dados pelo rateplan e contar o número de ocorrências\nval dfRatePlanCounts = dfRatePlan.groupBy(\"qr.hotel_ID\", \"h.localizacao\").count()\nval order = dfRatePlanCounts.orderBy($\"count\".desc)\n//\"h.localizacao\"\n// Mostrar o resultado\norder.show(10000)",
+   "id": "",
+   "dateCreated": "2023-05-03 21:24:30.093",
+   "config": {},
+   "dateStarted": "2023-05-03 21:51:23.809",
+   "dateUpdated": "2023-05-03 21:51:24.784",
+   "dateFinished": "2023-05-03 21:51:24.784",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "+--------+--------------------+-----+\n|hotel_ID|         localizacao|count|\n+--------+--------------------+-----+\n|     311|                Maia| 3325|\n|     310|                Gaia| 2120|\n|     556|             Covilhã| 1885|\n|     444|              Nazaré| 1687|\n|     535| Travanca do Mondego| 1344|\n|     309|             Valongo| 1140|\n|     482|            Portimão| 1001|\n|     539|              Amares|  880|\n|     426|              Chaves|  859|\n|     179|               Porto|  782|\n|     319|              Aveiro|  593|\n|     514|Charneca de Caparica|  458|\n|     304|             Coimbra|  402|\n|     328|              Lisboa|  363|\n|     322|              Aveiro|  310|\n|     504|              Monção|  293|\n|     443|             Cascais|  279|\n|     465|               Evora|  268|\n|     378|             Batalha|  263|\n|     392|               Olhão|  259|\n|     537|         Campo Maior|  248|\n|     313|               Olhão|  235|\n|     511|              Sagres|  227|\n|     280|    Viana do Castelo|  222|\n|     238|             Funchal|  213|\n|     453|               Porto|  206|\n|     395|               Porto|  205|\n|     379|               Lagos|  204|\n|     314|   Vila Nova de Gaia|  204|\n|      49|              Lamego|  196|\n|     478|             Estoril|  193|\n|     321|              Aveiro|  190|\n|     259|           Guimarães|  185|\n|     415|            Madalena|  169|\n|     358|               Porto|  167|\n|     560|               Porto|  165|\n|     413|          Mesão Frio|  162|\n|     503|              Aveiro|  162|\n|      44|      Pinhão - Alijó|  151|\n|     492|              Lisboa|  145|\n|     493|           Carnaxide|  144|\n|     421|               ELVAS|  144|\n|     414|São Martinho do P...|  134|\n|     185|   Valdigem - Lamego|  134|\n|     501|              Obidos|  126|\n|     445| Conceição de Tavira|  126|\n|     495|        Vale do Peso|  120|\n|      54|    Póvoa de Lanhoso|  117|\n|     391|        Torres Novas|  108|\n|     403|           Ermesinde|   94|\n|     349|              Lisboa|   88|\n|     416|               Velas|   85|\n|     494|              Lisboa|   79|\n|      20|               Viseu|   77|\n|     283|               Porto|   74|\n|     366|      Castelo Branco|   74|\n|     273|    Seixas - Caminha|   71|\n|     516|            Portimão|   67|\n|     285|               Porto|   62|\n|     522|            Portimão|   62|\n|     335|Furnas S. Miguel ...|   55|\n|     332|       Lagoa, Açores|   52|\n|     269|                Ovar|   51|\n|     483|             Covilhã|   50|\n|     399|              Tavira|   49|\n|     287|               Porto|   47|\n|     404| Valpedre - Penafiel|   42|\n|     284|               Porto|   37|\n|     526|              Açores|   36|\n|     433|              Aveiro|   32|\n|     490|              Lisboa|   31|\n|     368|        Olhos D'Água|   30|\n|     400|              Silves|   30|\n|     559|             Benafim|   28|\n|     225|               Porto|   24|\n|     320|              Aveiro|   23|\n|     241|              Lisboa|   23|\n|     356|    Valença do Minho|   20|\n|     327|     Câmara de Lobos|   18|\n|     561|            Alcanena|   18|\n|     546|                Alte|   15|\n|     558|             Funchal|   15|\n|     389|São Vicente Ferre...|   13|\n|     491|           Vilamoura|    5|\n|     302|               Tomar|    5|\n|     390|               Alijó|    5|\n|     442|             Funchal|    4|\n|     513|              Tavira|    1|\n+--------+--------------------+-----+\n\n\u001b[1m\u001b[34mdfRatePlan\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, localizacao: string]\n\u001b[1m\u001b[34mdfRatePlanCounts\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, localizacao: string ... 1 more field]\n\u001b[1m\u001b[34morder\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [hotel_ID: int, localizacao: string ... 1 more field]\n"
+     }
+    ]
+   }
   }
  ],
  "name": "Zeppelin Notebook",
