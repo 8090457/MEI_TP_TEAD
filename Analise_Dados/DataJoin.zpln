@@ -56,9 +56,18 @@
    "config": {
     "tableHide": true
    },
-   "dateStarted": "2023-05-01 09:54:36.448",
-   "dateUpdated": "2023-05-01 09:54:37.740",
-   "dateFinished": "2023-05-01 09:54:37.740"
+   "dateStarted": "2023-05-03 21:35:12.822",
+   "dateUpdated": "2023-05-03 21:35:13.271",
+   "dateFinished": "2023-05-03 21:35:13.271",
+   "results": {
+    "code": "ERROR",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "+---------------+\n|max(num_linhas)|\n+---------------+\n|          25105|\n+---------------+\n\norg.apache.spark.sql.AnalysisException: Found duplicate column(s) when inserting into file:/data/tp/arquivo: `hotel_id`;\n  at org.apache.spark.sql.util.SchemaUtils$.checkColumnNameDuplication(SchemaUtils.scala:85)\n  at org.apache.spark.sql.execution.datasources.InsertIntoHadoopFsRelationCommand.run(InsertIntoHadoopFsRelationCommand.scala:65)\n  at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult$lzycompute(commands.scala:104)\n  at org.apache.spark.sql.execution.command.DataWritingCommandExec.sideEffectResult(commands.scala:102)\n  at org.apache.spark.sql.execution.command.DataWritingCommandExec.doExecute(commands.scala:122)\n  at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:131)\n  at org.apache.spark.sql.execution.SparkPlan$$anonfun$execute$1.apply(SparkPlan.scala:127)\n  at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeQuery$1.apply(SparkPlan.scala:155)\n  at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)\n  at org.apache.spark.sql.execution.SparkPlan.executeQuery(SparkPlan.scala:152)\n  at org.apache.spark.sql.execution.SparkPlan.execute(SparkPlan.scala:127)\n  at org.apache.spark.sql.execution.QueryExecution.toRdd$lzycompute(QueryExecution.scala:83)\n  at org.apache.spark.sql.execution.QueryExecution.toRdd(QueryExecution.scala:81)\n  at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)\n  at org.apache.spark.sql.DataFrameWriter$$anonfun$runCommand$1.apply(DataFrameWriter.scala:676)\n  at org.apache.spark.sql.execution.SQLExecution$$anonfun$withNewExecutionId$1.apply(SQLExecution.scala:80)\n  at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:127)\n  at org.apache.spark.sql.execution.SQLExecution$.withNewExecutionId(SQLExecution.scala:75)\n  at org.apache.spark.sql.DataFrameWriter.runCommand(DataFrameWriter.scala:676)\n  at org.apache.spark.sql.DataFrameWriter.saveToV1Source(DataFrameWriter.scala:285)\n  at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:271)\n  at org.apache.spark.sql.DataFrameWriter.save(DataFrameWriter.scala:229)\n  ... 77 elided\n"
+     }
+    ]
+   }
   },
   {
    "settings": {

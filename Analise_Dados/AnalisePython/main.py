@@ -21,5 +21,4 @@ meteorologia = pd.read_csv("./Analise_Dados/DatasetOriginais/Meteorologia.csv", 
 feriados = pd.read_csv("./Analise_Dados/DatasetOriginais/Feriados.csv", delimiter=';')
 final = pd.read_csv("./Analise_Dados/DataSetFinal.csv", delimiter=";")
 
-# an.analise1(reservas, preco, 20684)
-an.outliersComplex(reservas, preco, "<= 6000")
+an.outliersComplex(reservas, preco, "<= 1000")

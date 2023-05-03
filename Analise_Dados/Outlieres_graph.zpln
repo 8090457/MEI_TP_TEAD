@@ -1,6 +1,23 @@
 {
  "paragraphs": [
   {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "import org.apache.spark.sql.DataFrame\n\nval outliersFolder = \"/data/outliers\"\nval saveJoins = false\n\ndef saveDataFrame(df: DataFrame, name: String): Unit = {\n    df.coalesce(1) // Print into a single file\n            .write\n            .option(\"delimiter\", \";\")\n            .option(\"header\", true) // Maintain Headers\n            .csv(s\"$outliersFolder/$name\") // Write to csv\n}",
+   "id": "",
+   "dateCreated": "2023-05-03 22:03:30.447",
+   "config": {},
+   "dateStarted": "2023-05-03 22:04:20.006",
+   "dateUpdated": "2023-05-03 22:04:20.204",
+   "dateFinished": "2023-05-03 22:04:20.204"
+  },
+  {
    "user": "anonymous",
    "config": {
     "colWidth": 12,
@@ -17,7 +34,9 @@
    },
    "settings": {
     "params": {
-     "bdtMeta": {}
+     "bdtMeta": {
+      "inlay": {}
+     }
     },
     "forms": {}
    },
@@ -29,10 +48,46 @@
    "progressUpdateIntervalMs": 500,
    "focus": true,
    "$$hashKey": "object:394",
-   "text": "import org.apache.spark.sql.functions._\n//depois testar com o iqr 1.5\n\nval result = spark.sql(\n    \"\"\"\n      SELECT qr.*\n      FROM QuartosReservados qr    \n    \"\"\"\n)\n\n// Calcula a média e o desvio padrão do número de noites usando Three Sigma\n//mean: Double = 2.282015534754033\n//stdDev: Double = 4.682108190781085\nval mean = result.agg(avg(\"num_noites\")).head.getDouble(0)\nval stdDev = result.agg(stddev(\"num_noites\")).head.getDouble(0)\n//mean + 3 * stdDev \n//14.32 = 2.28 + 3 * 4.68\nval upperLimit = 14\nval lowerLimit = 0.0 \nval outliers = result.filter($\"num_noites\" > upperLimit || $\"num_noites\" < lowerLimit)\n\n// adiciona uma coluna com o número de linhas\nval resultCount = outliers.withColumn(\"num_linhas\", count(\"*\").over())\n//// exibe o valor da coluna \"num_linhas\"\nresultCount.agg(max(\"num_linhas\")).show()\noutliers.show(115)\n//result.limit(100).show(100)",
-   "dateStarted": "2023-05-03 18:51:19.393",
-   "dateUpdated": "2023-05-03 18:51:21.055",
-   "dateFinished": "2023-05-03 18:51:21.055"
+   "text": "//depois testar com o iqr 1.5\n\nval resultQuartosReservados = spark.sql(\n    \"\"\"\n     SELECT * \n      FROM QuartosReservados qr\n      INNER JOIN Hotel h \n      ON h.hotel_ID = qr.hotel_ID   \n    \"\"\"\n)\n\n// Calcula a média e o desvio padrão do número de noites usando Three Sigma\n//mean: Double = 2.282015534754033\n//stdDev: Double = 4.682108190781085\nval mean = resultQuartosReservados.agg(avg(\"num_noites\")).head.getDouble(0)\nval stdDev = resultQuartosReservados.agg(stddev(\"num_noites\")).head.getDouble(0)\n//mean + 3 * stdDev \n//14.32 = 2.28 + 3 * 4.68\nval upperLimit = 14\nval lowerLimit = 0.0 \nval outliers = resultQuartosReservados.filter($\"num_noites\" > upperLimit || $\"num_noites\" < lowerLimit)\n\n// adiciona uma coluna com o número de linhas\nval resultCount = outliers.withColumn(\"num_linhas\", count(\"*\").over())\n//// exibe o valor da coluna \"num_linhas\"\nresultCount.agg(max(\"num_linhas\")).show()\noutliers.show(115)\n//result.limit(100).show(100)",
+   "dateStarted": "2023-05-03 22:04:20.212",
+   "dateUpdated": "2023-05-03 22:04:21.021",
+   "dateFinished": "2023-05-03 22:04:21.021"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "inlay": {}
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "//Agrupamento por rate_plan\nval dfRatePlan = resultQuartosReservados.select(\"rate_plan\")\n\n// Agrupar os dados pelo rateplan e contar o número de ocorrências\nval dfRatePlanCounts = dfRatePlan.groupBy(\"rate_plan\").count()\nval order = dfRatePlanCounts.orderBy($\"count\".desc)\n\n// Mostrar o resultado\norder.show(10000)",
+   "id": "",
+   "dateCreated": "2023-05-03 20:23:20.916",
+   "config": {},
+   "dateStarted": "2023-05-03 22:04:21.078",
+   "dateUpdated": "2023-05-03 22:04:22.286",
+   "dateFinished": "2023-05-03 22:04:22.286"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "//Agrupamento por Hotel quais os hoteis com mais reservas\nval dfRatePlan = resultQuartosReservados.select(\"qr.hotel_ID\",\"h.localizacao\")\n\n// Agrupar os dados pelo rateplan e contar o número de ocorrências\nval dfRatePlanCounts = dfRatePlan.groupBy(\"qr.hotel_ID\", \"h.localizacao\").count()\nval order = dfRatePlanCounts.orderBy($\"count\".desc)\n//\"h.localizacao\"\n// Mostrar o resultado\n\nsaveDataFrame(order, \"count_hotel\")\norder.show(10000)",
+   "id": "",
+   "dateCreated": "2023-05-03 21:24:30.093",
+   "config": {},
+   "dateStarted": "2023-05-03 22:04:22.309",
+   "dateUpdated": "2023-05-03 22:04:26.714",
+   "dateFinished": "2023-05-03 22:04:26.714"
   }
  ],
  "name": "Zeppelin Notebook",
