@@ -1,49 +1,27 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-
-
-def outliersSimple(df: pd.DataFrame, column_to_filter: str, filterValue: int):
+    
+def outliersSimple(df: pd.DataFrame, column_to_filter: str, filter_condition):
     _, axs = plt.subplots(1, 2)
 
     axs[0].set_title(f"{column_to_filter} (prev)")
     axs[0].boxplot(df[column_to_filter])
 
-    filtered = df[df[column_to_filter] >= filterValue]
-    axs[1].set_title(f"{column_to_filter} >= {filterValue}")
+    filtered = df[filter_condition]
+    axs[1].set_title(f"{column_to_filter} (after)")
     axs[1].boxplot(filtered[column_to_filter])
 
     plt.show()
 
-
-def outliersComplex(df: pd.DataFrame, column_to_filter: str, condition_str: str):
-    # convert string to boolean expression
-    condition = eval(f"lambda x: x {condition_str}")
-
-    _, axs = plt.subplots(1, 2)
-
-    axs[0].set_title(f"{column_to_filter} (prev)")
-    axs[0].boxplot(df[column_to_filter])
-
-    # apply filter condition to dataframe
-    filtered = df[condition(df[column_to_filter])]
-
-    axs[1].set_title(f"{column_to_filter} {condition_str}")
-    axs[1].boxplot(filtered[column_to_filter])
-
-    plt.show()
-
-
-def outliersWithPieChart(df: pd.DataFrame, column_to_filter: str, condition_str: str):
-    outliersComplex(df, column_to_filter, condition_str)
-    # convert string to boolean expression
-    condition = eval(f"lambda x: x {condition_str}")
+def outliersWithPieChart(df: pd.DataFrame, column_to_filter: str, filter_condition):
+    outliersSimple(df, column_to_filter, filter_condition)
 
     counts = df[column_to_filter].value_counts()
 
     count = counts.to_list()
     index = counts.index.to_list()
 
-    filtered = df[condition(df[column_to_filter])]
+    filtered = df[filter_condition]
     counts2 = filtered[column_to_filter].value_counts()
 
     count2 = counts2.to_list()
@@ -61,15 +39,16 @@ def outliersWithPieChart(df: pd.DataFrame, column_to_filter: str, condition_str:
         s = f"{index2[i]} - {count2[i]}"
         nl2.append(s)
 
-    axs2[0].pie(counts, autopct="%1.0f%%")
+    axs2[0].pie(counts, autopct='%1.0f%%')
 
     # move legend to the right
-    axs2[0].legend(nl1, loc="right", bbox_to_anchor=(1.5, 0.5))
+    axs2[0].legend(nl1, loc='right', bbox_to_anchor=(1.5,0.5))
 
-    axs2[1].pie(counts2, autopct="%1.0f%%")
+    axs2[1].pie(counts2, autopct='%1.0f%%')
 
     # move legend to the right
-    axs2[1].legend(nl2, loc="right", bbox_to_anchor=(1.5, 0.5))
+    axs2[1].legend(nl2, loc='right', bbox_to_anchor=(1.5,0.5))
+
 
     plt.show()
 
