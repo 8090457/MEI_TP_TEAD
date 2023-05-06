@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 def outliersSimple(df: pd.DataFrame, column_to_filter: str, filter_condition):
     _, axs = plt.subplots(1, 2)
 
-    axs[0].set_title(f"{column_to_filter} (prev)")
+    axs[0].set_title(f"{column_to_filter[:15]} (prev)")
     axs[0].boxplot(df[column_to_filter])
 
     filtered = df[filter_condition]
-    axs[1].set_title(f"{column_to_filter} (after)")
+    axs[1].set_title(f"{column_to_filter[:15]} (after)")
     axs[1].boxplot(filtered[column_to_filter])
 
     plt.show()
