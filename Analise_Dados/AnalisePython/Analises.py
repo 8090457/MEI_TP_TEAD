@@ -12,6 +12,7 @@ def outliersSimple(df: pd.DataFrame, column_to_filter: str, filter_condition):
     axs[1].boxplot(filtered[column_to_filter])
 
     plt.show()
+    print("Nº Outliers: ", len(df[~filter_condition]))
 
 def outliersWithPieChart(df: pd.DataFrame, column_to_filter: str, filter_condition):
     outliersSimple(df, column_to_filter, filter_condition)
