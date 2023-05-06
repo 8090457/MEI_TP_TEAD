@@ -69,7 +69,6 @@ def Iqr_1_5_LowerBound(column: pd.Series):
 
     return q1 - 1.5 * iqr
 
-    
 def Iqr_2_UpperBound(column: pd.Series):
     q1 = column.quantile(.25)
     q3 = column.quantile(.75)
@@ -86,7 +85,6 @@ def Iqr_2_LowerBound(column: pd.Series):
 
     return q1 - 2 * iqr
 
-    
 def Iqr_3_UpperBound(column: pd.Series):
     q1 = column.quantile(.25)
     q3 = column.quantile(.75)
@@ -102,3 +100,8 @@ def Iqr_3_LowerBound(column: pd.Series):
     iqr = q3 - q1
 
     return q1 - 3 * iqr
+
+# Usase quantileAnalisys(dataframe, ['coluna1', 'coluna2', 'coluna3'])
+def quantileAnalisys(df: pd.DataFrame, columnsArray):
+    print(df[columnsArray].quantile([0, .25, .5, .75, 1]))
+
