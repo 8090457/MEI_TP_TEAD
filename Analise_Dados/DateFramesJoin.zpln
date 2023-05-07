@@ -3,7 +3,126 @@
   {
    "settings": {
     "params": {
-     "bdtMeta": {}
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "rate_plan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
     },
     "forms": {}
    },
@@ -15,9 +134,18 @@
    "config": {
     "editorHide": false
    },
-   "dateStarted": "2023-05-01 22:59:03.550",
-   "dateUpdated": "2023-05-01 22:59:04.505",
-   "dateFinished": "2023-05-01 22:59:04.505"
+   "dateStarted": "2023-05-07 10:57:03.334",
+   "dateUpdated": "2023-05-07 10:57:07.402",
+   "dateFinished": "2023-05-07 10:57:07.402",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "25090\nimport org.apache.spark.sql.DataFrame\n\u001b[1m\u001b[34mjoinFolder\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/joins\n\u001b[1m\u001b[34msaveJoins\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n\u001b[1m\u001b[34msaveDataFrame\u001b[0m: \u001b[1m\u001b[32m(df: org.apache.spark.sql.DataFrame, name: String)Unit\u001b[0m\n\u001b[1m\u001b[34minitialCount\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 14 more fields]\n"
+     }
+    ]
+   }
   },
   {
    "user": "anonymous",
