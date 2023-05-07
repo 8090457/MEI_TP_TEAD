@@ -15,9 +15,9 @@
    "config": {
     "editorHide": false
    },
-   "dateStarted": "2023-05-07 21:35:29.572",
-   "dateUpdated": "2023-05-07 21:35:30.683",
-   "dateFinished": "2023-05-07 21:35:30.683"
+   "dateStarted": "2023-05-07 22:05:42.638",
+   "dateUpdated": "2023-05-07 22:05:43.546",
+   "dateFinished": "2023-05-07 22:05:43.546"
   },
   {
    "user": "anonymous",
@@ -49,9 +49,9 @@
    "focus": true,
    "$$hashKey": "object:394",
    "text": "val joinTipologia = spark.sql(\n    \"\"\"\n       SELECT DISTINCT \n           Q.hotel_ID, \n           Q.Reserve_ID,\n           Q.pais,\n           Q.estado_reserva,\n           Q.room_ID,\n           Q.tipo_quarto AS Q_tipo_quarto,\n           Q.rate_plan,\n           Q.data_reserva,\n           Q.data_chegada,\n           Q.data_partida,\n           Q.num_noites,\n           Q.ocupacao,\n           Q.adultos,\n           Q.criancas,\n           Q.bebes,\n           Q.preco_euros,\n           T.tipo_quarto as T_tipo_quarto, \n           T.quantidade,\n           T.capacidade_maxima,\n           T.capacidade_minima,\n           T.capacidade_max_adultos,\n           T.capacidade_min_adultos,\n           T.capacidade_max_criancas,\n           T.capacidade_min_criancas,\n           T.capacidade_max_bebes,\n           T.capacidade_max_camas_extra,\n           T.capacidade_max_camas_extra_criancas,\n           T.capacidade_max_bercos_extra\n       FROM QuartosReservados as Q\n       INNER JOIN Tipologias as T\n           ON Q.hotel_ID = T.hotel_ID AND T.room_ID = Q.room_ID\n      \"\"\")\n\njoinTipologia.createOrReplaceTempView(\"JoinTipologia\")\njoinTipologia.cache()\n\nif (saveJoins)\n    saveDataFrame(joinTipologia, \"joinTipologia\")\n\nprintln(joinTipologia.count())\njoinTipologia.printSchema()",
-   "dateStarted": "2023-05-07 21:35:30.693",
-   "dateUpdated": "2023-05-07 21:35:31.557",
-   "dateFinished": "2023-05-07 21:35:31.557"
+   "dateStarted": "2023-05-07 22:05:43.547",
+   "dateUpdated": "2023-05-07 22:05:44.070",
+   "dateFinished": "2023-05-07 22:05:44.070"
   },
   {
    "settings": {
@@ -70,9 +70,9 @@
    "config": {
     "tableHide": false
    },
-   "dateStarted": "2023-05-07 21:35:31.569",
-   "dateUpdated": "2023-05-07 21:35:32.751",
-   "dateFinished": "2023-05-07 21:35:32.750"
+   "dateStarted": "2023-05-07 22:05:44.071",
+   "dateUpdated": "2023-05-07 22:05:44.560",
+   "dateFinished": "2023-05-07 22:05:44.560"
   },
   {
    "settings": {
@@ -87,9 +87,9 @@
    "id": "",
    "dateCreated": "2023-04-30 20:12:14.191",
    "config": {},
-   "dateStarted": "2023-05-07 21:35:32.766",
-   "dateUpdated": "2023-05-07 21:35:35.084",
-   "dateFinished": "2023-05-07 21:35:35.084"
+   "dateStarted": "2023-05-07 22:05:44.562",
+   "dateUpdated": "2023-05-07 22:05:45.555",
+   "dateFinished": "2023-05-07 22:05:45.555"
   },
   {
    "settings": {
@@ -106,9 +106,9 @@
    "id": "",
    "dateCreated": "2023-04-30 20:16:51.675",
    "config": {},
-   "dateStarted": "2023-05-07 21:35:35.095",
-   "dateUpdated": "2023-05-07 21:35:41.259",
-   "dateFinished": "2023-05-07 21:35:41.259"
+   "dateStarted": "2023-05-07 22:05:45.556",
+   "dateUpdated": "2023-05-07 22:05:50.248",
+   "dateFinished": "2023-05-07 22:05:50.248"
   },
   {
    "settings": {
@@ -122,16 +122,16 @@
     "forms": {}
    },
    "apps": [],
-   "status": "ABORT",
+   "status": "FINISHED",
    "text": "val joinMeteoTemp = spark.sql(\n    \"\"\"\n        SELECT QR.*, M.city, M.tavg, M.tmax, M.tmin, M.prcp\n        FROM JoinEventos AS QR\n        JOIN Meteorologia AS M \n            ON QR.area_localizacao = M.city \n            AND M.date <= QR.data_partida AND M.date >= QR.data_chegada\n    \"\"\")\n\njoinMeteoTemp.createOrReplaceTempView(\"JoinMeteoTemp\")\n\nprintln(joinMeteoTemp.count())\njoinMeteoTemp.show()",
    "id": "",
    "dateCreated": "2023-05-01 15:31:17.385",
    "config": {
     "tableHide": true
    },
-   "dateStarted": "2023-05-07 21:52:22.625",
-   "dateUpdated": "2023-05-07 21:52:22.625",
-   "dateFinished": "2023-05-07 21:50:48.669"
+   "dateStarted": "2023-05-07 22:05:50.249",
+   "dateUpdated": "2023-05-07 22:05:56.118",
+   "dateFinished": "2023-05-07 22:05:56.118"
   },
   {
    "settings": {
@@ -146,9 +146,9 @@
    "id": "",
    "dateCreated": "2023-05-01 15:47:23.871",
    "config": {},
-   "dateStarted": "2023-05-07 21:50:56.397",
-   "dateUpdated": "2023-05-07 21:51:00.810",
-   "dateFinished": "2023-05-07 21:51:00.809"
+   "dateStarted": "2023-05-07 22:05:56.119",
+   "dateUpdated": "2023-05-07 22:06:01.877",
+   "dateFinished": "2023-05-07 22:06:01.876"
   }
  ],
  "name": "Zeppelin Notebook",

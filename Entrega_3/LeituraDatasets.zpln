@@ -1,0 +1,184 @@
+{
+ "paragraphs": [
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "inlay": {}
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val FacilitesTable = \"Facilities\"\nval HotelTable = \"Hotel\"\nval TipologiasTable = \"Tipologias\"\nval QuartosReservadosTable = \"QuartosReservados\"\nval FeriadosTable = \"Feriados\"\nval MeteorologiaTable = \"Meteorologia\"\nval EventosTable = \"Eventos\"",
+   "id": "",
+   "dateCreated": "2023-04-30 20:03:05.806",
+   "config": {
+    "tableHide": false
+   },
+   "dateStarted": "2023-05-07 21:30:50.210",
+   "dateUpdated": "2023-05-07 21:30:50.454",
+   "dateFinished": "2023-05-07 21:30:50.453"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "inlay": {
+       "collapsed": true
+      }
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "import org.apache.spark.sql.functions._\nval csvFacilities = \"/data/tp/Facilities.csv\" // Facilities file\n\nval df = spark.read.format(\"csv\") // Read CSV\n        .option(\"header\", \"true\") // First line is a header\n        .option(\"inferSchema\", \"true\") // infer the data types \n        .option(\"delimiter\", \";\") // Columns separated by ';\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n  .load(csvFacilities)\n\n\n\ndf.createOrReplaceTempView(FacilitesTable)\ndf.printSchema() // Schema of the data frame\ndf.show() // see the data frame data\ndf.cache()",
+   "id": "",
+   "dateCreated": "2023-04-23 23:44:45.859",
+   "config": {
+    "tableHide": true
+   },
+   "dateStarted": "2023-05-07 21:30:50.468",
+   "dateUpdated": "2023-05-07 21:30:59.639",
+   "dateFinished": "2023-05-07 21:30:59.639"
+  },
+  {
+   "user": "anonymous",
+   "config": {
+    "colWidth": 12,
+    "fontSize": 9,
+    "enabled": true,
+    "results": {},
+    "editorSetting": {
+     "language": "scala",
+     "editOnDblClick": false,
+     "completionKey": "TAB",
+     "completionSupport": true
+    },
+    "editorMode": "ace/mode/scala",
+    "tableHide": false,
+    "editorHide": false
+   },
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "inlay": {}
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "jobName": "paragraph_1563110258183_1613653816",
+   "id": "20190714-161738_1950435706",
+   "dateCreated": "2019-07-14T16:17:38+0300",
+   "status": "FINISHED",
+   "progressUpdateIntervalMs": 500,
+   "focus": true,
+   "$$hashKey": "object:394",
+   "text": "val csvHotel = \"/data/tp/Hotel.csv\" // Hotels file\nval Acores = List(\"Açores\", \"Furnas S. Miguel - Açores\", \"Lagoa, Açores\",\"Ponta Delgada\",\"São Vicente Ferreira, São Miguel - Açores\", \"Velas\")\nval Albufeira = List(\"Albufeira - Algarve\", \"Alte\", \"Benafim\", \"Conceição de Tavira\", \"Fuseta\", \"Olhão\", \"Olhos D'Água\", \"São Brás de Alportel\", \"Silves\", \"Tavira\", \"Vilamoura\")\nval Alcobaca = List(\"Alcanena\", \"Alcobaça\", \"São Martinho do Porto\")\nval Alijo = List(\"Alijó\", \"Pinhão - Alijó\")\nval Amares = List(\"Amares\", \"Braga\", \"Póvoa de Lanhoso\", \"Tomar\", \"Torres Novas\")\nval Aveiro = List(\"Aveiro\")\nval Batalha = List(\"Batalha\", \"Nazaré\")\nval Braganca = List(\"Alto dos Lombos\")\nval Campo_Maior = List(\"Campo Maior\")\nval Carnaxide = List(\"Almada\", \"Carnaxide\", \"Charneca de Caparica\", \"Lisboa\")\nval Carcavelos = List(\"Carcavelos\", \"Cascais\", \"Estoril\")\nval Castelo_Branco = List(\"Castelo Branco\", \"Covilhã\", \"Sabugueiro / Seia\", \"Vale do Peso\")\nval Chaves = List(\"Chaves\", \"Lamego\", \"Mesão Frio\", \"Valdigem - Lamego\")\nval Coimbra = List(\"Coimbra\", \"Travanca do Mondego\")\nval Elvas = List(\"ELVAS\")\nval Espinho = List(\"Espinho\", \"Ovar\", \"Viseu\")\nval Evora = List(\"Evora\")\nval Funchal = List(\"Câmara de Lobos\", \"Funchal\")\nval Guimaraes = List(\"Guimarães\")\nval Lagos = List(\"Lagos\", \"Portimão\", \"Sagres\")\nval Maia = List(\"Maia\")\nval Moncao = List(\"Monção\", \"Valença do Minho\")\nval Obidos = List(\"Obidos\")\nval Porto = List(\"Ermesinde\", \"Gaia\", \"Lousada\", \"Madalena\", \"Porto\", \"União de Freguesias do Centro\", \"Valongo\", \"Valpedre - Penafiel\", \"Vila Meã\", \"Vila Nova de Gaia\")\nval Praia_da_Vitoria = List(\"Praia da Vitória\")\nval Sintra = List(\"Sintra\")\nval Viana_do_Castelo = List(\"Seixas - Caminha\", \"Valença, Viana do Castelo\", \"Viana do Castelo\", \"Vila Praia de Âncora\")\n\ndef getArea(value: String)= value match {\n    case x if Acores.contains(x) => \"Açores\"\n    case x if Albufeira.contains(x) => \"Albufeira\"\n    case x if Alcobaca.contains(x) => \"Alcobaça\"\n    case x if Alijo.contains(x) => \"Alijó\"\n    case x if Amares.contains(x) => \"Amares\"\n    case x if Aveiro.contains(x) => \"Aveiro\"\n    case x if Batalha.contains(x) => \"Batalha\"\n    case x if Braganca.contains(x) => \"Bragança\"\n    case x if Campo_Maior.contains(x) => \"Campo Maior\"\n    case x if Carnaxide.contains(x) => \"Carnaxide\"\n    case x if Carcavelos.contains(x) => \"Carcavelos\"\n    case x if Castelo_Branco.contains(x) => \"Castelo Branco\"\n    case x if Chaves.contains(x) => \"Chaves\"\n    case x if Coimbra.contains(x) => \"Coimbra\"\n    case x if Elvas.contains(x) => \"Elvas\"\n    case x if Espinho.contains(x) => \"Espinho\"\n    case x if Evora.contains(x) => \"Evora\"\n    case x if Funchal.contains(x) => \"Funchal\"\n    case x if Guimaraes.contains(x) => \"Guimarães\"\n    case x if Lagos.contains(x) => \"Lagos\"\n    case x if Maia.contains(x) => \"Maia\"\n    case x if Moncao.contains(x) => \"Monção\"\n    case x if Obidos.contains(x) => \"Obidos\"\n    case x if Porto.contains(x) => \"Porto\"\n    case x if Praia_da_Vitoria.contains(x) => \"Praia da Vitória\"\n    case x if Sintra.contains(x) => \"Sintra\"\n    case x if Viana_do_Castelo.contains(x) => \"Viana do Castelo\"\n    case _ => value\n}\n\nval getAreaUDF = udf((value: String) => getArea(value))\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvHotel)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Localização\", \"localizacao\")\n        .withColumnRenamed(\"Estrelas\", \"estrelas\")\n        .withColumnRenamed(\"Idade Máxima de Crianças (Anos)\", \"idade_max_criancas\")\n        .withColumnRenamed(\"Idade Máxima de Bebés (Meses)\", \"idade_max_bebes\")\n        .withColumnRenamed(\"Hora máxima de check-in\", \"hora_max_checkin\")\n        .withColumnRenamed(\"Quantidade de quartos\", \"qtd_quartos\")\n        .withColumn(\"hora_max_checkin\", to_timestamp(col(\"hora_max_checkin\")))\n\nval dfWithArea = df.withColumn(\"area_localizacao\", getAreaUDF(col(\"localizacao\")))\n\ndfWithArea.createOrReplaceTempView(HotelTable)\ndfWithArea.cache()\ndfWithArea.printSchema()\ndfWithArea.describe().show()\ndfWithArea.show()",
+   "dateStarted": "2023-05-07 21:30:59.662",
+   "dateUpdated": "2023-05-07 21:31:05.111",
+   "dateFinished": "2023-05-07 21:31:05.111"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {
+      "inlay": {}
+     }
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val csvTipologias = \"/data/tp/Tipologias.csv\" // Tipologias file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .option(\"trim\", \"true\")\n        .load(csvTipologias)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Room ID\", \"room_ID\")\n        .withColumnRenamed(\"Tipo de quarto\", \"tipo_quarto\")\n        .withColumnRenamed(\"Quantidade\", \"quantidade\")\n        .withColumnRenamed(\"Capacidade máxima\", \"capacidade_maxima\")\n        .withColumnRenamed(\"Capacidade mínima\", \"capacidade_minima\") // !\n        .withColumnRenamed(\"Capacidade máxima de adultos\", \"capacidade_max_adultos\")\n        .withColumnRenamed(\"Capacidade mínima de adultos\", \"capacidade_min_adultos\") // !\n        .withColumnRenamed(\"Capacidade máxima de crianças\", \"capacidade_max_criancas\")\n        .withColumnRenamed(\"Capacidade mínima de crianças\", \"capacidade_min_criancas\") // !\n        .withColumnRenamed(\"Capacidade máxima de bebés\", \"capacidade_max_bebes\")\n        .withColumnRenamed(\"Capacidade máxima de camas extra\", \"capacidade_max_camas_extra\") // !\n        .withColumnRenamed(\"Capacidade máxima de camas extra (crianças)\", \"capacidade_max_camas_extra_criancas\") // !\n        .withColumnRenamed(\"Capacidade máxima de berços extra\", \"capacidade_max_bercos_extra\") // !\n\n//df.describe().show()\ndf.createOrReplaceTempView(TipologiasTable)\ndf.cache()\ndf.printSchema()\n//df.show()",
+   "id": "",
+   "dateCreated": "2023-04-24 21:16:30.526",
+   "config": {
+    "tableHide": false
+   },
+   "dateStarted": "2023-05-07 21:31:05.154",
+   "dateUpdated": "2023-05-07 21:31:06.684",
+   "dateFinished": "2023-05-07 21:31:06.684"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val csvQuartosReservados= \"/data/tp/Quartos_Reservados.csv\" // Quartos_Reservados File\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n        .load(csvQuartosReservados)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Reserve ID\", \"Reserve_ID\")\n        .withColumnRenamed(\"País\", \"pais\")\n        .withColumnRenamed(\"Estado da reserva\", \"estado_reserva\")\n        .withColumnRenamed(\"Room ID\", \"room_ID\")\n        .withColumnRenamed(\"Tipo de Quarto\", \"tipo_quarto\") // !\n        .withColumnRenamed(\"RatePlan\", \"rate_plan\")\n        .withColumnRenamed(\"Data da reserva\", \"data_reserva\")\n        .withColumn(\"data_chegada\", to_date(col(\"Data chegada\"), \"dd/MM/yyyy\"))\n        .drop(\"Data chegada\")\n        .withColumn(\"data_partida\", to_date(col(\"Data de partida\"), \"dd/MM/yyyy\"))\n        .drop(\"Data de partida\")\n        .withColumnRenamed(\"Número de noites\", \"num_noites\")\n        .withColumnRenamed(\"Ocupação\", \"ocupacao\")\n        .withColumnRenamed(\"Adultos\", \"adultos\")\n        .withColumnRenamed(\"Crianças\", \"criancas\")\n        .withColumnRenamed(\"Bebés\", \"bebes\") // !\n        .withColumnRenamed(\"Preço (€)\", \"preco_euros\")\n\nval mindata_reserva = df.select(min(\"data_reserva\")).first()(0)\nval maxdata_reserva = df.select(max(\"data_reserva\")).first()(0)\nprintln(s\"Minimum data_reserva date: $mindata_reserva\")\nprintln(s\"Maximum data_reserva date: $maxdata_reserva\")\n\nval mindata_data_chegada = df.select(min(\"data_chegada\")).first()(0)\nval maxdata_data_chegada= df.select(max(\"data_chegada\")).first()(0)\nprintln(s\"Minimum data_chegada date: $mindata_data_chegada\")\nprintln(s\"Maximum data_chegada date: $maxdata_data_chegada\")\n\nval mindata_data_partida = df.select(min(\"data_partida\")).first()(0)\nval maxdata_data_partida= df.select(max(\"data_partida\")).first()(0)\nprintln(s\"Minimum data_partida date: $mindata_data_partida\")\nprintln(s\"Maximum data_partida date: $maxdata_data_partida\")\n\ndf.createOrReplaceTempView(QuartosReservadosTable)\ndf.cache()\ndf.printSchema()\ndf.show()\n//df.select(\"pais\", \"estado_reserva\", \"rate_plan\", \"data_reserva\", \"data_chegada\", \"data_partida\", \"num_noites\", \"ocupacao\", \"adultos\", \"criancas\", \"preco_euros\").describe().show()",
+   "id": "",
+   "dateCreated": "2023-04-24 21:18:31.653",
+   "config": {},
+   "dateStarted": "2023-05-07 21:31:06.698",
+   "dateUpdated": "2023-05-07 21:31:13.609",
+   "dateFinished": "2023-05-07 21:31:13.609"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val csvFeriados= \"/data/tp/Feriados.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n        .load(csvFeriados)\n        .withColumn(\"date\", to_date(col(\"date\"), \"dd/MM/yyyy\"))\n\nval minDate = df.select(min(\"date\")).first()(0)\nval maxDate = df.select(max(\"date\")).first()(0)\nprintln(s\"Minimum start date: $minDate\")\nprintln(s\"Maximum start date: $maxDate\")\n\ndf.createOrReplaceTempView(FeriadosTable)\ndf.cache()\ndf.printSchema()\ndf.describe().show()\ndf.show()",
+   "id": "",
+   "dateCreated": "2023-04-24 22:00:30.321",
+   "config": {},
+   "dateStarted": "2023-05-07 21:31:13.628",
+   "dateUpdated": "2023-05-07 21:31:16.294",
+   "dateFinished": "2023-05-07 21:31:16.294"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val csvMeteorologia= \"/data/tp/Meteorologia.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n         .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n        .load(csvMeteorologia)\n        .withColumn(\"date\", to_date(col(\"date\"), \"dd/MM/yyyy\"))\n\nval minDate = df.select(min(\"date\")).first()(0)\nval maxDate = df.select(max(\"date\")).first()(0)\nprintln(s\"Minimum start date: $minDate\")\nprintln(s\"Maximum start date: $maxDate\")\n\ndf.createOrReplaceTempView(MeteorologiaTable)\ndf.cache()\n//df.printSchema()\n//df.describe().show()\ndf.show()",
+   "id": "",
+   "dateCreated": "2023-04-30 21:07:30.821",
+   "config": {},
+   "dateStarted": "2023-05-07 21:31:16.330",
+   "dateUpdated": "2023-05-07 21:31:19.403",
+   "dateFinished": "2023-05-07 21:31:19.403"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val csvEventos= \"/data/tp/Eventos.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and values\n        .load(csvEventos)\n        .withColumn(\"end_date\", to_date(trim(col(\"end_date\")), \"dd/MM/yyyy\"))\n        .withColumn(\"start_Date\", to_date(col(\"start_Date\"), \"dd/MM/yyyy\"))\n\nval minStartDate = df.select(min(\"start_Date\")).first()(0)\nval maxStartDate = df.select(max(\"start_Date\")).first()(0)\nval minEndDate = df.select(min(\"end_date\")).first()(0)\nval maxEndDate = df.select(max(\"end_date\")).first()(0)\n\nprintln(s\"Minimum start date: $minStartDate\")\nprintln(s\"Maximum start date: $maxStartDate\")\nprintln(s\"Minimum end date: $minEndDate\")\nprintln(s\"Maximum end date: $maxEndDate\")\n\ndf.createOrReplaceTempView(EventosTable)\ndf.cache()\n//df.printSchema()\ndf.describe().show()\n//df.show()",
+   "config": {},
+   "dateStarted": "2023-05-07 21:31:19.423",
+   "dateUpdated": "2023-05-07 21:31:21.430",
+   "dateFinished": "2023-05-07 21:31:21.430"
+  }
+ ],
+ "name": "Zeppelin Notebook",
+ "id": "",
+ "noteParams": {},
+ "noteForms": {},
+ "angularObjects": {},
+ "config": {
+  "isZeppelinNotebookCronEnable": false,
+  "looknfeel": "default",
+  "personalizedMode": "false"
+ },
+ "info": {}
+}
