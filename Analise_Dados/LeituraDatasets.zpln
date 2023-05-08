@@ -483,19 +483,79 @@
    "id": "",
    "dateCreated": "2023-05-08 16:57:04.969",
    "config": {},
-   "dateStarted": "2023-05-08 17:01:35.725",
-   "dateUpdated": "2023-05-08 17:01:35.935",
+   "dateStarted": "2023-05-08 17:03:45.280",
+   "dateUpdated": "2023-05-08 17:03:45.439",
+   "dateFinished": "2023-05-08 17:03:45.439",
    "results": {
     "code": "SUCCESS",
     "msg": []
-   },
-   "dateFinished": "2023-05-08 17:01:35.933"
+   }
   },
   {
    "settings": {
     "params": {
      "bdtMeta": {
       "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estrelas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hora_max_checkin",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "qtd_quartos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "area_localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         }
+        ]
+       },
        {
         "columns": [
          {
@@ -563,22 +623,24 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "// Initial transformation of Hotel table\n\nvar newHotel = spark.sql(\n    \"\"\"\n        SELECT * FROM InitialHotel AS H\n        WHERE EXISTS (\n            SELECT 1 FROM InitialQuartosReservados qr\n            WHERE h.hotel_ID = qr.hotel_ID\n        )\n    \"\"\")\n\nnewHotel.createOrReplaceTempView(HotelTable)",
+   "text": "// Initial transformation of Hotel table\nvar initalHotel = spark.sql(\"SELECT * FROM InitialHotel\")\n\nvar newHotel = spark.sql(\n    \"\"\"\n        SELECT * FROM InitialHotel AS H\n        WHERE EXISTS (\n            SELECT 1 FROM InitialQuartosReservados qr\n            WHERE h.hotel_ID = qr.hotel_ID\n        )\n    \"\"\")\n\nnewHotel.createOrReplaceTempView(HotelTable)\n\nprintln(\"Total lines removed: \" + (initalHotel.count() - newHotel.count()))",
    "id": "",
    "dateCreated": "2023-05-08 16:58:17.271",
-   "config": {},
-   "dateStarted": "2023-05-08 17:01:35.936",
-   "dateUpdated": "2023-05-08 17:01:36.175",
+   "config": {
+    "editorHide": false
+   },
+   "dateStarted": "2023-05-08 17:06:08.081",
+   "dateUpdated": "2023-05-08 17:06:08.462",
+   "dateFinished": "2023-05-08 17:06:08.462",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "\u001b[1m\u001b[34mnewHotel\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, localizacao: string ... 6 more fields]\n"
+      "data": "Total lines removed: 57\n\u001b[1m\u001b[34minitalHotel\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, localizacao: string ... 6 more fields]\n\u001b[1m\u001b[34mnewHotel\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, localizacao: string ... 6 more fields]\n"
      }
     ]
-   },
-   "dateFinished": "2023-05-08 17:01:36.175"
+   }
   },
   {
    "settings": {
@@ -754,22 +816,22 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "// Initial transformation of Tipologias table\n\nval initialTipologias = spark.sql(s\"SELECT * FROM $InitialTipologiasTable\")\n\nval newTipologias = initialTipologias\n        .drop(\"capacidade_minima\")\n        .drop(\"capacidade_min_adultos\")\n        .drop(\"capacidade_min_criancas\")\n        .drop(\"capacidade_max_camas_extra\")\n        .drop(\"capacidade_max_camas_extra_criancas\")\n        .drop(\"capacidade_max_bercos_extra\")\n\nnewTipologias.createOrReplaceTempView(TipologiasTable)",
+   "text": "// Initial transformation of Tipologias table\n\nval initialTipologias = spark.sql(s\"SELECT * FROM $InitialTipologiasTable\")\n\nval newTipologias = initialTipologias\n        .drop(\"capacidade_minima\")\n        .drop(\"capacidade_min_adultos\")\n        .drop(\"capacidade_min_criancas\")\n        .drop(\"capacidade_max_camas_extra\")\n        .drop(\"capacidade_max_camas_extra_criancas\")\n        .drop(\"capacidade_max_bercos_extra\")\n\nnewTipologias.createOrReplaceTempView(TipologiasTable)\n\nprintln(\"Total lines removed: \" + (initialTipologias.count() - newTipologias.count()))",
    "id": "",
    "dateCreated": "2023-05-08 16:58:47.072",
    "config": {},
-   "dateStarted": "2023-05-08 17:01:36.184",
-   "dateUpdated": "2023-05-08 17:01:36.418",
+   "dateStarted": "2023-05-08 17:06:08.469",
+   "dateUpdated": "2023-05-08 17:06:09.350",
+   "dateFinished": "2023-05-08 17:06:09.350",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "\u001b[1m\u001b[34minitialTipologias\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 12 more fields]\n\u001b[1m\u001b[34mnewTipologias\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 6 more fields]\n"
+      "data": "Total lines removed: 0\n\u001b[1m\u001b[34minitialTipologias\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 12 more fields]\n\u001b[1m\u001b[34mnewTipologias\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 6 more fields]\n"
      }
     ]
-   },
-   "dateFinished": "2023-05-08 17:01:36.418"
+   }
   },
   {
    "settings": {
@@ -1022,22 +1084,22 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "// Initial transformation of Quartos Reservados table\nval initialQuartosReservados = spark.sql(s\"SELECT * FROM $InitialQuartosReservadosTable\")\n\nval smallReservationsHotels = initialQuartosReservados\n                            .groupBy(\"hotel_ID\").count()\n                            .filter($\"count\" < 13)\n\nval newQuartosReservados = initialQuartosReservados\n        .filter($\"estado_reserva\".notEqual(\"CourtesyHold\")) // Remove reserve state \"CourtesyHold\" (5 reservations)\n        .filter(datediff($\"data_partida\", $\"data_chegada\") <= 14) // Remove lines where the booking has more than 14 days (115 reservations)\n        .join(smallReservationsHotels, Seq(\"hotel_ID\"), \"leftanti\") // Remove hotels that have less than 13 bookings (21 reservations)\n        .filter($\"preco_euros\" <= 5000) // Remove bookings with price greater than 5000€ (5 reservations)\n        .withColumn(\"preco_noite\", $\"preco_euros\" / $\"num_noites\")\n\nnewQuartosReservados.createOrReplaceTempView(QuartosReservadosTable)",
+   "text": "// Initial transformation of Quartos Reservados table\nval initialQuartosReservados = spark.sql(s\"SELECT * FROM $InitialQuartosReservadosTable\")\n\nval smallReservationsHotels = initialQuartosReservados\n                            .groupBy(\"hotel_ID\").count()\n                            .filter($\"count\" < 13)\n\nval newQuartosReservados = initialQuartosReservados\n        .filter($\"estado_reserva\".notEqual(\"CourtesyHold\")) // Remove reserve state \"CourtesyHold\" (5 reservations)\n        .filter(datediff($\"data_partida\", $\"data_chegada\") <= 14) // Remove lines where the booking has more than 14 days (115 reservations)\n        .join(smallReservationsHotels, Seq(\"hotel_ID\"), \"leftanti\") // Remove hotels that have less than 13 bookings (21 reservations)\n        .filter($\"preco_euros\" <= 5000) // Remove bookings with price greater than 5000€ (5 reservations)\n        .withColumn(\"preco_noite\", $\"preco_euros\" / $\"num_noites\")\n\nnewQuartosReservados.createOrReplaceTempView(QuartosReservadosTable)\n\nprintln(\"Total lines removed: \" + (initialQuartosReservados.count() - newQuartosReservados.count()))",
    "id": "",
    "dateCreated": "2023-05-08 16:58:48.800",
    "config": {},
-   "dateStarted": "2023-05-08 17:01:36.427",
-   "dateUpdated": "2023-05-08 17:01:36.736",
+   "dateStarted": "2023-05-08 17:06:09.357",
+   "dateUpdated": "2023-05-08 17:06:10.186",
+   "dateFinished": "2023-05-08 17:06:10.186",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "\u001b[1m\u001b[34minitialQuartosReservados\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 14 more fields]\n\u001b[1m\u001b[34msmallReservationsHotels\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [hotel_ID: int, count: bigint]\n\u001b[1m\u001b[34mnewQuartosReservados\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 15 more fields]\n"
+      "data": "Total lines removed: 142\n\u001b[1m\u001b[34minitialQuartosReservados\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 14 more fields]\n\u001b[1m\u001b[34msmallReservationsHotels\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [hotel_ID: int, count: bigint]\n\u001b[1m\u001b[34mnewQuartosReservados\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 15 more fields]\n"
      }
     ]
-   },
-   "dateFinished": "2023-05-08 17:01:36.736"
+   }
   }
  ],
  "name": "Zeppelin Notebook",
