@@ -70,6 +70,18 @@
    "dateStarted": "2023-05-08 15:31:15.765",
    "dateUpdated": "2023-05-08 15:31:19.546",
    "dateFinished": "2023-05-08 15:31:19.545"
+  },
+  {
+   "settings": {
+    "params": {},
+    "forms": {}
+   },
+   "apps": [],
+   "status": "READY",
+   "text": "// Podemos adicionar o número de dias desde a reserva até à chegada",
+   "id": "",
+   "dateCreated": "2023-05-08 20:50:14.235",
+   "config": {}
   }
  ],
  "name": "Zeppelin Notebook",
