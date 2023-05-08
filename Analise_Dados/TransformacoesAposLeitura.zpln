@@ -1,0 +1,134 @@
+{
+ "paragraphs": [
+  {
+   "user": "anonymous",
+   "config": {
+    "colWidth": 12,
+    "fontSize": 9,
+    "enabled": true,
+    "results": {},
+    "editorSetting": {
+     "language": "scala",
+     "editOnDblClick": false,
+     "completionKey": "TAB",
+     "completionSupport": true
+    },
+    "editorMode": "ace/mode/scala"
+   },
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "jobName": "paragraph_1563110258183_1613653816",
+   "id": "20190714-161738_1950435706",
+   "dateCreated": "2019-07-14T16:17:38+0300",
+   "status": "FINISHED",
+   "progressUpdateIntervalMs": 500,
+   "focus": true,
+   "$$hashKey": "object:394",
+   "text": "// FILE #2",
+   "dateStarted": "2023-05-08 16:52:41.374",
+   "dateUpdated": "2023-05-08 16:52:41.566",
+   "dateFinished": "2023-05-08 16:52:41.566"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "import org.apache.spark.sql.functions._\n\nval InitialFacilitesTable = \"InitialFacilities\"\nval InitialHotelTable = \"InitialHotel\"\nval InitialTipologiasTable = \"InitialTipologias\"\nval InitialQuartosReservadosTable = \"InitialQuartosReservados\"\nval InitialFeriadosTable = \"InitialFeriados\"\nval InitialMeteorologiaTable = \"InitialMeteorologia\"\nval InitialEventosTable = \"InitialEventos\"\n\nval FacilitesTable = \"Facilities\"\nval HotelTable = \"Hotel\"\nval TipologiasTable = \"Tipologias\"\nval QuartosReservadosTable = \"QuartosReservados\"\nval FeriadosTable = \"Feriados\"\nval MeteorologiaTable = \"Meteorologia\"\nval EventosTable = \"Eventos\"",
+   "id": "",
+   "dateCreated": "2023-05-08 15:33:24.199",
+   "config": {},
+   "dateStarted": "2023-05-08 16:52:41.568",
+   "dateUpdated": "2023-05-08 16:52:44.777",
+   "dateFinished": "2023-05-08 16:52:44.777"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "// Initial transformation of Hotel table\n\nvar newHotel = spark.sql(\n    \"\"\"\n        SELECT * FROM InitialHotel AS H\n        WHERE EXISTS (\n            SELECT 1 FROM InitialQuartosReservados qr\n            WHERE h.hotel_ID = qr.hotel_ID\n        )\n    \"\"\")\n\nnewHotel.createOrReplaceTempView(HotelTable)",
+   "id": "",
+   "dateCreated": "2023-05-08 15:33:48.789",
+   "config": {},
+   "dateStarted": "2023-05-08 16:52:44.785",
+   "dateUpdated": "2023-05-08 16:52:45.074",
+   "dateFinished": "2023-05-08 16:52:45.074"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "// Initial transformation of Tipologias table\n\nval initialTipologias = spark.sql(s\"SELECT * FROM $InitialTipologiasTable\")\n\nval newTipologias = initialTipologias\n        .drop(\"capacidade_minima\")\n        .drop(\"capacidade_min_adultos\")\n        .drop(\"capacidade_min_criancas\")\n        .drop(\"capacidade_max_camas_extra\")\n        .drop(\"capacidade_max_camas_extra_criancas\")\n        .drop(\"capacidade_max_bercos_extra\")\n\nnewTipologias.createOrReplaceTempView(TipologiasTable)",
+   "id": "",
+   "dateCreated": "2023-05-08 16:12:57.082",
+   "config": {},
+   "dateStarted": "2023-05-08 16:52:45.081",
+   "dateUpdated": "2023-05-08 16:52:45.375",
+   "dateFinished": "2023-05-08 16:52:45.375"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "val initialQuartosReservados = spark.sql(s\"SELECT * FROM $InitialQuartosReservadosTable\")\ninitialQuartosReservados.show()",
+   "id": "",
+   "dateCreated": "2023-05-08 16:51:13.832",
+   "config": {},
+   "dateStarted": "2023-05-08 16:52:45.382",
+   "dateUpdated": "2023-05-08 16:52:45.621",
+   "dateFinished": "2023-05-08 16:52:45.621"
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "// Initial transformation of Quartos Reservados table\nval initialQuartosReservados = spark.sql(s\"SELECT * FROM $InitialQuartosReservadosTable\")\n\nval smallReservationsHotels = initialQuartosReservados\n                            .groupBy(\"hotel_ID\").count()\n                            .filter($\"count\" < 13)\n\nval newQuartosReservados = initialQuartosReservados\n        .filter($\"estado_reserva\".notEqual(\"CourtesyHold\")) // Remove reserve state \"CourtesyHold\" (5 reservations)\n        .filter(datediff($\"data_partida\", $\"data_chegada\") <= 14) // Remove lines where the booking has more than 14 days (115 reservations)\n        .join(smallReservationsHotels, Seq(\"hotel_ID\"), \"leftanti\") // Remove hotels that have less than 13 bookings (21 reservations)\n        .filter($\"preco_euros\" <= 5000) // Remove bookings with price greater than 5000€ (5 reservations)\n        .withColumn(\"preco_noite\", $\"preco_euros\" / $\"num_noites\")\n\nprintln(initialQuartosReservados.count())\nprintln(newQuartosReservados.count())\nnewQuartosReservados.show()",
+   "id": "",
+   "dateCreated": "2023-05-08 16:15:46.576",
+   "config": {},
+   "dateStarted": "2023-05-08 16:54:01.773",
+   "dateUpdated": "2023-05-08 16:54:03.500",
+   "dateFinished": "2023-05-08 16:54:03.500"
+  }
+ ],
+ "name": "Zeppelin Notebook",
+ "id": "",
+ "noteParams": {},
+ "noteForms": {},
+ "angularObjects": {},
+ "config": {
+  "isZeppelinNotebookCronEnable": false,
+  "looknfeel": "default",
+  "personalizedMode": "false"
+ },
+ "info": {}
+}

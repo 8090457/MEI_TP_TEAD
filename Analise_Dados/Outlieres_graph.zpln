@@ -8,14 +8,14 @@
     "forms": {}
    },
    "apps": [],
-   "status": "ERROR",
-   "text": "import org.apache.spark.sql.DataFrame\nimport org.apache.spark.sql.functions._\n\n// Calcula o LowerLimit  usando Three Sigma\ndef calculateLowerLimit(df: DataFrame, column: String): Double = {\n  val filteredDF = df.filter(col(column) >= 0)\n  val meanValue = filteredDF.agg(mean(col(column)).as(\"mean\")).first().getDouble(0)\n  val stdDevValue = filteredDF.agg(stddev(col(column)).as(\"stddev\")).first().getDouble(0)\n  Math.max(0.0, meanValue - 3 * stdDevValue) // limite mínimo é zero\n}\n\n",
+   "status": "FINISHED",
+   "text": "import org.apache.spark.sql.DataFrame\nimport org.apache.spark.sql.functions._\n\n// Calcula o LowerLimit  usando Three Sigma\ndef calculateLowerLimit(df: DataFrame, column: String): Double = {\n  val filteredDF = df.filter(col(column) >= 0)\n  val meanValue = filteredDF.agg(mean(col(column)).as(\"mean\")).first().getDouble(0)\n  val stdDevValue = filteredDF.agg(stddev(col(column)).as(\"stddev\")).first().getDouble(0)\n  Math.max(0.0, meanValue - 3 * stdDevValue) // limite mínimo é zero\n}",
    "id": "",
    "dateCreated": "2023-05-03 22:50:26.069",
    "config": {},
-   "dateStarted": "2023-05-05 17:12:27.763",
-   "dateUpdated": "2023-05-05 17:12:28.251",
-   "dateFinished": "2023-05-05 17:12:28.250"
+   "dateStarted": "2023-05-08 16:28:45.955",
+   "dateUpdated": "2023-05-08 16:28:46.115",
+   "dateFinished": "2023-05-08 16:28:46.115"
   },
   {
    "settings": {
@@ -25,14 +25,14 @@
     "forms": {}
    },
    "apps": [],
-   "status": "ERROR",
+   "status": "FINISHED",
    "text": "// Calcula o UpperLimit  usando Three Sigma\n\ndef calculateUpperLimit(df: DataFrame, column: String): Double = {\n  val meanValue = df.agg(mean(col(column)).as(\"mean\")).first().getDouble(0)\n  val stdDevValue = df.agg(stddev(col(column)).as(\"stddev\")).first().getDouble(0)\n  meanValue + 3 * stdDevValue\n}",
    "id": "",
    "dateCreated": "2023-05-03 22:31:41.905",
    "config": {},
-   "dateStarted": "2023-05-05 17:12:26.996",
-   "dateUpdated": "2023-05-05 17:12:27.734",
-   "dateFinished": "2023-05-05 17:12:27.734"
+   "dateStarted": "2023-05-08 16:28:48.975",
+   "dateUpdated": "2023-05-08 16:28:49.220",
+   "dateFinished": "2023-05-08 16:28:49.220"
   },
   {
    "user": "anonymous",
@@ -66,9 +66,9 @@
    "focus": true,
    "$$hashKey": "object:394",
    "text": "//depois testar com o iqr 1.5\n\nval resultQuartosReservados = spark.sql(\n    \"\"\"\n     SELECT * \n      FROM QuartosReservados qr\n      INNER JOIN Hotel h \n      ON h.hotel_ID = qr.hotel_ID   \n    \"\"\"\n)\n\n// Calcula a média e o desvio padrão do número de noites usando Three Sigma\n//mean: Double = 2.282015534754033\n//stdDev: Double = 4.682108190781085\nval mean = resultQuartosReservados.agg(avg(\"num_noites\")).head.getDouble(0)\nval stdDev = resultQuartosReservados.agg(stddev(\"num_noites\")).head.getDouble(0)\n//mean + 3 * stdDev \n//14.32 = 2.28 + 3 * 4.68\nval upperLimit = 14\nval lowerLimit = 0.0 \nval outliers = resultQuartosReservados.filter($\"num_noites\" > upperLimit || $\"num_noites\" < lowerLimit)\n\n// adiciona uma coluna com o número de linhas\nval resultCount = outliers.withColumn(\"num_linhas\", count(\"*\").over())\n//// exibe o valor da coluna \"num_linhas\"\nresultCount.agg(max(\"num_linhas\")).show()\noutliers.show(115)\n//result.limit(100).show(100)",
-   "dateStarted": "2023-05-06 16:08:46.090",
-   "dateUpdated": "2023-05-06 16:08:47.274",
-   "dateFinished": "2023-05-06 16:08:47.273"
+   "dateStarted": "2023-05-08 16:29:09.194",
+   "dateUpdated": "2023-05-08 16:29:09.874",
+   "dateFinished": "2023-05-08 16:29:09.873"
   },
   {
    "settings": {
@@ -79,13 +79,13 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "//Hóteis a remover que não tem qualquer reserva\n\nval resultQuartosReservados = spark.sql(\n    \"\"\"\n    SELECT * \n    FROM Hotel h\n    WHERE NOT EXISTS (SELECT 1 FROM QuartosReservados qr\n    WHERE h.hotel_ID = qr.hotel_ID)\n    \"\"\"\n)\nval resultCount = resultQuartosReservados.withColumn(\"num_linhas\", count(\"*\").over())\n//// exibe o valor da coluna \"num_linhas\"\nresultCount.agg(max(\"num_linhas\")).show()\n resultQuartosReservados.show(60)",
+   "text": "//Hóteis a remover que não tem qualquer reserva\n\nval resultQuartosReservados2 = spark.sql(\n    \"\"\"\n    SELECT * \n    FROM Hotel h\n    WHERE NOT EXISTS (SELECT 1 FROM QuartosReservados qr\n    WHERE h.hotel_ID = qr.hotel_ID)\n    \"\"\"\n)\nval resultCount = resultQuartosReservados2.withColumn(\"num_linhas\", count(\"*\").over())\n// exibe o valor da coluna \"num_linhas\"\nresultCount.agg(max(\"num_linhas\")).show()\n resultQuartosReservados2.show(60)",
    "id": "",
    "dateCreated": "2023-05-07 17:38:06.368",
    "config": {},
-   "dateStarted": "2023-05-07 18:05:34.238",
-   "dateUpdated": "2023-05-07 18:05:34.693",
-   "dateFinished": "2023-05-07 18:05:34.693"
+   "dateStarted": "2023-05-08 16:29:12.209",
+   "dateUpdated": "2023-05-08 16:29:12.623",
+   "dateFinished": "2023-05-08 16:29:12.622"
   },
   {
    "settings": {
@@ -102,26 +102,49 @@
    "id": "",
    "dateCreated": "2023-05-03 20:23:20.916",
    "config": {},
-   "dateStarted": "2023-05-06 17:44:28.152",
-   "dateUpdated": "2023-05-06 17:44:30.041",
-   "dateFinished": "2023-05-06 17:44:30.040"
+   "dateStarted": "2023-05-08 16:29:15.339",
+   "dateUpdated": "2023-05-08 16:29:16.430",
+   "dateFinished": "2023-05-08 16:29:16.430"
   },
   {
    "settings": {
     "params": {
-     "bdtMeta": {}
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
     },
     "forms": {}
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "//Agrupamento e ordenação de Hoteis com mais reservas e com menos reservas\nval dfRatePlan = resultQuartosReservados.select(\"qr.hotel_ID\",\"h.localizacao\")\n\n// Agrupar os dados pelo rateplan e contar o número de ocorrências\nval dfRatePlanCounts = dfRatePlan.groupBy(\"qr.hotel_ID\", \"h.localizacao\").count()\nval order = dfRatePlanCounts.orderBy($\"count\".desc)\n\nval lowerLimit = 13\nval outliers = order.filter($\"count\" < lowerLimit)\nval numlinhas = outliers.count()\nval sumCounts = outliers.agg(sum(\"count\")).head().getLong(0)\n//order.describe().show()\nprintln(s\"A soma da contagem é $sumCounts\")\n\nprintln(numlinhas)\noutliers.show(100)\n\n\norder.show(10000)",
+   "text": "//Agrupamento e ordenação de Hoteis com mais reservas e com menos reservas\nval hotelReservationsCount = resultQuartosReservados\n        .groupBy(\"qr.hotel_ID\").count()\n        .orderBy($\"count\".desc)\n\nval lowerLimit = 13\nval outliers = hotelReservationsCount.filter($\"count\" < lowerLimit)\n\nprintln(outliers.count())\noutliers.show(100)\n\nhotelReservationsCount.show(10000)",
    "id": "",
    "dateCreated": "2023-05-03 21:24:30.093",
    "config": {},
-   "dateStarted": "2023-05-06 23:09:43.580",
-   "dateUpdated": "2023-05-06 23:09:47.564",
-   "dateFinished": "2023-05-06 23:09:47.563"
+   "dateStarted": "2023-05-08 16:35:22.175",
+   "dateUpdated": "2023-05-08 16:35:24.563",
+   "dateFinished": "2023-05-08 16:35:24.563",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "5\n+--------+-----+\n|hotel_ID|count|\n+--------+-----+\n|     491|    5|\n|     390|    5|\n|     302|    5|\n|     442|    4|\n|     513|    1|\n+--------+-----+\n\n+--------+-----+\n|hotel_ID|count|\n+--------+-----+\n|     311| 3325|\n|     310| 2120|\n|     556| 1884|\n|     444| 1687|\n|     535| 1344|\n|     309| 1140|\n|     482| 1001|\n|     539|  880|\n|     426|  859|\n|     179|  782|\n|     319|  593|\n|     514|  458|\n|     304|  402|\n|     328|  363|\n|     322|  310|\n|     504|  293|\n|     443|  279|\n|     465|  268|\n|     378|  263|\n|     392|  259|\n|     537|  248|\n|     313|  235|\n|     511|  227|\n|     280|  222|\n|     238|  213|\n|     453|  206|\n|     395|  205|\n|     314|  204|\n|     379|  204|\n|      49|  196|\n|     478|  193|\n|     321|  190|\n|     259|  185|\n|     415|  169|\n|     358|  167|\n|     560|  165|\n|     503|  162|\n|     413|  162|\n|      44|  151|\n|     492|  145|\n|     421|  144|\n|     493|  144|\n|     414|  134|\n|     185|  134|\n|     501|  126|\n|     445|  126|\n|     495|  120|\n|      54|  117|\n|     391|  108|\n|     403|   94|\n|     349|   88|\n|     416|   85|\n|     494|   79|\n|      20|   77|\n|     283|   74|\n|     366|   74|\n|     273|   71|\n|     516|   67|\n|     285|   62|\n|     522|   62|\n|     335|   55|\n|     332|   52|\n|     269|   51|\n|     483|   50|\n|     399|   49|\n|     287|   47|\n|     404|   42|\n|     284|   37|\n|     526|   36|\n|     433|   32|\n|     490|   31|\n|     368|   30|\n|     400|   30|\n|     559|   28|\n|     225|   24|\n|     241|   23|\n|     320|   23|\n|     356|   20|\n|     327|   18|\n|     561|   18|\n|     558|   15|\n|     546|   15|\n|     389|   13|\n|     491|    5|\n|     302|    5|\n|     390|    5|\n|     442|    4|\n|     513|    1|\n+--------+-----+\n\n\u001b[1m\u001b[34mquartosReservadosHotelId\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int]\n\u001b[1m\u001b[34mhotelReservationsCount\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [hotel_ID: int, count: bigint]\n\u001b[1m\u001b[34mlowerLimit\u001b[0m: \u001b[1m\u001b[32mInt\u001b[0m = 13\n\u001b[1m\u001b[34moutliers\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [hotel_ID: int, count: bigint]\n"
+     }
+    ]
+   }
   },
   {
    "settings": {
@@ -131,14 +154,14 @@
     "forms": {}
    },
    "apps": [],
-   "status": "FINISHED",
+   "status": "ERROR",
    "text": "//Preço Médio por noite por cada id Hotel\nval dfRatePlan = resultQuartosReservados.select(\"qr.hotel_ID\",\"h.localizacao\",\"qr.preco_euros\",\"qr.num_noites\")\n// converte a coluna \"preco_euros\" para o tipo de dados numérico\nval dfComPrecoNumerico = dfRatePlan.withColumn(\"preco_euros\", col(\"preco_euros\").cast(\"double\"))\n\n// adiciona uma coluna \"preco_por_noite\" com o valor da coluna \"preco_euros\" dividido pelo número de noites da reserva\nval dfComPrecoPorNoite = dfComPrecoNumerico.withColumn(\"preco_por_noite\", col(\"preco_euros\") / col(\"num_noites\"))\n\n// agrupa o dataframe pelo ID do hotel e calcula a média da coluna \"preco_por_noite\" para cada grupo\nval mediaPrecoPorHotel = dfComPrecoPorNoite.groupBy(\"hotel_ID\").agg(avg(\"preco_por_noite\").alias(\"preco_medio_por_noite\"))\nval mediaPrecoPorHotelArredondado = mediaPrecoPorHotel.withColumn(\"preco_medio_por_noite\", round(col(\"preco_medio_por_noite\"), 2))\nval mediaPrecoPorHotelArredondado_orderDESC = mediaPrecoPorHotelArredondado.orderBy($\"preco_medio_por_noite\".desc)\n\nmediaPrecoPorHotelArredondado_orderDESC.show(10000)",
    "id": "",
    "dateCreated": "2023-05-03 23:17:54.828",
    "config": {},
-   "dateStarted": "2023-05-06 18:28:39.806",
-   "dateUpdated": "2023-05-06 18:28:40.367",
-   "dateFinished": "2023-05-06 18:28:40.367"
+   "dateStarted": "2023-05-08 16:27:45.793",
+   "dateUpdated": "2023-05-08 16:27:46.204",
+   "dateFinished": "2023-05-08 16:27:46.204"
   },
   {
    "settings": {
@@ -148,14 +171,14 @@
     "forms": {}
    },
    "apps": [],
-   "status": "FINISHED",
+   "status": "ERROR",
    "text": "//Agrupar por Pais;\nval dfRatePlan = resultQuartosReservados.select(\"qr.pais\")\nval agrPais = dfRatePlan.groupBy(\"qr.pais\").count()\nval order_agr_Pais = agrPais.orderBy($\"count\".desc)\n\nval lowerLimit = 3\nval outliers = order_agr_Pais.filter($\"count\" < lowerLimit)\nval numlinhas = outliers.count()\n// saveDataFrame(order_agr_Pais,\"agr_Pais\")\nprintln(numlinhas)\noutliers.show(100)\norder_agr_Pais.show(10000)\n",
    "id": "",
    "dateCreated": "2023-05-05 17:22:06.727",
    "config": {},
-   "dateStarted": "2023-05-07 16:06:47.212",
-   "dateUpdated": "2023-05-07 16:06:50.367",
-   "dateFinished": "2023-05-07 16:06:50.367"
+   "dateStarted": "2023-05-08 16:27:46.219",
+   "dateUpdated": "2023-05-08 16:27:46.622",
+   "dateFinished": "2023-05-08 16:27:46.622"
   }
  ],
  "name": "Zeppelin Notebook",
