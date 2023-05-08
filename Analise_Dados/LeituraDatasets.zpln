@@ -51,7 +51,7 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "import org.apache.spark.sql.functions._\nval csvFacilities = \"/data/tp/Facilities.csv\" // Facilities file\n\nval df = spark.read.format(\"csv\") // Read CSV\n        .option(\"header\", \"true\") // First line is a header\n        .option(\"inferSchema\", \"true\") // infer the data types \n        .option(\"delimiter\", \";\") // Columns separated by ';\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n  .load(csvFacilities)\n\ndf.createOrReplaceTempView(FacilitesTable)\ndf.cache()\n//df.printSchema()\n//df.show()",
+   "text": "import org.apache.spark.sql.functions._\nval csvFacilities = \"/data/tp/Facilities.csv\" // Facilities file\n\nval df = spark.read.format(\"csv\") // Read CSV\n        .option(\"header\", \"true\") // First line is a header\n        .option(\"inferSchema\", \"true\") // infer the data types \n        .option(\"delimiter\", \";\") // Columns separated by ';'\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n  .load(csvFacilities)\n\ndf.createOrReplaceTempView(FacilitesTable)\ndf.cache()\n//df.printSchema()\n//df.show()",
    "id": "",
    "dateCreated": "2023-04-23 23:44:45.859",
    "config": {
