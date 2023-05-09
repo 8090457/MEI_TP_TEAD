@@ -816,7 +816,7 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "// Initial transformation of Tipologias table\n\nval initialTipologias = spark.sql(s\"SELECT * FROM $InitialTipologiasTable\")\n\nval newTipologias = initialTipologias\n        .drop(\"capacidade_minima\")\n        .drop(\"capacidade_min_adultos\")\n        .drop(\"capacidade_min_criancas\")\n        .drop(\"capacidade_max_camas_extra\")\n        .drop(\"capacidade_max_camas_extra_criancas\")\n        .drop(\"capacidade_max_bercos_extra\")\n\nnewTipologias.createOrReplaceTempView(TipologiasTable)\n\nprintln(\"Total lines removed: \" + (initialTipologias.count() - newTipologias.count()))",
+   "text": "// Initial transformation of Tipologias table\n\nval initialTipologias = spark.sql(s\"SELECT * FROM $InitialTipologiasTable\")\n\nval newTipologias = initialTipologias\n        .drop(\"capacidade_minima\")\n        .drop(\"capacidade_min_adultos\")\n        .drop(\"capacidade_min_criancas\")\n//        .drop(\"capacidade_max_camas_extra\")\n//        .drop(\"capacidade_max_camas_extra_criancas\")\n//        .drop(\"capacidade_max_bercos_extra\")\n\nnewTipologias.createOrReplaceTempView(TipologiasTable)\n\nprintln(\"Total lines removed: \" + (initialTipologias.count() - newTipologias.count()))",
    "id": "",
    "dateCreated": "2023-05-08 16:58:47.072",
    "config": {},
