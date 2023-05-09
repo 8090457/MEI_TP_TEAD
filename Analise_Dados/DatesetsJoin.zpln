@@ -13,9 +13,9 @@
    "id": "",
    "dateCreated": "2023-05-08 15:40:50.806",
    "config": {},
-   "dateStarted": "2023-05-10 00:10:19.912",
-   "dateUpdated": "2023-05-10 00:10:20.038",
-   "dateFinished": "2023-05-10 00:10:20.037",
+   "dateStarted": "2023-05-10 00:52:57.976",
+   "dateUpdated": "2023-05-10 00:52:58.152",
+   "dateFinished": "2023-05-10 00:52:58.152",
    "results": {
     "code": "SUCCESS",
     "msg": []
@@ -254,21 +254,21 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "import org.apache.spark.sql.DataFrame\n\nval joinFolder = \"/data/joins\"\nval saveJoins = false\n\ndef saveDataFrame(df: DataFrame, name: String): Unit = {\n    df.coalesce(1) // Print into a single file\n            .write\n            .mode(\"overwrite\")\n            .option(\"delimiter\", \";\")\n            .option(\"header\", true) // Maintain Headers\n            .csv(s\"$joinFolder/$name\") // Write to csv\n}\nval initialCount = spark.sql(\n    \"\"\"\n      SELECT DISTINCT * FROM QuartosReservados\n      \"\"\")\nprintln(initialCount.count())",
+   "text": "import org.apache.spark.sql.DataFrame\nimport org.apache.spark.sql.functions._\nimport spark.implicits._\n\nval joinFolder = \"/data/joins\"\nval saveJoins = false\n\ndef saveDataFrame(df: DataFrame, name: String): Unit = {\n    df.coalesce(1) // Print into a single file\n            .write\n            .mode(\"overwrite\")\n            .option(\"delimiter\", \";\")\n            .option(\"header\", true) // Maintain Headers\n            .csv(s\"$joinFolder/$name\") // Write to csv\n}\nval initialCount = spark.sql(\n    \"\"\"\n      SELECT DISTINCT * FROM QuartosReservados\n      \"\"\")\nprintln(initialCount.count())",
    "id": "",
    "dateCreated": "2023-04-30 19:59:44.804",
    "config": {
     "editorHide": false
    },
-   "dateStarted": "2023-05-10 00:10:20.040",
-   "dateUpdated": "2023-05-10 00:10:24.881",
-   "dateFinished": "2023-05-10 00:10:24.881",
+   "dateStarted": "2023-05-10 00:52:58.153",
+   "dateUpdated": "2023-05-10 00:53:01.845",
+   "dateFinished": "2023-05-10 00:53:01.845",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "24955\nimport org.apache.spark.sql.DataFrame\n\u001b[1m\u001b[34mjoinFolder\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/joins\n\u001b[1m\u001b[34msaveJoins\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n\u001b[1m\u001b[34msaveDataFrame\u001b[0m: \u001b[1m\u001b[32m(df: org.apache.spark.sql.DataFrame, name: String)Unit\u001b[0m\n\u001b[1m\u001b[34minitialCount\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 29 more fields]\n"
+      "data": "24955\nimport org.apache.spark.sql.DataFrame\nimport org.apache.spark.sql.functions._\nimport spark.implicits._\n\u001b[1m\u001b[34mjoinFolder\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/joins\n\u001b[1m\u001b[34msaveJoins\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n\u001b[1m\u001b[34msaveDataFrame\u001b[0m: \u001b[1m\u001b[32m(df: org.apache.spark.sql.DataFrame, name: String)Unit\u001b[0m\n\u001b[1m\u001b[34minitialCount\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 29 more fields]\n"
      }
     ]
    }
@@ -464,9 +464,9 @@
    "focus": true,
    "$$hashKey": "object:394",
    "text": "val joinTipologia = spark.sql(\n    \"\"\"\n       SELECT DISTINCT \n           Q.hotel_ID, \n           Q.Reserve_ID,\n           Q.pais,\n           Q.estado_reserva,\n           Q.room_ID,\n           Q.tipo_quarto AS Q_tipo_quarto,\n           Q.rate_plan,\n           Q.data_reserva,\n           Q.data_chegada,\n           Q.data_partida,\n           Q.num_noites,\n           Q.ocupacao,\n           Q.adultos,\n           Q.criancas,\n           Q.bebes,\n           Q.preco_euros,\n           T.tipo_quarto as T_tipo_quarto, \n           T.quantidade,\n           T.capacidade_maxima,\n           T.capacidade_max_adultos,\n           T.capacidade_max_criancas,\n           T.capacidade_max_bebes\n       FROM QuartosReservados as Q\n       INNER JOIN Tipologias as T\n           ON Q.hotel_ID = T.hotel_ID AND T.room_ID = Q.room_ID\n      \"\"\")\n\njoinTipologia.createOrReplaceTempView(\"JoinTipologia\")\njoinTipologia.cache()\n\nif (saveJoins)\n    saveDataFrame(joinTipologia, \"joinTipologia\")\n\nprintln(joinTipologia.count())\njoinTipologia.printSchema()",
-   "dateStarted": "2023-05-10 00:10:24.892",
-   "dateUpdated": "2023-05-10 00:10:29.827",
-   "dateFinished": "2023-05-10 00:10:29.826",
+   "dateStarted": "2023-05-10 00:53:01.852",
+   "dateUpdated": "2023-05-10 00:53:02.844",
+   "dateFinished": "2023-05-10 00:53:02.844",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -703,9 +703,9 @@
    "config": {
     "tableHide": false
    },
-   "dateStarted": "2023-05-10 00:10:29.841",
-   "dateUpdated": "2023-05-10 00:10:31.923",
-   "dateFinished": "2023-05-10 00:10:31.923",
+   "dateStarted": "2023-05-10 00:53:02.853",
+   "dateUpdated": "2023-05-10 00:53:03.915",
+   "dateFinished": "2023-05-10 00:53:03.914",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -949,9 +949,9 @@
    "config": {
     "tableHide": false
    },
-   "dateStarted": "2023-05-10 00:10:31.938",
-   "dateUpdated": "2023-05-10 00:10:35.794",
-   "dateFinished": "2023-05-10 00:10:35.794",
+   "dateStarted": "2023-05-10 00:53:03.924",
+   "dateUpdated": "2023-05-10 00:53:06.514",
+   "dateFinished": "2023-05-10 00:53:06.514",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -1221,9 +1221,9 @@
    "id": "",
    "dateCreated": "2023-04-30 20:16:51.675",
    "config": {},
-   "dateStarted": "2023-05-10 00:10:35.817",
-   "dateUpdated": "2023-05-10 00:10:42.438",
-   "dateFinished": "2023-05-10 00:10:42.438",
+   "dateStarted": "2023-05-10 00:53:06.530",
+   "dateUpdated": "2023-05-10 00:53:10.808",
+   "dateFinished": "2023-05-10 00:53:10.807",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -1532,9 +1532,9 @@
    "config": {
     "tableHide": true
    },
-   "dateStarted": "2023-05-10 00:10:42.446",
-   "dateUpdated": "2023-05-10 00:10:50.261",
-   "dateFinished": "2023-05-10 00:10:50.261",
+   "dateStarted": "2023-05-10 00:53:10.813",
+   "dateUpdated": "2023-05-10 00:53:16.948",
+   "dateFinished": "2023-05-10 00:53:16.948",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -1838,9 +1838,9 @@
    "id": "",
    "dateCreated": "2023-05-01 15:47:23.871",
    "config": {},
-   "dateStarted": "2023-05-10 00:10:50.279",
-   "dateUpdated": "2023-05-10 00:10:50.479",
-   "dateFinished": "2023-05-10 00:10:50.479",
+   "dateStarted": "2023-05-10 00:53:16.961",
+   "dateUpdated": "2023-05-10 00:53:17.153",
+   "dateFinished": "2023-05-10 00:53:17.153",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -1866,9 +1866,9 @@
    "config": {
     "editorHide": false
    },
-   "dateStarted": "2023-05-10 00:10:50.487",
-   "dateUpdated": "2023-05-10 00:10:50.593",
-   "dateFinished": "2023-05-10 00:10:50.593",
+   "dateStarted": "2023-05-10 00:53:17.159",
+   "dateUpdated": "2023-05-10 00:53:17.293",
+   "dateFinished": "2023-05-10 00:53:17.293",
    "results": {
     "code": "SUCCESS",
     "msg": []
@@ -1887,9 +1887,9 @@
    "id": "",
    "dateCreated": "2023-05-08 17:50:08.525",
    "config": {},
-   "dateStarted": "2023-05-10 00:10:50.594",
-   "dateUpdated": "2023-05-10 00:10:56.372",
-   "dateFinished": "2023-05-10 00:10:56.371",
+   "dateStarted": "2023-05-10 00:53:17.294",
+   "dateUpdated": "2023-05-10 00:53:22.400",
+   "dateFinished": "2023-05-10 00:53:22.400",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -1913,9 +1913,9 @@
    "id": "",
    "dateCreated": "2023-05-08 17:09:27.489",
    "config": {},
-   "dateStarted": "2023-05-10 00:10:56.381",
-   "dateUpdated": "2023-05-10 00:11:00.126",
-   "dateFinished": "2023-05-10 00:11:00.126",
+   "dateStarted": "2023-05-10 00:53:22.407",
+   "dateUpdated": "2023-05-10 00:53:25.583",
+   "dateFinished": "2023-05-10 00:53:25.583",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -2194,19 +2194,19 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "// Join pelo reserve_ID\n// Selecionar tudo das reservas\n\nvar finalDataSet = spark.sql(\n    \"\"\"\n    SELECT \n        first(hotel_ID) AS hotel_ID, \n        Reserve_ID,\n        first(pais) AS pais,\n        first(estado_reserva) AS estado_reserva,\n        first(room_ID) AS room_ID,\n        first(T_tipo_quarto) AS tipo_quarto,\n        first(rate_plan) AS rate_plan,\n        first(data_reserva) AS data_reserva,\n        first(data_chegada) AS data_chegada,\n        first(data_partida) AS data_partida,\n        first(num_noites) AS num_noites,\n        first(ocupacao) AS ocupacao,\n        first(adultos) AS adultos,\n        first(criancas) AS criancas,\n        first(bebes) AS bebes,\n        first(preco_euros) AS preco_euros,\n        first(quantidade) AS quantidade,\n        first(capacidade_maxima) AS capacidade_maxima,\n        first(capacidade_max_adultos) AS capacidade_max_adultos,\n        first(capacidade_max_criancas) AS capacidade_max_criancas,\n        first(capacidade_max_bebes) AS capacidade_max_bebes,\n        first(localizacao) AS localizacao,\n        first(area_localizacao) AS area_localizacao,\n        first(estrelas) AS estrelas,\n        first(idade_max_criancas) AS idade_max_criancas,\n        first(idade_max_bebes) AS idade_max_bebes,\n        first(hora_max_checkin) AS hora_max_checkin,\n        first(qtd_quartos) AS qtd_quartos,\n        first(is_holiday) AS is_holiday,\n        first(Location) AS event_Location,\n        first(Event) AS event,\n        first(city) AS city,\n        avg(tavg) AS temperature_avg,\n        max(tmax) AS temperature_tmax,\n        min(tmin) AS temperature_min,\n        avg(prcp) AS precipitation_avg\n       \n    FROM JoinedDataset\n    GROUP BY Reserve_ID\n    \"\"\")\nfinalDataSet.cache()",
+   "text": "// Join pelo reserve_ID\n// Selecionar tudo das reservas\n\nvar finalDataSet = spark.sql(\n    \"\"\"\n    SELECT \n        first(hotel_ID) AS hotel_ID, \n        Reserve_ID,\n        first(pais) AS pais,\n        first(estado_reserva) AS estado_reserva,\n        first(room_ID) AS room_ID,\n        first(T_tipo_quarto) AS tipo_quarto,\n        first(rate_plan) AS rate_plan,\n        first(data_reserva) AS data_reserva,\n        first(data_chegada) AS data_chegada,\n        first(data_partida) AS data_partida,\n        first(num_noites) AS num_noites,\n        first(ocupacao) AS ocupacao,\n        first(adultos) AS adultos,\n        first(criancas) AS criancas,\n        first(bebes) AS bebes,\n        first(preco_euros) AS preco_euros,\n        first(quantidade) AS quantidade,\n        first(capacidade_maxima) AS capacidade_maxima,\n        first(capacidade_max_adultos) AS capacidade_max_adultos,\n        first(capacidade_max_criancas) AS capacidade_max_criancas,\n        first(capacidade_max_bebes) AS capacidade_max_bebes,\n        first(localizacao) AS localizacao,\n        first(area_localizacao) AS area_localizacao,\n        first(estrelas) AS estrelas,\n        first(idade_max_criancas) AS idade_max_criancas,\n        first(idade_max_bebes) AS idade_max_bebes,\n        first(hora_max_checkin) AS hora_max_checkin,\n        first(qtd_quartos) AS qtd_quartos,\n        first(is_holiday) AS is_holiday,\n        first(Location) AS event_Location,\n        first(Event) AS event,\n        first(city) AS city,\n        avg(tavg) AS temperature_avg,\n        max(tmax) AS temperature_tmax,\n        min(tmin) AS temperature_min,\n        avg(prcp) AS precipitation_avg\n       \n    FROM JoinedDataset\n    GROUP BY Reserve_ID\n    \"\"\")\nfinalDataSet.createOrReplaceTempView(\"FinalDataSet\")\nfinalDataSet.cache()",
    "id": "",
    "dateCreated": "2023-05-08 17:09:37.474",
    "config": {},
-   "dateStarted": "2023-05-10 00:11:33.272",
-   "dateUpdated": "2023-05-10 00:11:33.450",
-   "dateFinished": "2023-05-10 00:11:33.449",
+   "dateStarted": "2023-05-10 00:53:25.598",
+   "dateUpdated": "2023-05-10 00:53:25.819",
+   "dateFinished": "2023-05-10 00:53:25.819",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "\u001b[1m\u001b[34mfinalDataSet\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 34 more fields]\n\u001b[1m\u001b[34mres48\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 34 more fields]\n"
+      "data": "\u001b[1m\u001b[34mfinalDataSet\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 34 more fields]\n\u001b[1m\u001b[34mres68\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 34 more fields]\n"
      }
     ]
    }
@@ -2222,9 +2222,9 @@
    "id": "",
    "dateCreated": "2023-05-10 00:11:20.730",
    "config": {},
-   "dateStarted": "2023-05-10 00:11:36.395",
-   "dateUpdated": "2023-05-10 00:11:37.511",
-   "dateFinished": "2023-05-10 00:11:37.511",
+   "dateStarted": "2023-05-10 00:53:25.825",
+   "dateUpdated": "2023-05-10 00:53:27.251",
+   "dateFinished": "2023-05-10 00:53:27.251",
    "results": {
     "code": "SUCCESS",
     "msg": [
