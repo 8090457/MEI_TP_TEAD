@@ -9,18 +9,148 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "// FILE #3",
+   "text": "// FILE #2",
    "id": "",
    "dateCreated": "2023-05-08 15:40:50.806",
    "config": {},
-   "dateStarted": "2023-05-08 17:39:58.155",
-   "dateUpdated": "2023-05-08 17:39:58.390",
-   "dateFinished": "2023-05-08 17:39:58.390"
+   "dateStarted": "2023-05-09 20:52:12.312",
+   "dateUpdated": "2023-05-09 20:52:12.667",
+   "dateFinished": "2023-05-09 20:52:12.666",
+   "results": {
+    "code": "SUCCESS",
+    "msg": []
+   }
   },
   {
    "settings": {
     "params": {
-     "bdtMeta": {}
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "rate_plan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_noite",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
     },
     "forms": {}
    },
@@ -32,9 +162,18 @@
    "config": {
     "editorHide": false
    },
-   "dateStarted": "2023-05-08 17:39:58.392",
-   "dateUpdated": "2023-05-08 17:40:01.434",
-   "dateFinished": "2023-05-08 17:40:01.434"
+   "dateStarted": "2023-05-09 20:52:12.670",
+   "dateUpdated": "2023-05-09 20:52:23.416",
+   "dateFinished": "2023-05-09 20:52:23.416",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "24949\nimport org.apache.spark.sql.DataFrame\n\u001b[1m\u001b[34mjoinFolder\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/joins\n\u001b[1m\u001b[34msaveJoins\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n\u001b[1m\u001b[34msaveDataFrame\u001b[0m: \u001b[1m\u001b[32m(df: org.apache.spark.sql.DataFrame, name: String)Unit\u001b[0m\n\u001b[1m\u001b[34minitialCount\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 15 more fields]\n"
+     }
+    ]
+   }
   },
   {
    "user": "anonymous",
@@ -53,7 +192,168 @@
    },
    "settings": {
     "params": {
-     "bdtMeta": {}
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Q_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "rate_plan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "T_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "quantidade",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_maxima",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
     },
     "forms": {}
    },
@@ -66,15 +366,233 @@
    "focus": true,
    "$$hashKey": "object:394",
    "text": "val joinTipologia = spark.sql(\n    \"\"\"\n       SELECT DISTINCT \n           Q.hotel_ID, \n           Q.Reserve_ID,\n           Q.pais,\n           Q.estado_reserva,\n           Q.room_ID,\n           Q.tipo_quarto AS Q_tipo_quarto,\n           Q.rate_plan,\n           Q.data_reserva,\n           Q.data_chegada,\n           Q.data_partida,\n           Q.num_noites,\n           Q.ocupacao,\n           Q.adultos,\n           Q.criancas,\n           Q.bebes,\n           Q.preco_euros,\n           T.tipo_quarto as T_tipo_quarto, \n           T.quantidade,\n           T.capacidade_maxima,\n           T.capacidade_max_adultos,\n           T.capacidade_max_criancas,\n           T.capacidade_max_bebes\n       FROM QuartosReservados as Q\n       INNER JOIN Tipologias as T\n           ON Q.hotel_ID = T.hotel_ID AND T.room_ID = Q.room_ID\n      \"\"\")\n\njoinTipologia.createOrReplaceTempView(\"JoinTipologia\")\njoinTipologia.cache()\n\nif (saveJoins)\n    saveDataFrame(joinTipologia, \"joinTipologia\")\n\nprintln(joinTipologia.count())\njoinTipologia.printSchema()",
-   "dateStarted": "2023-05-08 17:40:01.474",
-   "dateUpdated": "2023-05-08 17:40:02.161",
-   "dateFinished": "2023-05-08 17:40:02.161"
+   "dateStarted": "2023-05-09 20:52:23.432",
+   "dateUpdated": "2023-05-09 20:52:32.358",
+   "dateFinished": "2023-05-09 20:52:32.358",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "24941\nroot\n |-- hotel_ID: integer (nullable = true)\n |-- Reserve_ID: integer (nullable = true)\n |-- pais: string (nullable = true)\n |-- estado_reserva: string (nullable = true)\n |-- room_ID: integer (nullable = true)\n |-- Q_tipo_quarto: string (nullable = true)\n |-- rate_plan: string (nullable = true)\n |-- data_reserva: timestamp (nullable = true)\n |-- data_chegada: date (nullable = true)\n |-- data_partida: date (nullable = true)\n |-- num_noites: integer (nullable = true)\n |-- ocupacao: integer (nullable = true)\n |-- adultos: integer (nullable = true)\n |-- criancas: integer (nullable = true)\n |-- bebes: integer (nullable = true)\n |-- preco_euros: double (nullable = true)\n |-- T_tipo_quarto: string (nullable = true)\n |-- quantidade: integer (nullable = true)\n |-- capacidade_maxima: integer (nullable = true)\n |-- capacidade_max_adultos: integer (nullable = true)\n |-- capacidade_max_criancas: integer (nullable = true)\n |-- capacidade_max_bebes: integer (nullable = true)\n\n\u001b[1m\u001b[34mjoinTipologia\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 20 more fields]\n"
+     }
+    ]
+   }
   },
   {
    "settings": {
     "params": {
      "bdtMeta": {
-      "inlay": {}
+      "inlay": {},
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Q_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "rate_plan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "T_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "quantidade",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_maxima",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "area_localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estrelas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hora_max_checkin",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "qtd_quartos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
      }
     },
     "forms": {}
@@ -87,15 +605,240 @@
    "config": {
     "tableHide": false
    },
-   "dateStarted": "2023-05-08 17:49:10.543",
-   "dateUpdated": "2023-05-08 17:49:15.972",
-   "dateFinished": "2023-05-08 17:49:15.972"
+   "dateStarted": "2023-05-09 20:52:32.375",
+   "dateUpdated": "2023-05-09 20:52:37.326",
+   "dateFinished": "2023-05-09 20:52:37.325",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "24941\n\u001b[1m\u001b[34mjoinTipologiaAndHotel\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 27 more fields]\n"
+     }
+    ]
+   }
   },
   {
    "settings": {
     "params": {
      "bdtMeta": {
-      "inlay": {}
+      "inlay": {},
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Q_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "rate_plan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "T_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "quantidade",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_maxima",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "area_localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estrelas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hora_max_checkin",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "qtd_quartos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "is_holiday",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": false
+         }
+        ]
+       }
+      ]
      }
     },
     "forms": {}
@@ -108,15 +851,268 @@
    "config": {
     "tableHide": false
    },
-   "dateStarted": "2023-05-08 17:40:03.165",
-   "dateUpdated": "2023-05-08 17:40:07.523",
-   "dateFinished": "2023-05-08 17:40:07.523"
+   "dateStarted": "2023-05-09 20:52:37.349",
+   "dateUpdated": "2023-05-09 20:52:45.926",
+   "dateFinished": "2023-05-09 20:52:45.926",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "25206\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+-----------+--------------------+----------+-----------------+----------------------+-----------------------+--------------------+-------------------+----------------+--------+------------------+---------------+-------------------+-----------+----------+\n|hotel_ID|Reserve_ID|          pais|estado_reserva|room_ID|       Q_tipo_quarto|           rate_plan|        data_reserva|data_chegada|data_partida|num_noites|ocupacao|adultos|criancas|bebes|preco_euros|       T_tipo_quarto|quantidade|capacidade_maxima|capacidade_max_adultos|capacidade_max_criancas|capacidade_max_bebes|        localizacao|area_localizacao|estrelas|idade_max_criancas|idade_max_bebes|   hora_max_checkin|qtd_quartos|is_holiday|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+-----------+--------------------+----------+-----------------+----------------------+-----------------------+--------------------+-------------------+----------------+--------+------------------+---------------+-------------------+-----------+----------+\n|     556|   1420272|      Portugal|    Modificada|   2831|Double Room Standard|WEB (Best Availab...|2022-01-08 14:59:...|  2022-01-08|  2022-01-09|         1|       2|      2|       0|    2|      94.05|Double Room Standard|        45|                3|                     2|                      0|                   1|            Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         0|\n|     493|   1423335|      Portugal|     Registado|   2800|Estudio com 2 qua...|                 Bar|2022-01-17 12:43:...|  2022-01-18|  2022-01-19|         1|       2|      2|       0|    2|       55.0| Estudio com lareira|         1|                2|                     2|                      1|                   1|          Carnaxide|       Carnaxide|       0|                 0|              0|2023-05-09 12:00:00|          5|         0|\n|     310|   1428776|      Portugal|    Modificada|   1395|Quarto Duplo Stan...|              NRF BB|2022-01-31 10:43:...|  2022-01-31|  2022-02-04|         4|       1|      1|       0|    1|      199.8|Quarto Duplo Stan...|        10|                2|                     2|                      1|                   0|               Gaia|           Porto|       3|                 0|              0|2023-05-09 23:59:00|        192|         0|\n|     560|   1429148|      Portugal|     Cancelado|   2868|         Estudio 2+2|                  4N|2022-01-31 23:29:...|  2022-06-21|  2022-06-26|         5|       2|      2|       0|    2|        0.0|         Estudio 2+2|         2|                4|                     2|                      2|                   1|              Porto|           Porto|       0|                 3|             36|2023-05-09 20:00:00|          8|         0|\n|     539|   1430229|      Portugal|     Cancelado|   2545|            Villa T1|                 Bar|2022-02-03 10:15:...|  2022-04-15|  2022-04-17|         2|       1|      1|       0|    1|       88.0|            Villa T1|         1|                4|                     2|                      0|                   0|             Amares|          Amares|       0|                 0|              0|2023-05-09 18:00:00|         58|         1|\n|     539|   1430229|      Portugal|     Cancelado|   2545|            Villa T1|                 Bar|2022-02-03 10:15:...|  2022-04-15|  2022-04-17|         2|       1|      1|       0|    1|       88.0|            Villa T1|         1|                4|                     2|                      0|                   0|             Amares|          Amares|       0|                 0|              0|2023-05-09 18:00:00|         58|         1|\n|     444|   1431040|      Portugal|     Registado|   2077|            Familiar|              Normal|2022-02-04 20:16:...|  2022-02-12|  2022-02-13|         1|       2|      2|       2|    2|      150.0|            Familiar|         4|                4|                     2|                      3|                   1|             Nazaré|         Batalha|       4|                12|             24|2023-05-09 23:59:00|         77|         0|\n|     426|   1433080|Estados Unidos|    Modificada|   1991|Duplo Premium - C...|                 BAR|2022-02-08 23:44:...|  2022-08-16|  2022-08-18|         2|       2|      2|       0|    2|      198.0|Duplo Premium - C...|         7|                3|                     2|                      1|                   1|             Chaves|          Chaves|       4|                12|             60|2023-05-09 23:59:00|         58|         0|\n|     511|   1433298|Estados Unidos|     Registado|   2398|Apartamento com 2...|Standart Rate - A...|2022-02-09 14:42:...|  2022-02-25|  2022-03-01|         4|       2|      2|       2|    2|      240.0|Apartamento com 2...|         2|                5|                     5|                      2|                   1|             Sagres|           Lagos|       0|                12|             36|2023-05-09 20:00:00|         16|         1|\n|     444|   1434459|Estados Unidos|     Registado|   2073|              Duplo |              Normal|2022-02-11 19:02:...|  2022-02-11|  2022-02-12|         1|       2|      2|       0|    2|       70.0|              Duplo |        14|                2|                     2|                      1|                   1|             Nazaré|         Batalha|       4|                12|             24|2023-05-09 23:59:00|         77|         0|\n|     465|   1436885|Estados Unidos|     Cancelado|   2408| Suite Junior Deluxe|              Bar RO|2022-02-15 18:45:...|  2022-05-21|  2022-05-22|         1|       1|      1|       0|    1|      120.0| Suite Junior Deluxe|         2|                3|                     3|                      1|                   1|              Evora|           Evora|       0|                12|             24|2023-05-09 23:59:00|          7|         0|\n|     511|   1437487|      Alemanha|     Registado|   2398|Apartamento com 2...|Standart Rate - A...|2022-02-16 18:28:...|  2022-03-12|  2022-03-19|         7|       2|      2|       0|    2|      420.0|Apartamento com 2...|         2|                5|                     5|                      2|                   1|             Sagres|           Lagos|       0|                12|             36|2023-05-09 20:00:00|         16|         0|\n|     421|   1439857|    Luxemburgo|     Registado|   1931|Duplo ou Twin Sta...| Tarifa Normal - BAR|2022-02-20 20:47:...|  2022-04-17|  2022-04-18|         1|       1|      1|       0|    1|       65.0|Duplo ou Twin Sta...|        19|                3|                     3|                      1|                   1|              ELVAS|           Elvas|       4|                10|             24|2023-05-09 23:59:00|         23|         1|\n|     314|   1443123|        França|     Registado|   1380|               Duplo|            Standard|2022-02-26 18:54:...|  2022-02-26|  2022-02-27|         1|       1|      1|       0|    1|       68.0|               Duplo|         1|                2|                     2|                      1|                   0|  Vila Nova de Gaia|           Porto|       4|                36|             36|2023-05-09 23:59:00|          7|         0|\n|     535|   1446273|      Portugal|     Registado|   2523|        Quarto Duplo|             WebSite|2022-03-04 11:54:...|  2022-05-26|  2022-05-29|         3|       2|      2|       0|    2|      207.0|        Quarto Duplo|         5|                3|                     2|                      1|                   1|Travanca do Mondego|         Coimbra|       4|                12|             24|2023-05-09 23:55:00|         11|         0|\n|     311|   1451576|       Bélgica|  NãoRegistado|   1407|DB - Quarto Duplo...|           DB BB NRF|2022-03-14 10:06:...|  2022-03-16|  2022-03-17|         1|       1|      1|       0|    1|       70.5|DB - Quarto Duplo...|         8|                2|                     2|                      2|                   0|               Maia|            Maia|       3|                12|             36|2023-05-09 23:59:00|         30|         0|\n|     556|   1451814|      Portugal|      Pendente|   2831|Double Room Standard|WEB (Best Availab...|2022-03-14 16:51:...|  2022-03-15|  2022-03-16|         1|       1|      1|       0|    1|      42.75|Double Room Standard|        45|                3|                     2|                      0|                   1|            Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         0|\n|     238|   1452019|      Portugal|  NãoRegistado|    939|Superior Rooms Wi...|      Estadia Normal|2022-03-14 20:41:...|  2022-04-19|  2022-04-24|         5|       2|      2|       0|    2|      565.0|Superior Rooms Wi...|         4|                2|                     2|                      0|                   1|            Funchal|         Funchal|       3|                 8|             23|2023-05-09 23:30:00|         52|         0|\n|     379|   1456411|Estados Unidos|     Registado|   1741|T2 Superior Vista...|                 BAR|2022-03-22 00:54:...|  2022-06-29|  2022-07-04|         5|       4|      4|       0|    4|     1408.5|T2 Superior Vista...|         1|                4|                     4|                      2|                   1|              Lagos|           Lagos|       4|                10|             36|2023-05-09 18:00:00|         26|         0|\n|      44|   1458459|Estados Unidos|     Registado|     85| Quarto Vista Pinhão|                 BAR|2022-03-24 21:38:...|  2022-04-05|  2022-04-08|         3|       1|      1|       0|    1|      321.0| Quarto Vista Pinhão|         6|                2|                     2|                      0|                   0|     Pinhão - Alijó|           Alijó|       3|                12|             24|2023-05-09 23:00:00|         10|         0|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+-----------+--------------------+----------+-----------------+----------------------+-----------------------+--------------------+-------------------+----------------+--------+------------------+---------------+-------------------+-----------+----------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mjoinFeriados\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 28 more fields]\njoinFeriados: org.apache.spark.sql.DataFrame = [hotel_ID: int, Reserve_ID: int ... 28 more fields]\n"
+     }
+    ]
+   }
   },
   {
    "settings": {
     "params": {
      "bdtMeta": {
-      "inlay": {}
+      "inlay": {},
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Q_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "rate_plan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "T_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "quantidade",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_maxima",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "area_localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estrelas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hora_max_checkin",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "qtd_quartos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "is_holiday",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": false
+         },
+         {
+          "name": "Location",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Event",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "start_Date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "end_date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
      }
     },
     "forms": {}
@@ -127,9 +1123,18 @@
    "id": "",
    "dateCreated": "2023-04-30 20:16:51.675",
    "config": {},
-   "dateStarted": "2023-05-08 17:40:07.540",
-   "dateUpdated": "2023-05-08 17:40:15.840",
-   "dateFinished": "2023-05-08 17:40:15.840"
+   "dateStarted": "2023-05-09 20:52:46.091",
+   "dateUpdated": "2023-05-09 20:52:59.162",
+   "dateFinished": "2023-05-09 20:52:59.162",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "24955\n\u001b[1m\u001b[34mjoinEventos\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 32 more fields]\n"
+     }
+    ]
+   }
   },
   {
    "settings": {
@@ -137,7 +1142,286 @@
      "bdtMeta": {
       "inlay": {
        "collapsed": true
-      }
+      },
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Q_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "rate_plan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "T_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "quantidade",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_maxima",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "area_localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estrelas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hora_max_checkin",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "qtd_quartos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "is_holiday",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": false
+         },
+         {
+          "name": "Location",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Event",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "start_Date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "end_date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "city",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "tavg",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "tmax",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "tmin",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "prcp",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
      }
     },
     "forms": {}
@@ -150,14 +1434,303 @@
    "config": {
     "tableHide": true
    },
-   "dateStarted": "2023-05-08 17:40:15.846",
-   "dateUpdated": "2023-05-08 17:40:27.158",
-   "dateFinished": "2023-05-08 17:40:27.158"
+   "dateStarted": "2023-05-09 20:52:59.178",
+   "dateUpdated": "2023-05-09 20:53:16.203",
+   "dateFinished": "2023-05-09 20:53:16.203",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "67098\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+--------------+--------------------+----------+-----------------+----------------------+-----------------------+--------------------+-----------+----------------+--------+------------------+---------------+-------------------+-----------+----------+--------+-----+----------+--------+--------------+----+----+----+----+\n|hotel_ID|Reserve_ID|          pais|estado_reserva|room_ID|       Q_tipo_quarto|           rate_plan|        data_reserva|data_chegada|data_partida|num_noites|ocupacao|adultos|criancas|bebes|   preco_euros|       T_tipo_quarto|quantidade|capacidade_maxima|capacidade_max_adultos|capacidade_max_criancas|capacidade_max_bebes|localizacao|area_localizacao|estrelas|idade_max_criancas|idade_max_bebes|   hora_max_checkin|qtd_quartos|is_holiday|Location|Event|start_Date|end_date|          city|tavg|tmax|tmin|prcp|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+--------------+--------------------+----------+-----------------+----------------------+-----------------------+--------------------+-----------+----------------+--------+------------------+---------------+-------------------+-----------+----------+--------+-----+----------+--------+--------------+----+----+----+----+\n|     322|   1548686|Estados Unidos|     Registado|   2259|                Twin|Reembolsável Supl...|2022-07-22 15:48:...|  2022-10-12|  2022-10-13|         1|       2|      4|       0|    2|         170.0|                Twin|        18|                2|                     2|                      1|                   0|     Aveiro|          Aveiro|       3|                10|             24|2023-05-09 23:59:00|         52|         0|    null| null|      null|    null|        Aveiro|16.7|20.4|14.3|null|\n|     322|   1548686|Estados Unidos|     Registado|   2259|                Twin|Reembolsável Supl...|2022-07-22 15:48:...|  2022-10-12|  2022-10-13|         1|       2|      4|       0|    2|         170.0|                Twin|        18|                2|                     2|                      1|                   0|     Aveiro|          Aveiro|       3|                10|             24|2023-05-09 23:59:00|         52|         0|    null| null|      null|    null|        Aveiro|17.1|21.6|14.1|null|\n|     556|   1693187|      Portugal|     Registado|   2831|Double Room Standard|WEB NRF - Non Ref...|2023-03-08 12:21:...|  2023-03-30|  2023-04-01|         2|       1|      1|       0|    1|         88.14|Double Room Standard|        45|                3|                     2|                      0|                   1|    Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         0|    null| null|      null|    null|Castelo Branco|13.3|17.8| 8.6| 0.0|\n|     556|   1693187|      Portugal|     Registado|   2831|Double Room Standard|WEB NRF - Non Ref...|2023-03-08 12:21:...|  2023-03-30|  2023-04-01|         2|       1|      1|       0|    1|         88.14|Double Room Standard|        45|                3|                     2|                      0|                   1|    Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         0|    null| null|      null|    null|Castelo Branco|15.1|20.3|10.9| 0.0|\n|     556|   1693187|      Portugal|     Registado|   2831|Double Room Standard|WEB NRF - Non Ref...|2023-03-08 12:21:...|  2023-03-30|  2023-04-01|         2|       1|      1|       0|    1|         88.14|Double Room Standard|        45|                3|                     2|                      0|                   1|    Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         0|    null| null|      null|    null|Castelo Branco|15.2|21.8| 9.2| 0.0|\n|     309|   1448482|      Portugal|    Modificada|   1430|Quarto Twin Superior|             TWIN RO|2022-03-08 15:08:...|  2022-03-10|  2022-03-11|         1|       2|      4|       0|    2|          88.2|Quarto Twin Superior|         8|                2|                     2|                      2|                   0|    Valongo|           Porto|       3|                12|              4|2023-05-09 23:59:00|         41|         0|    null| null|      null|    null|         Porto|12.0|15.4| 7.2| 8.9|\n|     309|   1448482|      Portugal|    Modificada|   1430|Quarto Twin Superior|             TWIN RO|2022-03-08 15:08:...|  2022-03-10|  2022-03-11|         1|       2|      4|       0|    2|          88.2|Quarto Twin Superior|         8|                2|                     2|                      2|                   0|    Valongo|           Porto|       3|                12|              4|2023-05-09 23:59:00|         41|         0|    null| null|      null|    null|         Porto|13.0|15.4| 9.9| 2.3|\n|     478|   1626924|       Espanha|     Registado|   2231|Duplo (Cama de Ca...|    Não Reembolsável|2022-11-17 10:12:...|  2022-11-17|  2022-11-18|         1|       2|      2|       0|    2|          50.0|Duplo (Cama de Ca...|        12|                2|                     2|                      0|                   0|    Estoril|      Carcavelos|       2|                12|             24|2023-05-09 18:00:00|         26|         0|    null| null|      null|    null|    Carcavelos|15.0|16.0|13.1| 0.6|\n|     478|   1626924|       Espanha|     Registado|   2231|Duplo (Cama de Ca...|    Não Reembolsável|2022-11-17 10:12:...|  2022-11-17|  2022-11-18|         1|       2|      2|       0|    2|          50.0|Duplo (Cama de Ca...|        12|                2|                     2|                      0|                   0|    Estoril|      Carcavelos|       2|                12|             24|2023-05-09 18:00:00|         26|         0|    null| null|      null|    null|    Carcavelos|17.4|19.0|15.0| 7.6|\n|     179|   1538038|      Portugal|     Registado|    631|        Twin Comfort| No Reembolsable 13%|2022-07-08 09:36:...|  2022-07-14|  2022-07-16|         2|       1|      1|       0|    1|280.3399999999|        Twin Comfort|         8|                2|                     2|                      0|                   0|      Porto|           Porto|       4|                12|             24|2023-05-09 23:59:00|        132|         0|    null| null|      null|    null|         Porto|20.9|25.6|16.9| 0.0|\n|     179|   1538038|      Portugal|     Registado|    631|        Twin Comfort| No Reembolsable 13%|2022-07-08 09:36:...|  2022-07-14|  2022-07-16|         2|       1|      1|       0|    1|280.3399999999|        Twin Comfort|         8|                2|                     2|                      0|                   0|      Porto|           Porto|       4|                12|             24|2023-05-09 23:59:00|        132|         0|    null| null|      null|    null|         Porto|23.1|27.7|18.8| 0.0|\n|     179|   1538038|      Portugal|     Registado|    631|        Twin Comfort| No Reembolsable 13%|2022-07-08 09:36:...|  2022-07-14|  2022-07-16|         2|       1|      1|       0|    1|280.3399999999|        Twin Comfort|         8|                2|                     2|                      0|                   0|      Porto|           Porto|       4|                12|             24|2023-05-09 23:59:00|        132|         0|    null| null|      null|    null|         Porto|28.3|33.5|22.5| 0.0|\n|     426|   1673412|      Portugal|     Cancelado|   1990|       Twin Standard|                 BAR|2023-02-07 14:06:...|  2023-02-11|  2023-02-12|         1|       2|      2|       0|    2|          80.0|       Twin Standard|        26|                2|                     2|                      0|                   1|     Chaves|          Chaves|       4|                12|             60|2023-05-09 23:59:00|         58|         0|    null| null|      null|    null|        Chaves| 6.0| 9.4| 2.8| 0.0|\n|     426|   1673412|      Portugal|     Cancelado|   1990|       Twin Standard|                 BAR|2023-02-07 14:06:...|  2023-02-11|  2023-02-12|         1|       2|      2|       0|    2|          80.0|       Twin Standard|        26|                2|                     2|                      0|                   1|     Chaves|          Chaves|       4|                12|             60|2023-05-09 23:59:00|         58|         0|    null| null|      null|    null|        Chaves| 5.4|10.0| 0.0| 0.0|\n|     311|   1593282|        Brasil|  NãoRegistado|   1407|DB - Quarto Duplo...|        Main Rate BB|2022-09-21 10:59:...|  2022-10-21|  2022-10-24|         3|       2|      2|       0|    2|         308.7|DB - Quarto Duplo...|         8|                2|                     2|                      2|                   0|       Maia|            Maia|       3|                12|             36|2023-05-09 23:59:00|         30|         0|    null| null|      null|    null|          Maia|17.5|20.0|16.0| 5.7|\n|     311|   1593282|        Brasil|  NãoRegistado|   1407|DB - Quarto Duplo...|        Main Rate BB|2022-09-21 10:59:...|  2022-10-21|  2022-10-24|         3|       2|      2|       0|    2|         308.7|DB - Quarto Duplo...|         8|                2|                     2|                      2|                   0|       Maia|            Maia|       3|                12|             36|2023-05-09 23:59:00|         30|         0|    null| null|      null|    null|          Maia|16.7|19.0|15.0|52.6|\n|     311|   1593282|        Brasil|  NãoRegistado|   1407|DB - Quarto Duplo...|        Main Rate BB|2022-09-21 10:59:...|  2022-10-21|  2022-10-24|         3|       2|      2|       0|    2|         308.7|DB - Quarto Duplo...|         8|                2|                     2|                      2|                   0|       Maia|            Maia|       3|                12|             36|2023-05-09 23:59:00|         30|         0|    null| null|      null|    null|          Maia|17.0|20.0|14.0|11.2|\n|     311|   1593282|        Brasil|  NãoRegistado|   1407|DB - Quarto Duplo...|        Main Rate BB|2022-09-21 10:59:...|  2022-10-21|  2022-10-24|         3|       2|      2|       0|    2|         308.7|DB - Quarto Duplo...|         8|                2|                     2|                      2|                   0|       Maia|            Maia|       3|                12|             36|2023-05-09 23:59:00|         30|         0|    null| null|      null|    null|          Maia|17.1|19.0|16.0|12.1|\n|     556|   1630403|      Portugal|      Pendente|   2831|Double Room Standard|WEB (Best Availab...|2022-11-23 21:22:...|  2022-12-31|  2023-01-02|         2|       2|      2|       0|    2|         161.5|Double Room Standard|        45|                3|                     2|                      0|                   1|    Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         1|    null| null|      null|    null|Castelo Branco| 7.7|12.7| 4.6| 0.0|\n|     556|   1630403|      Portugal|      Pendente|   2831|Double Room Standard|WEB (Best Availab...|2022-11-23 21:22:...|  2022-12-31|  2023-01-02|         2|       2|      2|       0|    2|         161.5|Double Room Standard|        45|                3|                     2|                      0|                   1|    Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         1|    null| null|      null|    null|Castelo Branco|12.4|16.2|10.1|20.6|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+--------------+--------------------+----------+-----------------+----------------------+-----------------------+--------------------+-----------+----------------+--------+------------------+---------------+-------------------+-----------+----------+--------+-----+----------+--------+--------------+----+----+----+----+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mjoinMeteoTemp\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 37 more fields]\n"
+     }
+    ]
+   }
   },
   {
    "settings": {
     "params": {
-     "bdtMeta": {}
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Q_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "rate_plan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "T_tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "quantidade",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_maxima",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "area_localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estrelas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hora_max_checkin",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "qtd_quartos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "is_holiday",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": false
+         },
+         {
+          "name": "Location",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Event",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "start_Date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "end_date",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "city",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "tavg",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "tmax",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "tmin",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "prcp",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
     },
     "forms": {}
    },
@@ -167,9 +1740,18 @@
    "id": "",
    "dateCreated": "2023-05-01 15:47:23.871",
    "config": {},
-   "dateStarted": "2023-05-08 17:40:27.171",
-   "dateUpdated": "2023-05-08 17:40:27.501",
-   "dateFinished": "2023-05-08 17:40:27.501"
+   "dateStarted": "2023-05-09 20:53:16.222",
+   "dateUpdated": "2023-05-09 20:53:16.680",
+   "dateFinished": "2023-05-09 20:53:16.680",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "\u001b[1m\u001b[34mjoinMeteoTemp\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 37 more fields]\n"
+     }
+    ]
+   }
   },
   {
    "settings": {
@@ -186,9 +1768,13 @@
    "config": {
     "editorHide": false
    },
-   "dateStarted": "2023-05-08 17:40:27.509",
-   "dateUpdated": "2023-05-08 17:40:27.795",
-   "dateFinished": "2023-05-08 17:40:27.795"
+   "dateStarted": "2023-05-09 20:53:16.698",
+   "dateUpdated": "2023-05-09 20:53:17.353",
+   "dateFinished": "2023-05-09 20:53:17.353",
+   "results": {
+    "code": "SUCCESS",
+    "msg": []
+   }
   },
   {
    "settings": {
@@ -198,14 +1784,23 @@
     "forms": {}
    },
    "apps": [],
-   "status": "ABORT",
+   "status": "FINISHED",
    "text": "val duplicateReservations = spark.sql(\"SELECT Reserve_ID, count(*) as count FROM JoinTipologiaAndHotel GROUP BY Reserve_ID\").filter($\"count\" > 1)\nprintln(duplicateReservations.count())\nduplicateReservations.show()",
    "id": "",
    "dateCreated": "2023-05-08 17:50:08.525",
    "config": {},
-   "dateStarted": "2023-05-08 17:51:21.818",
-   "dateUpdated": "2023-05-08 17:51:21.818",
-   "dateFinished": "2023-05-08 17:50:45.638"
+   "dateStarted": "2023-05-09 20:53:17.355",
+   "dateUpdated": "2023-05-09 20:53:30.111",
+   "dateFinished": "2023-05-09 20:53:30.111",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "1057\n+----------+-----+\n|Reserve_ID|count|\n+----------+-----+\n|   1496883|    2|\n|   1696164|    2|\n|   1630633|    2|\n|   1683856|    2|\n|   1649924|    4|\n|   1482093|    2|\n|   1694268|    2|\n|   1522179|    2|\n|   1467564|    4|\n|   1493490|    2|\n|   1600427|    2|\n|   1507650|    2|\n|   1644433|    2|\n|   1649048|    2|\n|   1530600|    3|\n|   1702047|    2|\n|   1624186|    2|\n|   1630293|    4|\n|   1688117|    2|\n|   1721754|    2|\n+----------+-----+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mduplicateReservations\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [Reserve_ID: int, count: bigint]\n"
+     }
+    ]
+   }
   },
   {
    "settings": {
@@ -220,14 +1815,282 @@
    "id": "",
    "dateCreated": "2023-05-08 17:09:27.489",
    "config": {},
-   "dateStarted": "2023-05-08 17:40:27.797",
-   "dateUpdated": "2023-05-08 17:40:34.476",
-   "dateFinished": "2023-05-08 17:40:34.476"
+   "dateStarted": "2023-05-09 20:53:30.138",
+   "dateUpdated": "2023-05-09 20:53:39.307",
+   "dateFinished": "2023-05-09 20:53:39.307",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+--------------+--------------------+----------+-----------------+----------------------+-----------------------+--------------------+-----------+----------------+--------+------------------+---------------+-------------------+-----------+----------+--------+-----+----------+--------+--------------+----+----+----+----+\n|hotel_ID|Reserve_ID|          pais|estado_reserva|room_ID|       Q_tipo_quarto|           rate_plan|        data_reserva|data_chegada|data_partida|num_noites|ocupacao|adultos|criancas|bebes|   preco_euros|       T_tipo_quarto|quantidade|capacidade_maxima|capacidade_max_adultos|capacidade_max_criancas|capacidade_max_bebes|localizacao|area_localizacao|estrelas|idade_max_criancas|idade_max_bebes|   hora_max_checkin|qtd_quartos|is_holiday|Location|Event|start_Date|end_date|          city|tavg|tmax|tmin|prcp|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+--------------+--------------------+----------+-----------------+----------------------+-----------------------+--------------------+-----------+----------------+--------+------------------+---------------+-------------------+-----------+----------+--------+-----+----------+--------+--------------+----+----+----+----+\n|     322|   1548686|Estados Unidos|     Registado|   2259|                Twin|Reembolsável Supl...|2022-07-22 15:48:...|  2022-10-12|  2022-10-13|         1|       2|      4|       0|    2|         170.0|                Twin|        18|                2|                     2|                      1|                   0|     Aveiro|          Aveiro|       3|                10|             24|2023-05-09 23:59:00|         52|         0|    null| null|      null|    null|        Aveiro|16.7|20.4|14.3|null|\n|     322|   1548686|Estados Unidos|     Registado|   2259|                Twin|Reembolsável Supl...|2022-07-22 15:48:...|  2022-10-12|  2022-10-13|         1|       2|      4|       0|    2|         170.0|                Twin|        18|                2|                     2|                      1|                   0|     Aveiro|          Aveiro|       3|                10|             24|2023-05-09 23:59:00|         52|         0|    null| null|      null|    null|        Aveiro|17.1|21.6|14.1|null|\n|     556|   1693187|      Portugal|     Registado|   2831|Double Room Standard|WEB NRF - Non Ref...|2023-03-08 12:21:...|  2023-03-30|  2023-04-01|         2|       1|      1|       0|    1|         88.14|Double Room Standard|        45|                3|                     2|                      0|                   1|    Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         0|    null| null|      null|    null|Castelo Branco|13.3|17.8| 8.6| 0.0|\n|     556|   1693187|      Portugal|     Registado|   2831|Double Room Standard|WEB NRF - Non Ref...|2023-03-08 12:21:...|  2023-03-30|  2023-04-01|         2|       1|      1|       0|    1|         88.14|Double Room Standard|        45|                3|                     2|                      0|                   1|    Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         0|    null| null|      null|    null|Castelo Branco|15.1|20.3|10.9| 0.0|\n|     556|   1693187|      Portugal|     Registado|   2831|Double Room Standard|WEB NRF - Non Ref...|2023-03-08 12:21:...|  2023-03-30|  2023-04-01|         2|       1|      1|       0|    1|         88.14|Double Room Standard|        45|                3|                     2|                      0|                   1|    Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         0|    null| null|      null|    null|Castelo Branco|15.2|21.8| 9.2| 0.0|\n|     309|   1448482|      Portugal|    Modificada|   1430|Quarto Twin Superior|             TWIN RO|2022-03-08 15:08:...|  2022-03-10|  2022-03-11|         1|       2|      4|       0|    2|          88.2|Quarto Twin Superior|         8|                2|                     2|                      2|                   0|    Valongo|           Porto|       3|                12|              4|2023-05-09 23:59:00|         41|         0|    null| null|      null|    null|         Porto|12.0|15.4| 7.2| 8.9|\n|     309|   1448482|      Portugal|    Modificada|   1430|Quarto Twin Superior|             TWIN RO|2022-03-08 15:08:...|  2022-03-10|  2022-03-11|         1|       2|      4|       0|    2|          88.2|Quarto Twin Superior|         8|                2|                     2|                      2|                   0|    Valongo|           Porto|       3|                12|              4|2023-05-09 23:59:00|         41|         0|    null| null|      null|    null|         Porto|13.0|15.4| 9.9| 2.3|\n|     478|   1626924|       Espanha|     Registado|   2231|Duplo (Cama de Ca...|    Não Reembolsável|2022-11-17 10:12:...|  2022-11-17|  2022-11-18|         1|       2|      2|       0|    2|          50.0|Duplo (Cama de Ca...|        12|                2|                     2|                      0|                   0|    Estoril|      Carcavelos|       2|                12|             24|2023-05-09 18:00:00|         26|         0|    null| null|      null|    null|    Carcavelos|15.0|16.0|13.1| 0.6|\n|     478|   1626924|       Espanha|     Registado|   2231|Duplo (Cama de Ca...|    Não Reembolsável|2022-11-17 10:12:...|  2022-11-17|  2022-11-18|         1|       2|      2|       0|    2|          50.0|Duplo (Cama de Ca...|        12|                2|                     2|                      0|                   0|    Estoril|      Carcavelos|       2|                12|             24|2023-05-09 18:00:00|         26|         0|    null| null|      null|    null|    Carcavelos|17.4|19.0|15.0| 7.6|\n|     179|   1538038|      Portugal|     Registado|    631|        Twin Comfort| No Reembolsable 13%|2022-07-08 09:36:...|  2022-07-14|  2022-07-16|         2|       1|      1|       0|    1|280.3399999999|        Twin Comfort|         8|                2|                     2|                      0|                   0|      Porto|           Porto|       4|                12|             24|2023-05-09 23:59:00|        132|         0|    null| null|      null|    null|         Porto|20.9|25.6|16.9| 0.0|\n|     179|   1538038|      Portugal|     Registado|    631|        Twin Comfort| No Reembolsable 13%|2022-07-08 09:36:...|  2022-07-14|  2022-07-16|         2|       1|      1|       0|    1|280.3399999999|        Twin Comfort|         8|                2|                     2|                      0|                   0|      Porto|           Porto|       4|                12|             24|2023-05-09 23:59:00|        132|         0|    null| null|      null|    null|         Porto|23.1|27.7|18.8| 0.0|\n|     179|   1538038|      Portugal|     Registado|    631|        Twin Comfort| No Reembolsable 13%|2022-07-08 09:36:...|  2022-07-14|  2022-07-16|         2|       1|      1|       0|    1|280.3399999999|        Twin Comfort|         8|                2|                     2|                      0|                   0|      Porto|           Porto|       4|                12|             24|2023-05-09 23:59:00|        132|         0|    null| null|      null|    null|         Porto|28.3|33.5|22.5| 0.0|\n|     426|   1673412|      Portugal|     Cancelado|   1990|       Twin Standard|                 BAR|2023-02-07 14:06:...|  2023-02-11|  2023-02-12|         1|       2|      2|       0|    2|          80.0|       Twin Standard|        26|                2|                     2|                      0|                   1|     Chaves|          Chaves|       4|                12|             60|2023-05-09 23:59:00|         58|         0|    null| null|      null|    null|        Chaves| 6.0| 9.4| 2.8| 0.0|\n|     426|   1673412|      Portugal|     Cancelado|   1990|       Twin Standard|                 BAR|2023-02-07 14:06:...|  2023-02-11|  2023-02-12|         1|       2|      2|       0|    2|          80.0|       Twin Standard|        26|                2|                     2|                      0|                   1|     Chaves|          Chaves|       4|                12|             60|2023-05-09 23:59:00|         58|         0|    null| null|      null|    null|        Chaves| 5.4|10.0| 0.0| 0.0|\n|     311|   1593282|        Brasil|  NãoRegistado|   1407|DB - Quarto Duplo...|        Main Rate BB|2022-09-21 10:59:...|  2022-10-21|  2022-10-24|         3|       2|      2|       0|    2|         308.7|DB - Quarto Duplo...|         8|                2|                     2|                      2|                   0|       Maia|            Maia|       3|                12|             36|2023-05-09 23:59:00|         30|         0|    null| null|      null|    null|          Maia|17.5|20.0|16.0| 5.7|\n|     311|   1593282|        Brasil|  NãoRegistado|   1407|DB - Quarto Duplo...|        Main Rate BB|2022-09-21 10:59:...|  2022-10-21|  2022-10-24|         3|       2|      2|       0|    2|         308.7|DB - Quarto Duplo...|         8|                2|                     2|                      2|                   0|       Maia|            Maia|       3|                12|             36|2023-05-09 23:59:00|         30|         0|    null| null|      null|    null|          Maia|16.7|19.0|15.0|52.6|\n|     311|   1593282|        Brasil|  NãoRegistado|   1407|DB - Quarto Duplo...|        Main Rate BB|2022-09-21 10:59:...|  2022-10-21|  2022-10-24|         3|       2|      2|       0|    2|         308.7|DB - Quarto Duplo...|         8|                2|                     2|                      2|                   0|       Maia|            Maia|       3|                12|             36|2023-05-09 23:59:00|         30|         0|    null| null|      null|    null|          Maia|17.0|20.0|14.0|11.2|\n|     311|   1593282|        Brasil|  NãoRegistado|   1407|DB - Quarto Duplo...|        Main Rate BB|2022-09-21 10:59:...|  2022-10-21|  2022-10-24|         3|       2|      2|       0|    2|         308.7|DB - Quarto Duplo...|         8|                2|                     2|                      2|                   0|       Maia|            Maia|       3|                12|             36|2023-05-09 23:59:00|         30|         0|    null| null|      null|    null|          Maia|17.1|19.0|16.0|12.1|\n|     556|   1630403|      Portugal|      Pendente|   2831|Double Room Standard|WEB (Best Availab...|2022-11-23 21:22:...|  2022-12-31|  2023-01-02|         2|       2|      2|       0|    2|         161.5|Double Room Standard|        45|                3|                     2|                      0|                   1|    Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         1|    null| null|      null|    null|Castelo Branco| 7.7|12.7| 4.6| 0.0|\n|     556|   1630403|      Portugal|      Pendente|   2831|Double Room Standard|WEB (Best Availab...|2022-11-23 21:22:...|  2022-12-31|  2023-01-02|         2|       2|      2|       0|    2|         161.5|Double Room Standard|        45|                3|                     2|                      0|                   1|    Covilhã|  Castelo Branco|       3|                10|              3|2023-05-09 23:00:00|         84|         1|    null| null|      null|    null|Castelo Branco|12.4|16.2|10.1|20.6|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+--------------+--------------------+----------+-----------------+----------------------+-----------------------+--------------------+-----------+----------------+--------+------------------+---------------+-------------------+-----------+----------+--------+-----+----------+--------+--------------+----+----+----+----+\nonly showing top 20 rows\n\n"
+     }
+    ]
+   }
   },
   {
    "settings": {
     "params": {
-     "bdtMeta": {}
+     "bdtMeta": {
+      "ZTOOLS_DATA_FRAMES": [
+       {
+        "columns": [
+         {
+          "name": "hotel_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "Reserve_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "pais",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estado_reserva",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "room_ID",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "tipo_quarto",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "rate_plan",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_reserva",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_chegada",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "data_partida",
+          "tpe": {
+           "presentableName": "date"
+          },
+          "nullable": true
+         },
+         {
+          "name": "num_noites",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "ocupacao",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_euros",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "quantidade",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_maxima",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_adultos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "capacidade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "area_localizacao",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "estrelas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_criancas",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "idade_max_bebes",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "hora_max_checkin",
+          "tpe": {
+           "presentableName": "timestamp"
+          },
+          "nullable": true
+         },
+         {
+          "name": "qtd_quartos",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "is_holiday",
+          "tpe": {
+           "presentableName": "integer"
+          },
+          "nullable": true
+         },
+         {
+          "name": "event_Location",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "event",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "city",
+          "tpe": {
+           "presentableName": "string"
+          },
+          "nullable": true
+         },
+         {
+          "name": "temperature_avg",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "temperature_tmax",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "temperature_min",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "precipitation_avg",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         }
+        ]
+       }
+      ]
+     }
     },
     "forms": {}
    },
@@ -237,9 +2100,18 @@
    "id": "",
    "dateCreated": "2023-05-08 17:09:37.474",
    "config": {},
-   "dateStarted": "2023-05-08 17:44:00.446",
-   "dateUpdated": "2023-05-08 17:44:14.387",
-   "dateFinished": "2023-05-08 17:44:14.386"
+   "dateStarted": "2023-05-09 20:53:39.345",
+   "dateUpdated": "2023-05-09 20:54:06.832",
+   "dateFinished": "2023-05-09 20:54:06.831",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "21194\n+--------+----------+--------------+--------------+-------+--------------------+-------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+-----------+----------+-----------------+----------------------+-----------------------+--------------------+--------------------+----------------+--------+------------------+---------------+-------------------+-----------+----------+--------------+-----+----------------+------------------+----------------+---------------+------------------+\n|hotel_ID|Reserve_ID|          pais|estado_reserva|room_ID|         tipo_quarto|          rate_plan|        data_reserva|data_chegada|data_partida|num_noites|ocupacao|adultos|criancas|bebes|preco_euros|quantidade|capacidade_maxima|capacidade_max_adultos|capacidade_max_criancas|capacidade_max_bebes|         localizacao|area_localizacao|estrelas|idade_max_criancas|idade_max_bebes|   hora_max_checkin|qtd_quartos|is_holiday|event_Location|event|            city|   temperature_avg|temperature_tmax|temperature_min| precipitation_avg|\n+--------+----------+--------------+--------------+-------+--------------------+-------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+-----------+----------+-----------------+----------------------+-----------------------+--------------------+--------------------+----------------+--------+------------------+---------------+-------------------+-----------+----------+--------------+-----+----------------+------------------+----------------+---------------+------------------+\n|     395|   1423075|       Espanha|     Cancelado|   1828|             Estúdio|           Standard|2022-01-16 17:45:...|  2022-02-25|  2022-02-27|         2|       2|      4|       0|    2|      280.0|         5|                2|                     2|                      0|                   1|               Porto|           Porto|       0|                 3|             36|2023-05-09 20:00:00|         16|         0|          null| null|           Porto|12.566666666666668|            18.9|            6.5|              null|\n|     535|   1429890|      Portugal|     Registado|   2523|        Quarto Duplo|            WebSite|2022-02-02 15:28:...|  2022-02-06|  2022-02-07|         1|       2|      2|       0|    2|       58.5|         5|                3|                     2|                      1|                   1| Travanca do Mondego|         Coimbra|       4|                12|             24|2023-05-09 23:55:00|         11|         0|          null| null|         Coimbra|              11.2|            18.0|            6.9|              null|\n|     539|   1434277|      Portugal|     Registado|   2546|            Villa T2|                Bar|2022-02-11 12:50:...|  2022-02-12|  2022-02-13|         1|       1|      1|       0|    1|      160.0|         2|                4|                     4|                      0|                   0|              Amares|          Amares|       0|                 0|              0|2023-05-09 18:00:00|         58|         0|          null| null|          Amares|              9.95|            13.1|            6.8|              null|\n|     179|   1434507|Estados Unidos|     Cancelado|    630|      Duplo  Comfort|        Tarifa Base|2022-02-11 21:12:...|  2022-07-09|  2022-07-13|         4|       2|      2|       0|    2|     593.64|        27|                2|                     2|                      0|                   0|               Porto|           Porto|       4|                12|             24|2023-05-09 23:59:00|        132|         0|          null| null|           Porto|             25.68|            38.1|           14.1|               0.0|\n|     280|   1435255|      Portugal|     Registado|   2564|      SUITE FAMILIAR|                BAR|2022-02-13 15:47:...|  2022-04-23|  2022-04-24|         1|       2|      2|       2|    2|      200.0|         2|                4|                     3|                      2|                   2|    Viana do Castelo|Viana do Castelo|       4|                12|             24|2023-05-09 23:59:00|         37|         0|          null| null|Viana do Castelo|             12.05|            16.6|            7.4|              null|\n|     309|   1437296|      Portugal|      Pendente|   1372|Quarto Duplo Stan...|              PROMO|2022-02-16 14:20:...|  2022-02-16|  2022-02-17|         1|       1|      1|       0|    1|       43.0|        10|                2|                     2|                      1|                   0|             Valongo|           Porto|       3|                12|              4|2023-05-09 23:59:00|         41|         0|          null| null|           Porto|12.350000000000001|            16.4|            9.1|1.5499999999999998|\n|     310|   1441431|      Portugal|      Pendente|   1424|Quarto Twin Standard|              PROMO|2022-02-23 14:03:...|  2022-02-23|  2022-02-24|         1|       2|      2|       0|    2|       39.6|        25|                2|                     2|                      1|                   0|                Gaia|           Porto|       3|                 0|              0|2023-05-09 23:59:00|        192|         0|          null| null|           Porto|              12.2|            22.7|            6.4|               0.0|\n|     395|   1443176|      Portugal|     Cancelado|   1829|     Estúdio Jardim |           Standard|2022-02-26 20:48:...|  2022-03-01|  2022-03-02|         1|       1|      1|       0|    1|       55.0|         6|                2|                     2|                      0|                   1|               Porto|           Porto|       0|                 3|             36|2023-05-09 20:00:00|         16|         1|          null| null|           Porto|11.399999999999999|            17.0|            7.3|              4.45|\n|     311|   1450711|        França|  NãoRegistado|   1407|DB - Quarto Duplo...|       DB Room Only|2022-03-12 19:35:...|  2022-03-13|  2022-03-14|         1|       2|      2|       0|    2|       64.0|         8|                2|                     2|                      2|                   0|                Maia|            Maia|       3|                12|             36|2023-05-09 23:59:00|         30|         0|          null| null|            Maia|              10.5|            14.2|            6.3|              null|\n|     304|   1459640|      Alemanha|     Registado|   1406|  301 - Quarto Duplo|          Rack Rate|2022-03-26 20:09:...|  2022-06-27|  2022-07-01|         4|       2|      2|       0|    2|     250.24|         1|                2|                     2|                      0|                   0|             Coimbra|         Coimbra|       0|                11|             23|2023-05-09 22:30:00|         28|         0|          null| null|         Coimbra|17.099999999999998|            26.4|           11.6|               0.0|\n|     514|   1460507|Estados Unidos|     Registado|   2492|         Garden Room|  Non-Refundable >5|2022-03-28 00:08:...|  2022-06-27|  2022-07-04|         7|       2|      2|       0|    2|      924.0|         4|                3|                     2|                      0|                   0|Charneca de Caparica|       Carnaxide|       3|                12|             24|2023-05-09 18:00:00|         13|         0|          null| null|       Carnaxide|20.175000000000004|            30.2|           15.3|               0.0|\n|     322|   1462518|       Espanha|     Registado|   1413|               Duplo|Não Reembolsável AP|2022-03-30 16:23:...|  2022-04-02|  2022-04-03|         1|       2|      2|       0|    2|       62.0|        19|                2|                     2|                      1|                   0|              Aveiro|          Aveiro|       3|                10|             24|2023-05-09 23:59:00|         52|         0|          null| null|          Aveiro|              10.7|            15.4|            5.2|              null|\n|     310|   1466376|      Portugal|  NãoRegistado|   1395|Quarto Duplo Stan...|                NRF|2022-04-04 14:40:...|  2022-04-05|  2022-04-06|         1|       2|      2|       0|    2|       43.2|        10|                2|                     2|                      1|                   0|                Gaia|           Porto|       3|                 0|              0|2023-05-09 23:59:00|        192|         0|          null| null|           Porto|             10.85|            17.0|            6.3|              null|\n|     444|   1468011|      Portugal|     Registado|   2076|               Suite|             Normal|2022-04-06 12:31:...|  2022-04-15|  2022-04-17|         2|       2|      2|       2|    2|      320.0|         4|                4|                     2|                      3|                   1|              Nazaré|         Batalha|       4|                12|             24|2023-05-09 23:59:00|         77|         1|          null| null|         Batalha|              14.6|            20.0|           11.5|              null|\n|     560|   1477495|        França|     Registado|   2866|         Estúdio 2+1|                 7N|2022-04-19 21:00:...|  2022-09-18|  2022-09-25|         7|       2|      2|       0|    2|     573.75|         1|                3|                     2|                      1|                   1|               Porto|           Porto|       0|                 3|             36|2023-05-09 20:00:00|          8|         0|          null| null|           Porto|           20.4375|            29.2|           11.8|               0.0|\n|     444|   1477635|Estados Unidos|     Registado|   2386| Twin vista  mar ...|             Normal|2022-04-20 03:36:...|  2022-05-07|  2022-05-08|         1|       2|      6|       0|    2|      270.0|         5|                2|                     2|                      1|                   1|              Nazaré|         Batalha|       4|                12|             24|2023-05-09 23:59:00|         77|         0|          null| null|         Batalha|             16.25|            23.0|           10.6|              null|\n|     311|   1479818|      Alemanha|     Cancelado|   1407|DB - Quarto Duplo...|           Duplo BB|2022-04-23 08:57:...|  2022-07-02|  2022-07-03|         1|       2|      2|       0|    2|       99.0|         8|                2|                     2|                      2|                   0|                Maia|            Maia|       3|                12|             36|2023-05-09 23:59:00|         30|         0|          null| null|            Maia|18.450000000000003|            24.7|           14.0|               1.5|\n|     444|   1482093|      Portugal|     Registado|   2229|              Triplo|             Normal|2022-04-26 11:15:...|  2022-05-14|  2022-05-15|         1|       2|      2|       1|    2|      100.0|         5|                3|                     3|                      2|                   1|              Nazaré|         Batalha|       4|                12|             24|2023-05-09 23:59:00|         77|         0|          null| null|         Batalha|19.799999999999997|            28.0|           15.0|              null|\n|     504|   1488965|       Espanha|     Registado|   2374|       Cela da Torre|                Bar|2022-05-05 16:09:...|  2022-05-06|  2022-05-07|         1|       2|      2|       0|    2|     106.59|         1|                2|                     2|                      0|                   1|              Monção|          Monção|       4|                12|             36|2023-05-09 23:59:00|         27|         0|          null| null|          Monção|              18.2|            25.9|           10.0|               0.0|\n|      44|   1489269|Estados Unidos|     Cancelado|     85| Quarto Vista Pinhão|                BAR|2022-05-05 23:32:...|  2022-07-13|  2022-07-15|         2|       2|      2|       0|    2|      268.0|         6|                2|                     2|                      0|                   0|      Pinhão - Alijó|           Alijó|       3|                12|             24|2023-05-09 23:00:00|         10|         0|          null| null|           Alijó|31.366666666666664|            40.8|           23.8|               0.0|\n+--------+----------+--------------+--------------+-------+--------------------+-------------------+--------------------+------------+------------+----------+--------+-------+--------+-----+-----------+----------+-----------------+----------------------+-----------------------+--------------------+--------------------+----------------+--------+------------------+---------------+-------------------+-----------+----------+--------------+-----+----------------+------------------+----------------+---------------+------------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mfinalDataSet\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 34 more fields]\n"
+     }
+    ]
+   }
   }
  ],
  "name": "Zeppelin Notebook",
