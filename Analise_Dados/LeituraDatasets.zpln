@@ -13,9 +13,9 @@
    "id": "",
    "dateCreated": "2023-05-08 15:32:19.702",
    "config": {},
-   "dateStarted": "2023-05-09 21:51:34.721",
-   "dateUpdated": "2023-05-09 21:51:34.913",
-   "dateFinished": "2023-05-09 21:51:34.913",
+   "dateStarted": "2023-05-10 00:09:52.182",
+   "dateUpdated": "2023-05-10 00:09:52.349",
+   "dateFinished": "2023-05-10 00:09:52.349",
    "results": {
     "code": "SUCCESS",
     "msg": []
@@ -38,9 +38,9 @@
    "config": {
     "tableHide": false
    },
-   "dateStarted": "2023-05-09 21:51:34.914",
-   "dateUpdated": "2023-05-09 21:51:36.254",
-   "dateFinished": "2023-05-09 21:51:36.254",
+   "dateStarted": "2023-05-10 00:09:52.350",
+   "dateUpdated": "2023-05-10 00:09:53.250",
+   "dateFinished": "2023-05-10 00:09:53.250",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -55,9 +55,7 @@
    "settings": {
     "params": {
      "bdtMeta": {
-      "inlay": {
-       "collapsed": true
-      },
+      "inlay": {},
       "ZTOOLS_DATA_FRAMES": [
        {
         "columns": [
@@ -98,21 +96,21 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "import org.apache.spark.sql.functions._\nval csvFacilities = \"/data/tp/Facilities.csv\" // Facilities file\n\nval df = spark.read.format(\"csv\") // Read CSV\n        .option(\"header\", \"true\") // First line is a header\n        .option(\"inferSchema\", \"true\") // infer the data types \n        .option(\"delimiter\", \";\") // Columns separated by ';'\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n  .load(csvFacilities)\n\ndf.createOrReplaceTempView(FacilitesTable)\ndf.cache()\n//df.printSchema()\n//df.show()",
+   "text": "import org.apache.spark.sql.functions._\nval csvFacilities = \"/data/tp/Facilities.csv\" // Facilities file\n\nval df = spark.read.format(\"csv\") // Read CSV\n        .option(\"header\", \"true\") // First line is a header\n        .option(\"inferSchema\", \"true\") // infer the data types \n        .option(\"delimiter\", \";\") // Columns separated by ';\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and val\n  .load(csvFacilities)\n\ndf.createOrReplaceTempView(FacilitesTable)\ndf.cache()\n//df.printSchema()\n//df.show()",
    "id": "",
    "dateCreated": "2023-04-23 23:44:45.859",
    "config": {
-    "tableHide": true
+    "tableHide": false
    },
-   "dateStarted": "2023-05-09 21:51:36.254",
-   "dateUpdated": "2023-05-09 21:51:36.913",
-   "dateFinished": "2023-05-09 21:51:36.913",
+   "dateStarted": "2023-05-10 00:09:53.261",
+   "dateUpdated": "2023-05-10 00:09:54.923",
+   "dateFinished": "2023-05-10 00:09:54.923",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "import org.apache.spark.sql.functions._\n\u001b[1m\u001b[34mcsvFacilities\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Facilities.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Hotel ID: int, Facility ID: int ... 1 more field]\n\u001b[1m\u001b[34mres48\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [Hotel ID: int, Facility ID: int ... 1 more field]\n"
+      "data": "import org.apache.spark.sql.functions._\n\u001b[1m\u001b[34mcsvFacilities\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Facilities.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Hotel ID: int, Facility ID: int ... 1 more field]\n\u001b[1m\u001b[34mres18\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [Hotel ID: int, Facility ID: int ... 1 more field]\n"
      }
     ]
    }
@@ -151,9 +149,9 @@
    "focus": true,
    "$$hashKey": "object:394",
    "text": "val csvHotel = \"/data/tp/Hotel.csv\" // Hotels file\nval Acores = List(\"Açores\", \"Furnas S. Miguel - Açores\", \"Lagoa, Açores\",\"Ponta Delgada\",\"São Vicente Ferreira, São Miguel - Açores\", \"Velas\")\nval Albufeira = List(\"Albufeira - Algarve\", \"Alte\", \"Benafim\", \"Conceição de Tavira\", \"Fuseta\", \"Olhão\", \"Olhos D'Água\", \"São Brás de Alportel\", \"Silves\", \"Tavira\", \"Vilamoura\")\nval Alcobaca = List(\"Alcanena\", \"Alcobaça\", \"São Martinho do Porto\")\nval Alijo = List(\"Alijó\", \"Pinhão - Alijó\")\nval Amares = List(\"Amares\", \"Braga\", \"Póvoa de Lanhoso\", \"Tomar\", \"Torres Novas\")\nval Aveiro = List(\"Aveiro\")\nval Batalha = List(\"Batalha\", \"Nazaré\")\nval Braganca = List(\"Alto dos Lombos\")\nval Campo_Maior = List(\"Campo Maior\")\nval Carnaxide = List(\"Almada\", \"Carnaxide\", \"Charneca de Caparica\", \"Lisboa\")\nval Carcavelos = List(\"Carcavelos\", \"Cascais\", \"Estoril\")\nval Castelo_Branco = List(\"Castelo Branco\", \"Covilhã\", \"Sabugueiro / Seia\", \"Vale do Peso\")\nval Chaves = List(\"Chaves\", \"Lamego\", \"Mesão Frio\", \"Valdigem - Lamego\")\nval Coimbra = List(\"Coimbra\", \"Travanca do Mondego\")\nval Elvas = List(\"ELVAS\")\nval Espinho = List(\"Espinho\", \"Ovar\", \"Viseu\")\nval Evora = List(\"Evora\")\nval Funchal = List(\"Câmara de Lobos\", \"Funchal\")\nval Guimaraes = List(\"Guimarães\")\nval Lagos = List(\"Lagos\", \"Portimão\", \"Sagres\")\nval Maia = List(\"Maia\")\nval Moncao = List(\"Monção\", \"Valença do Minho\")\nval Obidos = List(\"Obidos\")\nval Porto = List(\"Ermesinde\", \"Gaia\", \"Lousada\", \"Madalena\", \"Porto\", \"União de Freguesias do Centro\", \"Valongo\", \"Valpedre - Penafiel\", \"Vila Meã\", \"Vila Nova de Gaia\")\nval Praia_da_Vitoria = List(\"Praia da Vitória\")\nval Sintra = List(\"Sintra\")\nval Viana_do_Castelo = List(\"Seixas - Caminha\", \"Valença, Viana do Castelo\", \"Viana do Castelo\", \"Vila Praia de Âncora\")\n\ndef getArea(value: String)= value match {\n    case x if Acores.contains(x) => \"Açores\"\n    case x if Albufeira.contains(x) => \"Albufeira\"\n    case x if Alcobaca.contains(x) => \"Alcobaça\"\n    case x if Alijo.contains(x) => \"Alijó\"\n    case x if Amares.contains(x) => \"Amares\"\n    case x if Aveiro.contains(x) => \"Aveiro\"\n    case x if Batalha.contains(x) => \"Batalha\"\n    case x if Braganca.contains(x) => \"Bragança\"\n    case x if Campo_Maior.contains(x) => \"Campo Maior\"\n    case x if Carnaxide.contains(x) => \"Carnaxide\"\n    case x if Carcavelos.contains(x) => \"Carcavelos\"\n    case x if Castelo_Branco.contains(x) => \"Castelo Branco\"\n    case x if Chaves.contains(x) => \"Chaves\"\n    case x if Coimbra.contains(x) => \"Coimbra\"\n    case x if Elvas.contains(x) => \"Elvas\"\n    case x if Espinho.contains(x) => \"Espinho\"\n    case x if Evora.contains(x) => \"Evora\"\n    case x if Funchal.contains(x) => \"Funchal\"\n    case x if Guimaraes.contains(x) => \"Guimarães\"\n    case x if Lagos.contains(x) => \"Lagos\"\n    case x if Maia.contains(x) => \"Maia\"\n    case x if Moncao.contains(x) => \"Monção\"\n    case x if Obidos.contains(x) => \"Obidos\"\n    case x if Porto.contains(x) => \"Porto\"\n    case x if Praia_da_Vitoria.contains(x) => \"Praia da Vitória\"\n    case x if Sintra.contains(x) => \"Sintra\"\n    case x if Viana_do_Castelo.contains(x) => \"Viana do Castelo\"\n    case _ => value\n}\n\nval getAreaUDF = udf((value: String) => getArea(value))\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .load(csvHotel)\n        .withColumnRenamed(\"Hotel ID\", \"hotel_ID\")\n        .withColumnRenamed(\"Localização\", \"localizacao\")\n        .withColumnRenamed(\"Estrelas\", \"estrelas\")\n        .withColumnRenamed(\"Idade Máxima de Crianças (Anos)\", \"idade_max_criancas\")\n        .withColumnRenamed(\"Idade Máxima de Bebés (Meses)\", \"idade_max_bebes\")\n        .withColumnRenamed(\"Hora máxima de check-in\", \"hora_max_checkin\")\n        .withColumnRenamed(\"Quantidade de quartos\", \"qtd_quartos\")\n        .withColumn(\"hora_max_checkin\", to_timestamp(col(\"hora_max_checkin\")))\n\nval dfWithArea = df.withColumn(\"area_localizacao\", getAreaUDF(col(\"localizacao\")))\n\ndfWithArea.createOrReplaceTempView(InitialHotelTable)\ndfWithArea.cache()\n//dfWithArea.printSchema()\n//dfWithArea.describe().show()\n//dfWithArea.show()",
-   "dateStarted": "2023-05-09 21:51:36.919",
-   "dateUpdated": "2023-05-09 21:51:37.751",
-   "dateFinished": "2023-05-09 21:51:37.751",
+   "dateStarted": "2023-05-10 00:09:54.935",
+   "dateUpdated": "2023-05-10 00:09:56.421",
+   "dateFinished": "2023-05-10 00:09:56.421",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -215,15 +213,15 @@
    "config": {
     "tableHide": false
    },
-   "dateStarted": "2023-05-09 21:51:37.753",
-   "dateUpdated": "2023-05-09 21:51:38.605",
-   "dateFinished": "2023-05-09 21:51:38.604",
+   "dateStarted": "2023-05-10 00:09:56.431",
+   "dateUpdated": "2023-05-10 00:09:56.905",
+   "dateFinished": "2023-05-10 00:09:56.905",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "\u001b[1m\u001b[34mcsvTipologias\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Tipologias.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 12 more fields]\n\u001b[1m\u001b[34mres50\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [hotel_ID: int, room_ID: int ... 12 more fields]\n"
+      "data": "\u001b[1m\u001b[34mcsvTipologias\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Tipologias.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 12 more fields]\n\u001b[1m\u001b[34mres20\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [hotel_ID: int, room_ID: int ... 12 more fields]\n"
      }
     ]
    }
@@ -278,15 +276,15 @@
    "config": {
     "editorHide": false
    },
-   "dateStarted": "2023-05-09 21:51:38.606",
-   "dateUpdated": "2023-05-09 21:51:45.395",
-   "dateFinished": "2023-05-09 21:51:45.395",
+   "dateStarted": "2023-05-10 00:09:56.915",
+   "dateUpdated": "2023-05-10 00:10:02.230",
+   "dateFinished": "2023-05-10 00:10:02.230",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "Minimum data_reserva date: 2022-01-01 10:17:09.29\nMaximum data_reserva date: 2023-04-18 16:33:15.437\nMinimum data_chegada date: 2022-01-01\nMaximum data_chegada date: 2024-04-05\nMinimum data_partida date: 2022-01-02\nMaximum data_partida date: 2024-05-31\n\u001b[1m\u001b[34mcsvQuartosReservados\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/QuartosReservados.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 28 more fields]\n\u001b[1m\u001b[34mmindata_reserva\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-01-01 10:17:09.29\n\u001b[1m\u001b[34mmaxdata_reserva\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2023-04-18 16:33:15.437\n\u001b[1m\u001b[34mmindata_data_chegada\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-01-01\n\u001b[1m\u001b[34mmaxdata_data_chegada\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2024-04-05\n\u001b[1m\u001b[34mmindata_data_partida\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-01-02\n\u001b[1m\u001b[34mmaxdata_data_partida\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2024-05-31\n\u001b[1m\u001b[34mres51\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 28 more fields]\n"
+      "data": "Minimum data_reserva date: 2022-01-01 10:17:09.29\nMaximum data_reserva date: 2023-04-18 16:33:15.437\nMinimum data_chegada date: 2022-01-01\nMaximum data_chegada date: 2024-04-05\nMinimum data_partida date: 2022-01-02\nMaximum data_partida date: 2024-05-31\n\u001b[1m\u001b[34mcsvQuartosReservados\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/QuartosReservados.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 28 more fields]\n\u001b[1m\u001b[34mmindata_reserva\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-01-01 10:17:09.29\n\u001b[1m\u001b[34mmaxdata_reserva\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2023-04-18 16:33:15.437\n\u001b[1m\u001b[34mmindata_data_chegada\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-01-01\n\u001b[1m\u001b[34mmaxdata_data_chegada\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2024-04-05\n\u001b[1m\u001b[34mmindata_data_partida\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-01-02\n\u001b[1m\u001b[34mmaxdata_data_partida\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2024-05-31\n\u001b[1m\u001b[34mres21\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 28 more fields]\n"
      }
     ]
    }
@@ -339,15 +337,15 @@
    "id": "",
    "dateCreated": "2023-04-24 22:00:30.321",
    "config": {},
-   "dateStarted": "2023-05-09 21:51:45.397",
-   "dateUpdated": "2023-05-09 21:51:46.194",
-   "dateFinished": "2023-05-09 21:51:46.194",
+   "dateStarted": "2023-05-10 00:10:02.241",
+   "dateUpdated": "2023-05-10 00:10:04.060",
+   "dateFinished": "2023-05-10 00:10:04.060",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "Minimum start date: 2022-01-01\nMaximum start date: 2023-12-31\n\u001b[1m\u001b[34mcsvFeriados\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Feriados.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, day: int ... 6 more fields]\n\u001b[1m\u001b[34mminDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-01-01\n\u001b[1m\u001b[34mmaxDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2023-12-31\n\u001b[1m\u001b[34mres52\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [date: date, day: int ... 6 more fields]\n"
+      "data": "Minimum start date: 2022-01-01\nMaximum start date: 2023-12-31\n\u001b[1m\u001b[34mcsvFeriados\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Feriados.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, day: int ... 6 more fields]\n\u001b[1m\u001b[34mminDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-01-01\n\u001b[1m\u001b[34mmaxDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2023-12-31\n\u001b[1m\u001b[34mres22\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [date: date, day: int ... 6 more fields]\n"
      }
     ]
    }
@@ -400,15 +398,15 @@
    "id": "",
    "dateCreated": "2023-04-30 21:07:30.821",
    "config": {},
-   "dateStarted": "2023-05-09 21:51:46.195",
-   "dateUpdated": "2023-05-09 21:51:47.361",
-   "dateFinished": "2023-05-09 21:51:47.360",
+   "dateStarted": "2023-05-10 00:10:04.105",
+   "dateUpdated": "2023-05-10 00:10:05.925",
+   "dateFinished": "2023-05-10 00:10:05.924",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "Minimum start date: 2022-01-01\nMaximum start date: 2023-04-23\n\u001b[1m\u001b[34mcsvMeteorologia\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Meteorologia.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, tavg: double ... 8 more fields]\n\u001b[1m\u001b[34mminDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-01-01\n\u001b[1m\u001b[34mmaxDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2023-04-23\n\u001b[1m\u001b[34mres53\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [date: date, tavg: double ... 8 more fields]\n"
+      "data": "Minimum start date: 2022-01-01\nMaximum start date: 2023-04-23\n\u001b[1m\u001b[34mcsvMeteorologia\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Meteorologia.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [date: date, tavg: double ... 8 more fields]\n\u001b[1m\u001b[34mminDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-01-01\n\u001b[1m\u001b[34mmaxDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2023-04-23\n\u001b[1m\u001b[34mres23\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [date: date, tavg: double ... 8 more fields]\n"
      }
     ]
    }
@@ -459,15 +457,15 @@
    "status": "FINISHED",
    "text": "val csvEventos= \"/data/tp/Eventos.csv\" // Holidays file\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\") // set this to true if your CSV file has header\n        .option(\"inferSchema\", \"true\") // set this to true if you want Spark to infer the schema\n        .option(\"delimiter\", \";\") // ; is the separator\n        .option(\"trim\", \"true\") // remove whitespaces from both ends of columns and values\n        .load(csvEventos)\n        .withColumn(\"end_date\", to_date(trim(col(\"end_date\")), \"dd/MM/yyyy\"))\n        .withColumn(\"start_Date\", to_date(col(\"start_Date\"), \"dd/MM/yyyy\"))\n\nval minStartDate = df.select(min(\"start_Date\")).first()(0)\nval maxStartDate = df.select(max(\"start_Date\")).first()(0)\nval minEndDate = df.select(min(\"end_date\")).first()(0)\nval maxEndDate = df.select(max(\"end_date\")).first()(0)\n\nprintln(s\"Minimum start date: $minStartDate\")\nprintln(s\"Maximum start date: $maxStartDate\")\nprintln(s\"Minimum end date: $minEndDate\")\nprintln(s\"Maximum end date: $maxEndDate\")\n\ndf.createOrReplaceTempView(EventosTable)\ndf.cache()\n//df.printSchema()\n//df.describe().show()\n//df.show()",
    "config": {},
-   "dateStarted": "2023-05-09 21:51:47.363",
-   "dateUpdated": "2023-05-09 21:51:48.365",
-   "dateFinished": "2023-05-09 21:51:48.365",
+   "dateStarted": "2023-05-10 00:10:05.937",
+   "dateUpdated": "2023-05-10 00:10:07.150",
+   "dateFinished": "2023-05-10 00:10:07.150",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "Minimum start date: 2022-06-01\nMaximum start date: 2023-11-05\nMinimum end date: 2022-06-11\nMaximum end date: 2023-11-05\n\u001b[1m\u001b[34mcsvEventos\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Eventos.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Location: string, Event: string ... 2 more fields]\n\u001b[1m\u001b[34mminStartDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-06-01\n\u001b[1m\u001b[34mmaxStartDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2023-11-05\n\u001b[1m\u001b[34mminEndDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-06-11\n\u001b[1m\u001b[34mmaxEndDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2023-11-05\n\u001b[1m\u001b[34mres54\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [Location: string, Event: string ... 2 more fields]\n"
+      "data": "Minimum start date: 2022-06-01\nMaximum start date: 2023-11-05\nMinimum end date: 2022-06-11\nMaximum end date: 2023-11-05\n\u001b[1m\u001b[34mcsvEventos\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/Eventos.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [Location: string, Event: string ... 2 more fields]\n\u001b[1m\u001b[34mminStartDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-06-01\n\u001b[1m\u001b[34mmaxStartDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2023-11-05\n\u001b[1m\u001b[34mminEndDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2022-06-11\n\u001b[1m\u001b[34mmaxEndDate\u001b[0m: \u001b[1m\u001b[32mAny\u001b[0m = 2023-11-05\n\u001b[1m\u001b[34mres24\u001b[0m: \u001b[1m\u001b[32mdf.type\u001b[0m = [Location: string, Event: string ... 2 more fields]\n"
      }
     ]
    }
@@ -485,9 +483,9 @@
    "id": "",
    "dateCreated": "2023-05-08 16:57:04.969",
    "config": {},
-   "dateStarted": "2023-05-09 21:51:48.366",
-   "dateUpdated": "2023-05-09 21:51:48.686",
-   "dateFinished": "2023-05-09 21:51:48.686",
+   "dateStarted": "2023-05-10 00:10:07.163",
+   "dateUpdated": "2023-05-10 00:10:07.290",
+   "dateFinished": "2023-05-10 00:10:07.290",
    "results": {
     "code": "SUCCESS",
     "msg": []
@@ -631,9 +629,9 @@
    "config": {
     "editorHide": false
    },
-   "dateStarted": "2023-05-09 21:51:48.688",
-   "dateUpdated": "2023-05-09 21:51:52.815",
-   "dateFinished": "2023-05-09 21:51:52.815",
+   "dateStarted": "2023-05-10 00:10:07.292",
+   "dateUpdated": "2023-05-10 00:10:10.749",
+   "dateFinished": "2023-05-10 00:10:10.749",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -808,27 +806,6 @@
            "presentableName": "integer"
           },
           "nullable": true
-         },
-         {
-          "name": "capacidade_max_camas_extra",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_camas_extra_criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_bercos_extra",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
          }
         ]
        }
@@ -839,19 +816,19 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "// Initial transformation of Tipologias table\n\nval initialTipologias = spark.sql(s\"SELECT * FROM $InitialTipologiasTable\")\n\nval newTipologias = initialTipologias\n        .drop(\"capacidade_minima\")\n        .drop(\"capacidade_min_adultos\")\n        .drop(\"capacidade_min_criancas\")\n//        .drop(\"capacidade_max_camas_extra\")\n//        .drop(\"capacidade_max_camas_extra_criancas\")\n//        .drop(\"capacidade_max_bercos_extra\")\n\nnewTipologias.createOrReplaceTempView(TipologiasTable)\n\nprintln(\"Total lines removed: \" + (initialTipologias.count() - newTipologias.count()))",
+   "text": "// Initial transformation of Tipologias table\n\nval initialTipologias = spark.sql(s\"SELECT * FROM $InitialTipologiasTable\")\n\nval newTipologias = initialTipologias\n        .drop(\"capacidade_minima\")\n        .drop(\"capacidade_min_adultos\")\n        .drop(\"capacidade_min_criancas\")\n        .drop(\"capacidade_max_camas_extra\")\n        .drop(\"capacidade_max_camas_extra_criancas\")\n        .drop(\"capacidade_max_bercos_extra\")\n\nnewTipologias.createOrReplaceTempView(TipologiasTable)\n\nprintln(\"Total lines removed: \" + (initialTipologias.count() - newTipologias.count()))",
    "id": "",
    "dateCreated": "2023-05-08 16:58:47.072",
    "config": {},
-   "dateStarted": "2023-05-09 21:51:52.817",
-   "dateUpdated": "2023-05-09 21:51:53.208",
-   "dateFinished": "2023-05-09 21:51:53.207",
+   "dateStarted": "2023-05-10 00:10:10.759",
+   "dateUpdated": "2023-05-10 00:10:11.107",
+   "dateFinished": "2023-05-10 00:10:11.107",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "Total lines removed: 0\n\u001b[1m\u001b[34minitialTipologias\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 12 more fields]\n\u001b[1m\u001b[34mnewTipologias\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 9 more fields]\n"
+      "data": "Total lines removed: 0\n\u001b[1m\u001b[34minitialTipologias\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 12 more fields]\n\u001b[1m\u001b[34mnewTipologias\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, room_ID: int ... 6 more fields]\n"
      }
     ]
    }
@@ -1307,9 +1284,9 @@
    "id": "",
    "dateCreated": "2023-05-08 16:58:48.800",
    "config": {},
-   "dateStarted": "2023-05-09 21:51:53.209",
-   "dateUpdated": "2023-05-09 21:51:58.115",
-   "dateFinished": "2023-05-09 21:51:58.115",
+   "dateStarted": "2023-05-10 00:10:11.117",
+   "dateUpdated": "2023-05-10 00:10:14.879",
+   "dateFinished": "2023-05-10 00:10:14.879",
    "results": {
     "code": "SUCCESS",
     "msg": [
