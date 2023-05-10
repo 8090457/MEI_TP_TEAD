@@ -80,7 +80,7 @@
          {
           "name": "data_reserva",
           "tpe": {
-           "presentableName": "timestamp"
+           "presentableName": "string"
           },
           "nullable": true
          },
@@ -134,97 +134,6 @@
           "nullable": true
          },
          {
-          "name": "_c17",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c18",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c19",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c20",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c21",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c22",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c23",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c24",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c25",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c26",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c27",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c28",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "_c29",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
           "name": "data_chegada",
           "tpe": {
            "presentableName": "date"
@@ -240,6 +149,13 @@
          },
          {
           "name": "preco_noite",
+          "tpe": {
+           "presentableName": "double"
+          },
+          "nullable": true
+         },
+         {
+          "name": "preco_noite_adulto",
           "tpe": {
            "presentableName": "double"
           },
@@ -260,15 +176,15 @@
    "config": {
     "editorHide": false
    },
-   "dateStarted": "2023-05-10 00:52:58.153",
-   "dateUpdated": "2023-05-10 00:53:01.845",
-   "dateFinished": "2023-05-10 00:53:01.845",
+   "dateStarted": "2023-05-10 01:03:20.192",
+   "dateUpdated": "2023-05-10 01:03:21.780",
+   "dateFinished": "2023-05-10 01:03:21.780",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "24955\nimport org.apache.spark.sql.DataFrame\nimport org.apache.spark.sql.functions._\nimport spark.implicits._\n\u001b[1m\u001b[34mjoinFolder\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/joins\n\u001b[1m\u001b[34msaveJoins\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n\u001b[1m\u001b[34msaveDataFrame\u001b[0m: \u001b[1m\u001b[32m(df: org.apache.spark.sql.DataFrame, name: String)Unit\u001b[0m\n\u001b[1m\u001b[34minitialCount\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 29 more fields]\n"
+      "data": "24955\nimport org.apache.spark.sql.DataFrame\nimport org.apache.spark.sql.functions._\nimport spark.implicits._\n\u001b[1m\u001b[34mjoinFolder\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/joins\n\u001b[1m\u001b[34msaveJoins\u001b[0m: \u001b[1m\u001b[32mBoolean\u001b[0m = false\n\u001b[1m\u001b[34msaveDataFrame\u001b[0m: \u001b[1m\u001b[32m(df: org.apache.spark.sql.DataFrame, name: String)Unit\u001b[0m\n\u001b[1m\u001b[34minitialCount\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 17 more fields]\n"
      }
     ]
    }
