@@ -1,0 +1,742 @@
+﻿Hotel ID;Room ID;Tipo de quarto;Quantidade;Capacidade máxima;Capacidade mínima;Capacidade máxima de adultos;Capacidade mínima de adultos;Capacidade máxima de crianças;Capacidade mínima de crianças;Capacidade máxima de bebés;Capacidade máxima de camas extra;Capacidade máxima de camas extra (crianças);Capacidade máxima de berços extra
+20;81;STANDART ROOM;24;2;1;2;1;2;0;1;1;0;0
+44;85;Quarto Vista Pinhão;6;2;1;2;1;0;0;0;0;0;0
+49;92;Quarto Duplo;10;4;1;2;1;1;0;1;0;1;1
+49;93;Quarto Single;10;2;1;1;1;1;0;1;0;0;0
+49;94;Suite Executiva;1;4;1;2;1;1;0;1;0;0;0
+54;167;Quarto Twin;5;3;1;2;1;2;0;1;0;0;0
+54;168;Suite Junior (romantico);1;2;1;2;1;2;0;2;2;2;0
+54;169;Suite Standard (familiar);1;4;1;2;1;2;0;2;0;0;0
+44;188;Twin;1;3;1;2;1;0;0;1;0;1;0
+44;189;Suite Vista Pinhão;1;4;2;4;1;0;0;1;0;1;0
+44;190;Quarto Vista Traseiras;2;2;1;2;1;0;0;1;0;0;0
+49;211;"Quarto Duplo ""Terrace""";5;3;1;2;1;1;0;1;0;0;0
+49;212;"Suite ""DD""ouro Terrace";1;4;1;2;1;1;0;1;0;0;0
+20;372;EXECUTIVE ROOM;2;2;1;2;1;2;0;1;1;0;0
+167;597;STANDARD;10;3;1;2;1;0;0;0;0;0;0
+167;598;SUPERIOR DOUBLE / TWIN;20;2;1;2;1;0;0;0;0;0;0
+167;599;DELUXE DOUBLE / TWIN;10;2;1;2;1;0;0;0;0;0;0
+167;618;PREMIUM DOUBLE / TWIN;10;2;1;2;1;0;0;0;0;0;0
+179;629;Single Comfort;10;1;1;1;1;0;0;0;0;0;0
+179;630;Duplo  Comfort;27;2;1;2;1;0;0;0;0;0;0
+179;631;Twin Comfort;8;2;1;2;1;0;0;0;0;0;0
+179;632;King Comfort;46;2;1;2;1;0;0;0;0;0;0
+179;633;Family Comfort Room;4;4;1;4;1;3;0;0;0;0;0
+179;635;Suite Comfort;4;3;1;3;1;2;0;0;0;0;0
+179;645;Romantico;0;2;1;2;1;0;0;0;0;0;0
+185;660;Duplo/Twin;17;2;1;2;1;1;0;1;1;1;1
+185;721;Suite;1;4;1;4;1;2;0;1;0;0;0
+206;757;Duplo/ Twin;4;2;1;2;1;0;0;0;0;0;0
+206;758;Single;0;1;1;1;1;0;0;0;0;0;0
+206;759;Family Room;0;5;1;4;1;1;0;0;0;0;0
+206;764;Twin + Extra Bed;0;3;1;3;1;0;0;0;0;0;0
+226;845;Apartamento com 4 Quartos;2;7;1;7;1;6;0;2;0;0;2
+225;846;Apartamento Vista Mar;3;5;1;5;1;4;0;2;0;0;2
+225;847;Apartamento Vista Cidade;2;5;1;5;1;4;0;2;0;0;2
+237;932;Standard Room Double;25;2;1;2;1;0;0;0;0;0;0
+237;933;Double Premier ;15;2;1;2;1;0;0;0;0;0;0
+237;934;Twin Premier ;10;2;1;2;1;0;0;0;0;0;0
+238;935;Standard Room;10;3;1;2;1;0;0;1;0;0;0
+238;936;Interior Family Room;6;3;1;3;1;1;0;1;0;0;0
+238;937;Standard Front / Side Balcony;18;3;1;2;1;0;0;1;0;0;0
+238;938;Side Superior Balcony or Terrace;3;3;1;3;1;0;0;1;0;0;0
+238;939;Superior Rooms Without Balcony;4;2;1;2;1;0;0;1;0;0;0
+238;940;Junior Suite;6;3;2;4;2;2;0;1;0;0;0
+237;944;Triple Premier;5;3;1;3;1;0;0;0;0;0;0
+237;945;Double Premier Romantico;10;2;1;2;1;0;0;0;0;0;0
+238;954;Suite Superior;1;4;2;4;2;2;0;1;0;0;0
+241;983;Apartamento T1 - 1 Quarto;6;3;1;3;1;1;0;1;0;0;0
+241;984;Apartamento T2 - 2 Quartos;6;6;1;4;1;2;0;2;0;0;0
+242;1075;Apartamento T1 + 1;1;3;1;3;1;1;0;1;1;1;1
+259;1103;Standard;13;3;1;3;1;1;0;1;1;1;1
+259;1104;Suite Junior;3;3;1;3;1;2;0;1;1;1;1
+259;1105;Suite Deluxe;4;4;1;2;1;2;0;2;2;2;2
+269;1159;Duplo/Twin Vista Terra;6;2;1;2;1;0;0;0;0;0;0
+269;1160;Duplo/Twin Premium Vista Terra;1;2;1;2;1;0;0;0;0;0;0
+269;1162;Suite - Vista Terra;1;2;1;2;1;0;0;0;0;0;0
+269;1163;Suite Open Space - Vista Terra;1;2;1;2;1;0;0;0;0;0;0
+269;1164;Suite VIP - Vista Terra;1;2;1;2;1;0;0;0;0;0;0
+269;1178;Duplo Vista Mar;3;2;1;2;1;0;0;0;0;0;0
+269;1179;Duplo/Twin Premium Vista Mar ;8;2;1;2;1;0;0;0;0;0;0
+273;1193;Mentha;1;2;1;2;1;0;0;0;0;0;0
+273;1197;Camomila;1;2;1;2;1;0;0;0;0;0;0
+276;1219;Quarto Duplo/ Twin;10;2;1;2;1;1;0;1;0;0;0
+278;1220;Quarto Duplo/ Twin;10;2;1;2;1;0;0;0;0;0;0
+278;1221;Quarto Duplo/ Twin com Cama Extra;2;3;3;3;1;1;0;1;0;0;0
+277;1222;Quarto Duplo/ Twin;10;2;1;2;1;1;0;1;1;1;1
+279;1223;Quarto Twin;10;2;1;2;1;0;0;0;0;0;0
+281;1227;Quarto Duplo/ Twin;5;2;1;2;1;0;0;0;0;0;0
+185;1228;Duplo/Twin adaptado;1;4;1;2;1;0;0;1;0;0;0
+185;1230;Suite adaptada;1;4;1;4;1;2;0;2;2;2;2
+287;1232;STUDIO;11;4;1;4;1;0;0;1;0;0;0
+273;1235;Rosmarine;1;2;1;2;1;0;0;0;0;0;0
+273;1236;Basilicum;1;2;1;2;1;0;0;0;0;0;0
+273;1237;Lavanda;1;2;1;2;1;0;0;0;0;0;0
+273;1238;Melissa;1;4;1;4;1;0;0;0;0;0;0
+273;1239;Oregão;1;2;1;2;1;0;0;0;0;0;0
+283;1241;Estudio;3;2;1;2;1;0;0;1;0;0;1
+283;1242;T1;3;4;1;4;1;0;0;1;0;0;0
+276;1244;Quarto Duplo/ Twin + Cama Extra;3;3;1;3;1;2;0;1;0;0;0
+277;1246;Quarto Duplo/ Twin + Cama Extra;2;3;1;3;1;1;0;1;1;0;0
+281;1251;Suite;1;4;1;2;1;2;0;1;0;0;0
+281;1252;Quarto Duplo/ Twin + Cama Extra;2;3;1;3;1;1;0;1;0;0;0
+277;1253;Familiar (2 quartos comunicantes);3;4;1;2;1;2;1;1;0;0;0
+281;1254;Familiar (2 quartos comunicantes);1;4;1;2;1;2;0;0;0;0;0
+242;1255;Apartamento T2 Superior;1;4;1;4;1;2;0;2;1;1;1
+277;1270;Quarto Single;3;1;1;1;1;0;0;0;0;0;0
+279;1271;Quarto Twin + Cama Extra;3;3;1;3;1;0;0;0;0;0;0
+284;1285;STUDIO;3;2;1;2;1;0;0;1;0;0;0
+284;1286;SUPERIOR STUDIO;2;2;1;2;1;0;0;1;0;0;0
+285;1288;STUDIO;4;2;1;2;1;0;0;1;0;0;0
+285;1289;SUPERIOR STUDIO;1;4;1;4;1;0;0;1;0;0;0
+285;1290;ONE-BEDROOM APARTMENT;3;5;1;5;1;0;0;1;0;0;0
+269;1292;Duplo Deluxe vista mar;1;2;1;2;1;0;0;0;0;0;0
+297;1303;VERMELHO ACESSÍVEL - ESTÚDIO;1;2;1;2;1;1;0;1;0;0;0
+297;1310;NOBUCK - APARTAMENTO T1;1;3;1;3;1;1;0;1;0;0;0
+297;1311;VERMELHO SENSUAL - Apartamento T1 4 pax;1;4;1;4;2;3;0;1;0;0;0
+297;1312;AMARELO PEDRA - Apartamento T2;1;6;1;6;4;5;0;1;0;0;0
+302;1316;Apartamento 1 quarto;3;2;1;2;1;1;0;1;0;0;0
+302;1317;Apartamento 2 quartos;3;4;1;4;1;3;0;1;0;0;0
+302;1318;Apartamento 3 quartos;1;6;1;6;1;5;0;2;0;0;0
+287;1346;STUDIO PREMIER;1;4;1;4;1;0;0;2;0;0;2
+304;1348;201 - Suite;1;2;1;2;1;0;0;0;0;0;0
+304;1349;202 - Suite;1;3;1;3;1;0;0;0;0;0;0
+304;1352;104 - Quarto Duplo;1;2;1;2;1;0;0;0;0;0;0
+304;1357;203 - Quarto Duplo Wc Exterior;1;2;1;2;1;0;0;0;0;0;0
+304;1360;204 - Duplo Superior;1;2;1;2;1;0;0;0;0;0;0
+307;1363;Estudio Standard;3;2;1;2;1;0;0;0;0;0;0
+307;1364;Estudio Superior;5;3;1;3;1;0;0;0;0;0;0
+307;1365;T1 Standard;2;3;1;3;1;0;0;0;0;0;0
+307;1366;T1 Superior;4;4;1;4;1;0;0;0;0;0;0
+307;1367;T2 ;1;5;1;5;1;0;0;0;0;0;0
+306;1368;T0 Superior;2;2;1;2;1;0;0;0;0;0;0
+306;1369;T1 Superior;3;4;1;4;1;0;0;0;0;0;0
+306;1370;T2;2;5;1;5;1;0;0;0;0;0;0
+309;1372;Quarto Duplo Standard;10;2;1;2;1;1;0;0;0;0;0
+313;1378;Quartos I, II, III, IV (Terraço Privado);4;2;1;2;1;0;0;0;0;0;1
+313;1379;Quarto VIII;1;3;1;3;1;1;0;1;1;1;1
+314;1380;Duplo;1;2;1;2;1;1;0;0;0;0;0
+313;1381;Quarto IX;0;2;1;2;1;0;0;0;0;0;0
+313;1382;Quartos V, VI, VII (Vista Mar);3;2;1;2;1;0;0;0;0;0;0
+314;1387;Twin;1;2;1;2;1;0;0;0;0;0;0
+314;1388;Triplo;1;3;1;3;1;0;0;0;0;0;0
+310;1395;Quarto Duplo Standard;10;2;1;2;1;1;0;0;0;0;0
+310;1397;Quarto Duplo Standard com Cama Extra;0;3;1;3;1;2;0;0;0;0;0
+316;1399;Quarto Duplo;4;2;1;2;1;1;0;1;0;0;1
+316;1404;Quarto Triplo;3;4;3;4;3;2;0;2;0;0;1
+304;1405;302 - Quarto Familiar;1;4;1;4;1;0;0;0;0;0;0
+304;1406;301 - Quarto Duplo;1;2;1;2;1;0;0;0;0;0;0
+311;1407;DB - Quarto Duplo Standard;8;2;1;2;1;2;0;0;0;0;0
+320;1409;Suite Twin;9;2;1;2;1;0;0;0;0;0;0
+321;1410;Quarto Twin;15;3;1;2;1;0;0;0;0;0;0
+322;1413;Duplo;19;2;1;2;1;1;0;0;0;0;0
+317;1414;Quarto Duplo;5;2;1;2;1;1;0;1;0;0;1
+319;1415;Executivo - Twin;25;2;1;2;1;1;0;1;1;0;1
+319;1416;Suite;2;2;1;2;1;0;0;0;0;0;0
+321;1417;Quarto Duplo;19;3;1;2;1;0;0;0;0;0;0
+320;1418;Cama em Camarata Masculina;6;6;1;1;1;0;0;0;0;0;0
+314;1419;Quarto Familiar;1;4;1;2;1;2;0;2;1;0;1
+316;1420;Quarto Quádruplo;3;5;4;5;4;2;0;2;0;0;1
+318;1421;Duplo;5;2;1;2;1;0;0;0;0;0;0
+318;1422;Quádruplo;5;4;1;4;1;2;0;0;0;0;0
+310;1424;Quarto Twin Standard;25;2;1;2;1;1;0;0;0;0;0
+316;1425;Quarto Twin;7;2;1;2;1;1;0;1;0;0;1
+309;1426;Quarto Duplo com Cama Extra;0;3;1;2;1;1;0;0;0;0;0
+314;1427;Quarto Romântico;1;2;1;2;1;0;0;0;0;0;0
+314;1428;Quarto Individual;1;1;1;1;1;0;0;0;0;0;0
+311;1429;TW - Quarto Twin Standard;4;2;1;2;1;2;0;0;0;0;0
+309;1430;Quarto Twin Superior;8;2;1;2;1;2;0;0;0;0;0
+327;1445;T1;23;2;1;2;1;1;0;1;1;1;1
+327;1446;T2;28;4;1;4;1;4;0;2;0;0;0
+327;1447;V3;1;7;1;7;1;6;0;1;0;0;0
+327;1448;V4;1;9;1;9;1;8;0;1;0;0;0
+328;1450;6 Bed Mixed Dormitory ;18;1;1;1;1;0;0;0;0;0;0
+328;1451;4 Bed Mixed Dormitory;8;1;1;1;1;0;0;0;0;0;0
+328;1452;Single Room;3;1;1;1;1;0;0;0;0;0;0
+328;1453;Standard Double Room;5;2;1;2;1;0;0;0;0;0;0
+328;1454;Double Room with Balcony;5;2;1;2;1;0;0;0;0;0;0
+328;1456;Superior Double Room;3;2;1;2;1;0;0;0;0;0;0
+332;1472;Apartamento T1;6;5;1;5;1;3;0;0;0;0;0
+332;1473;Apartamento T2;1;7;1;7;1;5;0;0;0;0;0
+335;1488;Duplo;4;2;1;2;1;0;0;0;0;0;0
+335;1489;Single;1;1;1;1;1;0;0;0;0;0;0
+335;1494;Twin+1;5;3;1;3;1;1;0;0;0;0;0
+350;1548;T0;5;2;1;2;1;1;0;1;0;0;1
+350;1549;T0 Classic;7;3;1;3;1;2;0;1;0;0;1
+350;1550;T1;2;3;1;3;1;2;0;1;0;0;1
+349;1551;Quarto Twin;4;2;1;2;1;1;0;1;0;0;1
+349;1552;Quarto Duplo;10;2;1;2;1;1;0;1;0;0;1
+349;1553;Quarto Familiar;4;4;1;4;1;3;0;1;0;0;1
+350;1563;T0VM;6;2;1;2;1;1;0;1;0;0;1
+356;1569; QUARTO STANDARD;6;3;1;2;1;1;0;1;0;0;0
+356;1570;QUARTO SUPERIOR;6;3;1;3;1;1;0;2;1;1;1
+356;1571;QUARTO SUPERIOR COM VARANDA;6;3;1;2;1;2;0;2;0;0;0
+339;1572;Suite Premium;3;2;1;2;1;2;0;0;0;0;0
+339;1573;Quarto Duplo ou Twin com Varanda;14;2;1;2;1;1;0;0;0;0;0
+339;1574;Quarto Duplo/Twin Conforto ;4;2;1;2;1;0;0;0;0;0;0
+339;1575;Quarto Duplo ou Twin Deluxe;4;2;1;2;1;1;0;0;0;0;0
+350;1582;T0VM-3;3;3;1;3;1;2;0;1;0;0;1
+350;1583;T1VM;5;3;1;3;1;2;0;1;0;0;1
+350;1584;T1-4;9;4;1;4;1;3;0;1;0;0;1
+350;1585;T1VM-4;9;4;1;4;1;3;0;1;0;0;1
+350;1586;T2;1;6;1;6;1;5;0;1;0;0;1
+350;1587;T2VM;1;6;1;6;1;5;0;1;0;0;1
+361;1615;T1;1;3;1;3;1;2;0;1;0;0;1
+361;1616;T2;1;6;1;6;1;5;0;1;0;0;1
+365;1640;Suite Mansarda;2;2;1;2;1;0;0;0;0;0;0
+49;1646;Quarto Duplo Reveillon;4;4;1;2;1;1;0;1;0;1;1
+366;1648;QUARTO TWIN STANDARD;40;3;1;2;1;1;0;1;0;0;0
+366;1650;QUARTO KING-SIZE BED;8;3;1;2;1;0;0;1;0;0;0
+366;1651;QUARTO TRIPLO;6;3;1;3;3;0;0;1;0;0;0
+366;1652;QUARTO FAMILIAR;4;4;1;2;2;2;2;1;0;0;0
+366;1653;QUARTO TWIN QUEEN-CLUB;1;4;1;2;1;1;0;1;0;0;0
+366;1654;QUARTO CASAL QUEEN-CLUB;1;3;1;2;1;1;1;1;0;0;0
+366;1655;SUITE CARGALEIRO;1;4;1;3;1;1;0;1;0;0;0
+366;1656;SUITE POETA;1;4;1;3;1;1;0;1;0;0;0
+237;1667;Quarto Familiar;3;2;1;2;1;0;0;0;0;0;0
+368;1668;Duplo;8;3;1;2;1;1;0;1;0;0;0
+368;1669;Duplo Varanda;2;3;1;2;1;1;0;1;0;0;0
+368;1670;Apartamento;2;5;1;4;1;3;0;3;0;0;0
+237;1671;Suite Terrace;2;2;1;2;1;0;0;0;0;0;0
+310;1673;Quarto Duplo Superior;63;2;1;2;1;1;0;0;0;0;0
+310;1674;Quarto Twin Superior;8;2;1;2;1;1;0;0;0;0;0
+365;1676;Quarto Duplo;2;2;1;2;1;0;0;0;0;0;0
+365;1677;Quarto Familiar;2;5;1;4;1;0;0;0;0;0;0
+365;1678;Quarto Superior;9;3;1;2;1;0;0;0;0;0;0
+365;1679;Quarto Twin;2;2;1;2;1;0;0;0;0;1;0
+365;1680;Suite Junior;2;3;1;2;1;0;0;0;0;0;0
+365;1681;Suite Premium;1;2;1;2;1;0;0;0;0;0;0
+365;1682;Suite Romantica;1;2;1;2;1;0;0;0;0;0;0
+49;1684;QUARTO DUPLO  (TARIFA NÃO REEMBOLSÁVEL) ;10;4;1;2;1;1;0;1;0;1;1
+370;1687;T1 - 6.3.E;1;4;1;4;1;3;0;1;0;0;1
+370;1688;T1 - 5.4.A;1;4;1;4;1;3;0;1;0;0;1
+370;1689;T1 - 2.4.E;1;4;1;4;1;3;0;1;0;0;1
+370;1690;T1 - 1.3.G;1;4;1;4;1;3;0;1;0;0;1
+370;1691;T2 - 6.5.E/F;2;6;1;6;1;5;0;1;0;0;1
+370;1692;T2 - 6.7.B;1;6;1;6;1;5;0;1;0;0;1
+370;1693;T2 - 3.6.A;1;6;1;6;1;5;0;1;0;0;1
+370;1695;T2 - 2.6.B;1;6;1;6;1;5;0;1;0;0;1
+370;1696;T2 - 1.1.A;1;6;1;6;1;5;0;1;0;0;1
+370;1697;T3 - 4.4.C;1;8;1;8;1;7;0;1;0;0;1
+370;1698;T3 - 5.5/6.A;2;8;1;8;1;7;0;1;0;0;1
+317;1705;Quarto Twin;5;2;1;2;1;1;0;1;0;0;1
+317;1706;Quarto Triplo;1;3;2;3;2;1;0;1;0;0;1
+317;1707;Quarto Quádruplo;2;4;1;4;3;2;0;2;0;0;2
+369;1718;Quarto Duplo Executivo;1;2;1;2;1;1;0;0;0;0;1
+369;1719;Quarto Duplo ou Twin;2;2;1;2;1;1;0;0;0;0;1
+369;1720;Quarto Triplo;1;3;1;3;1;0;0;0;0;0;0
+369;1721;Quarto Familiar (2 Adultos + 2 Crianças);1;4;1;2;1;2;0;0;0;0;0
+369;1722;Quarto Individual;2;1;1;1;1;0;0;0;0;0;0
+378;1730;Duplo Vista Mosteiro;5;2;1;2;1;1;0;0;0;0;0
+378;1731;Triplo Com Varanda;2;3;2;3;2;1;0;1;0;1;0
+379;1732;Suite T1 Standard - Vista Sul/Terra;5;4;1;4;1;2;0;1;0;0;1
+379;1736;Estúdio Standard - T0 Vista Sul/Terra ;5;2;1;2;1;1;0;1;0;0;1
+378;1737;Duplo Top Mosteiro;3;2;1;2;1;1;0;1;0;0;1
+378;1738;Duplo ou Twin Standard;7;2;1;2;1;1;0;1;0;0;1
+379;1739;Suite T1 Vista Marina ou Piscina;5;4;1;4;1;2;0;1;0;0;1
+379;1740;Estúdio Superior - T0 Vista Marina ou Piscina;5;2;1;2;1;1;0;1;0;0;1
+379;1741;T2 Superior Vista Marina ou Piscina;1;4;1;4;1;2;0;1;0;0;1
+379;1742;T3 Vista Marina ou Piscina;1;6;1;6;1;3;0;2;0;0;2
+379;1743;T2 Vista jardim;2;4;1;4;1;2;0;1;0;0;1
+379;1744;T2 Vista Marina ou Piscina;2;4;1;4;1;2;0;1;0;0;1
+358;1745;Suite Deluxe com Vista Cidade;1;2;1;2;1;0;0;0;0;0;0
+358;1746;Suite Twin com Vista Cidade;1;2;1;2;1;1;0;1;0;0;0
+378;1749;Familiar (2 adultos + 2 crianças);1;4;4;2;2;2;2;1;0;1;0
+380;1750;Superior Loft;20;2;1;2;1;1;0;0;0;0;0
+380;1751;Premium Loft Sunset;20;2;1;2;1;1;0;0;0;0;0
+380;1757;Premium Corner Loft;3;2;1;2;1;1;0;0;0;0;0
+380;1758;The Oitavos Suite;1;2;1;2;1;1;0;0;0;0;0
+380;1759;The Atlantic Suite;1;2;1;2;1;1;0;0;0;0;0
+179;1765;Family  Comfort Room  Plus;3;4;1;4;1;3;0;0;0;0;0
+179;1766;Suite Comfort Plus;7;3;1;3;1;2;0;0;0;0;0
+358;1767;Suite Twin com Vista Jardim;1;2;1;2;1;0;0;0;0;0;0
+358;1768;Suite Com Pátio Privado;1;2;1;2;1;1;0;1;0;0;0
+358;1769;Suite com Varanda e Vista Cidade;2;2;1;2;1;1;0;1;0;0;0
+358;1770;Suite com Varanda Interior;1;2;1;2;1;1;0;1;0;0;0
+358;1771;Suite Canto;1;2;1;2;1;1;0;1;0;0;0
+358;1772;Suite com Vista Cidade;1;2;1;2;1;1;0;1;0;0;0
+358;1773;Suite Torre;1;2;1;2;1;0;0;0;0;0;0
+384;1782;Quarto Duplo;5;2;1;2;1;1;0;0;0;0;0
+384;1783;Quarto Twin;7;2;1;2;1;1;0;0;0;0;0
+384;1784;Casa com 1 Quarto;5;3;1;3;1;2;0;0;0;0;0
+384;1785;Quarto Individual;3;1;1;1;1;0;0;0;0;0;0
+384;1786;Casa Superior;1;4;1;4;1;2;0;0;0;0;0
+384;1787;Casa com 2 Quartos;6;5;1;5;1;3;0;0;0;0;0
+386;1789;Double Room;3;3;1;2;1;0;0;1;0;0;1
+386;1790;Suite;5;4;1;2;1;1;0;1;0;0;0
+389;1793;T1;8;5;1;2;1;2;0;1;0;1;1
+389;1796;T2;4;8;2;4;2;2;0;2;1;1;2
+389;1797;T2PH;3;8;2;4;1;2;0;2;0;1;1
+391;1800;APART;1;4;1;4;1;3;0;1;0;0;1
+392;1801;QUARTO DUPLO OU TWIN ;6;3;1;3;1;0;0;1;0;0;1
+391;1803;Bordeaux;1;3;1;3;1;2;0;2;1;1;2
+391;1804;Flores;1;2;1;2;1;1;0;1;0;0;1
+391;1805;Azulejos;1;3;1;3;1;2;0;2;1;1;2
+391;1806;Dourado;1;3;1;3;1;2;0;1;1;1;1
+391;1807;Amarelo;1;2;1;2;1;1;0;1;0;0;1
+391;1808;Laranja;1;2;1;2;1;1;0;1;0;0;1
+391;1809;Azul;1;3;1;3;1;2;0;1;1;1;1
+391;1810;Música;1;2;1;2;1;1;0;1;0;0;1
+391;1811;Quadrados;1;3;1;3;1;2;0;2;1;1;2
+391;1812;Liberdade;1;3;1;3;1;1;0;1;1;1;1
+392;1813;QUARTO INDIVIDUAL;2;1;1;1;1;0;0;0;0;0;0
+390;1814;DBL ;4;2;1;2;1;1;0;1;0;1;0
+390;1815;Familiar ;1;4;1;3;1;2;0;1;2;2;1
+386;1818;Superior Double Room;4;4;1;2;2;1;0;1;1;1;1
+54;1823;Quarto Duplo;5;2;1;2;1;0;0;0;0;0;0
+378;1824;Individual Básico;1;1;1;1;1;0;0;0;0;0;0
+378;1825;Duplo com Cama Extra;1;3;1;2;1;1;1;0;0;0;0
+390;1826;DBL / TWN  com Varanda;3;2;1;2;1;1;0;1;1;1;1
+395;1828;Estúdio;5;2;1;2;1;0;0;1;0;0;1
+395;1829;Estúdio Jardim ;6;2;1;2;1;0;0;1;0;0;0
+395;1830;Estúdio Familiar;3;4;1;4;1;0;0;1;0;0;0
+395;1831;Estúdio Premier;2;4;1;4;1;0;0;1;0;0;0
+386;1833;Single;3;1;1;1;1;0;0;0;0;0;0
+179;1850;Suite Panorâmica Deluxe;3;2;1;2;1;0;0;0;0;0;0
+399;1851;1 Bedroom Terrace;1;3;1;3;1;1;0;1;1;1;1
+399;1852;1 Bedroom with Country View;1;3;1;3;1;1;0;1;0;0;1
+399;1853;Studio Pool View;1;3;1;3;1;1;0;1;1;1;1
+399;1858;1 Bedroom Pool View;1;3;1;3;1;1;0;1;1;1;1
+399;1859;1 Bedroom Garden View;1;3;1;3;1;1;0;1;1;1;1
+399;1860;Studio Sea View;1;3;1;3;1;1;0;1;0;1;1
+399;1861;1 Bedroom Sea View;1;2;1;2;1;0;0;0;0;0;0
+399;1862;Studio Country View;1;3;1;2;1;1;0;1;0;0;1
+399;1863;1 Bedroom Private Terrace;1;3;1;3;1;1;0;1;0;0;1
+400;1864;DBL / TWN ;6;2;1;2;1;0;0;0;0;0;0
+400;1865;Triplo;3;3;1;3;1;0;0;0;1;0;0
+400;1873;Familiar;1;4;1;4;1;0;0;0;0;0;0
+403;1875;Quarto Superior;4;2;1;2;1;1;0;1;0;0;0
+403;1876;Quarto Standard;16;2;1;2;1;1;0;1;1;1;1
+405;1878;Single Room;2;1;1;1;1;0;0;0;0;0;0
+405;1879;Double Room;2;2;1;2;1;0;0;0;0;0;0
+370;1886;T2 - 1.2.E;1;6;1;6;1;5;0;1;0;0;1
+327;1887;T2 STD;5;4;1;4;1;3;0;2;0;0;0
+404;1888;Duplo/Twin;7;3;1;3;1;1;0;1;0;0;0
+392;1889;APARTAMENTO ;3;3;1;3;1;0;0;1;0;0;1
+406;1890;Estudio;9;4;1;4;1;2;0;0;0;0;0
+406;1891;Standard;22;2;1;2;1;0;0;0;0;0;0
+409;1904;Twin Standard;22;2;1;2;1;0;0;0;0;0;0
+409;1905;Duplo Standard;7;2;1;2;1;0;0;0;0;0;0
+409;1906;Duplo Vista Mar;5;2;1;2;1;0;0;0;0;0;0
+304;1909;101 - Duplo Superior;1;2;1;2;1;0;0;0;0;0;0
+413;1912;Quarto Twin / Duplo Vista Montanha;3;4;1;2;1;1;0;1;1;1;1
+413;1913;Quarto Twin / Duplo Vista Jardim;3;3;1;2;1;1;0;1;1;1;1
+413;1914;Quarto Duplo Superior;3;2;1;2;1;0;0;1;0;0;0
+413;1915;Suite Familiar;1;4;1;2;2;2;0;2;1;2;1
+378;1918;Duplo Sem Varanda;2;2;1;2;1;1;0;0;0;0;0
+378;1919;Triplo Económico sem Varanda;1;4;2;2;2;1;1;0;1;0;0
+400;1920;Duplo/Twin Superior;1;2;1;2;1;0;0;0;0;0;0
+421;1930;Duplo ou Twin Superior;4;4;1;3;1;2;0;2;2;2;2
+421;1931;Duplo ou Twin Standard;19;3;1;3;1;1;0;1;1;1;2
+404;1936;Single;2;2;1;2;1;1;0;1;0;1;1
+415;1940;Duplo;60;3;1;2;1;1;0;1;1;0;0
+415;1941;Single;60;1;1;1;1;0;0;0;0;0;0
+380;1945;Family Suite - Interconnected Rooms;1;4;1;4;1;1;0;0;0;0;0
+311;1946;DBT - Quarto Duplo com Cama Extra;2;3;1;3;1;3;0;0;0;0;0
+370;1952;T2 - 2.4.D;1;6;1;6;1;5;0;1;0;0;1
+425;1953;Duplo;7;3;1;3;1;1;0;0;0;0;0
+425;1954;Twin / Single;39;4;1;4;1;4;0;0;0;0;0
+425;1955;Suite;2;4;1;4;1;2;0;0;0;0;0
+423;1957;Duplex Apartment 3a;1;4;1;4;1;0;0;0;0;0;0
+423;1958;Smart Apartment 1a;1;2;1;2;1;0;0;0;0;0;0
+423;1959;Studio Apartment 2b;1;2;1;2;1;0;0;0;0;0;0
+425;1965;Triplo;4;4;1;4;1;4;0;0;0;0;0
+415;1966;Suite;3;3;1;2;1;1;0;1;1;0;0
+416;1967;Duplo/Twin;10;3;1;2;1;1;0;1;1;0;0
+416;1968;Single;10;1;1;1;1;0;0;0;0;0;0
+423;1972;Smart Apartment 1b;1;2;1;2;1;0;0;0;0;0;0
+423;1973;Smart Apartment 4;1;1;1;2;1;0;0;0;0;0;0
+428;1974;T1;8;4;1;4;1;3;0;1;0;0;1
+423;1982;Studio Apartment 2a;1;2;1;2;1;0;0;0;0;0;0
+423;1983;Studio Apartment 3b;1;1;1;2;1;0;0;0;0;0;0
+416;1984;Triplo;2;3;1;3;1;1;0;0;0;0;0
+427;1988;Suite Deluxe;9;2;1;2;1;0;0;0;0;0;0
+427;1989;Camaratas;4;1;1;1;1;0;0;0;0;0;0
+426;1990;Twin Standard;26;2;1;2;1;0;0;1;0;0;1
+426;1991;Duplo Premium - Cama de Casal;7;3;1;2;1;1;0;1;1;0;1
+426;1992;Junior Suite;4;4;1;2;1;1;0;1;0;0;1
+426;1993;Twin Assotado;6;2;1;2;1;0;0;0;0;0;0
+426;1994;Twin Premium;5;3;1;2;1;1;0;1;1;0;1
+426;1995;Duplo Standard - Cama de Casal;10;2;1;2;1;0;0;0;0;0;0
+404;2011;Quarto Familiar;1;3;1;3;1;2;0;2;0;0;0
+311;2034;DBS - Quarto Duplo Superior;5;2;1;2;1;2;0;0;0;0;0
+414;2046;Twin Vista Praça;2;2;1;2;1;0;0;1;0;0;0
+414;2047;Duplo Superior Vista Mar;3;2;1;2;1;0;0;1;0;0;1
+414;2048;Apartamento ;4;4;1;4;1;1;0;1;1;1;1
+414;2049;Suite Junior;1;4;1;2;1;1;0;1;1;1;1
+414;2050;Duplo Vista Interior;3;3;1;2;1;1;0;1;1;1;1
+414;2051;Duplo Standard com Varanda;3;2;1;2;1;0;0;1;0;0;0
+427;2058;Twin ou Duplo Confort;2;2;1;2;1;0;0;0;0;0;0
+427;2059;Twin ou Duplo Deluxe;2;2;1;2;1;0;0;0;0;0;0
+443;2061;Clássico Standard;18;2;1;2;1;0;0;0;0;0;0
+443;2062;Clássico Vista Mar;16;2;1;2;1;0;0;0;0;0;0
+443;2063;Superior Vista Mar;7;2;1;2;1;0;0;0;0;0;0
+443;2064;Suite Deluxe;1;2;1;2;1;1;0;1;1;1;1
+442;2066;Standard;2;3;1;2;1;1;0;1;1;0;0
+442;2067;Lateral - Vista Mar;5;3;1;2;1;1;0;1;1;0;0
+442;2068;Frontal - Vista Mar;5;3;1;2;1;1;0;1;1;0;0
+442;2069;Suite;2;3;1;2;1;1;0;1;1;0;0
+414;2072;Quarto Comunicante;4;2;1;2;1;0;0;0;0;0;0
+444;2073;Duplo ;14;2;1;2;1;1;0;1;0;0;1
+444;2074;Duplo   Vista Mar lateral;5;2;1;2;1;1;0;1;0;0;1
+444;2075; Suite Junior;7;4;1;2;1;3;0;1;1;1;1
+444;2076;Suite;4;4;1;2;1;3;0;1;0;1;1
+444;2077;Familiar;4;4;1;2;1;3;0;1;0;1;1
+445;2079;Duplo ;1;2;1;2;1;0;0;0;0;0;0
+445;2080;Estúdio;5;3;1;2;1;2;0;1;1;1;1
+452;2100;Quarto Familiar (2+2) ;2;4;1;4;1;0;0;0;0;0;0
+452;2101;Duplo Standard;8;2;1;2;1;0;0;0;0;0;0
+452;2103;Twin Superior ;8;2;1;2;1;0;0;0;0;0;0
+452;2104;Duplo Superior ;8;2;1;2;1;0;0;0;0;0;0
+452;2110;Twin Standard ;27;2;1;2;1;0;0;0;0;0;0
+452;2114;Duplo ou Twin standard com cama extra;10;3;1;3;1;0;0;0;0;0;0
+453;2117;Apartamento T1;6;4;1;4;1;3;0;1;0;0;0
+453;2118;Apartamento T2;3;6;1;6;1;5;0;2;0;0;0
+392;2121;QUARTO FAMILIAR ( 2 adultos+criança );3;3;1;2;1;1;0;1;0;0;1
+392;2122;APARTAMENTO FAMILIAR ( 2 adultos+ 1 ou 2 crianças );2;4;1;2;1;2;1;1;0;0;1
+414;2135;Twin Vista Interior;3;3;1;2;1;1;0;1;1;1;1
+414;2136;Twin com varanda  ;1;2;1;2;1;1;0;1;1;1;1
+414;2137;Duplo Vista Praça ;6;2;1;2;1;0;0;0;0;0;0
+445;2139;Terrace Room ;3;2;1;2;1;0;0;0;0;0;0
+445;2140;Deluxe Room;6;2;1;2;1;0;0;0;0;0;0
+445;2141;Deluxe Dossel Room;0;2;1;2;1;0;0;0;0;0;0
+311;2159;SUT - Quarto Premium;4;2;1;2;1;0;0;0;0;0;0
+327;2160;T1 c/ peq. almoço;23;2;1;2;1;1;0;1;1;1;1
+241;2178;Apartamento  T1 Superior - 1 Quarto;5;3;1;3;1;1;0;1;0;0;0
+241;2179;Apartamento T1 Rooftop Superior - 1 Quarto;1;2;1;2;1;1;0;1;0;0;0
+241;2180;Apartamento T2 Superior - 2 Quartos;4;6;1;4;1;2;0;2;0;0;0
+49;2181;Quarto Twin;10;2;1;2;1;1;0;1;0;0;0
+20;2200;TRIPLE ROOM;2;3;1;3;3;0;0;0;0;0;0
+477;2210;Quarto Duplo ou Twin;28;3;1;3;1;1;0;0;0;0;0
+477;2211;Quarto Duplo ou Twin com Varanda;14;2;1;2;1;0;0;0;0;0;0
+477;2212;Suite Prestígio;2;3;1;3;1;1;0;0;0;0;0
+477;2213;Suite Deluxe;2;4;1;4;1;2;0;0;0;0;0
+477;2214;Quarto Duplo ou Twin com Cama Extra Adulto;6;3;1;3;1;0;0;0;0;0;0
+439;2217;STANDARD WC ROOM;9;2;1;2;1;0;0;0;0;0;0
+439;2218;SUPERIOR DOUBLE / TWIN;26;2;1;2;1;0;0;0;0;0;0
+439;2219;DELUXE OVAL BED WC ROOM;5;2;1;2;1;0;0;0;0;0;0
+439;2220;PRIME BATHTUB ROOM;1;2;1;2;1;0;0;0;0;0;0
+444;2229;Triplo;5;3;1;3;1;2;0;1;0;0;1
+478;2231;Duplo (Cama de Casal);12;2;1;2;1;0;0;0;0;0;0
+478;2232;Twin (2 Camas Solteiro);8;2;1;2;1;0;0;0;0;0;0
+478;2233;Triplo;5;3;1;3;1;0;0;0;0;0;0
+478;2234;Single;1;1;1;1;1;0;0;0;0;0;0
+479;2244;Shared Dorm - Shared Bathroom (21);21;1;1;1;1;0;0;0;0;0;0
+479;2245;Shared Dorm, Private Bathroom (8);8;1;1;1;1;0;0;0;0;0;0
+479;2248;Shared Room Ghandi (4);4;4;1;1;1;0;0;0;0;0;0
+479;2250;Suite Room Albert;1;1;1;5;1;0;0;0;0;0;0
+479;2251;Suite Room 7;2;1;1;7;1;0;0;0;0;0;0
+309;2254;Quarto Duplo Superior;8;2;1;2;1;1;0;0;0;0;0
+321;2257;Suite Familia 4 pessoas;4;4;1;4;3;2;0;0;0;0;1
+321;2258;Quarto Alentejano;2;2;1;2;1;0;0;0;0;0;0
+322;2259;Twin;18;2;1;2;1;1;0;0;0;0;0
+322;2260;Superior;4;2;1;2;1;0;0;0;0;0;0
+319;2264;Standard;18;2;1;2;1;0;0;0;0;0;0
+433;2269;QUARTO DUPLO;10;2;1;2;1;0;0;0;0;0;0
+320;2274;Cama em Camarata Feminina;6;6;1;1;1;0;0;0;0;0;0
+320;2275;Suite Dupla;10;2;1;2;1;0;0;0;0;0;0
+320;2278;Suite Familiar;5;4;1;4;1;0;0;0;0;0;0
+322;2284;Triplo;8;3;1;3;1;2;0;0;0;0;0
+482;2285;Apartamento T1;90;4;1;4;1;3;0;1;0;0;1
+482;2286;Apartamento T2;43;6;1;6;1;5;0;1;0;0;1
+483;2287;Twin Standard ;49;3;1;2;1;1;0;1;1;1;1
+483;2288;Double Standard ;39;4;1;2;1;1;0;1;1;1;2
+483;2289;Family Room Standard ;2;4;2;3;2;2;1;2;1;1;1
+485;2300;Quarto Duplo Standard;1;2;1;2;1;0;0;0;0;0;0
+485;2301;Quarto Twin Standard;1;2;1;2;1;0;0;0;0;0;0
+483;2313;Suite Standard;5;4;1;2;1;2;0;2;1;1;2
+483;2314;Suite Master ;1;4;1;2;1;2;0;2;1;0;2
+490;2317;Apartamento T1;1;6;1;6;1;5;0;1;0;0;0
+491;2319;Apartamento T1 com varanda e Vista de Mar;1;5;1;4;1;1;0;1;0;0;0
+492;2321;Apartamento T2;1;9;1;9;1;8;0;1;0;0;0
+492;2322;Quarto twin com WC privativa;3;2;1;2;1;1;0;1;0;0;0
+493;2323;Apartamento T1 R/C;1;4;1;4;1;3;0;1;0;0;0
+493;2324;Estudio com sala;1;2;1;2;1;1;0;1;0;0;0
+494;2326;Quarto de casal com WC privativa;1;2;1;2;1;1;0;1;0;0;0
+495;2327;Quarto Twin de luxo;1;4;1;4;1;3;0;2;0;0;2
+495;2328;Suite Executiva;3;4;1;4;1;3;0;2;0;0;1
+494;2331;Quarto Familiar twin com WC privativa ;1;4;1;4;1;3;0;1;0;0;1
+492;2332;Quarto familiar com WC privativa;1;3;1;3;1;2;0;2;0;0;0
+492;2333;Quarto de casal com WC privativa;3;2;1;2;1;1;0;1;0;0;0
+495;2334;Quarto Duplo;1;2;1;2;1;1;0;1;0;0;1
+495;2335;Quarto Twin ;1;2;1;2;1;1;0;2;0;0;2
+495;2336;Suite Deluxe;1;4;1;4;1;3;0;2;0;0;2
+495;2337;Quarto Duplo Conforto;1;3;1;3;1;2;0;1;1;1;1
+493;2338;Estudio com Terraço;1;2;1;2;1;1;0;1;0;0;0
+297;2347;VERDE OLIVA - Apartamento T1 ;1;3;1;3;1;1;0;1;0;0;0
+297;2348;VERDE CELADON - Apartamento T2;1;6;4;6;1;5;0;1;0;0;0
+297;2349;AZUL PORTO - Apartamento T2;1;6;1;6;4;5;0;1;0;0;0
+499;2359;Studio Standard;6;4;1;4;1;4;0;0;0;0;0
+499;2360;Studio Premium;8;4;1;4;1;4;0;0;0;0;0
+501;2363;Casa Cristina;1;6;1;6;1;1;0;1;1;1;1
+501;2364;Casa Leonor;1;4;1;2;1;1;0;1;1;1;1
+503;2367;Quarto Single;25;1;1;1;1;0;0;0;0;0;0
+503;2368;Quarto Duplo / Twin;64;2;2;2;2;0;0;0;0;0;0
+504;2369;Cela Superior;2;2;1;2;1;0;0;1;0;0;0
+504;2370;Suite Familiar;1;4;2;4;1;2;0;2;0;0;0
+501;2372;Casa Matilde;1;4;1;4;1;1;0;1;1;1;1
+501;2373;Casa Teresinha;1;2;1;2;1;0;0;1;0;0;1
+504;2374;Cela da Torre;1;2;1;2;1;0;0;1;0;0;0
+504;2376;Cela com Galeria;2;2;1;2;1;0;0;1;0;0;0
+504;2377;Cela Monacal;6;2;1;2;1;0;0;1;0;0;0
+504;2378;Cela Sæculare;13;2;1;2;1;0;0;1;0;0;0
+504;2379;Cela Familiar;2;2;2;2;1;2;0;2;0;0;0
+503;2380;Suite;9;5;1;5;1;4;0;0;0;0;0
+392;2382;APARTAMENTO COM 2 QUARTOS;1;4;2;4;2;1;0;1;0;0;0
+494;2383;Quarto twin Com WC privativa 1;1;2;1;2;1;1;0;1;0;0;1
+444;2384;Twin;24;2;1;2;1;1;0;1;0;0;1
+444;2386; Twin vista  mar parcial;5;2;1;2;1;1;0;1;0;0;1
+509;2388;Quarto Duplo Standard;1;2;1;2;1;0;0;0;0;0;0
+509;2389;Quarto Twin Standard;1;2;1;2;1;0;0;0;0;0;0
+54;2393;Bungallow;1;5;1;5;1;2;0;1;0;0;0
+511;2394;Quarto Duplo ou Twin;6;3;1;3;1;1;0;1;0;0;1
+511;2395;Apartamento com 1 Quarto;1;4;1;4;1;2;0;1;0;0;0
+501;2396;Quarto Duplo;3;3;1;2;1;1;0;1;0;0;1
+501;2397;Quarto Twin;3;3;1;2;1;1;0;1;0;0;1
+511;2398;Apartamento com 2 Quartos;2;5;1;5;1;2;0;1;0;0;0
+511;2399;Apartamento Estudio;1;2;1;2;1;0;0;1;0;0;1
+465;2407;Duplo Deluxe ;2;2;1;2;1;0;0;0;0;0;0
+465;2408;Suite Junior Deluxe;2;3;1;3;1;1;0;1;0;0;0
+465;2409;Queen Deluxe;1;2;1;2;1;0;0;0;0;0;0
+512;2413;Suite 1;1;2;1;2;1;0;0;0;0;0;1
+512;2414;Suite 2;1;2;1;2;1;0;0;0;0;0;1
+512;2415;Suite 3;1;4;1;2;1;1;0;0;0;0;0
+512;2416;Suite 4;1;2;1;2;1;0;0;0;0;0;1
+512;2417;Suite 5;1;4;1;2;1;2;0;0;0;0;1
+465;2418;Patio Deluxe;1;2;1;2;1;0;0;0;0;0;0
+465;2421;Familiar Deluxe;1;4;2;4;1;2;0;0;0;0;0
+513;2424;Apartamento T2;2;6;1;6;1;0;0;1;0;0;0
+514;2425;Eco Garden Room;4;2;1;2;1;0;0;0;0;0;0
+327;2428;T2 C/ Pequeno Almoço;28;4;1;4;1;4;0;2;0;0;0
+327;2429;T2 STD C/ Peq. Almoço;5;4;1;4;1;3;0;2;0;0;0
+516;2436;Quarto Duplo standard;6;2;1;2;1;0;0;0;0;0;0
+516;2437;Quarto Twin Standard;10;2;1;2;1;0;0;0;0;0;0
+511;2444;Quarto Duplo;3;2;1;3;1;0;0;1;0;0;1
+511;2445;Quarto Familiar;1;6;3;6;1;4;0;2;0;0;1
+520;2450;Quarto Privado 6;4;6;1;6;1;0;0;0;0;0;0
+520;2451;Quarto Triplo 3;2;3;1;3;1;0;0;0;0;0;0
+522;2454;Quarto Duplo;1;2;1;2;1;0;0;0;0;0;0
+522;2455;Quarto Twin;1;2;1;2;1;0;0;0;0;0;0
+524;2459;Quarto Duplo Standard;1;2;1;2;1;0;0;0;0;1;1
+524;2460;Quarto Twin Standard;1;3;1;2;1;1;0;0;0;0;0
+522;2462;Quarto Single;2;1;1;1;1;0;0;0;0;0;0
+522;2463;Quarto Triplo;3;1;1;3;3;2;1;1;0;0;1
+522;2464;Quarto Familiar;4;4;1;4;2;0;0;1;0;0;1
+516;2467;Quarto Triplo ;3;3;1;3;1;0;0;0;0;0;1
+516;2468;Quarto Single;3;1;1;1;1;0;0;0;0;0;0
+522;2469;Triplo - Casal + Single;3;1;1;3;3;2;1;1;0;0;1
+526;2472;Quarto Single;5;1;1;1;1;0;0;0;0;0;0
+520;2477;Cama Partilhado 6;4;1;1;1;1;0;0;0;0;0;0
+527;2484;Twin Standard;20;2;1;2;1;1;0;1;0;0;1
+527;2485;Twin Varanda Vista Mar;15;2;1;2;1;1;0;1;0;0;1
+528;2486;Estúdio 2 PAX;10;3;1;3;1;1;0;1;1;1;1
+528;2487;Estúdio 3 PAX;10;4;1;4;1;1;0;1;1;1;1
+516;2488;Temático 1001 Noites;1;2;1;2;1;0;0;0;0;0;0
+516;2489;Temático Velocidade;1;2;1;2;1;0;0;0;0;0;0
+516;2490;Temático Volta ao Mundo;1;2;1;2;1;0;0;0;0;0;0
+516;2491;Temático Praia;1;2;1;2;1;0;0;0;0;0;0
+514;2492;Garden Room;4;3;1;2;1;0;0;0;0;0;0
+514;2494;Pool Room;5;3;1;3;1;0;0;0;0;0;0
+527;2495;Twin Varanda;15;2;1;2;1;1;0;1;0;0;1
+530;2498;Duplo ;1;2;1;2;1;0;0;0;0;0;0
+530;2499;Twin ;1;2;1;2;1;0;0;0;0;0;0
+516;2502;Temático Glamour;1;2;1;2;1;0;0;0;0;0;0
+532;2505;Dormitório Misto de 12 camas Beliche;12;1;1;1;1;0;0;0;0;0;0
+532;2506;Dormitório misto de 8 camas em beliche;8;1;1;1;1;0;0;0;0;0;0
+528;2510;Apartamento 4 PAX;8;5;1;5;1;1;0;1;1;1;1
+528;2511;Apartamento 6 PAX;1;6;1;6;1;1;0;1;0;0;1
+527;2512;Triplo;10;3;1;3;1;1;0;1;0;0;1
+535;2523;Quarto Duplo;5;3;1;2;1;1;0;1;1;1;1
+535;2524;Quarto Twin;2;3;1;2;1;1;0;1;1;1;1
+535;2525;Quarto Twin Adaptado;1;3;1;2;1;1;0;1;1;1;1
+535;2526;Quarto Familiar;1;5;1;2;1;2;0;2;2;0;2
+535;2527;Suite;1;5;1;2;1;2;0;2;2;0;2
+537;2530;Alojamento Alqueva;1;2;1;2;1;0;0;0;0;0;0
+537;2531;Alojamento Caia;1;2;1;2;1;0;0;0;0;0;0
+539;2542;Quarto Dpl. Standard;5;2;1;2;1;0;0;0;0;0;0
+539;2543;Quarto Dpl. Superior;2;2;1;2;1;0;0;0;0;0;0
+539;2545;Villa T1;1;4;1;2;1;0;0;0;0;0;0
+539;2546;Villa T2;2;4;1;4;1;0;0;0;0;0;0
+532;2547;Dormitório Misto de 12 camas Beliche (tejo);12;10;1;1;1;0;0;0;0;0;0
+532;2548;Dormitório misto de 6 camas em beliche;6;1;1;1;1;0;0;0;0;0;0
+530;2550;Master;1;1;1;1;1;0;0;0;0;0;0
+280;2559;QUARTO DUPLO ECONÓMICO;1;2;1;2;1;0;0;0;0;0;0
+280;2560;SUITE STANDARD;1;4;1;3;1;2;0;2;1;2;2
+280;2561;QUARTO DUPLO STANDARD;5;2;1;2;1;1;0;1;0;0;0
+280;2562;QUARTO DUPLO SUPERIOR;7;2;1;2;1;1;0;1;1;1;1
+280;2563;SUITE CLÁSSICA;1;3;1;2;1;1;0;1;0;0;0
+280;2564;SUITE FAMILIAR;2;4;1;3;1;2;0;2;1;2;2
+490;2573;Quarto de casal com WC privativa e varanda;1;2;1;2;1;1;0;1;0;0;0
+490;2574;Quarto familiar com WC privativa;1;3;1;3;1;2;0;1;1;1;1
+408;2601;Apartamento com 1 Quarto e Varanda ;1;1;1;3;1;1;0;0;0;0;0
+408;2602; Apartamento com 1 Quarto, Varanda e Vista da Piscina;1;4;1;4;1;2;0;0;0;0;0
+408;2603;   Estúdio com Varanda e Vista para a Piscina;1;3;1;3;1;1;0;0;0;0;0
+408;2604; Apartamento Standard com 1 Quarto;1;4;1;4;1;2;0;0;0;0;0
+408;2605;Estúdio;1;3;1;3;1;1;0;0;0;0;0
+408;2606;Estúdio com Varanda;1;3;1;3;1;1;0;0;0;0;0
+408;2607;Apartamento com Varanda ;1;3;1;3;1;1;0;0;0;0;0
+423;2611;optown 1a;1;1;1;1;1;0;0;0;0;0;0
+423;2612;optown 1b;1;1;1;1;1;0;0;0;0;0;0
+423;2613;optown 1c;1;1;1;1;1;0;0;0;0;0;0
+423;2614;optown 2a;1;1;1;1;1;0;0;0;0;0;0
+423;2615;optown 2b;1;1;1;1;1;0;0;0;0;0;0
+423;2616;optown 2c;1;1;1;1;1;0;0;0;0;0;0
+499;2648;Studio Superior;7;4;1;4;1;4;0;0;0;0;0
+280;2650;SUITE FAMILIAR SUPERIOR;1;1;1;3;1;2;0;2;0;2;1
+406;2652;Superior;9;2;1;2;1;0;0;0;0;0;0
+525;2655;Duplo/Twin Vista Mar ;27;4;1;2;1;1;0;1;0;0;0
+525;2656;Duplo/Twin Vista Serra;20;4;1;2;1;1;0;1;0;0;0
+525;2658;Suite Júnior Vista Serra;5;5;1;3;1;3;0;2;0;0;0
+544;2665;Two Bedroom Design Penthouse  BA36;1;4;1;4;1;3;0;1;0;0;1
+543;2669;Superior One BR 2/3F;2;4;1;4;1;3;0;1;0;0;1
+543;2670;Deluxe One BR 2/3D;2;4;1;4;1;3;0;1;0;0;1
+543;2671;Superior Two BR 2E;1;6;1;6;1;5;0;1;0;0;1
+543;2672;Deluxe Two BR 3E;1;6;1;6;1;5;0;1;0;0;1
+543;2673;Top Floor One BR 4F;1;4;1;4;1;3;0;1;0;0;1
+543;2674;Penthouse Two BD Duplex 4D;1;6;1;6;1;5;0;1;0;0;1
+543;2675;Penthouse Three BR Duplex 4E;1;8;1;8;1;7;0;1;0;0;1
+321;2677;Duplo Confort;9;3;1;2;1;1;0;0;0;0;0
+543;2678;Superior One BR w/Balcony 1F;1;4;1;4;1;3;0;1;0;0;1
+543;2680;Deluxe One BR w/Balcony 1D;1;4;1;4;1;3;0;1;0;0;1
+543;2681;Superior Two BR w/Bacony 1E;1;6;1;6;1;5;0;1;0;0;1
+546;2682;Quarto Duplo;9;2;1;2;1;0;0;0;0;0;0
+307;2690;T1 Familiar;4;4;1;4;1;0;0;0;0;0;0
+284;2691;STUDIO WITH TERRACE AND RIVER VIEW;1;2;1;2;1;0;0;1;0;0;0
+404;2692;Quarto Duplo /Twin com Cama Extra;1;3;1;3;1;1;0;1;0;0;0
+320;2700;Camarata Exclusiva;2;6;1;6;1;0;0;0;0;0;0
+513;2701;Apartamento T2 Nice To Stay;1;6;1;6;1;0;0;1;0;0;1
+321;2702;Suite Familia 3 Pessoas;2;3;3;3;2;1;0;0;0;0;0
+321;2704;Suite Familia 5 Pessoas ;2;5;3;5;3;4;0;0;0;0;0
+537;2716;Suite 1;1;4;1;2;1;1;0;1;0;0;1
+537;2717;Suite 2;1;8;1;4;1;2;0;2;0;2;2
+537;2718;Suite 3;1;6;1;4;1;0;0;2;0;0;2
+537;2719;Alojamento Alter;1;2;1;2;1;0;0;0;0;0;0
+537;2720;Alojamento Arraiolos;1;4;1;2;1;1;0;1;1;1;1
+537;2721;Alojamento Nisa;1;4;1;2;1;1;0;1;1;1;1
+537;2722;Alojamento Crato;1;3;1;2;1;1;0;1;1;1;1
+537;2723;Alojamento Mata;1;3;1;2;1;1;0;1;1;1;1
+537;2724;Alojamento Chança;1;3;1;2;1;1;0;1;1;1;1
+433;2732;QUARTO FAMILIAR;4;4;1;4;1;0;0;0;0;0;0
+237;2739;Double Romantico - banheira canto;4;2;1;2;1;0;0;0;0;0;0
+403;2740;Quarto Superior Adaptado a Mobilidade Reduzida;1;2;1;2;1;1;0;1;0;0;0
+391;2742;Superior;2;4;1;4;1;3;0;2;1;1;1
+391;2743;Studio DB;2;4;1;4;1;3;0;2;1;1;1
+391;2744;Sup DB JZ;1;4;1;4;1;3;0;2;1;1;1
+370;2745;T1 - 1.3.E;1;4;1;4;1;3;0;1;0;0;1
+391;2746;Studio TW;2;4;1;4;1;3;0;2;1;1;1
+297;2751;YELLOW TINY HOUSE - ESTÚDIO;1;2;1;2;1;0;0;0;0;0;0
+551;2754;bnK Sailing;1;6;1;6;1;0;0;0;0;0;0
+526;2757;Quarto Double;20;2;1;2;1;0;0;0;0;0;0
+526;2758;Quarto Double Superior;7;2;1;2;1;1;0;0;0;1;0
+526;2759;Quarto Executivo;2;4;1;2;1;2;0;0;0;2;0
+20;2760;DOUBLE ROOM BOOKING;1;2;1;2;1;1;0;0;1;0;0
+20;2761;DOUBLE ROOM CE BOOKING;1;3;1;3;1;0;0;0;0;0;0
+552;2762;Two Bedroom Penthouse with Terrace 78.7C;1;4;1;4;1;3;0;1;0;0;1
+545;2764;Two Bedroom River View 4.1B;1;3;1;3;1;2;0;1;0;0;1
+545;2765;Two Bedroom River View and Terrace 5.1B;1;3;1;3;1;2;0;1;0;0;1
+273;2768;Fogo;1;2;1;2;1;0;0;0;0;0;0
+483;2769;Triple  Room Standard ;2;4;2;3;2;1;0;1;1;1;1
+526;2770;Quarto Twin;23;2;1;2;1;0;0;0;0;0;0
+526;2771;Quarto Twin Superior;1;1;1;2;1;1;0;0;1;0;1
+526;2772;Quarto Twin/Double;1;1;1;2;1;0;0;0;0;0;0
+273;2774;Água;1;2;1;2;1;0;0;0;0;0;0
+273;2775;Paixão;1;2;1;2;1;0;0;0;0;0;0
+273;2776;Casa dos Caseiros;1;4;1;4;1;0;0;0;0;0;0
+273;2777;Ar;1;2;1;2;1;0;0;0;0;0;0
+273;2778;Alma;1;2;1;2;1;0;0;0;0;0;0
+273;2779;Terra;1;2;1;2;1;0;0;0;0;0;0
+206;2780;COMUNICANTES;3;4;1;4;1;1;0;0;0;0;0
+537;2782;Caravana1;1;4;1;2;1;3;0;1;0;0;0
+535;2783;Bungalow;1;2;1;2;1;0;0;0;0;0;0
+503;2784;Individual Economico Traseiras ;25;1;1;1;1;0;0;0;0;0;0
+503;2785;Duplo Economico Traseiras ;64;2;2;2;2;0;0;0;0;0;0
+553;2787;Twin Standard;14;2;1;2;1;0;0;0;0;0;0
+553;2788;Superior;12;2;1;2;1;0;0;0;0;0;0
+553;2789;Deluxe;8;2;1;2;1;0;0;0;0;0;0
+553;2790;Premium;4;2;1;2;1;0;0;0;0;0;0
+495;2791;Quarto Familiar;1;5;1;5;1;4;0;2;0;0;1
+495;2792;Quarto Familiar de luxo;1;5;1;5;1;4;0;2;0;0;1
+554;2793;Family Room;3;5;1;5;1;4;0;0;0;0;0
+554;2794;Bunk Bed in Mixed Dormitory;27;1;1;1;1;0;0;0;0;0;0
+490;2797;Apartamento T2;1;5;1;5;1;4;0;1;0;0;0
+490;2798;Apartamento Estúdio com Terraço;1;3;1;3;1;2;0;1;0;0;1
+490;2799;Apartamento estúdio;1;2;1;2;1;1;0;1;0;0;1
+493;2800;Estudio com lareira;1;2;1;2;1;1;0;1;0;0;0
+492;2801;Apartamento com 3 quartos com 3 casas de banho;1;7;1;7;1;6;0;1;0;0;0
+304;2803;001 - Apartamento de 2 Quartos;1;3;1;3;1;0;0;0;0;0;0
+304;2804;002 - Estúdio Duplex;1;4;1;4;1;0;0;0;0;0;0
+304;2805;003 - Estúdio Superior;1;4;1;4;1;0;0;0;0;0;0
+304;2806;102 - Quarto Duplo;1;2;1;2;1;0;0;0;0;0;0
+304;2807;103 - Quarto Twin Wc Exterior;1;2;1;2;1;0;0;0;0;0;0
+304;2808;004 - Estúdio Superior;1;4;1;4;1;0;0;0;0;0;0
+370;2809;T2 - 3.6.B;2;6;1;6;1;5;0;1;0;0;1
+511;2810;Quarto Duplo ou Twin Superior com Terraço;1;2;1;2;1;0;0;1;0;0;1
+477;2811;Quarto Duplo ou Twin com Cama Extra Criança ;4;3;1;2;1;1;0;0;0;0;0
+328;2812;ENSUITE Room;2;2;1;2;1;0;0;0;0;0;0
+328;2813;Interior Double Room;3;2;1;2;1;0;0;0;0;0;0
+537;2814;Caravana2;1;2;1;2;1;1;0;1;0;0;0
+281;2815;Quarto Single (DSI);5;2;1;1;1;0;0;0;0;0;0
+555;2818;Casa 38  com 3 quartos + 1 sofa cama;1;8;8;8;8;0;0;0;0;0;0
+555;2819;Casa 22  com 2 Quartos + Sofa Cama;1;6;6;6;6;0;0;0;0;0;0
+555;2820;Casa 30-32  com 2 Quartos + Sofa Cama;1;6;6;6;6;0;0;0;0;0;0
+555;2821;Casa 34-36 com 2 Quartos  ;1;4;4;4;4;0;0;0;0;0;0
+555;2822;Casa 24-26 com 5 Quartos;1;10;10;10;10;0;0;0;0;0;0
+281;2823;Quarto Duplo/ Twin + Cama Extra | 2-12;2;3;1;2;1;2;0;1;0;0;0
+404;2824;Casa do Jardim;2;4;1;4;1;2;0;1;0;0;0
+276;2825;Quarto Single (DSI) ;1;2;1;1;1;0;0;0;0;0;0
+276;2826;Quarto Duplo/ Twin + Cama Extra | 2-12;2;3;1;2;1;2;0;1;0;0;0
+279;2827;Quarto Single ;3;1;1;1;1;0;0;0;0;0;0
+279;2828;Quarto Duplo/ Twin + Cama Extra | 2-12 | DUPLICATE;2;3;1;2;1;2;0;1;0;0;0
+278;2829;Quarto Single (DSI) ;5;2;1;1;1;0;0;0;0;0;0
+278;2830;Quarto Duplo/ Twin + Cama Extra | 2-12 ;2;3;1;2;1;2;0;1;0;0;0
+556;2831;Double Room Standard;45;3;1;2;1;0;0;1;0;0;1
+556;2832;Twin Room Standard;27;2;1;2;1;1;0;0;0;0;0
+556;2833;Triple Room Standard;7;3;1;3;1;2;0;1;0;0;1
+556;2834;Suite Room Standard;3;4;1;4;1;3;0;1;0;0;1
+415;2835;Quarto Triplo;2;3;1;3;1;0;0;0;0;0;0
+539;2836;Villa T2 | Site;2;4;1;4;1;0;0;0;0;0;0
+556;2847;Double Room w/extra bed;2;3;1;3;1;1;0;1;0;0;0
+277;2848;Quarto Duplo/ Twin + Cama Extra | 2-12 ;2;3;1;2;1;2;0;1;0;0;0
+557;2849;Quarto Standard;24;2;1;2;1;0;0;0;0;0;0
+557;2850;Quarto Superior;19;2;1;2;1;0;0;0;0;0;0
+557;2851;Quarto Premium;24;3;1;3;1;1;0;0;0;0;0
+558;2854;Rubi T2;1;5;2;5;2;1;0;1;1;1;1
+558;2855;Ametista T1;1;3;2;3;2;1;0;1;1;1;1
+558;2856;Topázio T1;1;3;2;3;2;1;0;1;1;1;1
+558;2857;Esmeralda T1;1;3;2;3;1;1;0;1;1;2;1
+559;2860;Quarto Duplo ou Twin;9;3;1;2;1;1;0;1;0;0;0
+559;2861;Suite;1;3;1;2;1;1;0;1;0;0;0
+559;2862;Apartamento;3;3;1;2;1;1;0;1;0;0;0
+559;2863;Quarto Duplo Panorâmico;2;2;1;2;1;0;0;0;0;0;0
+54;2864;Apartamentos;4;4;1;4;1;2;0;2;0;2;0
+560;2865;Estudio ;1;2;1;2;1;0;0;1;0;0;1
+560;2866;Estúdio 2+1;1;3;1;2;1;1;0;1;0;0;1
+511;2867;Quarto Duplo Económico;1;2;1;2;1;0;0;0;0;0;0
+560;2868;Estudio 2+2;2;4;1;2;1;2;0;1;0;0;1
+560;2869;Estudio Familiar;3;4;1;4;1;0;0;1;0;0;1
+310;2870;Quarto Duplo Superior com Cama Extra ;6;3;1;3;1;2;0;0;0;0;0
+238;2873;Communicating Standard Room 1;1;4;1;4;1;0;0;1;0;0;0
+238;2874;Communicating Room Superior ;1;4;1;4;1;0;0;1;0;0;0
+319;2876;Executivo - Casal;26;2;1;2;1;1;0;1;1;0;1
+319;2877;Quarto Familiar;5;3;1;3;1;1;0;1;0;0;0
+561;2879;Quarto Duplo Standard;2;2;1;2;1;0;0;0;0;0;0
+561;2882;Suite;1;4;1;4;1;2;0;0;0;0;0
+561;2884;Quarto Duplo Superior;5;3;1;3;1;2;0;2;1;1;2
+390;2885;TWN ;6;2;1;2;1;1;0;1;0;1;0
+238;2886;Communicating Standard Room 2;1;4;1;4;1;0;0;1;0;0;0
+319;2889;City Individual;6;1;1;1;1;0;0;0;0;0;0
+319;2890;City Duplo;13;2;1;2;1;0;0;0;0;0;0
+319;2891;City Triplo;1;3;1;3;1;0;0;0;0;0;0
+179;2892;Duplo Comfort Mobilidade Condicionada;1;2;1;2;1;0;0;0;0;0;0
+280;2893;DUPLO SUPERIOR DELUXE;1;2;1;2;1;0;0;0;0;0;0
+309;2894;Quarto Premium;5;2;1;2;1;1;0;0;0;0;0
+526;2895;Apartamento T1;7;2;1;2;1;0;0;0;0;0;1
+526;2896;Apartamento T2;2;4;1;4;1;0;0;1;1;1;1
+560;2897;Estúdio  Superior;1;2;1;2;1;0;0;1;0;0;1
+259;2898;Hool Apartment 1;1;2;1;2;1;0;0;0;0;0;0
+328;2899;4 Bed Female Dormitory;4;1;1;1;1;0;0;0;0;0;0
+241;2901;Apartamento T2 Superior - Beautiful;1;2;1;4;1;2;0;2;1;1;2
+241;2902;Apartamento T2 Superior Lux;1;4;1;4;1;1;0;1;1;1;1
+242;2903;Apartamento T2 Superior Lux;1;2;1;2;1;1;1;1;1;1;1
+242;2904;Apartamento T1+1 Superior;3;3;1;1;1;1;1;1;1;1;1
+242;2905;Apartamento Loft;1;2;1;2;1;1;1;1;1;1;1
