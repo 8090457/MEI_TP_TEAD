@@ -18,238 +18,7 @@
    },
    "settings": {
     "params": {
-     "bdtMeta": {
-      "ZTOOLS_DATA_FRAMES": [
-       {
-        "columns": [
-         {
-          "name": "hotel_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Reserve_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "pais",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estado_reserva",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "room_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Q_tipo_quarto",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "rate_plan",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_reserva",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_chegada",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_partida",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "num_noites",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "adultos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_euros",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "dif_data_chegada_data_reserva",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "quantidade",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_maxima",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "localizacao",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estrelas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "hora_max_checkin",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "qtd_quartos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "is_holiday",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "event_count",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_avg",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_max",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_min",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "precipitation_avg",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "precipitation_max",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "precipitation_min",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         }
-        ]
-       }
-      ]
-     }
+     "bdtMeta": {}
     },
     "forms": {}
    },
@@ -257,20 +26,20 @@
    "jobName": "paragraph_1563110258183_1613653816",
    "id": "20190714-161738_1950435706",
    "dateCreated": "2019-07-14T16:17:38+0300",
-   "status": "FINISHED",
+   "status": "ERROR",
    "progressUpdateIntervalMs": 500,
    "focus": true,
    "$$hashKey": "object:394",
-   "text": "//Leitura dataset Final e limpeza dados correlação\n\nval finalDataSet = \"/data/tp/FinalDataSet.csv\" // Quartos_Reservados File\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .option(\"trim\", \"true\") \n        .load(finalDataSet)\n        .drop(\"T_tipo_quarto\") //Correlação com 1 q_tipo de quarto\n        .drop(\"area_localizacao\") // correlação com localização\n        .drop(\"city\") // correlação com localização\n        .drop(\"idade_max_criancas\") //-0,45 quantidades de quartos\n        .drop(\"idade_max_bebes\") //-0,28 quantidades de quartos\n        .drop(\"tmax\") //0,93 correlação tavg\n        .drop(\"tmin\") //0,93 correlação tavg\n        .drop(\"capacidade_max_adultos\") //0,80 correlação Capacidade Máxima\n        .drop(\"ocupacao\") //0,73 correlação adultos\n\n        \nprintln(df.count())\ndf.show()",
-   "dateStarted": "2023-05-19 00:54:40.548",
-   "dateUpdated": "2023-05-19 00:54:44.861",
-   "dateFinished": "2023-05-19 00:54:44.861",
+   "text": "//Leitura dataset Final e limpeza dados correlação\n\nval finalDataSet = \"/data/tp/FinalDataSet.csv\" // Quartos_Reservados File\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .option(\"trim\", \"true\") \n        .load(finalDataSet)\n        .drop(\"T_tipo_quarto\") //Correlação com 1 q_tipo de quarto\n        .drop(\"area_localizacao\") // correlação com localização\n        .drop(\"city\") // correlação com localização\n        .drop(\"idade_max_criancas\") //-0,45 quantidades de quartos\n        .drop(\"idade_max_bebes\") //-0,28 quantidades de quartos\n        .drop(\"tmax\") //0,93 correlação tavg\n        .drop(\"tmin\") //0,93 correlação tavg\n        .drop(\"capacidade_max_adultos\") //0,80 correlação Capacidade Máxima\n        .drop(\"ocupacao\") //0,73 correlação adultos\n        .drop(\"Reserve_ID\") // remoção do ID da reserva\n\nprintln(df.count())\ndf.show()",
+   "dateStarted": "2023-05-23 21:22:27.266",
+   "dateUpdated": "2023-05-23 21:22:39.303",
+   "dateFinished": "2023-05-23 21:22:39.303",
    "results": {
-    "code": "SUCCESS",
+    "code": "ERROR",
     "msg": [
      {
       "type": "TEXT",
-      "data": "24947\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+-------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+-----------------+-----------------+-----------------+\n|hotel_ID|Reserve_ID|          pais|estado_reserva|room_ID|       Q_tipo_quarto|           rate_plan|        data_reserva|       data_chegada|       data_partida|num_noites|adultos|criancas|bebes|  preco_euros|dif_data_chegada_data_reserva|quantidade|capacidade_maxima|capacidade_max_criancas|capacidade_max_bebes|         localizacao|estrelas|   hora_max_checkin|qtd_quartos|is_holiday|event_count|   temperature_avg|temperature_max|temperature_min|precipitation_avg|precipitation_max|precipitation_min|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+-------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+-----------------+-----------------+-----------------+\n|     310|   1457395|      Portugal|    Modificada|   1673|Quarto Duplo Supe...|        main rate bb|2022-03-23 13:51:...|2022-03-25 00:00:00|2022-03-27 00:00:00|         2|      2|       0|    0|        138.0|                            2|        63|                2|                      1|                   0|                Gaia|       3|2023-05-18 23:59:00|        192|         0|          0|15.533333333333331|           21.8|            9.2|             null|             null|             null|\n|     311|   1646445|      Portugal|    Modificada|   1407|DB - Quarto Duplo...|        main rate bb|2022-12-28 11:37:...|2023-01-02 00:00:00|2023-01-03 00:00:00|         1|      1|       0|    0|       65.709|                            5|         8|                2|                      2|                   0|                Maia|       3|2023-05-18 23:59:00|         30|         0|          0|               9.5|           15.0|            5.0|             0.15|              0.3|              0.0|\n|     535|   1696195|      Portugal|     Registado|   2523|        Quarto Duplo|             website|2023-03-12 22:15:...|2023-05-05 00:00:00|2023-05-07 00:00:00|         2|      2|       0|    0|        157.5|                           54|         5|                3|                      1|                   1| Travanca do Mondego|       4|2023-05-18 23:55:00|         11|         0|          1|              null|           null|           null|             null|             null|             null|\n|     310|   1478472|      Portugal|     Registado|   1673|Quarto Duplo Supe...|      non-refundable|2022-04-21 09:19:...|2022-04-21 00:00:00|2022-04-22 00:00:00|         1|      1|       0|    0|         47.7|                            0|        63|                2|                      1|                   0|                Gaia|       3|2023-05-18 23:59:00|        192|         0|          0|              9.85|           13.4|            7.3|             null|             null|             null|\n|     514|   1535824|   Reino Unido|    Modificada|   2494|           Pool Room|      non-refundable|2022-07-05 10:59:...|2022-08-13 00:00:00|2022-08-17 00:00:00|         4|      2|       0|    0|        702.0|                           39|         5|                3|                      0|                   0|Charneca de Caparica|       3|2023-05-18 18:00:00|         13|         1|          0|              21.9|           29.9|           18.1|              0.0|              0.0|              0.0|\n|     322|   1494812|       Espanha|     Registado|   1413|               Duplo|reembolsvel suple...|2022-05-12 17:54:...|2022-07-31 00:00:00|2022-08-02 00:00:00|         2|      2|       0|    0|        160.0|                           80|        19|                2|                      1|                   0|              Aveiro|       3|2023-05-18 23:59:00|         52|         0|          0|20.633333333333333|           28.3|           17.2|             null|             null|             null|\n|     309|   1459664|      Portugal|    Modificada|   1372|Quarto Duplo Stan...|      non-refundable|2022-03-26 20:48:...|2022-03-29 00:00:00|2022-03-30 00:00:00|         1|      2|       0|    0|         43.0|                            3|        10|                2|                      1|                   0|             Valongo|       3|2023-05-18 23:59:00|         41|         0|          0|             13.55|           22.5|            8.5|             null|             null|             null|\n|     311|   1628596|Arábia Saudita|     Registado|   1407|DB - Quarto Duplo...|        mr main rate|2022-11-20 14:59:...|2022-12-01 00:00:00|2022-12-02 00:00:00|         1|      2|       0|    0|        57.33|                           11|         8|                2|                      2|                   0|                Maia|       3|2023-05-18 23:59:00|         30|         1|          0|              10.5|           18.0|            5.0|              0.0|              0.0|              0.0|\n|     304|   1589923|        França|     Registado|   1357|203 - Quarto Dupl...|         tarifa site|2022-09-15 19:26:...|2022-09-28 00:00:00|2022-09-30 00:00:00|         2|      2|       0|    0|       139.84|                           13|         1|                2|                      0|                   0|             Coimbra|       0|2023-05-18 22:30:00|         28|         0|          0|15.866666666666665|           20.9|           11.1|              1.2|              3.3|              0.1|\n|     482|   1488375|       Irlanda|     Registado|   2286|      Apartamento T2|             website|2022-05-04 20:35:...|2022-08-10 00:00:00|2022-08-15 00:00:00|         5|      6|       0|    0|       1235.0|                           98|        43|                6|                      5|                   1|            Portimão|       4|2023-05-18 23:59:00|        143|         1|          0|21.700000000000003|           27.5|           17.5|             null|             null|             null|\n|     482|   1620626|      Portugal|     Registado|   2285|      Apartamento T1|      non-refundable|2022-11-04 22:59:...|2022-11-04 00:00:00|2022-11-06 00:00:00|         2|      2|       0|    0|61.8399999999|                            0|        90|                4|                      3|                   1|            Portimão|       4|2023-05-18 23:59:00|        143|         0|          0|18.433333333333334|           22.4|           15.2|             null|             null|             null|\n|     504|   1581442|      Portugal|     Registado|   2378|       Cela Sæculare|                 bar|2022-09-02 22:26:...|2022-09-03 00:00:00|2022-09-05 00:00:00|         2|      2|       0|    0|      169.575|                            1|        13|                2|                      0|                   1|              Monção|       4|2023-05-18 23:59:00|         27|         0|          0|              18.1|           23.6|           11.1|              2.5|              5.9|              0.0|\n|     310|   1626279|      Portugal|     Cancelado|   1395|Quarto Duplo Stan...|        mr main rate|2022-11-15 23:35:...|2022-11-26 00:00:00|2022-11-27 00:00:00|         1|      2|       0|    0|         44.1|                           11|        10|                2|                      1|                   0|                Gaia|       3|2023-05-18 23:59:00|        192|         0|          0|              11.2|           15.7|            8.4|             5.05|             10.1|              0.0|\n|     493|   1689638|      Portugal|     Registado|   2800| Estudio com lareira|                 bar|2023-03-03 12:31:...|2023-03-12 00:00:00|2023-03-14 00:00:00|         2|      2|       0|    0|        140.0|                            9|         1|                2|                      1|                   1|           Carnaxide|       0|2023-05-18 12:00:00|          5|         0|          0|              15.5|           19.3|           12.0|              0.0|              0.0|              0.0|\n|     535|   1651261|      Portugal|     Cancelado|   2523|        Quarto Duplo|             website|2023-01-06 10:35:...|2023-01-12 00:00:00|2023-01-14 00:00:00|         2|      4|       0|    0|        252.0|                            6|         5|                3|                      1|                   1| Travanca do Mondego|       4|2023-05-18 23:55:00|         11|         0|          0|10.699999999999998|           14.8|            5.5|              0.0|              0.0|              0.0|\n|     445|   1444187|   Reino Unido|     Registado|   2139|        Terrace Room|                 bar|2022-02-28 20:03:...|2022-03-06 00:00:00|2022-03-12 00:00:00|         6|      2|       0|    0|        900.0|                            6|         3|                2|                      0|                   0| Conceição de Tavira|       4|2023-05-18 12:00:00|         15|         0|          0|13.414285714285715|           18.0|            7.3|             null|             null|             null|\n|     482|   1466794|        França|     Registado|   2286|      Apartamento T2|      non-refundable|2022-04-04 21:27:...|2022-08-03 00:00:00|2022-08-08 00:00:00|         5|      5|       0|    1|      1148.55|                          121|        43|                6|                      5|                   1|            Portimão|       4|2023-05-18 23:59:00|        143|         0|          0| 21.36666666666667|           26.8|           16.8|             null|             null|             null|\n|     378|   1706060|        Canadá|    Modificada|   1738|Duplo ou Twin Sta...|      non-refundable|2023-03-26 17:45:...|2023-06-01 00:00:00|2023-06-06 00:00:00|         5|      2|       0|    1|        400.0|                           67|         7|                2|                      1|                   1|             Batalha|       3|2023-05-18 23:30:00|         23|         0|          0|              null|           null|           null|             null|             null|             null|\n|     444|   1431937|Estados Unidos|     Cancelado|   2076|               Suite|              normal|2022-02-06 21:03:...|2022-04-15 00:00:00|2022-04-16 00:00:00|         1|      4|       4|    0|        320.0|                           68|         4|                4|                      3|                   1|              Nazaré|       4|2023-05-18 23:59:00|         77|         1|          0|              14.7|           20.0|           11.5|             null|             null|             null|\n|     556|   1476905|      Portugal|     Registado|   2847|Double Room w/ext...|             website|2022-04-19 07:39:...|2022-06-05 00:00:00|2022-06-06 00:00:00|         1|      2|       1|    0|        101.0|                           47|         2|                3|                      1|                   1|             Covilhã|       3|2023-05-18 23:00:00|         84|         0|          0|             20.85|           30.2|           11.3|              0.0|              0.0|              0.0|\n+--------+----------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+-------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+-----------------+-----------------+-----------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mfinalDataSet\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/FinalDataSet.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, Reserve_ID: int ... 30 more fields]\n"
+      "data": "org.apache.spark.sql.AnalysisException: Path does not exist: file:/data/tp/FinalDataSet.csv;\n  at org.apache.spark.sql.execution.datasources.DataSource$$anonfun$org$apache$spark$sql$execution$datasources$DataSource$$checkAndGlobPathIfNecessary$1.apply(DataSource.scala:558)\n  at org.apache.spark.sql.execution.datasources.DataSource$$anonfun$org$apache$spark$sql$execution$datasources$DataSource$$checkAndGlobPathIfNecessary$1.apply(DataSource.scala:545)\n  at scala.collection.TraversableLike$$anonfun$flatMap$1.apply(TraversableLike.scala:241)\n  at scala.collection.TraversableLike$$anonfun$flatMap$1.apply(TraversableLike.scala:241)\n  at scala.collection.immutable.List.foreach(List.scala:392)\n  at scala.collection.TraversableLike$class.flatMap(TraversableLike.scala:241)\n  at scala.collection.immutable.List.flatMap(List.scala:355)\n  at org.apache.spark.sql.execution.datasources.DataSource.org$apache$spark$sql$execution$datasources$DataSource$$checkAndGlobPathIfNecessary(DataSource.scala:545)\n  at org.apache.spark.sql.execution.datasources.DataSource.resolveRelation(DataSource.scala:359)\n  at org.apache.spark.sql.DataFrameReader.loadV1Source(DataFrameReader.scala:223)\n  at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:211)\n  at org.apache.spark.sql.DataFrameReader.load(DataFrameReader.scala:178)\n  ... 45 elided\n"
      }
     ]
    }
