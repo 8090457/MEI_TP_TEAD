@@ -200,3 +200,4 @@ hadoop-tools/hadoop-openstack/src/test/resources/contract-test-options.xml
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Scala,Spark,Intellij,ApacheHadoop
 scala_zeppelin/zeppelin/data/*
 AnaliseDados/Meus/*
+Zeppelin/scala_zeppelin/zeppelin/data/*
