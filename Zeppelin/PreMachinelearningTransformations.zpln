@@ -10,10 +10,12 @@
    "text": "import org.apache.spark.sql.DataFrame\n\nval mlFolder = \"/data/ml\"\n\ndef saveDataFrame(df: DataFrame, name: String): Unit = {\n    df.coalesce(1) // Print into a single file\n            .write\n            .mode(\"overwrite\")\n            .option(\"delimiter\", \";\")\n            .option(\"header\", true) // Maintain Headers\n            .csv(s\"$mlFolder/$name\") // Write to csv\n}",
    "id": "",
    "dateCreated": "2023-05-24 19:38:16.435",
-   "config": {},
-   "dateStarted": "2023-05-24 19:40:25.602",
-   "dateUpdated": "2023-05-24 19:40:28.758",
-   "dateFinished": "2023-05-24 19:40:28.758",
+   "config": {
+    "editorHide": false
+   },
+   "dateStarted": "2023-06-07 12:46:30.606",
+   "dateUpdated": "2023-06-07 12:46:31.531",
+   "dateFinished": "2023-06-07 12:46:31.531",
    "results": {
     "code": "SUCCESS",
     "msg": [
@@ -42,210 +44,7 @@
    },
    "settings": {
     "params": {
-     "bdtMeta": {
-      "ZTOOLS_DATA_FRAMES": [
-       {
-        "columns": [
-         {
-          "name": "hotel_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "pais",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estado_reserva",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "room_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Q_tipo_quarto",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "rate_plan",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_reserva",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_chegada",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_partida",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "num_noites",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "adultos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_euros",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "dif_data_chegada_data_reserva",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "quantidade",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_maxima",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "localizacao",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estrelas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "hora_max_checkin",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "qtd_quartos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "is_holiday",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "event_count",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_avg",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_max",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_min",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         }
-        ]
-       }
-      ]
-     }
+     "bdtMeta": {}
     },
     "forms": {}
    },
@@ -253,23 +52,85 @@
    "jobName": "paragraph_1563110258183_1613653816",
    "id": "20190714-161738_1950435706",
    "dateCreated": "2019-07-14T16:17:38+0300",
-   "status": "FINISHED",
+   "status": "ERROR",
    "progressUpdateIntervalMs": 500,
    "focus": true,
    "$$hashKey": "object:394",
-   "text": "//Leitura dataset Final e limpeza dados correlação\n\nval finalDataSet = \"/data/tp/FinalDataSet.csv\" // Quartos_Reservados File\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .option(\"trim\", \"true\") \n        .load(finalDataSet)\n        .drop(\"T_tipo_quarto\") //Correlação com 1 q_tipo de quarto\n        .drop(\"area_localizacao\") // correlação com localização\n        .drop(\"city\") // correlação com localização\n        .drop(\"idade_max_criancas\") //-0,45 quantidades de quartos\n        .drop(\"idade_max_bebes\") //-0,28 quantidades de quartos\n        .drop(\"tmax\") //0,93 correlação tavg\n        .drop(\"tmin\") //0,93 correlação tavg\n        .drop(\"capacidade_max_adultos\") //0,80 correlação Capacidade Máxima\n        .drop(\"ocupacao\") //0,73 correlação adultos\n        .drop(\"Reserve_ID\") // remoção do ID da reserva\n        .drop(\"precipitation_avg\")\n        .drop(\"precipitation_max\")\n        .drop(\"precipitation_min\")\n\nval df2 = df.filter(row => !row.isNullAt(26))\ndf2.show()\ndf2.createOrReplaceTempView(\"MLDataSet\")\n\n//val df3 = spark.sql(\"\"\"SELECT  * FROM FinalDataSet2 WHERE temperature_avg is null\"\"\")\n//df3.show()\n//df3.createOrReplaceTempView(\"MLDataSet\")\n\nsaveDataFrame(df2, \"MLDataSet\")\n\n//val meteoNull = spark.sql",
-   "dateStarted": "2023-05-24 19:40:28.759",
-   "dateUpdated": "2023-05-24 19:40:36.565",
-   "dateFinished": "2023-05-24 19:40:36.565",
+   "text": "//Leitura dataset Final e limpeza dados correlação\n\nval finalDataSet = \"/data/tp/FinalDataSet.csv\" // Quartos_Reservados File\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .option(\"trim\", \"true\") \n        .load(finalDataSet)\n        .drop(\"T_tipo_quarto\") //Correlação com 1 q_tipo de quarto\n        .drop(\"area_localizacao\") // correlação com localização\n        .drop(\"city\") // correlação com localização\n        .drop(\"idade_max_criancas\") //-0,45 quantidades de quartos\n        .drop(\"idade_max_bebes\") //-0,28 quantidades de quartos\n        .drop(\"tmax\") //0,93 correlação tavg\n        .drop(\"tmin\") //0,93 correlação tavg\n        .drop(\"capacidade_max_adultos\") //0,80 correlação Capacidade Máxima\n        .drop(\"ocupacao\") //0,73 correlação adultos\n        .drop(\"Reserve_ID\") // remoção do ID da reserva\n        .drop(\"precipitation_avg\")\n        .drop(\"precipitation_max\")\n        .drop(\"precipitation_min\")\n//Antes de remover os null 24.947\n//Após remoção 22.228\n//2719 removidos\n\nval df2 = df.filter(row => !row.isNullAt(26))\ndf2.show()\ndf2.createOrReplaceTempView(\"MLDataSet\")\n\nval df3 = spark.sql(\"\"\"SELECT  * FROM FinalDataSet2 WHERE temperature_avg is null\"\"\")\ndf3.show()\ndf3.createOrReplaceTempView(\"MLDataSet\")\n\nsaveDataFrame(df2, \"MLDataSet\")\n",
+   "dateStarted": "2023-06-08 10:18:45.255",
+   "dateUpdated": "2023-06-08 10:18:48.029",
+   "dateFinished": "2023-06-08 10:18:48.029",
+   "results": {
+    "code": "ERROR",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+--------------+-------------+------------------+--------------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\n|hotel_ID|          pais|estado_reserva|room_ID|       Q_tipo_quarto|           rate_plan|        data_reserva|       data_chegada|       data_partida|num_noites|adultos|criancas|bebes|   preco_euros|  preco_noite|preco_noite_adulto|preco_noite_ocupacao|dif_data_chegada_data_reserva|quantidade|capacidade_maxima|capacidade_max_criancas|capacidade_max_bebes|         localizacao|estrelas|   hora_max_checkin|qtd_quartos|is_holiday|event_count|   temperature_avg|temperature_max|temperature_min|\n+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+--------------+-------------+------------------+--------------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\n|     311|      Portugal|  NãoRegistado|   1407|      duplo standard|      non-refundable|2022-09-28 18:14:...|2022-10-04 00:00:00|2022-10-05 00:00:00|         1|      1|       0|    0|         92.88|        92.88|             92.88|               92.88|                            6|         8|                2|                      2|                   0|                Maia|       3|2023-06-07 23:59:00|         30|         1|          0|              15.7|           22.0|           10.0|\n|     269|      Portugal|     Cancelado|   1292|               other|               promo|2022-01-08 01:22:...|2022-02-19 00:00:00|2022-02-20 00:00:00|         1|      2|       0|    0|        126.65|       126.65|            63.325|              63.325|                           42|         1|                2|                      0|                   0|                Ovar|       4|2023-06-07 23:59:00|         50|         0|          0|              9.75|           15.0|            3.0|\n|     415|      Portugal|     Registado|   1940|               duplo|      non-refundable|2022-06-10 21:37:...|2022-07-09 00:00:00|2022-07-12 00:00:00|         3|      2|       0|    0|         288.0|         96.0|              48.0|                48.0|                           29|        60|                3|                      1|                   1|            Madalena|       4|2023-06-07 23:59:00|        125|         0|          0|              24.6|           38.1|           14.1|\n|     310|       Espanha|     Registado|   1395|      duplo standard|        mr main rate|2023-02-10 10:09:...|2023-02-15 00:00:00|2023-02-20 00:00:00|         5|      4|       0|    0|         441.0|         88.2|             22.05|                44.1|                            5|        10|                2|                      1|                   0|                Gaia|       3|2023-06-07 23:59:00|        192|         0|          0|13.733333333333333|           19.7|            9.2|\n|     319|      Portugal|     Registado|   2264|            standard|      non-refundable|2022-12-19 12:57:...|2023-01-06 00:00:00|2023-01-08 00:00:00|         2|      2|       0|    0|         121.0|         60.5|             30.25|               30.25|                           18|        18|                2|                      0|                   0|              Aveiro|       3|2023-06-07 23:59:00|         96|         0|          0|13.299999999999999|           15.7|            9.0|\n|     404|      Portugal|     Registado|   2692|               other|              normal|2022-05-21 18:45:...|2022-05-28 00:00:00|2022-05-29 00:00:00|         1|      2|       0|    0|         105.0|        105.0|              52.5|                52.5|                            7|         1|                3|                      1|                   1| Valpedre - Penafiel|       0|2023-06-07 23:00:00|         15|         0|          0|             19.85|           25.6|           15.3|\n|     482|      Portugal|     Registado|   2285|                  t1|      non-refundable|2022-05-09 22:14:...|2022-08-08 00:00:00|2022-08-12 00:00:00|         4|      8|       0|    0|        1413.6|        353.4|            44.175|               88.35|                           91|        90|                4|                      3|                   1|            Portimão|       4|2023-06-07 23:59:00|        143|         0|          0|             21.36|           27.5|           17.1|\n|     335|      Portugal|     Registado|   1494|                twin|             website|2022-07-28 16:52:...|2022-08-03 00:00:00|2022-08-05 00:00:00|         2|      2|       0|    0|         200.0|        100.0|              50.0|                50.0|                            6|         5|                3|                      1|                   0|Furnas S. Miguel ...|       2|2023-06-07 19:00:00|         10|         0|          0|23.099999999999998|           26.9|           18.9|\n|     482|      Portugal|     Registado|   2285|                  t1|             website|2022-08-21 13:05:...|2022-09-10 00:00:00|2022-09-15 00:00:00|         5|      2|       0|    0|         446.5|         89.3|             44.65|               44.65|                           20|        90|                4|                      3|                   1|            Portimão|       4|2023-06-07 23:59:00|        143|         0|          0|             22.05|           27.4|           18.6|\n|     179|         Outro|     Cancelado|    630|       duplo confort|           room only|2023-03-30 16:21:...|2023-04-06 00:00:00|2023-04-08 00:00:00|         2|      2|       0|    0|         413.7|       206.85|           103.425|             103.425|                            7|        27|                2|                      0|                   0|               Porto|       4|2023-06-07 23:59:00|        132|         1|          0|16.566666666666666|           24.3|           10.8|\n|     310|         Suiça|     Registado|   1673|            superior|        mr main rate|2023-02-24 22:10:...|2023-02-25 00:00:00|2023-02-26 00:00:00|         1|      2|       0|    0|         52.25|        52.25|            26.125|              26.125|                            1|        63|                2|                      1|                   0|                Gaia|       3|2023-06-07 23:59:00|        192|         0|          0|               7.6|           13.9|            4.1|\n|     310|      Portugal|     Cancelado|   1674|            superior|      non-refundable|2022-10-19 10:40:...|2022-12-02 00:00:00|2022-12-04 00:00:00|         2|      1|       1|    0|108.5939999998|54.2969999999|     54.2969999999|       54.2969999999|                           44|         8|                2|                      1|                   0|                Gaia|       3|2023-06-07 23:59:00|        192|         0|          0| 8.999999999999998|           14.0|            5.7|\n|     482|      Portugal|     Registado|   2285|                  t1|             website|2022-07-13 21:50:...|2022-07-30 00:00:00|2022-08-09 00:00:00|        10|      3|       0|    0|       2294.25|      229.425| 76.47500000000001|   76.47500000000001|                           17|        90|                4|                      3|                   1|            Portimão|       4|2023-06-07 23:59:00|        143|         0|          0|21.945454545454545|           29.7|           16.8|\n|     311|        França|  NãoRegistado|   1407|      duplo standard|        mr main rate|2023-01-18 15:56:...|2023-02-02 00:00:00|2023-02-03 00:00:00|         1|      2|       0|    0|          63.7|         63.7|             31.85|               31.85|                           15|         8|                2|                      2|                   0|                Maia|       3|2023-06-07 23:59:00|         30|         0|          0|              9.65|           18.0|            5.0|\n|     309|      Portugal|    Modificada|   1372|      duplo standard|      non-refundable|2022-10-12 14:09:...|2022-10-17 00:00:00|2022-10-21 00:00:00|         4|      1|       0|    0|         153.9|       38.475|            38.475|              38.475|                            5|        10|                2|                      1|                   0|             Valongo|       3|2023-06-07 23:59:00|         41|         0|          0|              17.1|           20.9|           14.8|\n|     492|      Portugal|     Registado|   2322|twin com wc priva...|               other|2022-04-11 18:43:...|2022-04-28 00:00:00|2022-05-11 00:00:00|        13|      1|       0|    0|         676.0|         52.0|              52.0|                52.0|                           17|         3|                2|                      1|                   1|              Lisboa|       0|2023-06-07 09:00:00|         13|         1|          0|19.935714285714287|           30.5|           13.4|\n|     322|      Portugal|     Registado|   2260|            superior|reembolsvel suple...|2022-05-08 23:28:...|2022-05-10 00:00:00|2022-05-11 00:00:00|         1|      2|       0|    0|         115.0|        115.0|              57.5|                57.5|                            2|         4|                2|                      0|                   0|              Aveiro|       3|2023-06-07 23:59:00|         52|         0|          0|15.600000000000001|           19.8|           11.9|\n|     514|Estados Unidos|     Registado|   2425|          eco garden|      non-refundable|2022-10-08 10:10:...|2022-10-09 00:00:00|2022-10-11 00:00:00|         2|      1|       0|    0|         225.0|        112.5|             112.5|               112.5|                            1|         4|                2|                      0|                   0|Charneca de Caparica|       3|2023-06-07 18:00:00|         13|         0|          0|19.433333333333334|           25.9|           16.8|\n|     311|        França|     Registado|   2159|         sut premium|   premium room only|2022-05-13 11:38:...|2022-05-19 00:00:00|2022-05-20 00:00:00|         1|      1|       0|    0|         104.0|        104.0|             104.0|               104.0|                            6|         4|                2|                      0|                   0|                Maia|       3|2023-06-07 23:59:00|         30|         0|          0|              17.5|           25.6|           10.0|\n|     444|         Suiça|     Registado|   2075|               suite|              normal|2022-07-15 14:38:...|2022-07-15 00:00:00|2022-07-17 00:00:00|         2|      2|       2|    0|         300.0|        150.0|              75.0|                75.0|                            0|         7|                4|                      3|                   1|              Nazaré|       4|2023-06-07 23:59:00|         77|         0|          0| 20.73333333333333|           26.0|           17.0|\n+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+--------------+-------------+------------------+--------------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\nonly showing top 20 rows\n\norg.apache.spark.sql.AnalysisException: Table or view not found: FinalDataSet2; line 1 pos 15\n  at org.apache.spark.sql.catalyst.analysis.package$AnalysisErrorAt.failAnalysis(package.scala:47)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.org$apache$spark$sql$catalyst$analysis$Analyzer$ResolveRelations$$lookupTableFromCatalog(Analyzer.scala:731)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.resolveRelation(Analyzer.scala:683)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$$anonfun$apply$8.applyOrElse(Analyzer.scala:713)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$$anonfun$apply$8.applyOrElse(Analyzer.scala:706)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1$$anonfun$apply$1.apply(AnalysisHelper.scala:90)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1$$anonfun$apply$1.apply(AnalysisHelper.scala:90)\n  at org.apache.spark.sql.catalyst.trees.CurrentOrigin$.withOrigin(TreeNode.scala:69)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1.apply(AnalysisHelper.scala:89)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1.apply(AnalysisHelper.scala:86)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:194)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$class.resolveOperatorsUp(AnalysisHelper.scala:86)\n  at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsUp(LogicalPlan.scala:29)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1$$anonfun$1.apply(AnalysisHelper.scala:87)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1$$anonfun$1.apply(AnalysisHelper.scala:87)\n  at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$4.apply(TreeNode.scala:328)\n  at org.apache.spark.sql.catalyst.trees.TreeNode.mapProductIterator(TreeNode.scala:186)\n  at org.apache.spark.sql.catalyst.trees.TreeNode.mapChildren(TreeNode.scala:326)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1.apply(AnalysisHelper.scala:87)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1.apply(AnalysisHelper.scala:86)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:194)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$class.resolveOperatorsUp(AnalysisHelper.scala:86)\n  at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsUp(LogicalPlan.scala:29)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1$$anonfun$1.apply(AnalysisHelper.scala:87)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1$$anonfun$1.apply(AnalysisHelper.scala:87)\n  at org.apache.spark.sql.catalyst.trees.TreeNode$$anonfun$4.apply(TreeNode.scala:328)\n  at org.apache.spark.sql.catalyst.trees.TreeNode.mapProductIterator(TreeNode.scala:186)\n  at org.apache.spark.sql.catalyst.trees.TreeNode.mapChildren(TreeNode.scala:326)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1.apply(AnalysisHelper.scala:87)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$$anonfun$resolveOperatorsUp$1.apply(AnalysisHelper.scala:86)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.allowInvokingTransformsInAnalyzer(AnalysisHelper.scala:194)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$class.resolveOperatorsUp(AnalysisHelper.scala:86)\n  at org.apache.spark.sql.catalyst.plans.logical.LogicalPlan.resolveOperatorsUp(LogicalPlan.scala:29)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.apply(Analyzer.scala:706)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.apply(Analyzer.scala:652)\n  at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:87)\n  at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1$$anonfun$apply$1.apply(RuleExecutor.scala:84)\n  at scala.collection.LinearSeqOptimized$class.foldLeft(LinearSeqOptimized.scala:124)\n  at scala.collection.immutable.List.foldLeft(List.scala:84)\n  at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:84)\n  at org.apache.spark.sql.catalyst.rules.RuleExecutor$$anonfun$execute$1.apply(RuleExecutor.scala:76)\n  at scala.collection.immutable.List.foreach(List.scala:392)\n  at org.apache.spark.sql.catalyst.rules.RuleExecutor.execute(RuleExecutor.scala:76)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer.org$apache$spark$sql$catalyst$analysis$Analyzer$$executeSameContext(Analyzer.scala:127)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer.execute(Analyzer.scala:121)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer$$anonfun$executeAndCheck$1.apply(Analyzer.scala:106)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer$$anonfun$executeAndCheck$1.apply(Analyzer.scala:105)\n  at org.apache.spark.sql.catalyst.plans.logical.AnalysisHelper$.markInAnalyzer(AnalysisHelper.scala:201)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer.executeAndCheck(Analyzer.scala:105)\n  at org.apache.spark.sql.execution.QueryExecution.analyzed$lzycompute(QueryExecution.scala:58)\n  at org.apache.spark.sql.execution.QueryExecution.analyzed(QueryExecution.scala:56)\n  at org.apache.spark.sql.execution.QueryExecution.assertAnalyzed(QueryExecution.scala:48)\n  at org.apache.spark.sql.Dataset$.ofRows(Dataset.scala:78)\n  at org.apache.spark.sql.SparkSession.sql(SparkSession.scala:642)\n  ... 70 elided\nCaused by: org.apache.spark.sql.catalyst.analysis.NoSuchTableException: Table or view 'finaldataset2' not found in database 'default';\n  at org.apache.spark.sql.catalyst.catalog.ExternalCatalog$class.requireTableExists(ExternalCatalog.scala:48)\n  at org.apache.spark.sql.catalyst.catalog.InMemoryCatalog.requireTableExists(InMemoryCatalog.scala:45)\n  at org.apache.spark.sql.catalyst.catalog.InMemoryCatalog.getTable(InMemoryCatalog.scala:326)\n  at org.apache.spark.sql.catalyst.catalog.ExternalCatalogWithListener.getTable(ExternalCatalogWithListener.scala:138)\n  at org.apache.spark.sql.catalyst.catalog.SessionCatalog.lookupRelation(SessionCatalog.scala:706)\n  at org.apache.spark.sql.catalyst.analysis.Analyzer$ResolveRelations$.org$apache$spark$sql$catalyst$analysis$Analyzer$ResolveRelations$$lookupTableFromCatalog(Analyzer.scala:728)\n  ... 122 more\n"
+     }
+    ]
+   }
+  },
+  {
+   "settings": {
+    "params": {},
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "import org.apache.spark.ml.{Pipeline, PipelineModel}\nimport org.apache.spark.ml.evaluation.RegressionEvaluator\nimport org.apache.spark.ml.feature.{StringIndexer, VectorAssembler}\nimport org.apache.spark.ml.regression.{GBTRegressor, GBTRegressionModel}\nimport org.apache.spark.sql.DataFrame\n\ndef trainAndEvaluate(algorithm: GBTRegressor, df: DataFrame, featureCols: Array[String], labelCol: String): Unit = {\n  // Criar o vetor de features usando VectorAssembler\n  val assembler = new VectorAssembler()\n    .setInputCols(featureCols)\n    .setOutputCol(\"features\")\n\n  // Criar o pipeline de transformação e treinamento\n  val pipeline = new Pipeline()\n    .setStages(Array(assembler, algorithm))\n\n  // Dividir o dataset em conjuntos de treinamento e teste\n  val Array(trainData, testData) = df.randomSplit(Array(0.7, 0.3), seed = 42)\n\n  // Treinar o modelo\n  val model = pipeline.fit(trainData)\n\n  // Realizar previsões nos dados de teste\n  val predictions = model.transform(testData)\n\n  // Avaliar o desempenho do modelo\n  val evaluator = new RegressionEvaluator()\n    .setLabelCol(labelCol)\n    .setPredictionCol(\"prediction\")\n    .setMetricName(\"rmse\")\n\n  val rmse = evaluator.evaluate(predictions)\n\n  println(\"Root Mean Squared Error (RMSE): \" + rmse) \n    // Chamar a função de classificação de recursos (feature ranking)\n  featureRanking(model.stages.last.asInstanceOf[GBTRegressionModel], featureCols)\n  // Exibir algumas previsões\n  predictions.select(labelCol, \"prediction\").show()\n}\n\ndef featureRanking(algorithm: GBTRegressionModel, featureCols: Array[String]): Unit = {\n  val featureImportances = algorithm.featureImportances.toArray\n  val rankedFeatures = featureCols.zip(featureImportances).sortBy(-_._2)\n\n  println(\"Feature Ranking:\")\n  rankedFeatures.zipWithIndex.foreach { case ((feature, importance), rank) =>\n    println(s\"Feature ${rank+1}: $feature - Importance $importance\")\n  }\n}",
+   "id": "",
+   "dateCreated": "2023-06-07 12:54:21.274",
+   "config": {},
+   "dateStarted": "2023-06-07 14:57:33.141",
+   "dateUpdated": "2023-06-07 14:57:34.076",
+   "dateFinished": "2023-06-07 14:57:34.075",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+-------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\n|hotel_ID|          pais|estado_reserva|room_ID|       Q_tipo_quarto|           rate_plan|        data_reserva|       data_chegada|       data_partida|num_noites|adultos|criancas|bebes|  preco_euros|dif_data_chegada_data_reserva|quantidade|capacidade_maxima|capacidade_max_criancas|capacidade_max_bebes|         localizacao|estrelas|   hora_max_checkin|qtd_quartos|is_holiday|event_count|   temperature_avg|temperature_max|temperature_min|\n+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+-------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\n|     322|     Austrália|     Registado|   2259|                twin| Não Reembolsável AP|2022-10-13 17:24:...|2022-10-17 00:00:00|2022-10-18 00:00:00|         1|      2|       0|    0|         66.0|                            4|        18|                2|                      1|                   0|              Aveiro|       3|2023-05-23 23:59:00|         52|         0|          0|18.450000000000003|           21.4|           15.8|\n|      44|Estados Unidos|     Registado|    190|     vista traseiras|                 BAR|2022-08-20 20:57:...|2022-10-18 00:00:00|2022-10-20 00:00:00|         2|      2|       0|    0|        228.0|                           59|         2|                2|                      0|                   1|      Pinhão - Alijó|       3|2023-05-23 23:00:00|         10|         0|          0|14.966666666666669|           22.0|            9.7|\n|     539|      Portugal|     Registado|   2542|      duplo standard|                 Bar|2022-06-10 11:42:...|2022-06-21 00:00:00|2022-06-22 00:00:00|         1|      1|       0|    0|         48.0|                           11|         5|                2|                      0|                   0|              Amares|       0|2023-05-23 18:00:00|         58|         0|          0|             16.45|           19.7|           13.8|\n|     539|      Portugal|     Registado|   2545|                  t1|                 Bar|2022-05-08 15:12:...|2022-05-08 00:00:00|2022-05-10 00:00:00|         2|      1|       0|    0|        162.0|                            0|         1|                4|                      0|                   0|              Amares|       0|2023-05-23 18:00:00|         58|         0|          0|              16.2|           22.3|           11.2|\n|     185|      Portugal|     Registado|    660|           duplotwin|                 BAR|2022-05-05 10:20:...|2022-06-12 00:00:00|2022-06-13 00:00:00|         1|      2|       0|    0|        139.0|                           38|        17|                2|                      1|                   1|   Valdigem - Lamego|       4|2023-05-23 23:00:00|         20|         0|          0|27.200000000000003|           35.5|           20.8|\n|     482|      Portugal|    Modificada|   2285|                  t1|(WEB) Best Availa...|2022-04-20 12:01:...|2022-07-25 00:00:00|2022-08-01 00:00:00|         7|      4|       0|    0|      1296.75|                           96|        90|                4|                      3|                   1|            Portimão|       4|2023-05-23 23:59:00|        143|         0|          0|            23.375|           32.0|           17.1|\n|     328|       Holanda|     Registado|   1452|              single|             WebSite|2022-05-01 17:59:...|2022-05-07 00:00:00|2022-05-09 00:00:00|         2|      1|       0|    0|         79.3|                            6|         3|                1|                      0|                   0|              Lisboa|       0|2023-05-23 22:00:00|         56|         0|          0|              22.3|           30.5|           15.0|\n|     482|      Portugal|     Registado|   2285|                  t1|(WEB) Best Availa...|2022-10-12 10:09:...|2022-10-13 00:00:00|2022-10-15 00:00:00|         2|      2|       0|    0|        114.0|                            1|        90|                4|                      3|                   1|            Portimão|       4|2023-05-23 23:59:00|        143|         0|          0|              20.2|           24.4|           17.6|\n|     311|      Portugal|      Pendente|   1407|      duplo standard|      MR - Main Rate|2023-03-30 18:25:...|2023-04-12 00:00:00|2023-04-13 00:00:00|         1|      1|       0|    0|      78.3275|                           13|         8|                2|                      2|                   0|                Maia|       3|2023-05-23 23:59:00|         30|         0|          0|              12.4|           16.0|            7.0|\n|     514|   Reino Unido|     Registado|   2492|              garden|   Non-Refundable >5|2022-04-30 22:31:...|2022-08-10 00:00:00|2022-08-17 00:00:00|         7|      1|       0|    0|        924.0|                          102|         4|                3|                      0|                   0|Charneca de Caparica|       3|2023-05-23 18:00:00|         13|         1|          0|           21.8625|           29.9|           17.9|\n|     311|       Espanha|     Registado|   2034|            superior|                  NR|2022-08-26 19:43:...|2022-08-30 00:00:00|2022-08-31 00:00:00|         1|      2|       0|    0|90.7499999999|                            4|         5|                2|                      2|                   0|                Maia|       3|2023-05-23 23:59:00|         30|         0|          0|             18.15|           22.8|           14.8|\n|     311|       Letónia|     Registado|   1429|       twin standard|    TW Room Only NRF|2022-05-29 20:02:...|2022-06-02 00:00:00|2022-06-03 00:00:00|         1|      1|       0|    0|         73.0|                            4|         4|                2|                      2|                   0|                Maia|       3|2023-05-23 23:59:00|         30|         0|          0|              18.5|           22.9|           15.3|\n|     492|      Portugal|     Registado|   2322|twin com wc priva...|                 Bar|2023-02-14 13:48:...|2023-02-18 00:00:00|2023-02-20 00:00:00|         2|      2|       0|    0|        140.0|                            4|         3|                2|                      1|                   1|              Lisboa|       0|2023-05-23 09:00:00|         13|         0|          0|14.333333333333334|           20.2|           10.7|\n|     504|      Portugal|     Registado|   2374|               other|                 Bar|2022-07-28 07:38:...|2022-08-13 00:00:00|2022-08-15 00:00:00|         2|      1|       0|    0|       206.91|                           16|         1|                2|                      0|                   1|              Monção|       4|2023-05-23 23:59:00|         27|         1|          0|18.166666666666668|           22.7|           13.9|\n|     259|        França|     Registado|   1103|            standard|Pacote Romântico/...|2022-04-28 14:44:...|2022-05-06 00:00:00|2022-05-07 00:00:00|         1|      2|       0|    0|        125.0|                            8|        13|                3|                      1|                   1|           Guimarães|       4|2023-05-23 23:59:00|         22|         0|          0|             15.75|           20.8|           10.3|\n|     535|      Portugal|      Pendente|   2783|            bungalow|             WebSite|2023-02-02 16:18:...|2023-02-15 00:00:00|2023-02-16 00:00:00|         1|      2|       0|    0|         72.0|                           13|         1|                2|                      0|                   0| Travanca do Mondego|       4|2023-05-23 23:55:00|         11|         0|          0|             13.95|           18.9|            9.7|\n|     311|      Portugal|    Modificada|   1407|      duplo standard|    DB Room Only NRF|2022-03-17 14:39:...|2022-03-21 00:00:00|2022-03-22 00:00:00|         1|      1|       0|    0|         63.0|                            4|         8|                2|                      2|                   0|                Maia|       3|2023-05-23 23:59:00|         30|         0|          0|             13.25|           18.2|           10.7|\n|     310|      Portugal|     Registado|   1673|            superior|               NR BB|2022-12-25 17:48:...|2022-12-27 00:00:00|2022-12-28 00:00:00|         1|      2|       0|    0|         70.3|                            2|        63|                2|                      1|                   0|                Gaia|       3|2023-05-23 23:59:00|        192|         0|          0|12.649999999999999|           14.9|           11.4|\n|     492|      Portugal|     Registado|   2322|twin com wc priva...|                 Bar|2022-03-07 12:28:...|2022-03-07 00:00:00|2022-03-08 00:00:00|         1|      1|       0|    0|         50.0|                            0|         3|                2|                      1|                   1|              Lisboa|       0|2023-05-23 09:00:00|         13|         0|          0|             12.45|           17.2|            8.9|\n|     444|Estados Unidos|     Registado|   2074|duplo vista mar l...|              Normal|2022-08-29 20:19:...|2022-09-24 00:00:00|2022-09-26 00:00:00|         2|      2|       0|    0|        260.0|                           26|         5|                2|                      1|                   1|              Nazaré|       4|2023-05-23 23:59:00|         77|         0|          0|              17.5|           22.2|           10.0|\n+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+-------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mfinalDataSet\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/FinalDataSet.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 26 more fields]\n\u001b[1m\u001b[34mdf2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [hotel_ID: int, pais: string ... 26 more fields]\n"
+      "data": "import org.apache.spark.ml.{Pipeline, PipelineModel}\nimport org.apache.spark.ml.evaluation.RegressionEvaluator\nimport org.apache.spark.ml.feature.{StringIndexer, VectorAssembler}\nimport org.apache.spark.ml.regression.{GBTRegressor, GBTRegressionModel}\nimport org.apache.spark.sql.DataFrame\n\u001b[1m\u001b[34mtrainAndEvaluate\u001b[0m: \u001b[1m\u001b[32m(algorithm: org.apache.spark.ml.regression.GBTRegressor, df: org.apache.spark.sql.DataFrame, featureCols: Array[String], labelCol: String)Unit\u001b[0m\n\u001b[1m\u001b[34mfeatureRanking\u001b[0m: \u001b[1m\u001b[32m(algorithm: org.apache.spark.ml.regression.GBTRegressionModel, featureCols: Array[String])Unit\u001b[0m\n"
      }
     ]
    }
+  },
+  {
+   "settings": {
+    "params": {
+     "bdtMeta": {}
+    },
+    "forms": {}
+   },
+   "apps": [],
+   "status": "FINISHED",
+   "text": "import org.apache.spark.ml.feature.StringIndexer\nimport org.apache.spark.ml.regression.GBTRegressor\n\n// Definir as colunas de entrada e a coluna de saída\nval featureCols = Array(\"num_noites\", \"dif_data_chegada_data_reserva\", \n  \"capacidade_maxima\", \"estrelas\", \"qtd_quartos\", \"temperature_avg\", \"temperature_max\", \"temperature_min\")\nval labelCol = \"preco_euros\"\n\n// Converter colunas de string para numéricas usando StringIndexer\nval indexer = new StringIndexer()\n  .setInputCol(\"Q_tipo_quarto\")\n  .setOutputCol(\"tipo_quarto_indexed\")\n\n// Aplicar a transformação de StringIndexer ao DataFrame\nval indexedDF = indexer.fit(df2).transform(df2)\n\n// Criar uma instância do algoritmo Gradient Boosted Trees regressor\nval algorithm = new GBTRegressor()\n  .setLabelCol(labelCol)\n  .setFeaturesCol(\"features\")\n  .setMaxBins(1000) // Definir o valor desejado para maxBins\n\n// Chamar a função de classificação de recursos (feature ranking)\n//featureRanking(algorithm, featureCols)\ntrainAndEvaluate(algorithm, indexedDF, featureCols, labelCol)",
+   "id": "",
+   "dateCreated": "2023-06-07 13:34:28.548",
+   "config": {},
+   "dateStarted": "2023-06-07 14:57:41.238",
+   "dateUpdated": "2023-06-07 14:57:56.602",
+   "dateFinished": "2023-06-07 14:57:56.602",
+   "results": {
+    "code": "SUCCESS",
+    "msg": [
+     {
+      "type": "TEXT",
+      "data": "Root Mean Squared Error (RMSE): 168.284675267448\nFeature Ranking:\nFeature 1: num_noites - Importance 0.2718266156382255\nFeature 2: qtd_quartos - Importance 0.23917958486484142\nFeature 3: estrelas - Importance 0.09497831831520531\nFeature 4: temperature_avg - Importance 0.09089048902846919\nFeature 5: temperature_max - Importance 0.08722716333111473\nFeature 6: capacidade_maxima - Importance 0.08158661620190334\nFeature 7: dif_data_chegada_data_reserva - Importance 0.07945595504465654\nFeature 8: temperature_min - Importance 0.05485525757558398\n+-----------+------------------+\n|preco_euros|        prediction|\n+-----------+------------------+\n|       45.0| 99.14379964680388|\n|       62.0| 81.53464796523072|\n|      124.0| 81.53464796523072|\n|       62.5| 93.29702313520329|\n|       62.0| 81.53464796523072|\n|       45.0| 83.09160071975711|\n|      116.0|141.10939575786264|\n|       45.0| 81.53464796523072|\n|       62.5| 96.05576067374744|\n|       67.0|  96.3223698948266|\n|       56.0| 83.09160071975711|\n|       54.0| 99.14379964680388|\n|       60.0| 77.03356522597706|\n|       64.0| 81.53464796523072|\n|      145.0| 113.8925231871316|\n|      279.0|238.28760628024378|\n|      224.0|169.08290752834674|\n|      114.0|115.46649091480084|\n|      174.0|105.39884483752884|\n|      301.0|290.83530729971295|\n+-----------+------------------+\nonly showing top 20 rows\n\nimport org.apache.spark.ml.feature.StringIndexer\nimport org.apache.spark.ml.regression.GBTRegressor\n\u001b[1m\u001b[34mfeatureCols\u001b[0m: \u001b[1m\u001b[32mArray[String]\u001b[0m = Array(num_noites, dif_data_chegada_data_reserva, capacidade_maxima, estrelas, qtd_quartos, temperature_avg, temperature_max, temperature_min)\n\u001b[1m\u001b[34mlabelCol\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = preco_euros\n\u001b[1m\u001b[34mindexer\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexer\u001b[0m = strIdx_2dad1c2f2f70\n\u001b[1m\u001b[34mindexedDF\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 27 more fields]\n\u001b[1m\u001b[34malgorithm\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.regression.GBTRegressor\u001b[0m = gbtr_64aa79e3cdeb\n"
+     }
+    ]
+   }
+  },
+  {
+   "settings": {
+    "params": {},
+    "forms": {}
+   },
+   "apps": [],
+   "status": "READY",
+   "text": "",
+   "id": "",
+   "dateCreated": "2023-06-07 14:54:13.157",
+   "config": {}
   }
  ],
  "name": "Zeppelin Notebook",
