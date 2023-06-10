@@ -2,7 +2,9 @@
  "paragraphs": [
   {
    "settings": {
-    "params": {},
+    "params": {
+     "bdtMeta": {}
+    },
     "forms": {}
    },
    "apps": [],
@@ -13,22 +15,15 @@
    "config": {
     "editorHide": false
    },
-   "dateStarted": "2023-06-08 22:17:38.952",
-   "dateUpdated": "2023-06-08 22:17:39.271",
-   "dateFinished": "2023-06-08 22:17:39.271",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "import org.apache.spark.sql.DataFrame\n\u001b[1m\u001b[34mmlFolder\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/ml\n\u001b[1m\u001b[34msaveDataFrame\u001b[0m: \u001b[1m\u001b[32m(df: org.apache.spark.sql.DataFrame, name: String)Unit\u001b[0m\n"
-     }
-    ]
-   }
+   "dateStarted": "2023-06-09 11:12:29.688",
+   "dateUpdated": "2023-06-09 11:12:30.923",
+   "dateFinished": "2023-06-09 11:12:30.923"
   },
   {
    "settings": {
-    "params": {},
+    "params": {
+     "bdtMeta": {}
+    },
     "forms": {}
    },
    "apps": [],
@@ -37,18 +32,9 @@
    "id": "",
    "dateCreated": "2023-06-08 10:42:38.640",
    "config": {},
-   "dateStarted": "2023-06-08 15:13:40.446",
-   "dateUpdated": "2023-06-08 15:13:41.090",
-   "dateFinished": "2023-06-08 15:13:41.090",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "\u001b[1m\u001b[34mMLDataSet\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = FinalDataSet2\n"
-     }
-    ]
-   }
+   "dateStarted": "2023-06-09 11:12:39.133",
+   "dateUpdated": "2023-06-09 11:12:40.077",
+   "dateFinished": "2023-06-09 11:12:40.077"
   },
   {
    "user": "anonymous",
@@ -68,452 +54,7 @@
    },
    "settings": {
     "params": {
-     "bdtMeta": {
-      "ZTOOLS_DATA_FRAMES": [
-       {
-        "columns": [
-         {
-          "name": "hotel_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "pais",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estado_reserva",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "room_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Q_tipo_quarto",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "rate_plan",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_reserva",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_chegada",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_partida",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "num_noites",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "adultos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_euros",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_adulto",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_ocupacao",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "dif_data_chegada_data_reserva",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "quantidade",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_maxima",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "localizacao",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estrelas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "hora_max_checkin",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "qtd_quartos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "is_holiday",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "event_count",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_avg",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_max",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_min",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         }
-        ]
-       },
-       {
-        "columns": [
-         {
-          "name": "hotel_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "pais",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estado_reserva",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "room_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Q_tipo_quarto",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "rate_plan",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_reserva",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_chegada",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_partida",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "num_noites",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "adultos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_euros",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_adulto",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_ocupacao",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "dif_data_chegada_data_reserva",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "quantidade",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_maxima",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "localizacao",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estrelas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "hora_max_checkin",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "qtd_quartos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "is_holiday",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "event_count",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_avg",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_max",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_min",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         }
-        ]
-       }
-      ]
-     }
+     "bdtMeta": {}
     },
     "forms": {}
    },
@@ -526,18 +67,9 @@
    "focus": true,
    "$$hashKey": "object:394",
    "text": "//Leitura dataset Final e limpeza dados correlação\n\nval finalDataSet = \"/data/tp/FinalDataSet.csv\" // Quartos_Reservados File\n\nval df = spark.read.format(\"csv\")\n        .option(\"header\", \"true\")\n        .option(\"inferSchema\", \"true\")\n        .option(\"delimiter\", \";\")\n        .option(\"trim\", \"true\") \n        .load(finalDataSet)\n        .drop(\"T_tipo_quarto\") //Correlação com 1 q_tipo de quarto\n        .drop(\"area_localizacao\") // correlação com localização\n        .drop(\"city\") // correlação com localização\n        .drop(\"idade_max_criancas\") //-0,45 quantidades de quartos\n        .drop(\"idade_max_bebes\") //-0,28 quantidades de quartos\n        .drop(\"tmax\") //0,93 correlação tavg\n        .drop(\"tmin\") //0,93 correlação tavg\n        .drop(\"capacidade_max_adultos\") //0,80 correlação Capacidade Máxima\n        .drop(\"ocupacao\") //0,73 correlação adultos\n        .drop(\"Reserve_ID\") // remoção do ID da reserva\n        .drop(\"precipitation_avg\")\n        .drop(\"precipitation_max\")\n        .drop(\"precipitation_min\")\n//Antes de remover os null 24.947\n//Após remoção 22.228\n//2719 removidos\n\nval df2 = df.filter(row => !row.isNullAt(26))\ndf2.show()\ndf2.createOrReplaceTempView(\"MLDataSet\")\n\nval df3 = spark.sql(\"\"\"SELECT  * FROM MLDataSet WHERE temperature_avg is not null\"\"\")\ndf3.show()\ndf3.createOrReplaceTempView(\"MLDataSet\")\n\n//saveDataFrame(df2, \"MLDataSet\")\n",
-   "dateStarted": "2023-06-08 22:19:59.905",
-   "dateUpdated": "2023-06-08 22:20:01.716",
-   "dateFinished": "2023-06-08 22:20:01.716",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+--------------+-------------+------------------+--------------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\n|hotel_ID|          pais|estado_reserva|room_ID|       Q_tipo_quarto|           rate_plan|        data_reserva|       data_chegada|       data_partida|num_noites|adultos|criancas|bebes|   preco_euros|  preco_noite|preco_noite_adulto|preco_noite_ocupacao|dif_data_chegada_data_reserva|quantidade|capacidade_maxima|capacidade_max_criancas|capacidade_max_bebes|         localizacao|estrelas|   hora_max_checkin|qtd_quartos|is_holiday|event_count|   temperature_avg|temperature_max|temperature_min|\n+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+--------------+-------------+------------------+--------------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\n|     311|      Portugal|  NãoRegistado|   1407|      duplo standard|      non-refundable|2022-09-28 18:14:...|2022-10-04 00:00:00|2022-10-05 00:00:00|         1|      1|       0|    0|         92.88|        92.88|             92.88|               92.88|                            6|         8|                2|                      2|                   0|                Maia|       3|2023-06-07 23:59:00|         30|         1|          0|              15.7|           22.0|           10.0|\n|     269|      Portugal|     Cancelado|   1292|               other|               promo|2022-01-08 01:22:...|2022-02-19 00:00:00|2022-02-20 00:00:00|         1|      2|       0|    0|        126.65|       126.65|            63.325|              63.325|                           42|         1|                2|                      0|                   0|                Ovar|       4|2023-06-07 23:59:00|         50|         0|          0|              9.75|           15.0|            3.0|\n|     415|      Portugal|     Registado|   1940|               duplo|      non-refundable|2022-06-10 21:37:...|2022-07-09 00:00:00|2022-07-12 00:00:00|         3|      2|       0|    0|         288.0|         96.0|              48.0|                48.0|                           29|        60|                3|                      1|                   1|            Madalena|       4|2023-06-07 23:59:00|        125|         0|          0|              24.6|           38.1|           14.1|\n|     310|       Espanha|     Registado|   1395|      duplo standard|        mr main rate|2023-02-10 10:09:...|2023-02-15 00:00:00|2023-02-20 00:00:00|         5|      4|       0|    0|         441.0|         88.2|             22.05|                44.1|                            5|        10|                2|                      1|                   0|                Gaia|       3|2023-06-07 23:59:00|        192|         0|          0|13.733333333333333|           19.7|            9.2|\n|     319|      Portugal|     Registado|   2264|            standard|      non-refundable|2022-12-19 12:57:...|2023-01-06 00:00:00|2023-01-08 00:00:00|         2|      2|       0|    0|         121.0|         60.5|             30.25|               30.25|                           18|        18|                2|                      0|                   0|              Aveiro|       3|2023-06-07 23:59:00|         96|         0|          0|13.299999999999999|           15.7|            9.0|\n|     404|      Portugal|     Registado|   2692|               other|              normal|2022-05-21 18:45:...|2022-05-28 00:00:00|2022-05-29 00:00:00|         1|      2|       0|    0|         105.0|        105.0|              52.5|                52.5|                            7|         1|                3|                      1|                   1| Valpedre - Penafiel|       0|2023-06-07 23:00:00|         15|         0|          0|             19.85|           25.6|           15.3|\n|     482|      Portugal|     Registado|   2285|                  t1|      non-refundable|2022-05-09 22:14:...|2022-08-08 00:00:00|2022-08-12 00:00:00|         4|      8|       0|    0|        1413.6|        353.4|            44.175|               88.35|                           91|        90|                4|                      3|                   1|            Portimão|       4|2023-06-07 23:59:00|        143|         0|          0|             21.36|           27.5|           17.1|\n|     335|      Portugal|     Registado|   1494|                twin|             website|2022-07-28 16:52:...|2022-08-03 00:00:00|2022-08-05 00:00:00|         2|      2|       0|    0|         200.0|        100.0|              50.0|                50.0|                            6|         5|                3|                      1|                   0|Furnas S. Miguel ...|       2|2023-06-07 19:00:00|         10|         0|          0|23.099999999999998|           26.9|           18.9|\n|     482|      Portugal|     Registado|   2285|                  t1|             website|2022-08-21 13:05:...|2022-09-10 00:00:00|2022-09-15 00:00:00|         5|      2|       0|    0|         446.5|         89.3|             44.65|               44.65|                           20|        90|                4|                      3|                   1|            Portimão|       4|2023-06-07 23:59:00|        143|         0|          0|             22.05|           27.4|           18.6|\n|     179|         Outro|     Cancelado|    630|       duplo confort|           room only|2023-03-30 16:21:...|2023-04-06 00:00:00|2023-04-08 00:00:00|         2|      2|       0|    0|         413.7|       206.85|           103.425|             103.425|                            7|        27|                2|                      0|                   0|               Porto|       4|2023-06-07 23:59:00|        132|         1|          0|16.566666666666666|           24.3|           10.8|\n|     310|         Suiça|     Registado|   1673|            superior|        mr main rate|2023-02-24 22:10:...|2023-02-25 00:00:00|2023-02-26 00:00:00|         1|      2|       0|    0|         52.25|        52.25|            26.125|              26.125|                            1|        63|                2|                      1|                   0|                Gaia|       3|2023-06-07 23:59:00|        192|         0|          0|               7.6|           13.9|            4.1|\n|     310|      Portugal|     Cancelado|   1674|            superior|      non-refundable|2022-10-19 10:40:...|2022-12-02 00:00:00|2022-12-04 00:00:00|         2|      1|       1|    0|108.5939999998|54.2969999999|     54.2969999999|       54.2969999999|                           44|         8|                2|                      1|                   0|                Gaia|       3|2023-06-07 23:59:00|        192|         0|          0| 8.999999999999998|           14.0|            5.7|\n|     482|      Portugal|     Registado|   2285|                  t1|             website|2022-07-13 21:50:...|2022-07-30 00:00:00|2022-08-09 00:00:00|        10|      3|       0|    0|       2294.25|      229.425| 76.47500000000001|   76.47500000000001|                           17|        90|                4|                      3|                   1|            Portimão|       4|2023-06-07 23:59:00|        143|         0|          0|21.945454545454545|           29.7|           16.8|\n|     311|        França|  NãoRegistado|   1407|      duplo standard|        mr main rate|2023-01-18 15:56:...|2023-02-02 00:00:00|2023-02-03 00:00:00|         1|      2|       0|    0|          63.7|         63.7|             31.85|               31.85|                           15|         8|                2|                      2|                   0|                Maia|       3|2023-06-07 23:59:00|         30|         0|          0|              9.65|           18.0|            5.0|\n|     309|      Portugal|    Modificada|   1372|      duplo standard|      non-refundable|2022-10-12 14:09:...|2022-10-17 00:00:00|2022-10-21 00:00:00|         4|      1|       0|    0|         153.9|       38.475|            38.475|              38.475|                            5|        10|                2|                      1|                   0|             Valongo|       3|2023-06-07 23:59:00|         41|         0|          0|              17.1|           20.9|           14.8|\n|     492|      Portugal|     Registado|   2322|twin com wc priva...|               other|2022-04-11 18:43:...|2022-04-28 00:00:00|2022-05-11 00:00:00|        13|      1|       0|    0|         676.0|         52.0|              52.0|                52.0|                           17|         3|                2|                      1|                   1|              Lisboa|       0|2023-06-07 09:00:00|         13|         1|          0|19.935714285714287|           30.5|           13.4|\n|     322|      Portugal|     Registado|   2260|            superior|reembolsvel suple...|2022-05-08 23:28:...|2022-05-10 00:00:00|2022-05-11 00:00:00|         1|      2|       0|    0|         115.0|        115.0|              57.5|                57.5|                            2|         4|                2|                      0|                   0|              Aveiro|       3|2023-06-07 23:59:00|         52|         0|          0|15.600000000000001|           19.8|           11.9|\n|     514|Estados Unidos|     Registado|   2425|          eco garden|      non-refundable|2022-10-08 10:10:...|2022-10-09 00:00:00|2022-10-11 00:00:00|         2|      1|       0|    0|         225.0|        112.5|             112.5|               112.5|                            1|         4|                2|                      0|                   0|Charneca de Caparica|       3|2023-06-07 18:00:00|         13|         0|          0|19.433333333333334|           25.9|           16.8|\n|     311|        França|     Registado|   2159|         sut premium|   premium room only|2022-05-13 11:38:...|2022-05-19 00:00:00|2022-05-20 00:00:00|         1|      1|       0|    0|         104.0|        104.0|             104.0|               104.0|                            6|         4|                2|                      0|                   0|                Maia|       3|2023-06-07 23:59:00|         30|         0|          0|              17.5|           25.6|           10.0|\n|     444|         Suiça|     Registado|   2075|               suite|              normal|2022-07-15 14:38:...|2022-07-15 00:00:00|2022-07-17 00:00:00|         2|      2|       2|    0|         300.0|        150.0|              75.0|                75.0|                            0|         7|                4|                      3|                   1|              Nazaré|       4|2023-06-07 23:59:00|         77|         0|          0| 20.73333333333333|           26.0|           17.0|\n+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+--------------+-------------+------------------+--------------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\nonly showing top 20 rows\n\n+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+--------------+-------------+------------------+--------------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\n|hotel_ID|          pais|estado_reserva|room_ID|       Q_tipo_quarto|           rate_plan|        data_reserva|       data_chegada|       data_partida|num_noites|adultos|criancas|bebes|   preco_euros|  preco_noite|preco_noite_adulto|preco_noite_ocupacao|dif_data_chegada_data_reserva|quantidade|capacidade_maxima|capacidade_max_criancas|capacidade_max_bebes|         localizacao|estrelas|   hora_max_checkin|qtd_quartos|is_holiday|event_count|   temperature_avg|temperature_max|temperature_min|\n+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+--------------+-------------+------------------+--------------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\n|     311|      Portugal|  NãoRegistado|   1407|      duplo standard|      non-refundable|2022-09-28 18:14:...|2022-10-04 00:00:00|2022-10-05 00:00:00|         1|      1|       0|    0|         92.88|        92.88|             92.88|               92.88|                            6|         8|                2|                      2|                   0|                Maia|       3|2023-06-07 23:59:00|         30|         1|          0|              15.7|           22.0|           10.0|\n|     269|      Portugal|     Cancelado|   1292|               other|               promo|2022-01-08 01:22:...|2022-02-19 00:00:00|2022-02-20 00:00:00|         1|      2|       0|    0|        126.65|       126.65|            63.325|              63.325|                           42|         1|                2|                      0|                   0|                Ovar|       4|2023-06-07 23:59:00|         50|         0|          0|              9.75|           15.0|            3.0|\n|     415|      Portugal|     Registado|   1940|               duplo|      non-refundable|2022-06-10 21:37:...|2022-07-09 00:00:00|2022-07-12 00:00:00|         3|      2|       0|    0|         288.0|         96.0|              48.0|                48.0|                           29|        60|                3|                      1|                   1|            Madalena|       4|2023-06-07 23:59:00|        125|         0|          0|              24.6|           38.1|           14.1|\n|     310|       Espanha|     Registado|   1395|      duplo standard|        mr main rate|2023-02-10 10:09:...|2023-02-15 00:00:00|2023-02-20 00:00:00|         5|      4|       0|    0|         441.0|         88.2|             22.05|                44.1|                            5|        10|                2|                      1|                   0|                Gaia|       3|2023-06-07 23:59:00|        192|         0|          0|13.733333333333333|           19.7|            9.2|\n|     319|      Portugal|     Registado|   2264|            standard|      non-refundable|2022-12-19 12:57:...|2023-01-06 00:00:00|2023-01-08 00:00:00|         2|      2|       0|    0|         121.0|         60.5|             30.25|               30.25|                           18|        18|                2|                      0|                   0|              Aveiro|       3|2023-06-07 23:59:00|         96|         0|          0|13.299999999999999|           15.7|            9.0|\n|     404|      Portugal|     Registado|   2692|               other|              normal|2022-05-21 18:45:...|2022-05-28 00:00:00|2022-05-29 00:00:00|         1|      2|       0|    0|         105.0|        105.0|              52.5|                52.5|                            7|         1|                3|                      1|                   1| Valpedre - Penafiel|       0|2023-06-07 23:00:00|         15|         0|          0|             19.85|           25.6|           15.3|\n|     482|      Portugal|     Registado|   2285|                  t1|      non-refundable|2022-05-09 22:14:...|2022-08-08 00:00:00|2022-08-12 00:00:00|         4|      8|       0|    0|        1413.6|        353.4|            44.175|               88.35|                           91|        90|                4|                      3|                   1|            Portimão|       4|2023-06-07 23:59:00|        143|         0|          0|             21.36|           27.5|           17.1|\n|     335|      Portugal|     Registado|   1494|                twin|             website|2022-07-28 16:52:...|2022-08-03 00:00:00|2022-08-05 00:00:00|         2|      2|       0|    0|         200.0|        100.0|              50.0|                50.0|                            6|         5|                3|                      1|                   0|Furnas S. Miguel ...|       2|2023-06-07 19:00:00|         10|         0|          0|23.099999999999998|           26.9|           18.9|\n|     482|      Portugal|     Registado|   2285|                  t1|             website|2022-08-21 13:05:...|2022-09-10 00:00:00|2022-09-15 00:00:00|         5|      2|       0|    0|         446.5|         89.3|             44.65|               44.65|                           20|        90|                4|                      3|                   1|            Portimão|       4|2023-06-07 23:59:00|        143|         0|          0|             22.05|           27.4|           18.6|\n|     179|         Outro|     Cancelado|    630|       duplo confort|           room only|2023-03-30 16:21:...|2023-04-06 00:00:00|2023-04-08 00:00:00|         2|      2|       0|    0|         413.7|       206.85|           103.425|             103.425|                            7|        27|                2|                      0|                   0|               Porto|       4|2023-06-07 23:59:00|        132|         1|          0|16.566666666666666|           24.3|           10.8|\n|     310|         Suiça|     Registado|   1673|            superior|        mr main rate|2023-02-24 22:10:...|2023-02-25 00:00:00|2023-02-26 00:00:00|         1|      2|       0|    0|         52.25|        52.25|            26.125|              26.125|                            1|        63|                2|                      1|                   0|                Gaia|       3|2023-06-07 23:59:00|        192|         0|          0|               7.6|           13.9|            4.1|\n|     310|      Portugal|     Cancelado|   1674|            superior|      non-refundable|2022-10-19 10:40:...|2022-12-02 00:00:00|2022-12-04 00:00:00|         2|      1|       1|    0|108.5939999998|54.2969999999|     54.2969999999|       54.2969999999|                           44|         8|                2|                      1|                   0|                Gaia|       3|2023-06-07 23:59:00|        192|         0|          0| 8.999999999999998|           14.0|            5.7|\n|     482|      Portugal|     Registado|   2285|                  t1|             website|2022-07-13 21:50:...|2022-07-30 00:00:00|2022-08-09 00:00:00|        10|      3|       0|    0|       2294.25|      229.425| 76.47500000000001|   76.47500000000001|                           17|        90|                4|                      3|                   1|            Portimão|       4|2023-06-07 23:59:00|        143|         0|          0|21.945454545454545|           29.7|           16.8|\n|     311|        França|  NãoRegistado|   1407|      duplo standard|        mr main rate|2023-01-18 15:56:...|2023-02-02 00:00:00|2023-02-03 00:00:00|         1|      2|       0|    0|          63.7|         63.7|             31.85|               31.85|                           15|         8|                2|                      2|                   0|                Maia|       3|2023-06-07 23:59:00|         30|         0|          0|              9.65|           18.0|            5.0|\n|     309|      Portugal|    Modificada|   1372|      duplo standard|      non-refundable|2022-10-12 14:09:...|2022-10-17 00:00:00|2022-10-21 00:00:00|         4|      1|       0|    0|         153.9|       38.475|            38.475|              38.475|                            5|        10|                2|                      1|                   0|             Valongo|       3|2023-06-07 23:59:00|         41|         0|          0|              17.1|           20.9|           14.8|\n|     492|      Portugal|     Registado|   2322|twin com wc priva...|               other|2022-04-11 18:43:...|2022-04-28 00:00:00|2022-05-11 00:00:00|        13|      1|       0|    0|         676.0|         52.0|              52.0|                52.0|                           17|         3|                2|                      1|                   1|              Lisboa|       0|2023-06-07 09:00:00|         13|         1|          0|19.935714285714287|           30.5|           13.4|\n|     322|      Portugal|     Registado|   2260|            superior|reembolsvel suple...|2022-05-08 23:28:...|2022-05-10 00:00:00|2022-05-11 00:00:00|         1|      2|       0|    0|         115.0|        115.0|              57.5|                57.5|                            2|         4|                2|                      0|                   0|              Aveiro|       3|2023-06-07 23:59:00|         52|         0|          0|15.600000000000001|           19.8|           11.9|\n|     514|Estados Unidos|     Registado|   2425|          eco garden|      non-refundable|2022-10-08 10:10:...|2022-10-09 00:00:00|2022-10-11 00:00:00|         2|      1|       0|    0|         225.0|        112.5|             112.5|               112.5|                            1|         4|                2|                      0|                   0|Charneca de Caparica|       3|2023-06-07 18:00:00|         13|         0|          0|19.433333333333334|           25.9|           16.8|\n|     311|        França|     Registado|   2159|         sut premium|   premium room only|2022-05-13 11:38:...|2022-05-19 00:00:00|2022-05-20 00:00:00|         1|      1|       0|    0|         104.0|        104.0|             104.0|               104.0|                            6|         4|                2|                      0|                   0|                Maia|       3|2023-06-07 23:59:00|         30|         0|          0|              17.5|           25.6|           10.0|\n|     444|         Suiça|     Registado|   2075|               suite|              normal|2022-07-15 14:38:...|2022-07-15 00:00:00|2022-07-17 00:00:00|         2|      2|       2|    0|         300.0|        150.0|              75.0|                75.0|                            0|         7|                4|                      3|                   1|              Nazaré|       4|2023-06-07 23:59:00|         77|         0|          0| 20.73333333333333|           26.0|           17.0|\n+--------+--------------+--------------+-------+--------------------+--------------------+--------------------+-------------------+-------------------+----------+-------+--------+-----+--------------+-------------+------------------+--------------------+-----------------------------+----------+-----------------+-----------------------+--------------------+--------------------+--------+-------------------+-----------+----------+-----------+------------------+---------------+---------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34mfinalDataSet\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = /data/tp/FinalDataSet.csv\n\u001b[1m\u001b[34mdf\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 29 more fields]\n\u001b[1m\u001b[34mdf2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Dataset[org.apache.spark.sql.Row]\u001b[0m = [hotel_ID: int, pais: string ... 29 more fields]\n\u001b[1m\u001b[34mdf3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 29 more fields]\n"
-     }
-    ]
-   }
+   "dateStarted": "2023-06-09 11:12:48.424",
+   "dateUpdated": "2023-06-09 11:12:50.720",
+   "dateFinished": "2023-06-09 11:12:50.720"
   },
   {
    "settings": {
@@ -545,453 +77,10 @@
      "bdtMeta": {
       "ZTOOLS_DATA_FRAMES": [
        {
-        "columns": [
-         {
-          "name": "hotel_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "pais",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estado_reserva",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "room_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Q_tipo_quarto",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "rate_plan",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_reserva",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_chegada",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_partida",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "num_noites",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "adultos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_euros",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_adulto",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_ocupacao",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "dif_data_chegada_data_reserva",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "quantidade",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_maxima",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "localizacao",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estrelas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "hora_max_checkin",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "qtd_quartos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "is_holiday",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "event_count",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_avg",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_max",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_min",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         }
-        ]
+        "columns": []
        },
        {
-        "columns": [
-         {
-          "name": "hotel_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "pais",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estado_reserva",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "room_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Q_tipo_quarto",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "rate_plan",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_reserva",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_chegada",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_partida",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "num_noites",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "adultos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_euros",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_adulto",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_ocupacao",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "dif_data_chegada_data_reserva",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "quantidade",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_maxima",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "localizacao",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estrelas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "hora_max_checkin",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "qtd_quartos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "is_holiday",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "event_count",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_avg",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_max",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_min",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temporada",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": false
-         }
-        ]
+        "columns": []
        }
       ]
      }
@@ -1000,26 +89,28 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "//Criação Novas Colunas Com a temporada Alta Baixa e Média\n//A baixa temporada em Portugal inverno, que ocorre dezembro e março\n//ALta Temporada  julho e agosto e feriados \nval df_nc = spark.sql(\"\"\"SELECT  * FROM MLDataSet \"\"\")\n\n\n// Definir a condição para a existência de feriados\nval condFeriado = col(\"is_holiday\") === 1\n// Definir as condições para baixa temporada, média temporada e alta temporada\nval condBaixaTemporada = month(col(\"data_chegada\")).isin(11,12, 1, 2, 3)\nval condAltaTemporada = month(col(\"data_chegada\")).isin(6,7, 8) || condFeriado\nval condMediaTemporada = !condBaixaTemporada && !condAltaTemporada\n\n// Adicionar a nova coluna \"temporada\" ao DataFrame com os valores correspondentes\nval dfComTemporada = df_nc.withColumn(\"temporada\", when(condBaixaTemporada, 0).when(condAltaTemporada, 2).otherwise(1))\n\n// Criar a nova coluna \"cancelado na coluna \"estado_reserva\"\nval df_com_cancelamento = dfComTemporada.withColumn(\"cancelamento\",\n  when(col(\"estado_reserva\") === \"Cancelado\", 1).otherwise(0))\n\ndf_com_cancelamento.createOrReplaceTempView(\"MLDataSet\")\ndf_com_cancelamento.cache()\n// Exibir o resultado\ndf_com_cancelamento.select(\"data_chegada\", \"is_holiday\",\"cancelamento\", \"temporada\").show(100)\n//saveDataFrame(df_com_cancelamento, \"MLDataSet\")\n\n",
+   "text": "//Criação Novas Colunas Com a temporada Alta Baixa e Média\n//A baixa temporada em Portugal inverno, que ocorre dezembro e março\n//ALta Temporada  julho e agosto e feriados\nimport org.apache.spark.sql.functions.{col, month, when}\nval df_nc = spark.sql(\"\"\"SELECT  * FROM MLDataSet \"\"\")\n\n// Definir a condição para a existência de feriados\nval condFeriado = col(\"is_holiday\") === 1\n// Definir as condições para baixa temporada, média temporada e alta temporada\nval condBaixaTemporada = month(col(\"data_chegada\")).isin(11, 12, 1, 2, 3)\nval condAltaTemporada = month(col(\"data_chegada\")).isin(6, 7, 8) || condFeriado\nval condMediaTemporada = !condBaixaTemporada && !condAltaTemporada\n\n// Adicionar a nova coluna \"temporada\" ao DataFrame com os valores correspondentes\nval dfComTemporada = df_nc.withColumn(\"temporada\", when(condBaixaTemporada, 0).when(condAltaTemporada, 2).otherwise(1))\n\n// Criar a nova coluna \"cancelado na coluna \"estado_reserva\"\nval df_com_cancelamento = dfComTemporada.withColumn(\"cancelamento\",\n  when(col(\"estado_reserva\") === \"Cancelado\", 1).otherwise(0))\n\nval dfformatDate = df_com_cancelamento.withColumn(\"data_reserva\", to_date(col(\"data_reserva\"), \"yyyy-MM-dd\"))\n                            .withColumn(\"data_chegada\", to_date(col(\"data_chegada\"), \"yyyy-MM-dd\"))\n\n// Pré-processamento das colunas de data\nval processedDF = dfformatDate.withColumn(\"estacao_chegada\", when(month(col(\"data_chegada\")).isin(12, 1, 2), \"Inverno\")\n    .when(month(col(\"data_chegada\")).isin(3, 4, 5), \"Primavera\")\n    .when(month(col(\"data_chegada\")).isin(6, 7, 8), \"Verão\")\n    .otherwise(\"Outono\"))\n\nprocessedDF.createOrReplaceTempView(\"MLDataSet\")\nprocessedDF.cache()\n// Exibir o resultado\ndf_com_cancelamento.select(\"data_chegada\",\"data_reserva\",\"estacao_chegada\", \"is_holiday\",\"cancelamento\", \"temporada\").show(100)\n//saveDataFrame(df_com_cancelamento, \"MLDataSet\")\n\n",
    "id": "",
    "dateCreated": "2023-06-08 11:10:12.135",
    "config": {},
-   "dateStarted": "2023-06-08 22:20:12.905",
-   "dateUpdated": "2023-06-08 22:20:13.621",
-   "dateFinished": "2023-06-08 22:20:13.621",
+   "dateStarted": "2023-06-09 11:44:55.314",
+   "dateUpdated": "2023-06-09 11:44:57.440",
+   "dateFinished": "2023-06-09 11:44:57.440",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "+-------------------+----------+------------+---------+\n|       data_chegada|is_holiday|cancelamento|temporada|\n+-------------------+----------+------------+---------+\n|2022-10-04 00:00:00|         1|           0|        2|\n|2022-02-19 00:00:00|         0|           1|        0|\n|2022-07-09 00:00:00|         0|           0|        2|\n|2023-02-15 00:00:00|         0|           0|        0|\n|2023-01-06 00:00:00|         0|           0|        0|\n|2022-05-28 00:00:00|         0|           0|        1|\n|2022-08-08 00:00:00|         0|           0|        2|\n|2022-08-03 00:00:00|         0|           0|        2|\n|2022-09-10 00:00:00|         0|           0|        1|\n|2023-04-06 00:00:00|         1|           1|        2|\n|2023-02-25 00:00:00|         0|           0|        0|\n|2022-12-02 00:00:00|         0|           1|        0|\n|2022-07-30 00:00:00|         0|           0|        2|\n|2023-02-02 00:00:00|         0|           0|        0|\n|2022-10-17 00:00:00|         0|           0|        1|\n|2022-04-28 00:00:00|         1|           0|        2|\n|2022-05-10 00:00:00|         0|           0|        1|\n|2022-10-09 00:00:00|         0|           0|        1|\n|2022-05-19 00:00:00|         0|           0|        1|\n|2022-07-15 00:00:00|         0|           0|        2|\n|2022-03-05 00:00:00|         0|           0|        0|\n|2022-12-06 00:00:00|         0|           0|        0|\n|2022-07-23 00:00:00|         0|           1|        2|\n|2023-01-22 00:00:00|         0|           0|        0|\n|2022-02-07 00:00:00|         0|           0|        0|\n|2022-12-10 00:00:00|         0|           0|        0|\n|2022-11-06 00:00:00|         0|           0|        0|\n|2022-08-17 00:00:00|         0|           0|        2|\n|2023-01-13 00:00:00|         0|           0|        0|\n|2022-06-23 00:00:00|         0|           0|        2|\n|2022-10-03 00:00:00|         1|           0|        2|\n|2022-08-06 00:00:00|         0|           0|        2|\n|2022-09-24 00:00:00|         0|           0|        1|\n|2022-05-31 00:00:00|         0|           0|        1|\n|2022-05-29 00:00:00|         0|           0|        1|\n|2022-11-23 00:00:00|         0|           0|        0|\n|2022-08-18 00:00:00|         0|           0|        2|\n|2022-09-07 00:00:00|         0|           1|        1|\n|2022-08-21 00:00:00|         0|           0|        2|\n|2023-04-04 00:00:00|         0|           0|        1|\n|2022-07-26 00:00:00|         0|           0|        2|\n|2023-04-19 00:00:00|         0|           1|        1|\n|2023-04-05 00:00:00|         1|           0|        2|\n|2023-02-13 00:00:00|         0|           0|        0|\n|2022-08-09 00:00:00|         0|           0|        2|\n|2022-10-15 00:00:00|         0|           0|        1|\n|2023-04-23 00:00:00|         0|           0|        1|\n|2023-02-25 00:00:00|         0|           0|        0|\n|2022-05-10 00:00:00|         0|           0|        1|\n|2023-04-21 00:00:00|         0|           1|        1|\n|2023-02-14 00:00:00|         0|           0|        0|\n|2022-11-03 00:00:00|         0|           0|        0|\n|2022-07-14 00:00:00|         0|           0|        2|\n|2022-05-08 00:00:00|         0|           0|        1|\n|2022-09-21 00:00:00|         0|           0|        1|\n|2023-04-15 00:00:00|         0|           0|        1|\n|2022-12-07 00:00:00|         1|           0|        0|\n|2023-03-17 00:00:00|         0|           0|        0|\n|2022-09-10 00:00:00|         0|           1|        1|\n|2022-07-04 00:00:00|         0|           0|        2|\n|2022-07-10 00:00:00|         0|           0|        2|\n|2022-07-13 00:00:00|         0|           0|        2|\n|2023-01-17 00:00:00|         0|           0|        0|\n|2022-12-27 00:00:00|         0|           0|        0|\n|2023-04-10 00:00:00|         0|           0|        1|\n|2022-05-05 00:00:00|         0|           0|        1|\n|2022-02-20 00:00:00|         0|           0|        0|\n|2022-06-03 00:00:00|         0|           0|        2|\n|2023-02-18 00:00:00|         0|           0|        0|\n|2022-08-12 00:00:00|         0|           0|        2|\n|2023-03-10 00:00:00|         0|           0|        0|\n|2022-08-26 00:00:00|         0|           0|        2|\n|2022-05-17 00:00:00|         0|           0|        1|\n|2022-06-01 00:00:00|         0|           0|        2|\n|2022-02-10 00:00:00|         0|           0|        0|\n|2022-08-19 00:00:00|         0|           0|        2|\n|2022-06-06 00:00:00|         0|           0|        2|\n|2022-08-16 00:00:00|         0|           0|        2|\n|2022-03-04 00:00:00|         0|           1|        0|\n|2022-08-17 00:00:00|         0|           0|        2|\n|2023-04-15 00:00:00|         0|           1|        1|\n|2022-02-19 00:00:00|         0|           0|        0|\n|2023-01-12 00:00:00|         0|           1|        0|\n|2022-05-25 00:00:00|         0|           1|        1|\n|2023-03-17 00:00:00|         0|           0|        0|\n|2022-09-01 00:00:00|         0|           1|        1|\n|2023-03-18 00:00:00|         0|           0|        0|\n|2023-03-16 00:00:00|         0|           0|        0|\n|2022-03-04 00:00:00|         0|           0|        0|\n|2022-03-06 00:00:00|         0|           0|        0|\n|2023-03-20 00:00:00|         0|           0|        0|\n|2022-09-01 00:00:00|         0|           0|        1|\n|2022-12-31 00:00:00|         1|           0|        0|\n|2022-01-30 00:00:00|         0|           1|        0|\n|2022-10-17 00:00:00|         0|           0|        1|\n|2022-08-24 00:00:00|         0|           0|        2|\n|2022-03-05 00:00:00|         0|           0|        0|\n|2022-06-12 00:00:00|         0|           0|        2|\n|2022-12-08 00:00:00|         1|           0|        0|\n|2022-06-15 00:00:00|         1|           0|        2|\n+-------------------+----------+------------+---------+\nonly showing top 100 rows\n\n\u001b[1m\u001b[34mdf_nc\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 29 more fields]\n\u001b[1m\u001b[34mcondFeriado\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Column\u001b[0m = (is_holiday = 1)\n\u001b[1m\u001b[34mcondBaixaTemporada\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Column\u001b[0m = (month(data_chegada) IN (11, 12, 1, 2, 3))\n\u001b[1m\u001b[34mcondAltaTemporada\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Column\u001b[0m = ((month(data_chegada) IN (6, 7, 8)) OR (is_holiday = 1))\n\u001b[1m\u001b[34mcondMediaTemporada\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Column\u001b[0m = ((NOT (month(data_chegada) IN (11, 12, 1, 2, 3))) AND (NOT ((month(data_chegada) IN (6, 7, 8)) OR (is_holiday = 1))))\n\u001b[1m\u001b[34mdfComTemporada\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 30 more fields]\n\u001b[1m\u001b[34mdf_com_cancelament..."
+      "data": "+------------+------------+---------------+----------+------------+---------+\n|data_chegada|data_reserva|estacao_chegada|is_holiday|cancelamento|temporada|\n+------------+------------+---------------+----------+------------+---------+\n|  2022-10-04|  2022-09-28|         Outono|         1|           0|        2|\n|  2022-02-19|  2022-01-08|        Inverno|         0|           1|        0|\n|  2022-07-09|  2022-06-10|          Verão|         0|           0|        2|\n|  2023-02-15|  2023-02-10|        Inverno|         0|           0|        0|\n|  2023-01-06|  2022-12-19|        Inverno|         0|           0|        0|\n|  2022-05-28|  2022-05-21|      Primavera|         0|           0|        1|\n|  2022-08-08|  2022-05-09|          Verão|         0|           0|        2|\n|  2022-08-03|  2022-07-28|          Verão|         0|           0|        2|\n|  2022-09-10|  2022-08-21|         Outono|         0|           0|        1|\n|  2023-04-06|  2023-03-30|      Primavera|         1|           1|        2|\n|  2023-02-25|  2023-02-24|        Inverno|         0|           0|        0|\n|  2022-12-02|  2022-10-19|        Inverno|         0|           1|        0|\n|  2022-07-30|  2022-07-13|          Verão|         0|           0|        2|\n|  2023-02-02|  2023-01-18|        Inverno|         0|           0|        0|\n|  2022-10-17|  2022-10-12|         Outono|         0|           0|        1|\n|  2022-04-28|  2022-04-11|      Primavera|         1|           0|        2|\n|  2022-05-10|  2022-05-08|      Primavera|         0|           0|        1|\n|  2022-10-09|  2022-10-08|         Outono|         0|           0|        1|\n|  2022-05-19|  2022-05-13|      Primavera|         0|           0|        1|\n|  2022-07-15|  2022-07-15|          Verão|         0|           0|        2|\n|  2022-03-05|  2022-03-04|      Primavera|         0|           0|        0|\n|  2022-12-06|  2022-11-27|        Inverno|         0|           0|        0|\n|  2022-07-23|  2022-06-08|          Verão|         0|           1|        2|\n|  2023-01-22|  2023-01-21|        Inverno|         0|           0|        0|\n|  2022-02-07|  2022-02-04|        Inverno|         0|           0|        0|\n|  2022-12-10|  2022-12-05|        Inverno|         0|           0|        0|\n|  2022-11-06|  2022-10-31|         Outono|         0|           0|        0|\n|  2022-08-17|  2022-08-10|          Verão|         0|           0|        2|\n|  2023-01-13|  2023-01-08|        Inverno|         0|           0|        0|\n|  2022-06-23|  2022-06-22|          Verão|         0|           0|        2|\n|  2022-10-03|  2022-06-25|         Outono|         1|           0|        2|\n|  2022-08-06|  2022-07-11|          Verão|         0|           0|        2|\n|  2022-09-24|  2022-09-20|         Outono|         0|           0|        1|\n|  2022-05-31|  2022-05-28|      Primavera|         0|           0|        1|\n|  2022-05-29|  2022-02-26|      Primavera|         0|           0|        1|\n|  2022-11-23|  2022-11-23|         Outono|         0|           0|        0|\n|  2022-08-18|  2022-08-16|          Verão|         0|           0|        2|\n|  2022-09-07|  2022-08-28|         Outono|         0|           1|        1|\n|  2022-08-21|  2022-08-19|          Verão|         0|           0|        2|\n|  2023-04-04|  2023-04-03|      Primavera|         0|           0|        1|\n|  2022-07-26|  2022-05-04|          Verão|         0|           0|        2|\n|  2023-04-19|  2023-04-17|      Primavera|         0|           1|        1|\n|  2023-04-05|  2023-03-21|      Primavera|         1|           0|        2|\n|  2023-02-13|  2023-02-13|        Inverno|         0|           0|        0|\n|  2022-08-09|  2022-08-09|          Verão|         0|           0|        2|\n|  2022-10-15|  2022-10-11|         Outono|         0|           0|        1|\n|  2023-04-23|  2023-03-06|      Primavera|         0|           0|        1|\n|  2023-02-25|  2023-01-05|        Inverno|         0|           0|        0|\n|  2022-05-10|  2022-03-06|      Primavera|         0|           0|        1|\n|  2023-04-21|  2022-11-24|      Primavera|         0|           1|        1|\n|  2023-02-14|  2023-02-14|        Inverno|         0|           0|        0|\n|  2022-11-03|  2022-11-02|         Outono|         0|           0|        0|\n|  2022-07-14|  2022-07-14|          Verão|         0|           0|        2|\n|  2022-05-08|  2022-03-13|      Primavera|         0|           0|        1|\n|  2022-09-21|  2022-08-17|         Outono|         0|           0|        1|\n|  2023-04-15|  2023-04-13|      Primavera|         0|           0|        1|\n|  2022-12-07|  2022-11-07|        Inverno|         1|           0|        0|\n|  2023-03-17|  2023-02-13|      Primavera|         0|           0|        0|\n|  2022-09-10|  2022-09-03|         Outono|         0|           1|        1|\n|  2022-07-04|  2022-05-30|          Verão|         0|           0|        2|\n|  2022-07-10|  2022-06-25|          Verão|         0|           0|        2|\n|  2022-07-13|  2022-07-13|          Verão|         0|           0|        2|\n|  2023-01-17|  2023-01-17|        Inverno|         0|           0|        0|\n|  2022-12-27|  2022-12-24|        Inverno|         0|           0|        0|\n|  2023-04-10|  2023-04-10|      Primavera|         0|           0|        1|\n|  2022-05-05|  2022-01-12|      Primavera|         0|           0|        1|\n|  2022-02-20|  2022-02-17|        Inverno|         0|           0|        0|\n|  2022-06-03|  2022-05-29|          Verão|         0|           0|        2|\n|  2023-02-18|  2023-02-10|        Inverno|         0|           0|        0|\n|  2022-08-12|  2022-06-29|          Verão|         0|           0|        2|\n|  2023-03-10|  2023-02-25|      Primavera|         0|           0|        0|\n|  2022-08-26|  2022-08-20|          Verão|         0|           0|        2|\n|  2022-05-17|  2022-05-14|      Primavera|         0|           0|        1|\n|  2022-06-01|  2022-02-05|          Verão|         0|           0|        2|\n|  2022-02-10|  2022-01-12|        Inverno|         0|           0|        0|\n|  2022-08-19|  2022-07-14|          Verão|         0|           0|        2|\n|  2022-06-06|  2022-06-03|          Verão|         0|           0|        2|\n|  2022-08-16|  2022-01-01|          Verão|         0|           0|        2|\n|  2022-03-04|  2022-03-03|      Primavera|         0|           1|        0|\n|  2022-08-17|  2022-03-11|          Verão|         0|           0|        2|\n|  2023-04-15|  2023-04-08|      Primavera|         0|           1|        1|\n|  2022-02-19|  2022-01-31|        Inverno|         0|           0|        0|\n|  2023-01-12|  2022-12-08|        Inverno|         0|           1|        0|\n|  2022-05-25|  2022-05-11|      Primavera|         0|           1|        1|\n|  2023-03-17|  2023-03-14|      Primavera|         0|           0|        0|\n|  2022-09-01|  2022-06-17|         Outono|         0|           1|        1|\n|  2023-03-18|  2023-03-17|      Primavera|         0|           0|        0|\n|  2023-03-16|  2023-03-03|      Primavera|         0|           0|        0|\n|  2022-03-04|  2022-03-04|      Primavera|         0|           0|        0|\n|  2022-03-06|  2022-02-28|      Primavera|         0|           0|        0|\n|  2023-03-20|  2023-03-16|      Primavera|         0|           0|        0|\n|  2022-09-01|  2022-08-28|         Outono|         0|           0|        1|\n|  2022-12-31|  2022-12-30|        Inverno|         1|           0|        0|\n|  2022-01-30|  2022-01-28|        Inverno|         0|           1|        0|\n|  2022-10-17|  2022-08-30|         Outono|         0|           0|        1|\n|  2022-08-24|  2022-08-17|          Verão|         0|           0|        2|\n|  2022-03-05|  2022-01-17|      Primavera|         0|           0|        0|\n|  2022-06-12|  2022-06-01|          Verão|         0|           0|        2|\n|  2022-12-08|  2022-10-12|        Inverno|         1|           0|        0|\n|  2022-06-15|  2022-06-15|          Verão|         1|           0|        2|\n+------------+------------+---------------+----------+------------+---------+\nonly showing top 100 rows\n\nimport org.apache.spark.sql.functions.{col, month, when}\n\u001b[1m\u001b[34mdf_nc\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 32 more fields]\n\u001b[1m\u001b[34mcondFeriado\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Column\u001b[0m = (is_holiday = 1)\n\u001b[1m\u001b[34mcondBaixaTemporada\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Column\u001b[0m = (month(data_chegada) IN (11, 12, 1, 2, 3))\n\u001b[1m\u001b[34mcondAltaTemporada\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Column\u001b[0m = ((month(data_chegada) IN (6, 7, 8)) OR (is_holiday = 1))\n\u001b[1m\u001b[34mcondMediaTemporada\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.Column\u001b[0m = ((NOT (month(data_chegada) IN (11, 12, 1, 2, 3))) AND (NOT ((month(data_chegada) IN (6, 7, 8)) OR (is_holiday = 1))))\n\u001b[1m\u001b[34mdfComTemporada\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pai..."
      }
     ]
    }
   },
   {
    "settings": {
-    "params": {},
+    "params": {
+     "bdtMeta": {}
+    },
     "forms": {}
    },
    "apps": [],
@@ -1030,20 +121,13 @@
    "config": {},
    "dateStarted": "2023-06-08 22:25:45.840",
    "dateUpdated": "2023-06-08 22:25:46.290",
-   "dateFinished": "2023-06-08 22:25:46.290",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "import org.apache.spark.ml.{Pipeline, PipelineModel}\nimport org.apache.spark.ml.evaluation.RegressionEvaluator\nimport org.apache.spark.ml.feature.{StringIndexer, VectorAssembler}\nimport org.apache.spark.ml.regression.{GBTRegressor, GBTRegressionModel}\nimport org.apache.spark.sql.DataFrame\n\u001b[1m\u001b[34mtrainAndEvaluateGBT\u001b[0m: \u001b[1m\u001b[32m(algorithm: org.apache.spark.ml.regression.GBTRegressor, df: org.apache.spark.sql.DataFrame, featureCols: Array[String], labelCol: String)Unit\u001b[0m\n\u001b[1m\u001b[34mfeatureRanking\u001b[0m: \u001b[1m\u001b[32m(algorithm: org.apache.spark.ml.regression.GBTRegressionModel, featureCols: Array[String])Unit\u001b[0m\n"
-     }
-    ]
-   }
+   "dateFinished": "2023-06-08 22:25:46.290"
   },
   {
    "settings": {
-    "params": {},
+    "params": {
+     "bdtMeta": {}
+    },
     "forms": {}
    },
    "apps": [],
@@ -1054,257 +138,13 @@
    "config": {},
    "dateStarted": "2023-06-08 22:25:52.741",
    "dateUpdated": "2023-06-08 22:25:53.124",
-   "dateFinished": "2023-06-08 22:25:53.124",
-   "results": {
-    "code": "SUCCESS",
-    "msg": [
-     {
-      "type": "TEXT",
-      "data": "import org.apache.spark.ml.feature.VectorAssembler\nimport org.apache.spark.ml.Pipeline\nimport org.apache.spark.ml.regression.{RandomForestRegressor, RandomForestRegressionModel}\nimport org.apache.spark.ml.evaluation.RegressionEvaluator\nimport org.apache.spark.sql.DataFrame\n\u001b[1m\u001b[34mtrainAndEvaluateRFR\u001b[0m: \u001b[1m\u001b[32m(algorithm: org.apache.spark.ml.regression.RandomForestRegressor, df: org.apache.spark.sql.DataFrame, featureCols: Array[String], labelCol: String)Unit\u001b[0m\n\u001b[1m\u001b[34mfeatureRanking\u001b[0m: \u001b[1m\u001b[32m(algorithm: org.apache.spark.ml.regression.RandomForestRegressionModel, featureCols: Array[String])Unit\u001b[0m\n"
-     }
-    ]
-   }
+   "dateFinished": "2023-06-08 22:25:53.124"
   },
   {
    "settings": {
     "params": {
      "bdtMeta": {
       "ZTOOLS_DATA_FRAMES": [
-       {
-        "columns": [
-         {
-          "name": "hotel_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "pais",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estado_reserva",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "room_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Q_tipo_quarto",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "rate_plan",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_reserva",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_chegada",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_partida",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "num_noites",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "adultos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_euros",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_adulto",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_ocupacao",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "dif_data_chegada_data_reserva",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "quantidade",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_maxima",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "localizacao",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estrelas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "hora_max_checkin",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "qtd_quartos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "is_holiday",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "event_count",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_avg",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_max",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_min",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temporada",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": false
-         },
-         {
-          "name": "cancelamento",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": false
-         }
-        ]
-       },
        {
         "columns": []
        }
@@ -1315,26 +155,28 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "import org.apache.spark.ml.feature.StringIndexer\nimport org.apache.spark.ml.regression.GBTRegressor\n//val featureCols = Array(\n//  \"hotel_ID\", \"pais\", \"estado_reserva\", \"room_ID\", \"Q_tipo_quarto\", \"rate_plan\",\n//  \"data_reserva\", \"data_chegada\", \"data_partida\", \"num_noites\", \"adultos\", \"criancas\",\n//  \"bebes\", \"preco_euros\", \"preco_noite\", \"preco_noite_adulto\", \"preco_noite_ocupacao\",\n//  \"dif_data_chegada_data_reserva\", \"quantidade\", \"capacidade_maxima\",\n//  \"capacidade_max_criancas\", \"capacidade_max_bebes\", \"localizacao\", \"estrelas\",\n//  \"hora_max_checkin\", \"qtd_quartos\", \"is_holiday\", \"event_count\", \"temperature_avg\",\n//  \"temperature_max\", \"temperature_min\", \"temporada\"\n//)\nval df_ml = spark.sql(\"\"\"SELECT  * FROM MLDataSet \"\"\")\n//df_ml.show()\n// Definir as colunas de entrada e a coluna de saída\nval featureCols = Array(\"hotel_ID\",\"room_ID\",\n    \"adultos\", \"estrelas\", \"qtd_quartos\",\n     \"temperature_avg\",\"temporada\")\nval labelCol = \"preco_noite\"\n\n// Converter colunas de string para numéricas usando StringIndexer\nval indexer1 = new StringIndexer()\n  .setInputCol(\"Q_tipo_quarto\")\n  .setOutputCol(\"tipo_quarto_indexed\")\n\nval indexer2 = new StringIndexer()\n  .setInputCol(\"rate_plan\")\n  .setOutputCol(\"rate_plan_indexed\")\n\nval indexer3 = new StringIndexer()\n  .setInputCol(\"localizacao\")\n  .setOutputCol(\"localizacao_indexed\")\n\n// Aplicar a transformação de StringIndexer ao DataFrame\nval indexedDF = indexer1.fit(df_ml)\n  .transform(indexer2.fit(df_ml)\n  .transform(indexer3.fit(df_ml)\n  .transform(df_ml)))\n\n// Criar uma instância do algoritmo Gradient Boosted Trees regressor\nval algorithm = new GBTRegressor()\n  .setLabelCol(labelCol)\n  .setFeaturesCol(\"features\")\n  .setMaxBins(1000) // Definir o valor desejado para maxBins\n\n// Chamar a função de classificação de recursos (feature ranking)\n// featureRanking(algorithm, featureCols)\ntrainAndEvaluateGBT(algorithm, indexedDF, featureCols, labelCol)",
+   "text": "import org.apache.spark.ml.feature.StringIndexer\nimport org.apache.spark.ml.regression.GBTRegressor\n//val featureCols = Array(\n//  \"hotel_ID\", \"pais\", \"estado_reserva\", \"room_ID\", \"Q_tipo_quarto\", \"rate_plan\",\n//  \"data_reserva\", \"data_chegada\", \"data_partida\", \"num_noites\", \"adultos\", \"criancas\",\n//  \"bebes\", \"preco_euros\", \"preco_noite\", \"preco_noite_adulto\", \"preco_noite_ocupacao\",\n//  \"dif_data_chegada_data_reserva\", \"quantidade\", \"capacidade_maxima\",\n//  \"capacidade_max_criancas\", \"capacidade_max_bebes\", \"localizacao\", \"estrelas\",\n//  \"hora_max_checkin\", \"qtd_quartos\", \"is_holiday\", \"event_count\", \"temperature_avg\",\n//  \"temperature_max\", \"temperature_min\", \"temporada\"\n//)\nval df_ml = spark.sql(\"\"\"SELECT  * FROM MLDataSet \"\"\")\n//df_ml.show()\n// Definir as colunas de entrada e a coluna de saída\nval featureCols = Array(\"hotel_ID\",\"room_ID\",\n    \"adultos\", \"estrelas\", \"qtd_quartos\",\n     \"temperature_avg\",\"temporada\")\nval labelCol = \"preco_noite_adulto\"\n\n// Converter colunas de string para numéricas usando StringIndexer\nval indexer1 = new StringIndexer()\n  .setInputCol(\"Q_tipo_quarto\")\n  .setOutputCol(\"tipo_quarto_indexed\")\n\nval indexer2 = new StringIndexer()\n  .setInputCol(\"rate_plan\")\n  .setOutputCol(\"rate_plan_indexed\")\n\nval indexer3 = new StringIndexer()\n  .setInputCol(\"localizacao\")\n  .setOutputCol(\"localizacao_indexed\")\n\n// Aplicar a transformação de StringIndexer ao DataFrame\nval indexedDF = indexer1.fit(df_ml)\n    .transform(indexer2.fit(df_ml)\n    .transform(indexer3.fit(df_ml)\n    .transform(df_ml)))\n\n// Criar uma instância do algoritmo Gradient Boosted Trees regressor\nval algorithm = new GBTRegressor()\n  .setLabelCol(labelCol)\n  .setFeaturesCol(\"features\")\n  .setMaxBins(1000) // Definir o valor desejado para maxBins\n\n// Chamar a função de classificação de recursos (feature ranking)\n// featureRanking(algorithm, featureCols)\ntrainAndEvaluateGBT(algorithm, indexedDF, featureCols, labelCol)",
    "id": "",
    "dateCreated": "2023-06-07 13:34:28.548",
    "config": {},
-   "dateStarted": "2023-06-08 22:26:38.817",
-   "dateUpdated": "2023-06-08 22:26:47.096",
-   "dateFinished": "2023-06-08 22:26:47.096",
+   "dateStarted": "2023-06-09 12:16:50.354",
+   "dateUpdated": "2023-06-09 12:17:11.833",
+   "dateFinished": "2023-06-09 12:17:11.833",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "Root Mean Squared Error (RMSE): 39.81520256895648\nFeature Ranking:\nFeature 1: room_ID - Importance 0.22902964085128258\nFeature 2: qtd_quartos - Importance 0.19907722761383512\nFeature 3: hotel_ID - Importance 0.16957084863762067\nFeature 4: adultos - Importance 0.15718706391210482\nFeature 5: temperature_avg - Importance 0.14112601631429728\nFeature 6: estrelas - Importance 0.07293998341720001\nFeature 7: temporada - Importance 0.031069219253659502\n+-------+-----------+------------------+\n|room_ID|preco_noite|        prediction|\n+-------+-----------+------------------+\n|     81|       57.0| 75.96467512674934|\n|     81|       45.0| 38.68777621400593|\n|     81|       45.0| 38.68777621400593|\n|     81|       59.0| 62.70996312461662|\n|     81|       45.0|50.414803528529944|\n|     81|       62.5| 75.96467512674934|\n|     81|       45.0|  42.0318661139938|\n|     81|       57.0| 51.34374784466523|\n|     81|       54.0| 70.09887386105942|\n|     81|       44.0| 43.36641206261458|\n|     85|      125.0|147.20545428724012|\n|     85|      134.0| 144.1654077379728|\n|    190|      114.0|136.57986245958517|\n|    190|       91.0| 81.28307100131615|\n|     85|      145.0|147.20545428724012|\n|    190|      114.0|136.94891049488783|\n|    190|      114.0|136.94891049488783|\n|     85|      107.0|120.80939309133267|\n|    190|      100.0| 123.2178775373546|\n|    190|      100.0|122.33463188173207|\n+-------+-----------+------------------+\nonly showing top 20 rows\n\nimport org.apache.spark.ml.feature.StringIndexer\nimport org.apache.spark.ml.regression.GBTRegressor\n\u001b[1m\u001b[34mdf_ml\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 31 more fields]\n\u001b[1m\u001b[34mfeatureCols\u001b[0m: \u001b[1m\u001b[32mArray[String]\u001b[0m = Array(hotel_ID, room_ID, adultos, estrelas, qtd_quartos, temperature_avg, temporada)\n\u001b[1m\u001b[34mlabelCol\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = preco_noite\n\u001b[1m\u001b[34mindexer1\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexer\u001b[0m = strIdx_9a8acad36a4d\n\u001b[1m\u001b[34mindexer2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexer\u001b[0m = strIdx_d6d7bbc3f812\n\u001b[1m\u001b[34mindexer3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexer\u001b[0m = strIdx_114c6e23c6fa\n\u001b[1m\u001b[34mindexedDF\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int,..."
+      "data": "Root Mean Squared Error (RMSE): 17.54049738716371\nFeature Ranking:\nFeature 1: room_ID - Importance 0.30243281598502675\nFeature 2: hotel_ID - Importance 0.1950398992535922\nFeature 3: qtd_quartos - Importance 0.16422797372858028\nFeature 4: temperature_avg - Importance 0.14102907803669354\nFeature 5: adultos - Importance 0.10835236176104315\nFeature 6: estrelas - Importance 0.06677579612496042\nFeature 7: temporada - Importance 0.022142075110103746\n+-------+------------------+------------------+\n|room_ID|preco_noite_adulto|        prediction|\n+-------+------------------+------------------+\n|     81|              28.5| 31.29484738379246|\n|     81|              45.0|61.212967810013396|\n|     81|              45.0|61.212967810013396|\n|     81|              29.5| 29.08658871842678|\n|     81|              45.0| 99.72859374552105|\n|     81|             31.25|28.345357587874094|\n|     81|              45.0| 91.68111398013853|\n|     81|              28.5|25.498833181179428|\n|     81|              27.0| 26.84495168929202|\n|     81|              44.0|100.73494595291419|\n|     85|              62.5|  67.9726062040213|\n|     85|              67.0| 74.11553050981094|\n|    190|              57.0|  67.6776023950932|\n|    190|              45.5| 53.25816632902684|\n|     85|              72.5|  67.9726062040213|\n|    190|              57.0| 70.91896873322632|\n|    190|              57.0| 70.91896873322632|\n|     85|             107.0|  84.1241782911615|\n|    190|             100.0|122.15293974790283|\n|    190|              50.0| 67.81523616135262|\n+-------+------------------+------------------+\nonly showing top 20 rows\n\nimport org.apache.spark.ml.feature.StringIndexer\nimport org.apache.spark.ml.regression.GBTRegressor\n\u001b[1m\u001b[34mdf_ml\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 32 more fields]\n\u001b[1m\u001b[34mfeatureCols\u001b[0m: \u001b[1m\u001b[32mArray[String]\u001b[0m = Array(hotel_ID, room_ID, adultos, estrelas, qtd_quartos, temperature_avg, temporada)\n\u001b[1m\u001b[34mlabelCol\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = preco_noite_adulto\n\u001b[1m\u001b[34mindexer1\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexer\u001b[0m = strIdx_c7edaef61b83\n\u001b[1m\u001b[34mindexer4\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexer\u001b[0m = strIdx_de3c183482f9\n\u001b[1m\u001b[34mindexer2\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexer\u001b[0m = strIdx_f473fdc705d8\n\u001b[1m\u001b[34mindexer3\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.feature.StringIndexer\u001b[0m ..."
      }
     ]
    }
   },
   {
    "settings": {
-    "params": {},
+    "params": {
+     "bdtMeta": {}
+    },
     "forms": {}
    },
    "apps": [],
@@ -1343,15 +185,15 @@
    "id": "",
    "dateCreated": "2023-06-07 14:54:13.157",
    "config": {},
-   "dateStarted": "2023-06-08 22:27:57.866",
-   "dateUpdated": "2023-06-08 22:28:00.174",
-   "dateFinished": "2023-06-08 22:28:00.174",
+   "dateStarted": "2023-06-09 12:10:40.952",
+   "dateUpdated": "2023-06-09 12:10:45.779",
+   "dateFinished": "2023-06-09 12:10:45.778",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "Root Mean Squared Error (RMSE): 46.381766114281426\nFeature Ranking:\nFeature 1: adultos - Importance 0.4613762746073179\nFeature 2: estrelas - Importance 0.12908352343089607\nFeature 3: hotel_ID - Importance 0.1190656249898843\nFeature 4: qtd_quartos - Importance 0.11160058253841898\nFeature 5: temperature_avg - Importance 0.06863573339322707\nFeature 6: temporada - Importance 0.06471643521734759\nFeature 7: room_ID - Importance 0.04552182582290816\n+-------+-----------+------------------+\n|room_ID|preco_noite|        prediction|\n+-------+-----------+------------------+\n|     81|       57.0|104.99544355458086|\n|     81|       45.0| 78.31283980599093|\n|     81|       45.0| 78.31283980599093|\n|     81|       59.0| 96.18593919269671|\n|     81|       45.0| 92.18969612070642|\n|     81|       62.5|104.99544355458086|\n|     81|       45.0| 82.47849980676081|\n|     81|       57.0| 82.11060170946567|\n|     81|       54.0|108.73228496171446|\n|     81|       44.0| 95.93479007043432|\n|     85|      125.0| 137.5460114820254|\n|     85|      134.0|122.14034941685766|\n|    190|      114.0|132.70604492821445|\n|    190|       91.0| 95.81010841195979|\n|     85|      145.0| 137.5460114820254|\n|    190|      114.0|132.70604492821445|\n|    190|      114.0|132.70604492821445|\n|     85|      107.0| 115.3808442961858|\n|    190|      100.0|118.14410634486735|\n|    190|      100.0| 133.2545064228725|\n+-------+-----------+------------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34malgorithm\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.regression.RandomForestRegressor\u001b[0m = rfr_617d4b7fc555\n"
+      "data": "Root Mean Squared Error (RMSE): 46.28802380137938\nFeature Ranking:\nFeature 1: adultos - Importance 0.4611118826631565\nFeature 2: estrelas - Importance 0.13294342628200878\nFeature 3: hotel_ID - Importance 0.1159650005196036\nFeature 4: qtd_quartos - Importance 0.10980995740478756\nFeature 5: temperature_avg - Importance 0.06898715509788812\nFeature 6: temporada - Importance 0.06572080292435181\nFeature 7: room_ID - Importance 0.04546177510820359\n+-------+-----------+------------------+\n|room_ID|preco_noite|        prediction|\n+-------+-----------+------------------+\n|     81|       57.0|105.84148802779688|\n|     81|       45.0| 75.04242046856655|\n|     81|       45.0| 75.04242046856655|\n|     81|       59.0| 96.01980118919796|\n|     81|       45.0| 92.19821650957087|\n|     81|       62.5|105.84148802779688|\n|     81|       45.0| 80.57740513038134|\n|     81|       57.0| 78.83045414224628|\n|     81|       54.0|108.89575136963086|\n|     81|       44.0| 95.47147276240284|\n|     85|      125.0|135.96883033407315|\n|     85|      134.0|117.63251331302445|\n|    190|      114.0|131.43034776468136|\n|    190|       91.0| 88.90526598348953|\n|     85|      145.0|135.96883033407315|\n|    190|      114.0|131.43034776468136|\n|    190|      114.0|131.43034776468136|\n|     85|      107.0|110.64970289218039|\n|    190|      100.0| 116.6400051242803|\n|    190|      100.0|131.98414299838564|\n+-------+-----------+------------------+\nonly showing top 20 rows\n\n\u001b[1m\u001b[34malgorithm\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.ml.regression.RandomForestRegressor\u001b[0m = rfr_a78b243b0a58\n"
      }
     ]
    }
@@ -1362,239 +204,7 @@
      "bdtMeta": {
       "ZTOOLS_DATA_FRAMES": [
        {
-        "columns": [
-         {
-          "name": "hotel_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "pais",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estado_reserva",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "room_ID",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "Q_tipo_quarto",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "rate_plan",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_reserva",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_chegada",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "data_partida",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "num_noites",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "adultos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_euros",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_adulto",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "preco_noite_ocupacao",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "dif_data_chegada_data_reserva",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "quantidade",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_maxima",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_criancas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "capacidade_max_bebes",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "localizacao",
-          "tpe": {
-           "presentableName": "string"
-          },
-          "nullable": true
-         },
-         {
-          "name": "estrelas",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "hora_max_checkin",
-          "tpe": {
-           "presentableName": "timestamp"
-          },
-          "nullable": true
-         },
-         {
-          "name": "qtd_quartos",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "is_holiday",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "event_count",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_avg",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_max",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temperature_min",
-          "tpe": {
-           "presentableName": "double"
-          },
-          "nullable": true
-         },
-         {
-          "name": "temporada",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": false
-         },
-         {
-          "name": "cancelamento",
-          "tpe": {
-           "presentableName": "integer"
-          },
-          "nullable": false
-         }
-        ]
+        "columns": []
        },
        {
         "columns": []
@@ -1606,19 +216,19 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "import org.apache.spark.ml.classification.RandomForestClassifier\nimport org.apache.spark.ml.evaluation.{BinaryClassificationEvaluator, MulticlassClassificationEvaluator}\nimport org.apache.spark.ml.{Pipeline, PipelineModel}\n\n\nval df_mlclass = spark.sql(\"\"\"SELECT  * FROM MLDataSet \"\"\")\n// Selecionar as colunas relevantes para o modelo\nval featureCols = Array(\"hotel_ID\", \"pais\", \"estado_reserva\", \"Q_tipo_quarto\", \n    \"rate_plan\", \"preco_euros\", \"localizacao\", \"estrelas\",\n    \"temperature_avg\",\"temporada\")\n\nval labelCol = \"cancelamento\"\n\n// Selecionar apenas as colunas relevantes do DataFrame\nval selectedDF = df_mlclass.select((featureCols :+ labelCol).map(col): _*)\n\n// Converter colunas de string para numéricas usando StringIndexer\nval indexers = featureCols.map { colName =>\n  new StringIndexer()\n    .setInputCol(colName)\n    .setOutputCol(s\"${colName}_indexed\")\n}\n\nval indexedDF = new Pipeline().setStages(indexers).fit(selectedDF).transform(selectedDF)\n\n// Criar o vetor de features usando VectorAssembler\nval assembler = new VectorAssembler()\n  .setInputCols(featureCols.map(colName => s\"${colName}_indexed\"))\n  .setOutputCol(\"features\")\n\nval assembledDF = assembler.transform(indexedDF)\n\n// Dividir o dataset em conjuntos de treinamento e teste\nval Array(trainData, testData) = assembledDF.randomSplit(Array(0.8, 0.2), seed = 42)\n\n// Criar o modelo de classificação\nval classifier = new RandomForestClassifier()\n  .setLabelCol(labelCol)\n  .setFeaturesCol(\"features\")\n  .setMaxBins(5000)\n\n// Treinar o modelo\nval model = classifier.fit(trainData)\n\n// Realizar previsões nos dados de teste\nval predictions = model.transform(testData)\n\n// Avaliar o desempenho do modelo\nval evaluator = new BinaryClassificationEvaluator()\n  .setLabelCol(labelCol)\n  .setMetricName(\"areaUnderROC\")\n\nval accuracy = evaluator.evaluate(predictions)\n\nprintln(\"Accuracy: \" + accuracy)\n\n// Outras métricas de avaliação\nval evaluatorMulti = new MulticlassClassificationEvaluator()\n  .setLabelCol(labelCol)\n  .setPredictionCol(\"prediction\")\n  .setMetricName(\"f1\")\n\nval f1Score = evaluatorMulti.evaluate(predictions)\n\nprintln(\"F1-Score: \" + f1Score)\n\n// Matriz de confusão\nval confusionMatrix = predictions\n  .groupBy(labelCol, \"prediction\")\n  .count()\n  .orderBy(labelCol, \"prediction\")\n\nconfusionMatrix.show()\n",
+   "text": "import org.apache.spark.ml.classification.RandomForestClassifier\nimport org.apache.spark.ml.evaluation.{BinaryClassificationEvaluator, MulticlassClassificationEvaluator}\nimport org.apache.spark.ml.{Pipeline, PipelineModel}\n//  \"hotel_ID\", \"pais\", \"estado_reserva\", \"room_ID\", \"Q_tipo_quarto\", \"rate_plan\",\n//  \"data_reserva\", \"data_chegada\", \"data_partida\", \"num_noites\", \"adultos\", \"criancas\",\n//  \"bebes\", \"preco_euros\", \"preco_noite\", \"preco_noite_adulto\", \"preco_noite_ocupacao\",\n//  \"dif_data_chegada_data_reserva\", \"quantidade\", \"capacidade_maxima\",\n//  \"capacidade_max_criancas\", \"capacidade_max_bebes\", \"localizacao\", \"estrelas\",\n//  \"hora_max_checkin\", \"qtd_quartos\", \"is_holiday\", \"event_count\", \"temperature_avg\",\n//  \"temperature_max\", \"temperature_min\", \"temporada\"\n\nval df_mlclass = spark.sql(\"\"\"SELECT  * FROM MLDataSet \"\"\")\n\n\n// Selecionar as colunas relevantes para o modelo\nval featureCols = Array(\"hotel_ID\", \"pais\", \"Q_tipo_quarto\", \n     \"localizacao\",\"dif_data_chegada_data_reserva\",\n    \"temperature_avg\",\"estrelas\",\"quantidade\",\"room_ID\")\n//Estrelas Estrela\nval labelCol = \"cancelamento\"\n\n// Selecionar apenas as colunas relevantes do DataFrame\nval selectedDF = df_mlclass.select((featureCols :+ labelCol).map(col): _*)\n\n// Converter colunas de string para numéricas usando StringIndexer\nval indexers = featureCols.map { colName =>\n  new StringIndexer()\n    .setInputCol(colName)\n    .setOutputCol(s\"${colName}_indexed\")\n}\n\nval indexedDF = new Pipeline().setStages(indexers).fit(selectedDF).transform(selectedDF)\n\n// Criar o vetor de features usando VectorAssembler\nval assembler = new VectorAssembler()\n  .setInputCols(featureCols.map(colName => s\"${colName}_indexed\"))\n  .setOutputCol(\"features\")\n\nval assembledDF = assembler.transform(indexedDF)\n\n// Dividir o dataset em conjuntos de treinamento e teste\nval Array(trainData, testData) = assembledDF.randomSplit(Array(0.9, 0.1), seed = 42)\n\n// Criar o modelo de classificação\nval classifier = new RandomForestClassifier()\n  .setLabelCol(labelCol)\n  .setFeaturesCol(\"features\")\n  .setMaxBins(5000)\n\n// Treinar o modelo\nval model = classifier.fit(trainData)\n\n// Realizar previsões nos dados de teste\nval predictions = model.transform(testData)\n\n// Avaliar o desempenho do modelo\nval evaluator = new BinaryClassificationEvaluator()\n  .setLabelCol(labelCol)\n  .setMetricName(\"areaUnderROC\")\n\nval accuracy = evaluator.evaluate(predictions)\n\nprintln(\"Accuracy: \" + accuracy)\n\n// Outras métricas de avaliação\nval evaluatorMulti = new MulticlassClassificationEvaluator()\n  .setLabelCol(labelCol)\n  .setPredictionCol(\"prediction\")\n  .setMetricName(\"f1\")\n\nval f1Score = evaluatorMulti.evaluate(predictions)\n\nprintln(\"F1-Score: \" + f1Score)\n\n// Matriz de confusão\nval confusionMatrix = predictions\n  .groupBy(labelCol, \"prediction\")\n  .count()\n  .orderBy(labelCol, \"prediction\")\n\nconfusionMatrix.show()\n",
    "id": "",
    "dateCreated": "2023-06-08 16:30:40.956",
    "config": {},
-   "dateStarted": "2023-06-08 22:45:12.688",
-   "dateUpdated": "2023-06-08 22:45:20.082",
-   "dateFinished": "2023-06-08 22:45:20.082",
+   "dateStarted": "2023-06-09 12:05:28.056",
+   "dateUpdated": "2023-06-09 12:05:47.169",
+   "dateFinished": "2023-06-09 12:05:47.169",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "Accuracy: 1.0\nF1-Score: 1.0\n+------------+----------+-----+\n|cancelamento|prediction|count|\n+------------+----------+-----+\n|           0|       0.0| 4072|\n|           1|       1.0|  333|\n+------------+----------+-----+\n\nimport org.apache.spark.ml.classification.RandomForestClassifier\nimport org.apache.spark.ml.evaluation.{BinaryClassificationEvaluator, MulticlassClassificationEvaluator}\nimport org.apache.spark.ml.{Pipeline, PipelineModel}\n\u001b[1m\u001b[34mdf_mlclass\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 31 more fields]\n\u001b[1m\u001b[34mfeatureCols\u001b[0m: \u001b[1m\u001b[32mArray[String]\u001b[0m = Array(hotel_ID, pais, estado_reserva, Q_tipo_quarto, rate_plan, preco_euros, localizacao, estrelas, temperature_avg, temporada)\n\u001b[1m\u001b[34mlabelCol\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = cancelamento\n\u001b[1m\u001b[34mselectedDF\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 9 more fields]\n\u001b[1m\u001b[34mindexers\u001b[0m: \u001b[1m\u001b[32mArray[org.apache.spark.ml.feature.StringIndexer]\u001b[0m = Array(s..."
+      "data": "Accuracy: 0.6226151089054305\nF1-Score: 0.8787462328007402\n+------------+----------+-----+\n|cancelamento|prediction|count|\n+------------+----------+-----+\n|           0|       0.0| 2015|\n|           1|       0.0|  180|\n+------------+----------+-----+\n\nimport org.apache.spark.ml.classification.RandomForestClassifier\nimport org.apache.spark.ml.evaluation.{BinaryClassificationEvaluator, MulticlassClassificationEvaluator}\nimport org.apache.spark.ml.{Pipeline, PipelineModel}\n\u001b[1m\u001b[34mdf_mlclass\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 32 more fields]\n\u001b[1m\u001b[34mfeatureCols\u001b[0m: \u001b[1m\u001b[32mArray[String]\u001b[0m = Array(hotel_ID, pais, Q_tipo_quarto, localizacao, dif_data_chegada_data_reserva, temperature_avg, estrelas, quantidade, room_ID)\n\u001b[1m\u001b[34mlabelCol\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = cancelamento\n\u001b[1m\u001b[34mselectedDF\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 8 more fields]\n\u001b[1m\u001b[34mindexers\u001b[0m: \u001b[1m\u001b[32mArray[org.apache.spark.ml.feature.StringIndexer]\u001b[0m = Array(..."
      }
     ]
    }
@@ -1630,6 +240,9 @@
       "ZTOOLS_DATA_FRAMES": [
        {
         "columns": []
+       },
+       {
+        "columns": []
        }
       ]
      }
@@ -1638,19 +251,19 @@
    },
    "apps": [],
    "status": "FINISHED",
-   "text": "//Cancelamentos por id de hotel num determinado mes. data de chegada:\nimport org.apache.spark.sql.functions._\n\nval df_mlclassM = spark.sql(\"\"\"SELECT * FROM MLDataSet\"\"\")\n//df_mlclassM.show()\n// Selecionar as colunas relevantes para o modelo\nval featureCols = Array(\"hotel_ID\", \"pais\", \"estado_reserva\", \"Q_tipo_quarto\",\n  \"rate_plan\", \"preco_euros\", \"localizacao\", \"estrelas\",\n  \"temperature_avg\", \"temporada\")\n\nval labelCol = \"cancelamento\"\n\n// Selecionar apenas as colunas relevantes do DataFrame\nval selectedDF = df_mlclassM.select((featureCols :+ labelCol).map(col): _*)\n\n// Converter colunas de string para numéricas usando StringIndexer\nval indexers = featureCols.map { colName =>\n  new StringIndexer()\n    .setInputCol(colName)\n    .setOutputCol(s\"${colName}_indexed\")\n}\n\nval indexedDF = new Pipeline().setStages(indexers).fit(selectedDF).transform(selectedDF)\n\n// Criar o vetor de features usando VectorAssembler\nval assembler = new VectorAssembler()\n  .setInputCols(featureCols.map(colName => s\"${colName}_indexed\"))\n  .setOutputCol(\"features\")\n\nval assembledDF = assembler.transform(indexedDF)\n\n// Criar o modelo de classificação\nval classifier = new RandomForestClassifier()\n  .setLabelCol(labelCol)\n  .setFeaturesCol(\"features\")\n  .setMaxBins(5000)\n\n// Treinar o modelo\nval model = classifier.fit(assembledDF)\n\n// Fazer previsões para o mês específico (exemplo: janeiro)\nval hotelID = 311 // ID do hotel que você deseja prever os cancelamentos\nval month = 8 // Mês específico para o qual você deseja fazer a previsão\n\nval monthDF = spark.sql(s\"\"\"SELECT * FROM MLDataSet WHERE hotel_ID = '$hotelID' AND month(data_chegada) = $month\"\"\")\nval indexedMonthDF = new Pipeline().setStages(indexers).fit(monthDF).transform(monthDF)\nval assembledMonthDF = assembler.transform(indexedMonthDF)\n\n// Fazer previsões usando o modelo treinado\nval predictions = model.transform(assembledMonthDF)\n\n// Contar o número previsto de cancelamentos e reservas para o mês específico\nval cancellations = predictions.filter(col(labelCol) === 1).count()\nval reservations = predictions.filter(col(labelCol) === 0).count()\n\nprintln(s\"Number of cancellations for hotel $hotelID in month $month: $cancellations\")\nprintln(s\"Number of reservations for hotel $hotelID in month $month: $reservations\")",
+   "text": "//Cancelamentos por id de hotel num determinado mes. data de chegada:\nimport org.apache.spark.sql.functions._\n\nval df_mlclassM = spark.sql(\"\"\"SELECT * FROM MLDataSet\"\"\")\n// Selecionar as colunas relevantes para o modelo\nval featureCols = Array(\"hotel_ID\", \"pais\", \"Q_tipo_quarto\", \"localizacao\",\n  \"dif_data_chegada_data_reserva\", \"temperature_avg\", \"estrelas\", \"quantidade\", \"room_ID\")\nval labelCol = \"cancelamento\"\n\n// Selecionar apenas as colunas relevantes do DataFrame\nval selectedDF = df_mlclassM.select((featureCols :+ labelCol).map(col): _*)\n\n// Converter colunas de string para numéricas usando StringIndexer\nval indexers = featureCols.map { colName =>\n  new StringIndexer()\n    .setInputCol(colName)\n    .setOutputCol(s\"${colName}_indexed\")\n}\n\nval indexedDF = new Pipeline().setStages(indexers).fit(selectedDF).transform(selectedDF)\n\n// Criar o vetor de features usando VectorAssembler\nval assembler = new VectorAssembler()\n  .setInputCols(featureCols.map(colName => s\"${colName}_indexed\"))\n  .setOutputCol(\"features\")\n\nval assembledDF = assembler.transform(indexedDF)\n\n// Criar o modelo de classificação\nval classifier = new RandomForestClassifier()\n  .setLabelCol(labelCol)\n  .setFeaturesCol(\"features\")\n  .setMaxBins(5000)\n\n// Treinar o modelo\nval model = classifier.fit(assembledDF)\n\n// Fazer previsões para o mês específico (exemplo: janeiro)\nval hotelID = 444 // ID do hotel que você deseja prever os cancelamentos\nval month = 1 // Mês específico para o qual você deseja fazer a previsão\n\nval monthDF = spark.sql(s\"\"\"SELECT * FROM MLDataSet WHERE hotel_ID = '$hotelID' AND month(data_chegada) = $month\"\"\")\nval indexedMonthDF = new Pipeline().setStages(indexers).fit(monthDF).transform(monthDF)\nval assembledMonthDF = assembler.transform(indexedMonthDF)\n\n// Fazer previsões usando o modelo treinado\nval predictions = model.transform(assembledMonthDF)\n\n// Contar o número previsto de cancelamentos e reservas para o mês específico\nval cancellations = predictions.filter(col(labelCol) === 1).count()\nval reservations = predictions.filter(col(labelCol) === 0).count()\nval accuracy = evaluator.evaluate(predictions)\n\nprint(\"Accuracy: \" + accuracy + \" | \")\nprint(s\"Number of cancellations for hotel $hotelID in month $month: $cancellations | \")\nprintln(s\"Number of reservations for hotel $hotelID in month $month: $reservations\")",
    "id": "",
    "dateCreated": "2023-06-08 22:34:41.400",
    "config": {},
-   "dateStarted": "2023-06-08 23:53:25.606",
-   "dateUpdated": "2023-06-08 23:53:31.219",
-   "dateFinished": "2023-06-08 23:53:31.219",
+   "dateStarted": "2023-06-09 12:27:17.442",
+   "dateUpdated": "2023-06-09 12:27:31.418",
+   "dateFinished": "2023-06-09 12:27:31.418",
    "results": {
     "code": "SUCCESS",
     "msg": [
      {
       "type": "TEXT",
-      "data": "Number of cancellations for hotel 311 in month 8: 6\nNumber of reservations for hotel 311 in month 8: 178\nimport org.apache.spark.ml.classification.RandomForestClassifier\nimport org.apache.spark.ml.evaluation.{BinaryClassificationEvaluator, MulticlassClassificationEvaluator}\nimport org.apache.spark.ml.feature.{StringIndexer, VectorAssembler}\nimport org.apache.spark.ml.{Pipeline, PipelineModel}\nimport org.apache.spark.ml.classification.RandomForestClassifier\nimport org.apache.spark.ml.evaluation.{BinaryClassificationEvaluator, MulticlassClassificationEvaluator}\nimport org.apache.spark.ml.feature.{StringIndexer, VectorAssembler}\nimport org.apache.spark.ml.{Pipeline, PipelineModel}\nimport org.apache.spark.sql.functions._\n\u001b[1m\u001b[34mdf_mlclassM\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 31 more fields]\n\u001b[1m\u001b[34mfeatureCols\u001b[0m: \u001b[1m\u001b[32mArray[String]\u001b[0m =..."
+      "data": "Accuracy: 0.5347826086956522 | Number of cancellations for hotel 444 in month 1: 3 | Number of reservations for hotel 444 in month 1: 115\nimport org.apache.spark.sql.functions._\n\u001b[1m\u001b[34mdf_mlclassM\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 32 more fields]\n\u001b[1m\u001b[34mfeatureCols\u001b[0m: \u001b[1m\u001b[32mArray[String]\u001b[0m = Array(hotel_ID, pais, Q_tipo_quarto, localizacao, dif_data_chegada_data_reserva, temperature_avg, estrelas, quantidade, room_ID)\n\u001b[1m\u001b[34mlabelCol\u001b[0m: \u001b[1m\u001b[32mString\u001b[0m = cancelamento\n\u001b[1m\u001b[34mselectedDF\u001b[0m: \u001b[1m\u001b[32morg.apache.spark.sql.DataFrame\u001b[0m = [hotel_ID: int, pais: string ... 8 more fields]\n\u001b[1m\u001b[34mindexers\u001b[0m: \u001b[1m\u001b[32mArray[org.apache.spark.ml.feature.StringIndexer]\u001b[0m = Array(strIdx_9bbe371c808f, strIdx_ced325ed5137, strIdx_4c920ccb76c6, strIdx_52acc9303dc9, strIdx_7fb9f08d4e88, strIdx_9af3499de90d, strIdx_d759ca26631a, strIdx_0a3d7315c640, strIdx_1e81eb6..."
      }
     ]
    }
