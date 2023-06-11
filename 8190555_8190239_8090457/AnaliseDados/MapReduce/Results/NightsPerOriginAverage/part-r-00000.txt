@@ -1,0 +1,111 @@
+APO/FPO	1.0
+Albánia	4.0
+Alemanha	3.26
+Andorra	1.5
+Angola	5.0
+Antilhas Holandesas	1.0
+Antígua e Barbuda	1.0
+Argentina	2.51
+Argélia	7.75
+Arménia	1.0
+Arábia Saudita	1.25
+Austrália	2.12
+Bangladesh	1.0
+Bermuda	5.0
+Bielorússia	21.5
+Botswana	3.0
+Brasil	3.23
+Bulgária	2.0
+Bélgica	3.06
+Cabo Verde	12.71
+Camarões	2.0
+Canadá	2.12
+Chile	2.2
+China	2.5
+Chipre	3.2
+Colômbia	2.2
+Coreia do Sul	1.75
+Costa Rica	3.0
+Croácia	2.43
+Dinamarca	2.68
+Egipto	2.5
+Emirados Árabes Unidos	3.0
+Equador	4.0
+Eslováquia	2.1
+Eslovénia	2.71
+Espanha	2.09
+Estados Unidos	2.06
+Estónia	4.1
+Filandia	2.32
+Filipinas	1.13
+França	2.49
+Gana	3.0
+Grécia	3.43
+Guadeloupe	1.0
+Holanda	2.72
+Hong Kong	1.64
+Hungria	2.67
+Ilha da Reunião	1.5
+Ilhas Caimão	1.0
+Ilhas Virgens (E. U. A.)	4.0
+India	1.83
+Irlanda	5.55
+Irão	5.0
+Islândia	1.0
+Israel	1.81
+Itália	2.13
+Jamaica	3.0
+Japão	1.67
+Jersey	1.5
+Jordânia	3.0
+Kenia	7.0
+Letónia	1.0
+Lituánia	1.44
+Luxemburgo	2.26
+Macedónia	4.0
+Malta	1.8
+Malásia	1.0
+Marrocos	5.8
+Martinica	5.0
+Moldávia	10.0
+Montenegro	3.0
+Moçambique	2.25
+México	2.17
+Mónaco	3.0
+Nigéria	7.43
+Niue	1.0
+Noruega	2.39
+Nova Zelândia	4.4
+Níger	5.0
+Outro	3.33
+Panamá	3.0
+Paraguai	1.0
+Peru	2.0
+Polónia	2.57
+Porto Rico	1.0
+Portugal	2.05
+Quatar	15.75
+Reino Unido	2.89
+República da Quirguízia	1.0
+Roménia	3.1
+Ruanda	1.0
+Républica Checa	2.63
+Rússia	3.75
+Samoa Americana	2.0
+Senegal	15.0
+Singapura	2.35
+Sri Lanka	2.0
+Suazilândia	1.0
+Suiça	2.53
+Suécia	2.64
+São Cristóvão e Nevis	1.0
+Sérvia	4.0
+Tailândia	2.5
+Taiwan	1.75
+Tunísia	3.5
+Turquia	2.2
+Ucránia	1.71
+Uruguai	1.0
+Venezuela	4.86
+África do Sul	8.87
+Áustria	2.97

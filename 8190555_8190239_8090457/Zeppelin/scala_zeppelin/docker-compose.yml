@@ -1,0 +1,19 @@
+version: '3.2'
+services:
+  zeppelin:
+    image: apache/zeppelin:0.9.0
+    container_name: tead_zeppelin
+    ports:
+      - 8080:8080
+    environment:
+      - ZEPPELIN_LOG_DIR='/logs'
+      - ZEPPELIN_NOTEBOOK_DIR='/zeppelin/notebook'
+      - ZEPPELIN_ADDR=0.0.0.0
+      - ZEPPELIN_NOTEBOOK_STORAGE=org.apache.zeppelin.notebook.repo.VFSNotebookRepo
+    volumes:
+      - ./zeppelin/data:/data
+      # - scala_notebooks:/opt/zeppelin/notebook
+      - ./zeppelin/conf:/opt/zeppelin/conf
+volumes:
+  scala_notebooks:
+  
