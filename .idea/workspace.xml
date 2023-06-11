@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dadb1c82-93c7-4ead-bd50-55079124afef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2023.MEI.TEAD.Projeto.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/AnalisePython/CancelamentosGeral.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/AnalisePython/CorrelationMatrix.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AnaliseDados/AnalisePython/CorrelationMatrix.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/AnalisePython/Outliers/OutliersHotel.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AnaliseDados/AnalisePython/Outliers/OutliersHotel.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/AnalisePython/Outliers/OutliersTipologias.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AnaliseDados/AnalisePython/Outliers/OutliersTipologias.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/AnalisePython/cancelamentos.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AnaliseDados/AnalisePython/cancelamentos.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/JupyterNotebooks/AnaliseDatas.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/JupyterNotebooks/jupyter_notebook_config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/JupyterNotebooks/results/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/JupyterNotebooks/results/.part-00000-8e04fb02-040a-4880-8f39-1711cd1f637c-c000.csv.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/JupyterNotebooks/results/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/JupyterNotebooks/results/part-00000-8e04fb02-040a-4880-8f39-1711cd1f637c-c000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/JupyterNotebooks/translatedCode.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/MapReduce/Results/NightsPerOriginAverage/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/MapReduce/Results/NumeroReservasPorHotel/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/MapReduce/Results/graficosMapReduce.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/AnaliseDados/MapReduce/Results/graficosMapReduce.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AnaliseDados/Reservas por País.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entrega_2.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML_Python/e-GDS-mine.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML_Python/e-GDS.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML_Python/predictOcuppation.ipynb" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2PwAcUkEf9YacuZpUa9or9JRz4g" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "Entrega",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/MEI/1Ano/2Semestre/MEI_TP_TEAD/Zeppelin/scala_zeppelin/zeppelin/data/tp",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\MEI\1Ano\2Semestre\MEI_TP_TEAD\Zeppelin\scala_zeppelin\zeppelin\data\tp" />
+      <recent name="D:\MEI\1Ano\2Semestre\MEI_TP_TEAD\Datasets" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dadb1c82-93c7-4ead-bd50-55079124afef" name="Changes" comment="" />
+      <created>1684357851603</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684357851603</updated>
+      <workItem from="1684357853769" duration="55000" />
+      <workItem from="1684618489824" duration="73000" />
+      <workItem from="1684872687211" duration="2379000" />
+      <workItem from="1684952534843" duration="62000" />
+      <workItem from="1684952610331" duration="2285000" />
+      <workItem from="1685271949439" duration="639000" />
+      <workItem from="1686434300239" duration="602000" />
+      <workItem from="1686435930488" duration="146000" />
+      <workItem from="1686436090352" duration="1327000" />
+      <workItem from="1686483616915" duration="2046000" />
+      <workItem from="1686489074173" duration="970000" />
+      <workItem from="1686492788847" duration="31000" />
+      <workItem from="1686492833773" duration="399000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
